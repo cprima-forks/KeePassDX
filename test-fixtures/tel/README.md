@@ -1,6 +1,6 @@
 # tel: test fixture
 
-Throwaway KeePassDX database for testing how `tel:` and other URL schemes are handled. **Contains no real data.** Fork-only: lives on `fork-main`, never in a feature branch or PR.
+Throwaway KeePassDX database for testing how `tel:` and other URL schemes are handled. **Contains no real data.** Fork-only: committed on the feature branch, but left out of the upstream PR (see `FORK-WORKFLOW.md`).
 
 - File: `kp-test-tel.kdbx` (KDBX 3.1, created with KeePassDX 4.5.4)
 - Password: `test123` (non-secret, no keyfile)
