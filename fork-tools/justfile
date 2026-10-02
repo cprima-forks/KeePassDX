@@ -6,6 +6,12 @@ set shell := ["pwsh", "-NoProfile", "-Command"]
 dry:
     ./Setup-AndroidBuild.ps1 -Dry
 
+# Paths are relative to where you run just: `just fork strip-png in.png out.png`
+# Strip metadata (capture time, UUID, device build) from a PNG; pixels stay unchanged
+[no-cd]
+strip-png source target:
+    uv run python "{{source_directory()}}/strip_png_metadata.py" "{{source}}" "{{target}}"
+
 # Install missing SDK packages. Licenses are not accepted unless you pass -AcceptLicenses.
 setup *args:
     ./Setup-AndroidBuild.ps1 {{args}}
