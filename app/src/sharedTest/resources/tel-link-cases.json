@@ -1,0 +1,221 @@
+{
+  "description": "Cases for the tel: link in the URL field. 'works': the complete list of links expected for the input (in text order; a link target is the lower case scheme plus the number). 'fails': inputs that must produce no tel: link. 'field' defaults to 'url'; the other values are 'notes', 'custom', 'username' and 'unset' (no tag). Every 'works' input is also run in all other fields and must give no tel: link there. RFC means RFC 3966.",
+  "works": [
+    {
+      "id": "works-minimal",
+      "input": "tel:+1",
+      "links": [ { "text": "+1", "target": "tel:+1" } ],
+      "note": "RFC 5.1: no minimum length, one digit is enough"
+    },
+    {
+      "id": "works-plain-number",
+      "input": "tel:+49301234567",
+      "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
+      "note": "RFC 3: global number"
+    },
+    {
+      "id": "works-brackets-and-hyphen",
+      "input": "tel:+49(30)123-456",
+      "links": [ { "text": "+49(30)123-456", "target": "tel:+49(30)123-456" } ],
+      "note": "RFC 3: visual separators ( ) and -, accepted unchanged by the dialer on the test phone"
+    },
+    {
+      "id": "works-hyphens",
+      "input": "tel:+1-201-555-0123",
+      "links": [ { "text": "+1-201-555-0123", "target": "tel:+1-201-555-0123" } ],
+      "note": "RFC 6: the RFC's own example"
+    },
+    {
+      "id": "works-dots",
+      "input": "tel:+49.30.123",
+      "links": [ { "text": "+49.30.123", "target": "tel:+49.30.123" } ],
+      "note": "RFC 3: visual separator ."
+    },
+    {
+      "id": "works-capitals",
+      "input": "TEL:+49301234567",
+      "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
+      "note": "RFC 4: comparison is case-insensitive; the target always has the lower case scheme"
+    },
+    {
+      "id": "works-mixed-case",
+      "input": "Tel:+49301234567",
+      "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
+      "note": "RFC 4: case-insensitive"
+    },
+    {
+      "id": "works-in-sentence",
+      "input": "call tel:+4930123 now",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "the number ends at the space"
+    },
+    {
+      "id": "works-two-numbers",
+      "input": "tel:+1 and tel:+2",
+      "links": [
+        { "text": "+1", "target": "tel:+1" },
+        { "text": "+2", "target": "tel:+2" }
+      ],
+      "note": "one link per number"
+    },
+    {
+      "id": "works-adjacent-numbers",
+      "input": "tel:+1tel:+2",
+      "links": [
+        { "text": "+1", "target": "tel:+1" },
+        { "text": "+2", "target": "tel:+2" }
+      ],
+      "note": "letters are not part of a number, so the second prefix starts a new match"
+    },
+    {
+      "id": "works-doubled-prefix",
+      "input": "tel:tel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "only the prefix directly before the number counts"
+    },
+    {
+      "id": "works-prefix-glued-to-text",
+      "input": "xtel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "decision of the owner: no word boundary before the prefix, as in iteration 1"
+    },
+    {
+      "id": "works-square-brackets",
+      "input": "[tel:+4930123]",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "] is not part of a number"
+    },
+    {
+      "id": "works-bracket-after-space",
+      "input": "(tel:+4930123 )",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "the space ends the number, so the closing parenthesis stays outside"
+    },
+    {
+      "id": "works-closing-parenthesis-after-digits",
+      "input": "(tel:+49)",
+      "links": [ { "text": "+49)", "target": "tel:+49)" } ],
+      "note": "documented consequence of the RFC grammar: separators may follow the last digit, ) is a separator"
+    },
+    {
+      "id": "works-trailing-dot",
+      "input": "tel:+49301234567.",
+      "links": [ { "text": "+49301234567.", "target": "tel:+49301234567." } ],
+      "note": "decision of the owner: trailing separators stay part of the number (RFC grammar)"
+    },
+    {
+      "id": "works-space-ends-number",
+      "input": "tel:+49 30 123",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "RFC 5.1.1: no spaces in a tel URI; decision: not supported in the first iterations"
+    },
+    {
+      "id": "works-parameter-ends-number",
+      "input": "tel:+4930123;ext=12",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "parameters such as ;ext= are out of scope; the link stops at the semicolon"
+    },
+    {
+      "id": "works-next-to-web-link",
+      "input": "see https://example.com and tel:+4930123",
+      "links": [
+        { "text": "https://example.com", "target": "https://example.com" },
+        { "text": "+4930123", "target": "tel:+4930123" }
+      ],
+      "note": "the mask based call runs first; its web link is kept"
+    },
+    {
+      "id": "works-next-to-email",
+      "input": "write a@example.com or tel:+49",
+      "links": [
+        { "text": "a@example.com", "target": "mailto:a@example.com" },
+        { "text": "+49", "target": "tel:+49" }
+      ],
+      "note": "an e-mail address next to a number: both are linked, each on its own text"
+    },
+    {
+      "id": "works-inside-web-address",
+      "input": "https://example.com/tel:+49",
+      "links": [
+        { "text": "https://example.com/tel:+49", "target": "https://example.com/tel:+49" },
+        { "text": "+49", "target": "tel:+49" }
+      ],
+      "note": "characterisation: a number inside a web address gets a second, overlapping link. Existing behaviour of the pattern call, accepted"
+    }
+  ],
+  "fails": [
+    {
+      "id": "fails-prefix-only",
+      "input": "tel:",
+      "note": "no number"
+    },
+    {
+      "id": "fails-plus-only",
+      "input": "tel:+",
+      "note": "RFC 3: at least one digit"
+    },
+    {
+      "id": "fails-separators-in-brackets-only",
+      "input": "tel:+()",
+      "note": "RFC 3: at least one digit"
+    },
+    {
+      "id": "fails-separators-only",
+      "input": "tel:+-.-",
+      "note": "RFC 3: at least one digit"
+    },
+    {
+      "id": "fails-letters",
+      "input": "tel:+abc",
+      "note": "RFC 5.1.2: vanity numbers are not supported"
+    },
+    {
+      "id": "fails-double-plus",
+      "input": "tel:++49",
+      "note": "only one plus sign, directly after the prefix"
+    },
+    {
+      "id": "fails-space-after-prefix",
+      "input": "tel: +49",
+      "note": "the number must follow the prefix directly"
+    },
+    {
+      "id": "fails-local-number",
+      "input": "tel:0301234567",
+      "note": "RFC 5.1.5: a number without a plus is a local number and needs a phone-context; out of scope"
+    },
+    {
+      "id": "fails-number-without-prefix",
+      "input": "+49301234567",
+      "note": "decision: only explicit tel: values are linked"
+    },
+    {
+      "id": "fails-digits-without-prefix",
+      "input": "0301234567",
+      "note": "decision: only explicit tel: values are linked"
+    },
+    {
+      "id": "fails-bidi-control-character",
+      "input": "tel:+4930123‮",
+      "note": "the platform refuses to link text that contains U+202C, U+202D or U+202E"
+    },
+    {
+      "id": "fails-notes-field",
+      "field": "notes",
+      "input": "tel:+49301234567",
+      "note": "iteration 1 and 2: the URL field only"
+    },
+    {
+      "id": "fails-custom-field",
+      "field": "custom",
+      "input": "tel:+49301234567",
+      "note": "iteration 1 and 2: the URL field only"
+    },
+    {
+      "id": "fails-field-without-tag",
+      "field": "unset",
+      "input": "tel:+49301234567",
+      "note": "a view whose tag is not set yet gets no link"
+    }
+  ]
+}

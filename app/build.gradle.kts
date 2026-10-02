@@ -99,6 +99,15 @@ android {
         getByName("free") {
             res.srcDirs("src/free/res")
         }
+        // Fork-only: test code and cases shared by the unit test and the instrumented test
+        getByName("test") {
+            java.srcDir("src/sharedTest/java")
+            resources.srcDir("src/sharedTest/resources")
+        }
+        getByName("androidTest") {
+            java.srcDir("src/sharedTest/java")
+            assets.srcDir("src/sharedTest/resources")
+        }
     }
 
     testOptions {
