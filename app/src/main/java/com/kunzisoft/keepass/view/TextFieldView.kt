@@ -296,6 +296,7 @@ open class TextFieldView @JvmOverloads constructor(
             }
             else -> {
                 LinkifyCompat.addLinks(valueView, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
+                spikeLinkifyTel(valueView, tag)
             }
         }
     }
