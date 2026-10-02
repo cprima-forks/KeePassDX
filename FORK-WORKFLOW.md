@@ -22,7 +22,7 @@ There is one feature branch at a time. No other long-lived or side branches.
 - Work follows the phases: requirements, design, implement, test, PR. Each phase ends with an approval.
 - Commit and push only when asked.
 - Upstream PRs follow upstream `CONTRIBUTING.md`: discuss in an upstream issue first, keep commits small and logical, include tests, and state how the code was reviewed and which tools helped.
-- Fork-only material (this document, `docs/research/`, `test-fixtures/`) is committed on the feature branch, but must not appear in the upstream PR. When the PR is prepared, put only the code and test commits on a clean branch off `develop` (cherry-pick), and leave the fork-only commits behind.
+- Fork-only material (this document, `justfile`, `fork-tools/`, `test-fixtures/`) is committed on the feature branch, but must not appear in the upstream PR. Research, notes and checklists live in the [wiki](https://github.com/cprima-forks/KeePassDX/wiki), not in the repository. When the PR is prepared, put only the code and test commits on a clean branch off `develop` (cherry-pick), and leave the fork-only commits behind.
 - Test databases contain no real data and use a documented, non-secret password. Never copy a real database into the repository.
 
 ## Syncing with upstream
