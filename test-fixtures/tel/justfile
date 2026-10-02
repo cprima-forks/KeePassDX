@@ -1,0 +1,17 @@
+# tel: fixture database. Run from the repository root as `just fixture <recipe>`.
+
+set shell := ["pwsh", "-NoProfile", "-Command"]
+
+db := "kp-test-tel.kdbx"
+
+# Show what populate.py would change. Changes nothing.
+dry:
+    uv run python populate.py {{db}} --dry
+
+# Bring the database in line with the spec. A second run changes nothing.
+populate:
+    uv run python populate.py {{db}}
+
+# Compare the stored header hash with the real one
+check:
+    uv run python check_headerhash.py {{db}}

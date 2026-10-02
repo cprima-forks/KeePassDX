@@ -1,0 +1,2 @@
+# Machine-specific values. Never commit. See .env.example.
+.env

@@ -1,0 +1,11 @@
+# Android build setup. Run from the repository root as `just fork <recipe>`.
+
+set shell := ["pwsh", "-NoProfile", "-Command"]
+
+# Show what the setup would install. Changes nothing.
+dry:
+    ./Setup-AndroidBuild.ps1 -Dry
+
+# Install missing SDK packages. Licenses are not accepted unless you pass -AcceptLicenses.
+setup *args:
+    ./Setup-AndroidBuild.ps1 {{args}}
