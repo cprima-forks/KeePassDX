@@ -25,7 +25,8 @@ internal fun asciiOnly(text: String): String {
 
 /**
  * Collects the records of one run, one JSON line each. Every record has the same envelope: `v`, `run`,
- * `seq`, `t`, `probe`, `case`, `value`; the payload follows.
+ * `sdk` (the API level the record was made on), `seq`, `t`, `probe`, `case`, `value`; the payload follows.
+ * Adding a field to the envelope does not change the schema version; renaming or retyping one does.
  */
 class Recorder(val runId: String) {
     private var sequence = 0
@@ -44,6 +45,7 @@ class Recorder(val runId: String) {
             sequence += 1
             record.put("v", LabSchema.VERSION)
             record.put("run", runId)
+            record.put("sdk", Build.VERSION.SDK_INT)
             record.put("seq", sequence)
             record.put("t", System.currentTimeMillis())
             record.put("probe", probe)
