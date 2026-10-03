@@ -1,2 +1,5 @@
 # Machine-specific values. Never commit. See .env.example.
 .env
+
+# Python bytecode of the tools in this folder
+__pycache__/
