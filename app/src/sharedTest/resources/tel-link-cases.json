@@ -1,10 +1,73 @@
 {
-  "description": "Cases for the tel: link in the URL field. 'works': the complete list of links expected for the input (in text order; a link target is the lower case scheme plus the number). 'fails': inputs that must produce no tel: link. 'field' defaults to 'url'; the other values are 'notes', 'custom', 'username' and 'unset' (no tag). Every 'works' input is also run in all other fields and must give no tel: link there. RFC means RFC 3966.",
+  "description": "Cases for the tel: link in the URL field. 'works': decided behaviour, the complete list of links expected for the input (in text order; a link target is the lower case scheme plus the number). 'fails': decided behaviour, no tel: link is expected. 'observed': behaviour seen in a test and not decided yet; 'links' is what the code gives today, a decision may change it. 'field' defaults to 'url'; the other values are 'notes', 'custom', 'username', 'password', 'title' and 'unset' (no tag). 'generated' builds a long input from a repeated unit. 'decision' names the decision a case verifies or waits for. Every 'works' and 'observed' input is also run in all other fields and must give no tel: link there. RFC means RFC 3966.",
   "works": [
+    {
+      "id": "works-number-after-web-link",
+      "input": "https://example.com/a tel:+49",
+      "links": [
+        { "text": "https://example.com/a", "target": "https://example.com/a" },
+        { "text": "+49", "target": "tel:+49" }
+      ],
+      "decision": "14",
+      "note": "a number outside a web link is linked; the filter rejects a match only when it lies inside another link"
+    },
+    {
+      "id": "works-number-before-web-link",
+      "input": "tel:+49 https://example.com",
+      "links": [
+        { "text": "+49", "target": "tel:+49" },
+        { "text": "https://example.com", "target": "https://example.com" }
+      ],
+      "decision": "14",
+      "note": "the same, with the number first"
+    },
+    {
+      "id": "works-number-after-plain-email",
+      "input": "a@example.com tel:+49",
+      "links": [
+        { "text": "a@example.com", "target": "mailto:a@example.com" },
+        { "text": "+49", "target": "tel:+49" }
+      ],
+      "decision": "14",
+      "note": "a number next to an e-mail address, outside it"
+    },
+    {
+      "id": "works-in-quotation-marks",
+      "input": "\"tel:+49\"",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "14",
+      "note": "a quotation mark before the prefix is not a letter"
+    },
+    {
+      "id": "works-country-code-zero",
+      "input": "tel:+0301234567",
+      "links": [ { "text": "+0301234567", "target": "tel:+0301234567" } ],
+      "note": "owner: correct. The user is responsible for a correct number; neither the digits nor the region code can be validated"
+    },
+    {
+      "id": "works-newline-cuts-number",
+      "input": "tel:+49\n301234",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "owner: correct. A line break cuts the number"
+    },
+    {
+      "id": "works-web-address-with-tel-in-path",
+      "input": "https://example.com/tel:+49",
+      "links": [ { "text": "https://example.com/tel:+49", "target": "https://example.com/tel:+49" } ],
+      "note": "owner: one web link and no phone link inside it. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "works-web-address-with-word-ending-in-tel-in-path",
+      "input": "https://example.com/hotel:+49",
+      "links": [ { "text": "https://example.com/hotel:+49", "target": "https://example.com/hotel:+49" } ],
+      "decision": "14",
+      "note": "the same with a word that ends in tel: one web link. Expected to fail until the pattern is changed"
+    },
     {
       "id": "works-minimal",
       "input": "tel:+1",
       "links": [ { "text": "+1", "target": "tel:+1" } ],
+      "decision": "D7",
       "note": "RFC 5.1: no minimum length, one digit is enough"
     },
     {
@@ -26,6 +89,12 @@
       "note": "RFC 6: the RFC's own example"
     },
     {
+      "id": "works-hyphens-only-format",
+      "input": "tel:+49-30-123-4567",
+      "links": [ { "text": "+49-30-123-4567", "target": "tel:+49-30-123-4567" } ],
+      "note": "a common way to write a number without spaces: it is linked completely"
+    },
+    {
       "id": "works-dots",
       "input": "tel:+49.30.123",
       "links": [ { "text": "+49.30.123", "target": "tel:+49.30.123" } ],
@@ -41,7 +110,7 @@
       "id": "works-mixed-case",
       "input": "Tel:+49301234567",
       "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
-      "note": "RFC 4: case-insensitive"
+      "note": "RFC 4: case-insensitive; also the common abbreviation of 'telephone' in several languages"
     },
     {
       "id": "works-in-sentence",
@@ -74,12 +143,6 @@
       "note": "only the prefix directly before the number counts"
     },
     {
-      "id": "works-prefix-glued-to-text",
-      "input": "xtel:+49",
-      "links": [ { "text": "+49", "target": "tel:+49" } ],
-      "note": "decision of the owner: no word boundary before the prefix, as in iteration 1"
-    },
-    {
       "id": "works-square-brackets",
       "input": "[tel:+4930123]",
       "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
@@ -104,9 +167,16 @@
       "note": "decision of the owner: trailing separators stay part of the number (RFC grammar)"
     },
     {
+      "id": "works-trailing-newline",
+      "input": "tel:+4930123\n",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "a line break ends the number"
+    },
+    {
       "id": "works-space-ends-number",
       "input": "tel:+49 30 123",
       "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "D2",
       "note": "RFC 5.1.1: no spaces in a tel URI; decision: not supported in the first iterations"
     },
     {
@@ -114,6 +184,18 @@
       "input": "tel:+4930123;ext=12",
       "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
       "note": "parameters such as ;ext= are out of scope; the link stops at the semicolon"
+    },
+    {
+      "id": "works-emoji-after-number",
+      "input": "tel:+4930123😀",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "a character outside the basic plane (two UTF-16 units) ends the number"
+    },
+    {
+      "id": "works-emoji-before-prefix",
+      "input": "😀tel:+4930123",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "a character outside the basic plane in front of the prefix does not disturb the match"
     },
     {
       "id": "works-next-to-web-link",
@@ -132,18 +214,27 @@
         { "text": "+49", "target": "tel:+49" }
       ],
       "note": "an e-mail address next to a number: both are linked, each on its own text"
-    },
-    {
-      "id": "works-inside-web-address",
-      "input": "https://example.com/tel:+49",
-      "links": [
-        { "text": "https://example.com/tel:+49", "target": "https://example.com/tel:+49" },
-        { "text": "+49", "target": "tel:+49" }
-      ],
-      "note": "characterisation: a number inside a web address gets a second, overlapping link. Existing behaviour of the pattern call, accepted"
     }
   ],
   "fails": [
+    {
+      "id": "fails-non-latin-letter-before-prefix",
+      "input": "Жtel:+49",
+      "decision": "14",
+      "note": "a Cyrillic letter (U+0416) directly before the prefix: any script counts as a letter, not only Latin. Expected to fail until the filter is added"
+    },
+    {
+      "id": "fails-letter-outside-bmp-before-prefix",
+      "input": "𝐱tel:+49",
+      "decision": "14",
+      "note": "a mathematical bold x (U+1D431, a surrogate pair) directly before the prefix: the letter is found by code point, not by char. Expected to fail until the filter is added"
+    },
+    {
+      "id": "fails-combining-mark-before-prefix",
+      "input": "Hôtel:+49",
+      "decision": "14",
+      "note": "decomposed 'Hôtel': a combining circumflex (U+0302) belongs to the letter before it. Expected to fail until the filter is added"
+    },
     {
       "id": "fails-prefix-only",
       "input": "tel:",
@@ -177,27 +268,88 @@
     {
       "id": "fails-space-after-prefix",
       "input": "tel: +49",
+      "decision": "D2",
       "note": "the number must follow the prefix directly"
+    },
+    {
+      "id": "fails-abbreviation-with-space",
+      "input": "Tel: +49 30 1234567",
+      "decision": "D2",
+      "note": "consequence of D2: the usual way to write 'Tel:' in German, Dutch, French and others has a space after the colon and inside the number, so it is not linked"
+    },
+    {
+      "id": "fails-abbreviation-with-dot",
+      "input": "Tel.:+49301234567",
+      "note": "'Tel.:' is not the prefix 'tel:'"
+    },
+    {
+      "id": "fails-abbreviation-with-accent",
+      "input": "Tél:+33145678901",
+      "note": "the French abbreviation with an accent is not the prefix"
     },
     {
       "id": "fails-local-number",
       "input": "tel:0301234567",
+      "decision": "O7",
       "note": "RFC 5.1.5: a number without a plus is a local number and needs a phone-context; out of scope"
     },
     {
       "id": "fails-number-without-prefix",
       "input": "+49301234567",
+      "decision": "D1",
       "note": "decision: only explicit tel: values are linked"
+    },
+    {
+      "id": "fails-plus-leading-zero-without-prefix",
+      "input": "+0301234567",
+      "decision": "D1",
+      "note": "entered by the tester on 2026-10-02 as an extra check: a number with a plus and no prefix is not linked"
     },
     {
       "id": "fails-digits-without-prefix",
       "input": "0301234567",
+      "decision": "D1",
       "note": "decision: only explicit tel: values are linked"
+    },
+    {
+      "id": "fails-arabic-indic-digits",
+      "input": "tel:+٤٩٣٠",
+      "note": "only the digits 0 to 9 of ASCII count, not other scripts' digits"
+    },
+    {
+      "id": "fails-fullwidth-plus",
+      "input": "tel:＋49301234",
+      "note": "a full-width plus sign is not a plus sign"
+    },
+    {
+      "id": "fails-fullwidth-colon",
+      "input": "tel：+49301234",
+      "note": "a full-width colon is not the colon of the prefix"
+    },
+    {
+      "id": "fails-percent-encoded-plus",
+      "input": "tel:%2B49301234",
+      "note": "the plus must be the character itself; encoded forms are not decoded"
+    },
+    {
+      "id": "fails-empty",
+      "input": "",
+      "note": "an empty value is common (the code comments that the value is often empty) and must not fail"
+    },
+    {
+      "id": "fails-whitespace-only",
+      "input": "   ",
+      "note": "white space only"
     },
     {
       "id": "fails-bidi-control-character",
       "input": "tel:+4930123‮",
       "note": "the platform refuses to link text that contains U+202C, U+202D or U+202E"
+    },
+    {
+      "id": "fails-very-long-separators",
+      "generated": { "prefix": "tel:+", "unit": "(", "count": 20000 },
+      "note": "20,000 separators after the prefix and no digit: must be rejected quickly; a slow pattern would show here"
     },
     {
       "id": "fails-notes-field",
@@ -212,10 +364,229 @@
       "note": "iteration 1 and 2: the URL field only"
     },
     {
+      "id": "fails-username-field",
+      "field": "username",
+      "input": "tel:+49301234567",
+      "note": "iteration 1 and 2: the URL field only"
+    },
+    {
+      "id": "fails-password-field",
+      "field": "password",
+      "input": "tel:+49301234567",
+      "note": "a revealed password is plain text, never a link"
+    },
+    {
+      "id": "fails-title-field",
+      "field": "title",
+      "input": "tel:+49301234567",
+      "note": "iteration 1 and 2: the URL field only"
+    },
+    {
       "id": "fails-field-without-tag",
       "field": "unset",
       "input": "tel:+49301234567",
       "note": "a view whose tag is not set yet gets no link"
+    },
+    {
+      "id": "fails-word-ending-in-tel-hotel",
+      "input": "Hotel:+4930123456",
+      "decision": "14",
+      "note": "owner: must not link. 'hotel' in German, Dutch, Danish, Spanish, Portuguese, French, Czech, Polish and others ends in tel; the prefix must not be the end of a longer word. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-hotel-rating",
+      "input": "Hotel:+4.5",
+      "decision": "14",
+      "note": "a signed rating after a word ending in tel is not a phone number. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-hotel-french-accent",
+      "input": "Hôtel:+33145678901",
+      "decision": "14",
+      "note": "French 'hôtel'. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-otel",
+      "input": "Otel:+90212345678",
+      "decision": "14",
+      "note": "Turkish 'otel': hotel. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-motel",
+      "input": "Motel:+1-555-0100",
+      "decision": "14",
+      "note": "'motel' in many languages. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-kartel",
+      "input": "Kartel:+2",
+      "decision": "14",
+      "note": "'kartel' (Dutch, Czech, Polish, Turkish) and 'cartel' in other languages end in tel. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-titel",
+      "input": "Titel:+1",
+      "decision": "14",
+      "note": "owner: must not link. German, Dutch and Danish 'Titel': title, a common label. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-mittel",
+      "input": "Mittel:+0.3",
+      "decision": "14",
+      "note": "German 'Mittel': mean or means; a signed difference after it. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-zettel",
+      "input": "Zettel:+5",
+      "decision": "14",
+      "note": "German 'Zettel': slip of paper. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-drittel",
+      "input": "Drittel:+3",
+      "decision": "14",
+      "note": "German fractions all end in tel (Drittel, Viertel, Fuenftel to Zehntel). Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-viertel",
+      "input": "Viertel:+3",
+      "decision": "14",
+      "note": "German fraction 'Viertel'. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-pastel",
+      "input": "Pastel:+5",
+      "decision": "14",
+      "note": "'pastel' in Spanish, French and Portuguese (from memory, not checked in a dictionary). Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-intel",
+      "input": "Intel:+3",
+      "decision": "14",
+      "note": "a brand name. Expected to fail until the pattern is changed"
+    },
+    {
+      "id": "fails-word-ending-in-tel-xtel",
+      "input": "xtel:+49",
+      "decision": "14",
+      "note": "owner: must not link. No distinction between words and made-up input: the prefix must not be the end of a longer run of letters. Expected to fail until the pattern is changed"
+    }
+  ],
+  "observed": [
+    {
+      "id": "observed-digit-before-prefix",
+      "input": "1tel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "14",
+      "note": "a digit before the prefix: the owner's rule is about letters; not decided"
+    },
+    {
+      "id": "observed-underscore-before-prefix",
+      "input": "_tel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "14",
+      "note": "an underscore before the prefix: not decided"
+    },
+    {
+      "id": "observed-hyphen-before-prefix",
+      "input": "-tel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "14",
+      "note": "a hyphen before the prefix: not decided"
+    },
+    {
+      "id": "observed-dot-before-prefix",
+      "input": ".tel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "14",
+      "note": "a dot before the prefix: not decided"
+    },
+    {
+      "id": "observed-slash-before-prefix",
+      "input": "a /tel:+49",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "14",
+      "note": "a slash before the prefix, not inside a web address: not decided"
+    },
+    {
+      "id": "observed-parameter-isub",
+      "input": "tel:+4930123;isub=12345",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "RFC 5.1.3: ISDN subaddress parameter; out of scope, the link stops at the semicolon like ;ext=. The target has no subaddress"
+    },
+    {
+      "id": "observed-parameters-ext-then-isub",
+      "input": "tel:+4930123;ext=12;isub=3",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "two parameters in a row: the link stops at the first semicolon, nothing after it is linked"
+    },
+    {
+      "id": "observed-local-number-with-phone-context-domain",
+      "input": "tel:7042;phone-context=example.com",
+      "links": [ { "text": "example.com", "target": "http://example.com" } ],
+      "note": "RFC 5.1.5 example: a local number with a domain as context; out of scope, no tel link (no plus). The prediction 'no link at all' was wrong: the platform's web address matcher links the bare domain example.com"
+    },
+    {
+      "id": "observed-local-number-with-phone-context-prefix",
+      "input": "tel:0301234567;phone-context=+49",
+      "note": "a local number whose context is a country prefix; no link is given today: the plus after phone-context= is not directly behind the prefix"
+    },
+    {
+      "id": "observed-format-bracketed-zero",
+      "input": "tel:+49 (0) 30 1234567",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "D2",
+      "note": "a very common way to write a German number; spaces cut it after the country code"
+    },
+    {
+      "id": "observed-format-us-brackets",
+      "input": "tel:+1 (555) 010-0100",
+      "links": [ { "text": "+1", "target": "tel:+1" } ],
+      "decision": "D2",
+      "note": "the usual American format with spaces; cut after the country code"
+    },
+    {
+      "id": "observed-format-slashes",
+      "input": "tel:+49/30/1234567",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "decision": "D2",
+      "note": "a slash is not one of the RFC visual separators"
+    },
+    {
+      "id": "observed-tab-inside-number",
+      "input": "tel:+49\t301234",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "a tab cuts the number"
+    },
+    {
+      "id": "observed-no-break-space-inside-number",
+      "input": "tel:+49 301234",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "a no-break space cuts the number, like an ordinary space"
+    },
+    {
+      "id": "observed-bidi-embedding-after-number",
+      "input": "tel:+4930123‪",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "the platform guard refuses only U+202C, U+202D and U+202E; U+202A is not refused. RFC 11 warns about links whose text hides the target"
+    },
+    {
+      "id": "observed-bidi-isolate-after-number",
+      "input": "tel:+4930123⁦",
+      "links": [ { "text": "+4930123", "target": "tel:+4930123" } ],
+      "note": "U+2066 (left-to-right isolate) is not refused by the platform guard"
+    },
+    {
+      "id": "observed-bidi-mark-inside-number",
+      "input": "tel:+49‎30123",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "U+200E (left-to-right mark) cuts the number; not refused by the platform guard"
+    },
+    {
+      "id": "observed-bidi-isolate-inside-number",
+      "input": "tel:+49⁧30123⁩",
+      "links": [ { "text": "+49", "target": "tel:+49" } ],
+      "note": "isolate characters inside a number cut it; not refused by the platform guard"
     }
   ]
 }
