@@ -69,7 +69,7 @@ def phone_results(output: Path, class_suffix: str) -> dict[str, str]:
     return found
 
 
-DEFECT_TYPES = {"product", "testware", "environment", "documentation"}
+DEFECT_TYPES = {"product", "platform", "testware", "environment", "documentation"}
 DEFECT_STATUSES = {"open", "accepted", "fixed", "withdrawn"}
 DEFECT_ROW = re.compile(r"^\| (D-\d{3,}) \| (\w+) \| (R-\d{3,}) \| (\w+) \|")
 
@@ -109,6 +109,66 @@ def load_cases() -> list[dict]:
     for path in sorted(glob.glob(str(CASES_DIR / "*.json"))):
         cases += json.load(open(path, encoding="utf8"))
     return cases
+
+
+MATRIX_ENVIRONMENTS = (
+    ("E-003", "JVM, 34"), ("E-007", "JVM, 28"), ("E-004", "phone, 33"), ("E-005", "emulator, 28"),
+    ("E-006", "emulator, 24"), ("E-001", "device, 33"), ("E-002", "device, 33, Linphone"),
+)
+
+
+def matrix_cell(rows: list[dict]) -> str:
+    """One requirement in one environment: what the cases there say."""
+    if not rows:
+        return "·"
+    executed = [r for r in rows if r["coverage"] == "covered"]
+    if not executed:
+        return "not run" if any(r["case"] for r in rows) else "no case"
+    failed = [r for r in executed if r["result"] == "fail"]
+    if failed:
+        defects = sorted({r["defect"] for r in failed if r["defect"]})
+        text = f"**fail {len(failed)}/{len(executed)}**"
+        return text + (" " + ", ".join(defects) if defects else " (boundary)")
+    return f"pass {len(executed)}"
+
+
+def write_matrix(rows: list[dict], requirement_rows: list[dict], run: str) -> None:
+    """traceability-matrix.md: every requirement against every environment, generated from the same rows as
+    traceability.csv. `·` means no case of the requirement exists for that environment (or the environment is
+    not run yet), so an empty cell is never read as a pass."""
+    by_requirement: dict[str, list[dict]] = {}
+    for r in rows:
+        by_requirement.setdefault(r["requirement"], []).append(r)
+    header = ["Requirement", "Scope", "Text"] + [f"{env}<br>{label}" for env, label in MATRIX_ENVIRONMENTS]
+    lines = [
+        "> **Status:** draft  ",
+        "> **Audience:** KeePassDX maintainers now; users later  ",
+        "> **Last verified:** 2026-10-03  ",
+        "> **Issues:** fork [#14](https://github.com/cprima-forks/KeePassDX/issues/14)",
+        "",
+        "# Traceability by environment",
+        "",
+        f"Generated from [run {run}](runs/{run}) by `make_traceability.py`, from the same rows as [traceability.csv](traceability.csv). "
+        "Not edited by hand.",
+        "",
+        "Each cell is what the cases of one requirement say in one environment. `pass 3` means 3 cases ran and none failed. "
+        "`**fail 1/3 D-017**` means 1 of 3 failed, with the defect. `(boundary)` is a failing case of an out-of-scope "
+        "requirement (no defect). `not run` means cases exist and none has run there. `no case` means the requirement has "
+        "no case at that level. `·` means no case of the requirement is assigned to that environment: it is **not** a pass.",
+        "",
+        "| " + " | ".join(header) + " |",
+        "|" + "|".join("---" for _ in header) + "|",
+    ]
+    for req in requirement_rows:
+        rid = req["id"]
+        cells = []
+        for env, _ in MATRIX_ENVIRONMENTS:
+            cells.append(matrix_cell([r for r in by_requirement.get(rid, []) if r["environment"] == env]))
+        text = req["text"].replace("|", "/").replace("\n", " ")
+        text = text if len(text) <= 90 else text[:87] + "..."
+        lines.append(f"| {rid} | {req['scope']} | {text} | " + " | ".join(cells) + " |")
+    lines += ["", "## Related", "", "[Traceability](traceability), [Test environments](environments), [Defects](defects).", ""]
+    (WIKI / "traceability-matrix.md").write_text("\n".join(lines), encoding="utf8", newline="\n")
 
 
 def main() -> int:
@@ -208,6 +268,8 @@ def main() -> int:
         writer = csv.DictWriter(out, fieldnames=fields, lineterminator="\n")
         writer.writeheader()
         writer.writerows(rows)
+
+    write_matrix(rows, requirement_rows, args.run)
 
     print(f"{results_path.name}: {sum(len(v) for v in results.values())} results")
     print(f"{trace_path.name}: {len(rows)} rows for {len(requirements)} requirements")
