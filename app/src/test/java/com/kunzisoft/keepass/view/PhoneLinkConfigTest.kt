@@ -20,11 +20,12 @@ class PhoneLinkConfigTest {
 
     @Test
     fun allFieldsHasAnEffect() {
-        val json = PhoneLinkConfigTest::class.java.classLoader!!
-            .getResourceAsStream(TelLinkCases.FILE_NAME)!!
-            .bufferedReader().use { it.readText() }
         PhoneLinkFlagChecks.allFieldsHasAnEffect(
-            TelLinkCases.parse(json),
+            flagInputs { path ->
+                PhoneLinkConfigTest::class.java.classLoader!!
+                    .getResourceAsStream(path)!!
+                    .bufferedReader().use { it.readText() }
+            },
             ApplicationProvider.getApplicationContext<Context>()
         )
     }

@@ -6,20 +6,20 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 
 /**
- * The feature flags of the phone number links, checked against every case of tel-link-cases.json on
- * the phone. The same checks run on the desktop JVM in PhoneLinkFlagsTest.
+ * The feature flags of the phone number links, checked against the value of every code case on the
+ * phone. The same checks run on the desktop JVM in PhoneLinkFlagsTest.
  */
 @RunWith(Parameterized::class)
-class PhoneLinkFlagsInstrumentedTest(private val case: TelLinkCase) {
+class PhoneLinkFlagsInstrumentedTest(private val case: FlagInput) {
 
     companion object {
+        private fun read(path: String): String =
+            InstrumentationRegistry.getInstrumentation().context.assets
+                .open(path).bufferedReader().use { it.readText() }
+
         @JvmStatic
         @Parameterized.Parameters(name = "{0}")
-        fun cases(): List<Array<Any>> {
-            val json = InstrumentationRegistry.getInstrumentation().context.assets
-                .open(TelLinkCases.FILE_NAME).bufferedReader().use { it.readText() }
-            return TelLinkCases.parse(json).map { arrayOf<Any>(it) }
-        }
+        fun cases(): List<Array<Any>> = flagInputs(::read).map { arrayOf<Any>(it) }
     }
 
     /** Views belong to the main thread; a failure is rethrown here so that the runner reports it. */

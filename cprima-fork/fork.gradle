@@ -1,0 +1,78 @@
+/*
+ * Fork-only build settings (fork issues #14 and #15).
+ *
+ * build.gradle.kts of the app is owned by upstream. It carries ONE added line,
+ * apply(from = "../cprima-fork/fork.gradle"), so that a pull from upstream conflicts at most on that line.
+ * Everything the fork adds lives in the folder cprima-fork/ (this script, the tools, the fixtures and the
+ * test and lab source folders). This file is not part of an upstream pull request. It is a Groovy script on
+ * purpose: an applied Kotlin script cannot see the types of the Android Gradle plugin.
+ */
+
+// The root of everything the fork adds
+def fork = rootProject.file('cprima-fork')
+
+android {
+
+    sourceSets {
+        // Test code and cases shared by the unit test and the instrumented test. labShared holds the case-file
+        // code without JUnit, so that the debug app (LinkLab) can use it too.
+        getByName('test') {
+            java.srcDir "$fork/app/sharedTest/java"
+            java.srcDir "$fork/app/labShared/java"
+            resources.srcDir "$fork/app/sharedTest/resources"
+        }
+        getByName('androidTest') {
+            java.srcDir "$fork/app/sharedTest/java"
+            java.srcDir "$fork/app/labShared/java"
+            assets.srcDir "$fork/app/sharedTest/resources"
+        }
+        // LinkLab, a probe screen in the debug variant only (fork issue #15): the whole source set is ours
+        getByName('debug') {
+            setRoot("$fork/app/debug")
+            java.srcDir "$fork/app/labShared/java"
+            assets.srcDir "$fork/app/sharedTest/resources"
+        }
+    }
+
+    testOptions {
+        // The cases that are known to differ from the requirements (current: differs) run in the
+        // *KnownDefects* classes. They are expected to fail until the defects are fixed, so the default task
+        // leaves them out; -PknownDefects runs only them.
+        unitTests.all { test ->
+            if (project.hasProperty('knownDefects')) {
+                test.include '**/*KnownDefects*'
+            } else {
+                test.exclude '**/*KnownDefects*'
+            }
+        }
+    }
+
+    defaultConfig {
+        // The same split for the instrumented run; -PknownDefects runs only the known defects class.
+        if (project.hasProperty('knownDefects')) {
+            testInstrumentationRunnerArguments['class'] =
+                    'com.kunzisoft.keepass.view.RequirementCasesKnownDefectsInstrumentedTest'
+        } else {
+            testInstrumentationRunnerArguments['notClass'] =
+                    'com.kunzisoft.keepass.view.RequirementCasesKnownDefectsInstrumentedTest'
+        }
+    }
+}
+
+// The debug build carries the owner's own identity, not the flavour's and not the version upstream happened to
+// have when the fork was made: its own application id (a hyphen is not allowed in one, hence cprima_fork), so
+// that it installs next to any other KeePassDX build, and a version name from the fork's own git state.
+// Release variants are not touched.
+def forkBuildId = providers.exec {
+    commandLine 'git', 'describe', '--always', '--dirty'
+    ignoreExitValue = true
+}.standardOutput.asText.map { it.trim() ? it.trim() : 'unknown' }
+
+androidComponents {
+    onVariants(selector().withBuildType('debug')) { variant ->
+        variant.applicationId.set('com.kunzisoft.keepass.cprima_fork')
+        variant.outputs.each { output ->
+            output.versionName.set(forkBuildId.map { "cprima-fork-${it}".toString() })
+        }
+    }
+}

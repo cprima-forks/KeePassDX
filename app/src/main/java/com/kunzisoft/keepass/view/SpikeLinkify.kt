@@ -15,11 +15,12 @@ import java.util.regex.Pattern
  * number and the selection toolbar's Call action gives the dialer the number without the prefix.
  * (Android selects a whole link span on a long-press, see Editor.selectCurrentWord().)
  *
- * To remove it: delete this file, the test sources under src/sharedTest, SpikeLinkifyCasesTest,
- * SpikeLinkifyCasesInstrumentedTest, SpikeLinkifyFuzzTest, SpikeLinkifyFuzzInstrumentedTest,
- * PhoneLinkFlagsTest, PhoneLinkFlagsInstrumentedTest, PhoneLinkConfigTest,
- * PhoneLinkConfigInstrumentedTest, the sourceSets lines for them in app/build.gradle.kts and the
- * one call in TextFieldView.linkify().
+ * To remove it: delete this file, the test sources and the case files under cprima-fork/app/sharedTest,
+ * RequirementCasesTest, RequirementCasesKnownDefectsTest, RequirementCaseFilesTest,
+ * RequirementCasesInstrumentedTest, RequirementCasesKnownDefectsInstrumentedTest,
+ * SpikeLinkifyFuzzTest, SpikeLinkifyFuzzInstrumentedTest, PhoneLinkFlagsTest,
+ * PhoneLinkFlagsInstrumentedTest, PhoneLinkConfigTest, PhoneLinkConfigInstrumentedTest, the sourceSets
+ * and test lines for them in app/build.gradle.kts and the one call in TextFieldView.linkify().
  */
 
 /** A scheme whose numbers are linked. Only the values that are implemented exist. */

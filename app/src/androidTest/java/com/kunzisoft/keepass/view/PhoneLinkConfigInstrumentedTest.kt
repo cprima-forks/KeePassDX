@@ -18,12 +18,13 @@ class PhoneLinkConfigInstrumentedTest {
     @Test
     fun allFieldsHasAnEffect() {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
-        val json = instrumentation.context.assets.open(TelLinkCases.FILE_NAME)
-            .bufferedReader().use { it.readText() }
+        val inputs = flagInputs { path ->
+            instrumentation.context.assets.open(path).bufferedReader().use { it.readText() }
+        }
         var failure: Throwable? = null
         instrumentation.runOnMainSync {
             try {
-                PhoneLinkFlagChecks.allFieldsHasAnEffect(TelLinkCases.parse(json), instrumentation.targetContext)
+                PhoneLinkFlagChecks.allFieldsHasAnEffect(inputs, instrumentation.targetContext)
             } catch (throwable: Throwable) {
                 failure = throwable
             }

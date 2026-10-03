@@ -1,13 +1,13 @@
 # Fork-only task runner. Not part of any upstream PR (see FORK-WORKFLOW.md).
-# Values come from fork-tools/.env (copy fork-tools/.env.example).
+# Values come from cprima-fork/tools/.env (copy cprima-fork/tools/.env.example).
 
 set shell := ["pwsh", "-NoProfile", "-Command"]
-set dotenv-path := "fork-tools/.env"
+set dotenv-path := "cprima-fork/tools/.env"
 set dotenv-load := true
 set dotenv-override := true
 
-mod fork 'fork-tools'
-mod fixture 'test-fixtures/tel'
+mod fork 'cprima-fork/tools'
+mod fixture 'cprima-fork/test-fixtures/tel'
 
 # List all recipes, including those of the modules
 default:
