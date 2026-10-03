@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- LinkLab (fork issue #15), debug variant only. Not translated. -->
+<resources>
+    <string name="linklab_name" translatable="false">LinkLab</string>
+    <string name="linklab_about_title" translatable="false">About LinkLab</string>
+    <string name="linklab_about_button" translatable="false">About</string>
+    <string name="linklab_previous" translatable="false">Previous case</string>
+    <string name="linklab_next" translatable="false">Next case</string>
+    <string name="linklab_section_stored" translatable="false">Stored value</string>
+    <string name="linklab_section_shown" translatable="false">As KeePassDX shows it</string>
+    <string name="linklab_section_links" translatable="false">Links KeePassDX makes</string>
+    <string name="linklab_section_classifier" translatable="false">Android classifier suggests</string>
+    <string name="linklab_section_handlers" translatable="false">Apps that answer the link</string>
+    <string name="linklab_section_details" translatable="false">Details</string>
+    <string name="linklab_hint_classifier" translatable="false">What the system text classifier returns for the link. It is not the selection toolbar itself.</string>
+    <string name="linklab_hint_handlers" translatable="false">Which installed apps can open the target. Nothing is started.</string>
+    <string name="linklab_run" translatable="false">Run probes</string>
+    <string name="linklab_copy" translatable="false">Copy</string>
+    <string name="linklab_save" translatable="false">Save</string>
+    <string name="linklab_details_show" translatable="false">Show details (JSON lines)</string>
+    <string name="linklab_details_hide" translatable="false">Hide details</string>
+    <string name="linklab_none" translatable="false">none</string>
+    <string name="linklab_pending" translatable="false">probing …</string>
+</resources>

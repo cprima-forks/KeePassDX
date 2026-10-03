@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- One row of a result block: a small label on the left, the value on the right. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/linklab_row_label"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.34"
+        android:fontFamily="monospace"
+        android:paddingEnd="8dp"
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:textColor="?attr/colorOnSurfaceVariant" />
+
+    <TextView
+        android:id="@+id/linklab_row_value"
+        style="@style/LinkLab.Mono"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.66"
+        android:textAppearance="?attr/textAppearanceBodyMedium" />
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    LinkLab (fork issue #15): a probe screen for what Android does with a tel: value. Debug variant only;
+    never part of a release build and never part of an upstream pull request.
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Package visibility (API 30+): which apps answer a tel: link -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="tel" />
+        </intent>
+    </queries>
+
+    <application>
+        <activity
+            android:name="com.kunzisoft.keepass.linklab.LabActivity"
+            android:label="@string/linklab_name"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kunzisoft.keepass.linklab.LabAboutActivity"
+            android:label="@string/linklab_about_title"
+            android:exported="false" />
+    </application>
+</manifest>
