@@ -1,0 +1,288 @@
+{
+  "description": "What the tel: fixture contains and why. Each entry has an id (its title), the field its value sits in, and either a 'value' of its own (a UI-only entry) or 'valueFrom' a case id of app/src/sharedTest/resources/tel-link-cases.json. 'scenarios' name the UI scenarios that use the entry; if left out they follow from the case (links expected: UI-LINK, UI-LONGPRESS, UI-CALL; no link: UI-NOLINK). The Notes field of every entry holds the instructions, built from the scenarios and from the case; for an entry that tests the Notes field, the tested value is the last line. Run 'uv run python populate.py' to build the database, 'uv run python check_alignment.py' to check that spec, cases and database agree.",
+  "casesFile": "../../app/src/sharedTest/resources/tel-link-cases.json",
+  "customFieldName": "phone",
+  "database": {
+    "password": "test123",
+    "userVerification": "disabled",
+    "mode": "Modifiable",
+    "why": "The password is a documented test value, not a secret. User verification off: the per-database toggle of KeePassDX, which removes the system prompt before an entry can be edited. Modifiable: the Edit button exists only for a database that is not read-only; the tests never save."
+  },
+  "dialogs": [
+    {
+      "name": "discard-changes",
+      "match": { "message": "Discard changes?", "has_button": "Discard" },
+      "answer": "Discard",
+      "why": "Leaving edit mode asks this. A test never saves."
+    },
+    {
+      "name": "lock-discard",
+      "match": { "message": "Discard changes?", "has_button": "Lock" },
+      "answer": "Lock",
+      "why": "Locking asks this when the database holds unsaved changes. A test never saves, so nothing is lost; seeing it at all means something edited the database, and the report shows the rule used."
+    },
+    {
+      "name": "database-changed",
+      "match": { "text_contains": "has been modified outside the app" },
+      "answer": "OK",
+      "why": "The file changed on the phone while the app held it open (a push or a sync). OK only reads it again. Initialize closes the apps before the push, so this means the close step did not work."
+    },
+    {
+      "name": "reload-discards",
+      "match": { "text_contains": "Reloading the database will delete the locally modified data" },
+      "answer": "Cancel",
+      "why": "A reload that would throw away local changes. Cancel changes nothing."
+    },
+    {
+      "name": "notification-permission",
+      "match": { "text_contains": "The notification permission allows you to display the status of the database" },
+      "answer": "Later",
+      "why": "Android 13 asks once. Later does not open the system permission dialog and does not change a setting."
+    },
+    {
+      "name": "clipboard-first-time",
+      "match": { "text_contains": "The clipboard is shared by all apps" },
+      "answer": "Disable",
+      "why": "First tap on Copy of a protected field. Disable keeps the default (clipboard trust off)."
+    },
+    {
+      "name": "password-encoding",
+      "match": { "text_contains": "Avoid password characters outside of text encoding" },
+      "answer": "Cancel",
+      "why": "The unlock password has unusual characters. test123 never does; Cancel changes nothing."
+    },
+    {
+      "name": "duplicate-uuid",
+      "match": { "text_contains": "The database contains duplicate UUIDs" },
+      "answer": "Cancel",
+      "why": "The fixture is broken. Cancel, and the run fails at the unlock."
+    },
+    {
+      "name": "mail-draft",
+      "match": { "text": "Save draft message?" },
+      "answer": "Discard",
+      "why": "A tap on an e-mail address opens a composer; leaving it asks this. A test never saves a draft."
+    },
+    {
+      "name": "popup-menu",
+      "match": { "window_prefix": "PopupWindow" },
+      "answer": "back",
+      "why": "An overflow menu or a dropdown is a window named PopupWindow:<hash>, without an activity. It is not a modal to wait for: Back closes it."
+    },
+    {
+      "name": "notification-shade",
+      "match": { "window": "NotificationShade" },
+      "answer": "command:cmd statusbar collapse",
+      "why": "The notification panel covers the app and makes the screen dump fail. Closing it is a technical step."
+    },
+    {
+      "name": "screen-locked",
+      "match": { "window": "Keyguard" },
+      "answer": "wait",
+      "waitSeconds": 180,
+      "why": "The phone locked itself. Only the person can unlock it; the test waits for them."
+    },
+    {
+      "name": "user-verification",
+      "match": { "window": "BiometricPrompt" },
+      "answer": "wait",
+      "waitSeconds": 180,
+      "why": "Android asks the person to verify (PIN or fingerprint) before an entry can be edited. The test never enters a PIN: it waits for the person."
+    }
+  ],
+  "scenarios": {
+    "UI-LINK": {
+      "title": "The link in view mode",
+      "steps": [ "Open the entry in view mode and look at the value. Which characters are underlined?" ]
+    },
+    "UI-TAP": {
+      "title": "Tap",
+      "steps": [ "Tap the underlined number. Android may ask which app opens it; choose the Phone app. Look at the dialpad: does it hold the number? Do NOT press the call button. Go back." ]
+    },
+    "UI-LONGPRESS": {
+      "title": "Long-press",
+      "steps": [ "Long-press the underlined number. Which characters are highlighted? Which buttons does the toolbar show?" ]
+    },
+    "UI-CALL": {
+      "title": "Call in the selection toolbar",
+      "steps": [ "After the long-press tap Call in the toolbar. What does the dialpad hold? Do NOT press the call button. Go back." ]
+    },
+    "UI-LONGPRESS-TWO": {
+      "title": "Long-press with two numbers",
+      "steps": [ "Long-press the second number only. Is only that number highlighted? Tap Call: does the dialpad hold only the second number? Do NOT press the call button." ]
+    },
+    "UI-WRAP": {
+      "title": "A number that wraps over two lines",
+      "steps": [ "The number is long enough to wrap. Is the underline continuous over both lines? Tap the part on the second line. Long-press the part on the second line: is the whole number highlighted?" ]
+    },
+    "UI-NOTEL": {
+      "title": "No phone link where only another link is expected",
+      "steps": [ "Look at the value: only the web address or e-mail address may be a link, no part of it a phone link. A tap on the part with the number must open the web address, not the dialer. Go back." ]
+    },
+    "UI-NOLINK": {
+      "title": "No link where none is expected",
+      "steps": [ "Look at the value: nothing may be underlined. Long-press the value: a single word is highlighted, as in any text." ]
+    },
+    "UI-WEB": {
+      "title": "A web link",
+      "steps": [ "Tap the underlined address. Does the browser open? Go back." ]
+    },
+    "UI-MAIL": {
+      "title": "An e-mail link",
+      "steps": [ "Is only the address underlined, and not the word in front of it? Tap it: does a mail app open? Go back without sending." ]
+    },
+    "UI-REOPEN": {
+      "title": "Reopen the entry",
+      "steps": [ "Go back to the list and open the entry again. Is it shown exactly as before?" ]
+    },
+    "UI-EDIT": {
+      "title": "Edit mode",
+      "steps": [ "Tap the pencil. In edit mode the value is a plain text field: no underline, the full text. Leave edit mode WITHOUT saving." ]
+    },
+    "UI-COPY": {
+      "title": "Copy button",
+      "steps": [ "Tap the copy button next to the value, then paste somewhere (for example into a note app). What was copied: the whole value or only a part?" ]
+    }
+  },
+  "entries": [
+    {
+      "id": "tel-url",
+      "field": "url",
+      "value": "tel:+1234567890",
+      "links": [ { "text": "+1234567890", "target": "tel:+1234567890" } ],
+      "scenarios": [ "UI-LINK", "UI-TAP", "UI-LONGPRESS", "UI-CALL", "UI-REOPEN" ],
+      "expected": "Only the number after the prefix is underlined, the prefix is plain. A tap and Call lead to the dialpad with the number only."
+    },
+    {
+      "id": "tel-custom",
+      "field": "custom",
+      "value": "tel:+1234567890",
+      "links": [],
+      "scenarios": [ "UI-NOLINK" ],
+      "expected": "A custom field has no link in the first iterations."
+    },
+    {
+      "id": "tel-notes",
+      "field": "notes",
+      "value": "tel:+1234567890",
+      "links": [],
+      "scenarios": [ "UI-NOLINK" ],
+      "expected": "The Notes field has no link in the first iterations."
+    },
+    {
+      "id": "ctl-https",
+      "field": "url",
+      "value": "https://example.com",
+      "links": [ { "text": "https://example.com", "target": "https://example.com" } ],
+      "scenarios": [ "UI-WEB", "UI-LONGPRESS", "UI-REOPEN" ],
+      "expected": "The whole address is underlined; a long-press highlights the whole address."
+    },
+    {
+      "id": "ctl-mailto",
+      "field": "url",
+      "value": "mailto:a@example.com",
+      "links": [ { "text": "a@example.com", "target": "mailto:a@example.com" } ],
+      "scenarios": [ "UI-MAIL", "UI-LONGPRESS" ],
+      "expected": "Only the address after mailto: is underlined; a long-press highlights only the address."
+    },
+    {
+      "id": "ctl-bare",
+      "field": "notes",
+      "value": "0301234567",
+      "links": [],
+      "scenarios": [ "UI-NOLINK" ],
+      "expected": "A bare number has no link."
+    },
+    {
+      "id": "ui-longpress-start",
+      "field": "url",
+      "value": "tel:+49301234567 is the number to call, this text only makes the line longer",
+      "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
+      "scenarios": [ "UI-LINK", "UI-LONGPRESS", "UI-CALL" ],
+      "expected": "The number is at the start of the text. Only the number is underlined and highlighted."
+    },
+    {
+      "id": "ui-longpress-middle",
+      "field": "url",
+      "value": "this text comes first, then tel:+49301234567 and then more text follows",
+      "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
+      "scenarios": [ "UI-LINK", "UI-LONGPRESS", "UI-CALL" ],
+      "expected": "The number is in the middle of the text. Only the number is underlined and highlighted."
+    },
+    {
+      "id": "ui-longpress-end",
+      "field": "url",
+      "value": "a text that ends with the number: tel:+49301234567",
+      "links": [ { "text": "+49301234567", "target": "tel:+49301234567" } ],
+      "scenarios": [ "UI-LINK", "UI-LONGPRESS", "UI-CALL" ],
+      "expected": "The number is at the end of the text. Only the number is underlined and highlighted."
+    },
+    {
+      "id": "ui-two-numbers",
+      "field": "url",
+      "valueFrom": "works-two-numbers",
+      "scenarios": [ "UI-LINK", "UI-LONGPRESS-TWO" ],
+      "expected": "Both numbers are underlined, each on its own; a long-press highlights only the one touched."
+    },
+    {
+      "id": "ui-wrapped-number",
+      "field": "url",
+      "value": "tel:+49-30-123-4567-8901-2345-6789-0123-4567-8901-2345-6789-0123-4567",
+      "links": [ { "text": "+49-30-123-4567-8901-2345-6789-0123-4567-8901-2345-6789-0123-4567", "target": "tel:+49-30-123-4567-8901-2345-6789-0123-4567-8901-2345-6789-0123-4567" } ],
+      "scenarios": [ "UI-LINK", "UI-WRAP" ],
+      "expected": "The number wraps over two lines, the underline is continuous, a tap or a long-press on the second line works on the whole number."
+    },
+    {
+      "id": "ui-edit-and-copy",
+      "field": "url",
+      "value": "tel:+1234567890",
+      "links": [ { "text": "+1234567890", "target": "tel:+1234567890" } ],
+      "scenarios": [ "UI-EDIT", "UI-COPY" ],
+      "expected": "Edit mode shows the plain text, no link. The copy button copies the whole value including the prefix."
+    },
+    { "id": "works-in-sentence", "field": "url", "valueFrom": "works-in-sentence" },
+    { "id": "works-next-to-web-link", "field": "url", "valueFrom": "works-next-to-web-link" },
+    { "id": "works-next-to-email", "field": "url", "valueFrom": "works-next-to-email" },
+    { "id": "works-adjacent-numbers", "field": "url", "valueFrom": "works-adjacent-numbers" },
+    { "id": "fails-space-after-prefix", "field": "url", "valueFrom": "fails-space-after-prefix" },
+    { "id": "fails-local-number", "field": "url", "valueFrom": "fails-local-number" },
+    { "id": "fails-bidi-control-character", "field": "url", "valueFrom": "fails-bidi-control-character" },
+    { "id": "fails-word-ending-in-tel-xtel", "field": "url", "valueFrom": "fails-word-ending-in-tel-xtel" },
+    { "id": "works-newline-cuts-number", "field": "url", "valueFrom": "works-newline-cuts-number" },
+    { "id": "observed-parameter-isub", "field": "url", "valueFrom": "observed-parameter-isub" },
+    { "id": "observed-parameters-ext-then-isub", "field": "url", "valueFrom": "observed-parameters-ext-then-isub" },
+    { "id": "observed-local-number-with-phone-context-domain", "field": "url", "valueFrom": "observed-local-number-with-phone-context-domain" },
+    { "id": "observed-local-number-with-phone-context-prefix", "field": "url", "valueFrom": "observed-local-number-with-phone-context-prefix" },
+    { "id": "works-parameter-ends-number", "field": "url", "valueFrom": "works-parameter-ends-number" },
+    { "id": "fails-non-latin-letter-before-prefix", "field": "url", "valueFrom": "fails-non-latin-letter-before-prefix" },
+    { "id": "works-number-after-web-link", "field": "url", "valueFrom": "works-number-after-web-link" },
+    { "id": "observed-digit-before-prefix", "field": "url", "valueFrom": "observed-digit-before-prefix" },
+    {
+      "id": "works-minimal",
+      "field": "url",
+      "valueFrom": "works-minimal",
+      "scenarios": [ "UI-LINK", "UI-LONGPRESS", "UI-CALL" ],
+      "expected": "Only +1 is underlined. A long-press highlights only +1, not tel:. The toolbar offers Call, and Call gives the dialer +1."
+    },
+    { "id": "works-capitals", "field": "url", "valueFrom": "works-capitals" },
+    { "id": "works-trailing-dot", "field": "url", "valueFrom": "works-trailing-dot" },
+    { "id": "works-closing-parenthesis-after-digits", "field": "url", "valueFrom": "works-closing-parenthesis-after-digits" },
+    { "id": "fails-abbreviation-with-space", "field": "url", "valueFrom": "fails-abbreviation-with-space" },
+    { "id": "fails-plus-leading-zero-without-prefix", "field": "url", "valueFrom": "fails-plus-leading-zero-without-prefix" },
+    { "id": "fails-arabic-indic-digits", "field": "url", "valueFrom": "fails-arabic-indic-digits" },
+    { "id": "fails-fullwidth-plus", "field": "url", "valueFrom": "fails-fullwidth-plus" },
+    { "id": "fails-percent-encoded-plus", "field": "url", "valueFrom": "fails-percent-encoded-plus" },
+    { "id": "works-country-code-zero", "field": "url", "valueFrom": "works-country-code-zero" },
+    { "id": "fails-word-ending-in-tel-hotel", "field": "url", "valueFrom": "fails-word-ending-in-tel-hotel" },
+    { "id": "fails-word-ending-in-tel-hotel-rating", "field": "url", "valueFrom": "fails-word-ending-in-tel-hotel-rating" },
+    { "id": "fails-word-ending-in-tel-titel", "field": "url", "valueFrom": "fails-word-ending-in-tel-titel" },
+    { "id": "fails-word-ending-in-tel-drittel", "field": "url", "valueFrom": "fails-word-ending-in-tel-drittel" },
+    { "id": "works-web-address-with-tel-in-path", "field": "url", "valueFrom": "works-web-address-with-tel-in-path" },
+    { "id": "observed-format-bracketed-zero", "field": "url", "valueFrom": "observed-format-bracketed-zero" },
+    { "id": "observed-format-us-brackets", "field": "url", "valueFrom": "observed-format-us-brackets" },
+    { "id": "observed-no-break-space-inside-number", "field": "url", "valueFrom": "observed-no-break-space-inside-number" },
+    { "id": "observed-bidi-embedding-after-number", "field": "url", "valueFrom": "observed-bidi-embedding-after-number" },
+    { "id": "observed-bidi-isolate-inside-number", "field": "url", "valueFrom": "observed-bidi-isolate-inside-number" },
+    { "id": "works-web-address-with-word-ending-in-tel-in-path", "field": "url", "valueFrom": "works-web-address-with-word-ending-in-tel-in-path" }
+  ]
+}

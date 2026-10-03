@@ -12,6 +12,10 @@ dry:
 populate:
     uv run python populate.py {{db}}
 
+# Check that spec, case file and database agree
+align:
+    uv run python check_alignment.py {{db}}
+
 # Compare the stored header hash with the real one
 check:
     uv run python check_headerhash.py {{db}}

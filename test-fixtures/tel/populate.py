@@ -1,7 +1,8 @@
-"""Idempotently populate the tel: test fixture database.
+"""Idempotently populate the tel: test fixture database from fixture-spec.json.
 
 Re-running makes no change (and does not rewrite the file) once the
-database matches SPEC. Entries are matched by title.
+database matches the spec. Entries are matched by title; entries that are
+not in the spec are removed.
 
     uv run python populate.py kp-test-tel.kdbx --dry
     uv run python populate.py kp-test-tel.kdbx
@@ -12,17 +13,9 @@ import sys
 
 from pykeepass import PyKeePass
 
-PASSWORD = "test123"  # documented, non-secret test password
+import fixture_spec
 
-# title -> desired url / notes / custom (advanced) fields
-SPEC = {
-    "tel-url": {"url": "tel:+1234567890", "notes": "", "custom": {}},
-    "tel-custom": {"url": "", "notes": "", "custom": {"phone": "tel:+1234567890"}},
-    "tel-notes": {"url": "", "notes": "tel:+1234567890", "custom": {}},
-    "ctl-https": {"url": "https://example.com", "notes": "", "custom": {}},
-    "ctl-mailto": {"url": "mailto:a@example.com", "notes": "", "custom": {}},
-    "ctl-bare": {"url": "", "notes": "0301234567", "custom": {}},
-}
+PASSWORD = "test123"  # documented, non-secret test password
 
 
 def reconcile(kp: PyKeePass, title: str, want: dict, dry: bool) -> bool:
@@ -36,22 +29,21 @@ def reconcile(kp: PyKeePass, title: str, want: dict, dry: bool) -> bool:
             entry = kp.add_entry(
                 kp.root_group, title, "", PASSWORD, url=want["url"] or None
             )
-    else:
-        if (entry.url or "") != want["url"]:
-            changes.append(f"url {entry.url!r} -> {want['url']!r}")
-            if not dry:
-                entry.url = want["url"]
+    elif (entry.url or "") != want["url"]:
+        changes.append("url")
+        if not dry:
+            entry.url = want["url"]
 
     if entry is not None:
         if (entry.notes or "") != want["notes"]:
-            changes.append(f"notes {entry.notes!r} -> {want['notes']!r}")
+            changes.append("notes")
             if not dry:
                 entry.notes = want["notes"]
 
         have = dict(entry.custom_properties)
         for key, value in want["custom"].items():
             if have.get(key) != value:
-                changes.append(f"custom[{key}] {have.get(key)!r} -> {value!r}")
+                changes.append(f"custom[{key}]")
                 if not dry:
                     entry.set_custom_property(key, value)
         for key in set(have) - set(want["custom"]):
@@ -59,14 +51,22 @@ def reconcile(kp: PyKeePass, title: str, want: dict, dry: bool) -> bool:
             if not dry:
                 entry.delete_custom_property(key)
     else:
-        # dry run for a new entry: report what it would carry
-        for key, value in want["custom"].items():
-            changes.append(f"custom[{key}] = {value!r}")
-        if want["notes"]:
-            changes.append(f"notes = {want['notes']!r}")
+        changes.append("with url, notes and custom fields")
 
-    print(f"{title:12} {'; '.join(changes) if changes else 'ok (no change)'}")
+    print(f"{title:42} {'; '.join(changes) if changes else 'ok (no change)'}")
     return bool(changes)
+
+
+def remove_stale(kp: PyKeePass, titles: set[str], dry: bool) -> bool:
+    changed = False
+    # only the entries of the root group: the KeePassDX templates live in their own group
+    for entry in list(kp.root_group.entries):
+        if entry.title not in titles:
+            print(f"{entry.title:42} remove (not in the spec)")
+            if not dry:
+                kp.delete_entry(entry)
+            changed = True
+    return changed
 
 
 def clear_header_hash(kp: PyKeePass, dry: bool) -> bool:
@@ -79,9 +79,9 @@ def clear_header_hash(kp: PyKeePass, dry: bool) -> bool:
     """
     element = kp.tree.find("Meta/HeaderHash")
     if element is None or not (element.text or ""):
-        print(f"{'HeaderHash':12} ok (already empty)")
+        print(f"{'HeaderHash':42} ok (already empty)")
         return False
-    print(f"{'HeaderHash':12} clear (stale after save)")
+    print(f"{'HeaderHash':42} clear (stale after save)")
     if not dry:
         element.text = ""
     return True
@@ -94,11 +94,17 @@ def main() -> int:
     ap.add_argument("--dry", action="store_true", help="print plan, write nothing")
     args = ap.parse_args()
 
+    spec = fixture_spec.load_spec()
+    cases = fixture_spec.load_cases(spec)
+    want = fixture_spec.wanted(spec, cases)
+
     kp = PyKeePass(args.database, password=args.password)
     print(f"opened {args.database} (KDBX {kp.version[0]}.{kp.version[1]}), "
-          f"{len(kp.entries)} entries")
+          f"{len(kp.entries)} entries, spec has {len(want)}")
 
-    changed = [reconcile(kp, t, w, args.dry) for t, w in SPEC.items()]
+    changed = [reconcile(kp, t, w, args.dry) for t, w in want.items()]
+    changed.append(remove_stale(kp, set(want), args.dry))
+    # a save regenerates the header, so the hash is cleared after any change
     changed.append(clear_header_hash(kp, args.dry))
 
     if not any(changed):
@@ -106,7 +112,12 @@ def main() -> int:
     elif args.dry:
         print("dry run: nothing written")
     else:
+        # entries changed above leave Meta/HeaderHash stale again on save
         kp.save()
+        element = kp.tree.find("Meta/HeaderHash")
+        if element is not None and (element.text or ""):
+            element.text = ""
+            kp.save()
         print("saved")
     return 0
 
