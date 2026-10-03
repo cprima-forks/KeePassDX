@@ -316,13 +316,27 @@ class LabActivity : Activity() {
             targets.forEachIndexed { number, case ->
                 val value = data.valueOf(case)
                 val link = onMain { Probes.links(this, case, value, recorder) }
-                Probes.classifier(this, case, value, link, recorder)
-                Probes.handlers(this, case, value, link, recorder)
-                runOnUiThread { findViewById<TextView>(R.id.linklab_position).text = "${number + 1} / ${targets.size}" }
+                val entry = Shown(link)
+                entry.classifier = Probes.classifier(this, case, value, link, recorder)
+                entry.handlers = Probes.handlers(this, case, value, link, recorder)
+                shown[case.id] = entry
+                runOnUiThread {
+                    index = data.cases.indexOfFirst { it.id == case.id }
+                    render(case, entry)
+                    findViewById<TextView>(R.id.linklab_position).text = "${number + 1} / ${targets.size}"
+                    findViewById<TextView>(R.id.linklab_case_id).text = case.id
+                    findViewById<TextView>(R.id.linklab_requirements).text =
+                        case.requirements.joinToString(" · ") + "  ·  " + case.level
+                    findViewById<TextView>(R.id.linklab_stored).text = visible(value.text.take(300))
+                    findViewById<TextView>(R.id.linklab_stored_note).text = "${value.id} · ${value.text.length} characters"
+                }
             }
             val file = save()
             Log.i(TAG, "LINKLAB_DONE n=${targets.size} file=${file.path}")
-            runOnUiThread { finish() }
+            runOnUiThread {
+                findViewById<TextView>(R.id.linklab_title).text = "Batch done: ${targets.size} cases, ${file.name}"
+                // Stays open for a person to read; a script ends it with --es action exit
+            }
         }
     }
 

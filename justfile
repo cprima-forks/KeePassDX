@@ -6,6 +6,7 @@ set dotenv-path := "cprima-fork/tools/.env"
 set dotenv-load := true
 set dotenv-override := true
 
+mod cprima 'cprima-fork'
 mod fork 'cprima-fork/tools'
 mod fixture 'cprima-fork/test-fixtures/tel'
 
