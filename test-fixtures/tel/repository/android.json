@@ -1,0 +1,101 @@
+{
+  "system": "android",
+  "kind": "platform",
+  "provenance": {
+    "type": "observed on a device",
+    "device": "Fairphone FP4",
+    "android": "13",
+    "date": "2026-10-02",
+    "note": "The platform and its system apps are not in the app source. These locators were read from screen dumps on the device named here; another Android version or phone maker may differ, which the live check (not yet written) is for."
+  },
+  "screens": {
+    "dialog": {
+      "note": "An AlertDialog, from the app or from another app. The plain dump holds only the dialog while it is showing.",
+      "elements": {
+        "panel": {
+          "id": "android:id/content",
+          "children": {
+            "title": { "id": "android:id/alertTitle" },
+            "message": { "id": "android:id/message" },
+            "positive": { "id": "android:id/button1" },
+            "negative": { "id": "android:id/button2" },
+            "neutral": { "id": "android:id/button3" }
+          }
+        }
+      }
+    },
+    "selection_toolbar": {
+      "note": "The floating toolbar of a text selection (Call, Copy, Share, Select all). It is a separate window: only `uiautomator dump --windows` shows it. Its actions come from the text classifier, so they depend on the Android version and the phone maker.",
+      "elements": {
+        "item": {
+          "id": "android:id/floating_toolbar_menu_item_text",
+          "children": {}
+        },
+        "call": { "id": "android:id/floating_toolbar_menu_item_text", "text": "Call", "note": "offered by the text classifier when it takes the selection for a phone number" },
+        "email": { "id": "android:id/floating_toolbar_menu_item_text", "text": "Email", "note": "offered for an e-mail address" },
+        "open": { "id": "android:id/floating_toolbar_menu_item_text", "text": "Open", "note": "offered for a web address" },
+        "copy": { "id": "android:id/floating_toolbar_menu_item_text", "text": "Copy" },
+        "share": { "id": "android:id/floating_toolbar_menu_item_text", "text": "Share", "note": "opens the share sheet, which shows the exact selected text" },
+        "select_all": { "id": "android:id/floating_toolbar_menu_item_text", "text": "Select all" },
+        "overflow": { "id": "android:id/overflow" }
+      }
+    },
+    "status_bar": {
+      "elements": {
+        "clock": { "id": "com.android.systemui:id/clock" }
+      }
+    },
+    "share_sheet": {
+      "note": "Android's share sheet (ChooserActivity). It shows the shared text, and it lists contacts: it must never be saved as a picture.",
+      "elements": {
+        "preview_text": { "id": "android:id/content_preview_text" }
+      }
+    },
+    "resolver": {
+      "note": "Android's 'Open with' chooser (window android/com.android.internal.app.ResolverActivity). It appears when a tap on a tel: link finds more than one app that can handle it and none is the default. Unlike the share sheet it lists apps, not contacts. Each row has the app's label and a second line (the Phone app says Dialpad). Read from a dump of the FP4 on 2026-10-02: Phone, Linphone, ChatLaunch, OpenContacts, Zoom.",
+      "elements": {
+        "title": { "id": "android:id/title", "text": "Open with" },
+        "tab_personal": { "text": "Personal", "desc": "Personal view", "class": "Button", "note": "a work profile adds the second tab" },
+        "tab_work": { "text": "Work", "desc": "Work view", "class": "Button" },
+        "apps": {
+          "id": "android:id/resolver_list",
+          "kind": "list",
+          "cardinality": "0 or more",
+          "cardinality_note": "No fixed number: it depends on the phone and the apps on it. Five rows were in view on the FP4 on 2026-10-02, and the list scrolls, so the rows below are not in the dump. A script must work with fewer (a short list does not scroll) and with more (scroll to find a row, and prove the end).",
+          "children": {
+            "row": {
+              "class": "LinearLayout",
+              "clickable": true,
+              "note": "one app: a full-width, clickable LinearLayout. The label and the subtitle sit inside an inner LinearLayout that is NOT clickable, so the row is what is tapped, at its centre. The list container's `scrollable` flag says false although it scrolls: never rely on it.",
+              "identity": "label",
+              "identity_note": "a row is found and chosen by its label text",
+              "children": {
+                "icon": { "id": "android:id/icon" },
+                "label": { "id": "android:id/text1", "note": "the app's name" },
+                "subtitle": { "id": "android:id/text2", "note": "for example Dialpad; not every row has one" }
+              }
+            }
+          }
+        },
+        "button_bar": { "id": "android:id/button_bar_container", "note": "sits over the lower part of the list: a row whose bottom is below the top of this bar is covered by it and must not be tapped" },
+        "just_once": { "id": "android:id/button_once", "text": "Just once", "note": "opens the chosen app this one time and changes no setting; appears after a row is selected" },
+        "always": { "id": "android:id/button_always", "text": "Always", "neverPress": true, "note": "makes the chosen app the default for this link type: it changes the phone's settings" }
+      }
+    },
+    "picker": {
+      "note": "The system file picker (Documents UI), listing the Downloads folder.",
+      "elements": {
+        "file_title": { "id": "title", "package": "com.google.android.documentsui" },
+        "open_roots": { "desc": "Show roots", "package": "com.google.android.documentsui" }
+      }
+    },
+    "user_verification": {
+      "note": "The system prompt (BiometricPrompt, window BiometricPrompt) raised before an entry can be edited when the database has user verification on. It cannot be captured as a picture.",
+      "elements": {
+        "title": { "id": "com.android.systemui:id/title" },
+        "subtitle": { "id": "com.android.systemui:id/subtitle" },
+        "cancel_area": { "id": "com.android.systemui:id/background" }
+      }
+    }
+  }
+}

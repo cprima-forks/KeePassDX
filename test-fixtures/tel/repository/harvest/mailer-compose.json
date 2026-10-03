@@ -1,0 +1,428 @@
+{
+ "role": "mailer",
+ "screen": "compose",
+ "package": "net.thunderbird.android",
+ "launched_with": [
+  "-a",
+  "android.intent.action.SENDTO",
+  "-d",
+  "mailto:a@example.com"
+ ],
+ "device": "Fairphone FP4, Android 13",
+ "date": "2026-10-02",
+ "focus": "net.thunderbird.android/com.fsck.k9.activity.MessageCompose",
+ "candidates": [
+  {
+   "id": "net.thunderbird.android:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "net.thunderbird.android:id/coordinator_layout",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "net.thunderbird.android:id/app_bar_layout",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,0][1080,241]"
+  },
+  {
+   "id": "net.thunderbird.android:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "",
+   "text": "Compose",
+   "desc": "",
+   "class": "TextView",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[150,112][457,209]"
+  },
+  {
+   "id": "net.thunderbird.android:id/add_attachment",
+   "text": "",
+   "desc": "Add attachment",
+   "class": "Button",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[740,101][860,221]"
+  },
+  {
+   "id": "net.thunderbird.android:id/send",
+   "text": "",
+   "desc": "Send",
+   "class": "Button",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[860,101][980,221]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "ImageView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[980,101][1080,221]"
+  },
+  {
+   "id": "net.thunderbird.android:id/content_container",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,241][1080,2199]"
+  },
+  {
+   "id": "",
+   "text": "From",
+   "desc": "",
+   "class": "TextView",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[30,258][164,364]"
+  },
+  {
+   "id": "net.thunderbird.android:id/identity",
+   "text": "<redacted>",
+   "desc": "",
+   "class": "TextView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[164,251][915,371]"
+  },
+  {
+   "id": "net.thunderbird.android:id/reply_to_expander_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewAnimator",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[970,271][1050,351]"
+  },
+  {
+   "id": "net.thunderbird.android:id/reply_to_expander",
+   "text": "",
+   "desc": "Expand",
+   "class": "ImageView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[970,271][1050,351]"
+  },
+  {
+   "id": "net.thunderbird.android:id/to_wrapper",
+   "text": "",
+   "desc": "",
+   "class": "RelativeLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[30,384][1050,530]"
+  },
+  {
+   "id": "net.thunderbird.android:id/to_label",
+   "text": "To",
+   "desc": "",
+   "class": "TextView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[30,404][155,510]"
+  },
+  {
+   "id": "net.thunderbird.android:id/to",
+   "text": "<redacted>, ",
+   "desc": "",
+   "class": "AutoCompleteTextView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[155,384][975,530]"
+  },
+  {
+   "id": "net.thunderbird.android:id/recipient_expander_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewAnimator",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[970,417][1050,497]"
+  },
+  {
+   "id": "net.thunderbird.android:id/recipient_expander",
+   "text": "",
+   "desc": "Expand",
+   "class": "ImageView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[970,417][1050,497]"
+  },
+  {
+   "id": "net.thunderbird.android:id/subject",
+   "text": "Subject",
+   "desc": "",
+   "class": "EditText",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[30,533][1050,661]"
+  },
+  {
+   "id": "net.thunderbird.android:id/message_content",
+   "text": "Message text",
+   "desc": "",
+   "class": "EditText",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[0,664][1080,2199]"
+  }
+ ],
+ "matches": {
+  "to_field": {
+   "why": "UI-MAIL: the recipient that was filled in must be the link's address",
+   "found": [
+    {
+     "id": "net.thunderbird.android:id/coordinator_layout",
+     "text": "",
+     "desc": "",
+     "class": "ScrollView",
+     "package": "net.thunderbird.android",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "net.thunderbird.android:id/toolbar",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "net.thunderbird.android",
+     "clickable": false,
+     "bounds": "[0,81][1080,241]"
+    },
+    {
+     "id": "net.thunderbird.android:id/reply_to_expander_container",
+     "text": "",
+     "desc": "",
+     "class": "ViewAnimator",
+     "package": "net.thunderbird.android",
+     "clickable": false,
+     "bounds": "[970,271][1050,351]"
+    },
+    {
+     "id": "net.thunderbird.android:id/reply_to_expander",
+     "text": "",
+     "desc": "Expand",
+     "class": "ImageView",
+     "package": "net.thunderbird.android",
+     "clickable": true,
+     "bounds": "[970,271][1050,351]"
+    }
+   ],
+   "count": 9
+  },
+  "subject": {
+   "why": "to know the composer is the plain one (empty subject)",
+   "found": [
+    {
+     "id": "net.thunderbird.android:id/subject",
+     "text": "Subject",
+     "desc": "",
+     "class": "EditText",
+     "package": "net.thunderbird.android",
+     "clickable": true,
+     "bounds": "[30,533][1050,661]"
+    }
+   ],
+   "count": 1
+  },
+  "body": {
+   "why": "an empty body: nothing was pre-filled by the link",
+   "found": [
+    {
+     "id": "android:id/content",
+     "text": "",
+     "desc": "",
+     "class": "FrameLayout",
+     "package": "net.thunderbird.android",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "net.thunderbird.android:id/content_container",
+     "text": "",
+     "desc": "",
+     "class": "LinearLayout",
+     "package": "net.thunderbird.android",
+     "clickable": false,
+     "bounds": "[0,241][1080,2199]"
+    },
+    {
+     "id": "net.thunderbird.android:id/message_content",
+     "text": "Message text",
+     "desc": "",
+     "class": "EditText",
+     "package": "net.thunderbird.android",
+     "clickable": true,
+     "bounds": "[0,664][1080,2199]"
+    }
+   ],
+   "count": 3
+  },
+  "send_button": {
+   "why": "to know what is NOT to be pressed",
+   "found": [
+    {
+     "id": "net.thunderbird.android:id/send",
+     "text": "",
+     "desc": "Send",
+     "class": "Button",
+     "package": "net.thunderbird.android",
+     "clickable": true,
+     "bounds": "[860,101][980,221]"
+    }
+   ],
+   "count": 1
+  },
+  "navigate_up": {
+   "why": "to leave without a draft",
+   "found": [
+    {
+     "id": "",
+     "text": "",
+     "desc": "Navigate up",
+     "class": "ImageButton",
+     "package": "net.thunderbird.android",
+     "clickable": true,
+     "bounds": "[0,91][140,231]"
+    }
+   ],
+   "count": 1
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "net.thunderbird.android:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "net.thunderbird.android:id/app_bar_layout",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[0,0][1080,241]"
+  },
+  {
+   "id": "net.thunderbird.android:id/add_attachment",
+   "text": "",
+   "desc": "Add attachment",
+   "class": "Button",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[740,101][860,221]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "ImageView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[980,101][1080,221]"
+  },
+  {
+   "id": "net.thunderbird.android:id/identity",
+   "text": "<redacted>",
+   "desc": "",
+   "class": "TextView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[164,251][915,371]"
+  },
+  {
+   "id": "net.thunderbird.android:id/to_wrapper",
+   "text": "",
+   "desc": "",
+   "class": "RelativeLayout",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[30,384][1050,530]"
+  },
+  {
+   "id": "net.thunderbird.android:id/to_label",
+   "text": "To",
+   "desc": "",
+   "class": "TextView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[30,404][155,510]"
+  },
+  {
+   "id": "net.thunderbird.android:id/to",
+   "text": "<redacted>, ",
+   "desc": "",
+   "class": "AutoCompleteTextView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[155,384][975,530]"
+  },
+  {
+   "id": "net.thunderbird.android:id/recipient_expander_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewAnimator",
+   "package": "net.thunderbird.android",
+   "clickable": false,
+   "bounds": "[970,417][1050,497]"
+  },
+  {
+   "id": "net.thunderbird.android:id/recipient_expander",
+   "text": "",
+   "desc": "Expand",
+   "class": "ImageView",
+   "package": "net.thunderbird.android",
+   "clickable": true,
+   "bounds": "[970,417][1050,497]"
+  }
+ ]
+}

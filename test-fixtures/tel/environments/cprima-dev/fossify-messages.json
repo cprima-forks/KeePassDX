@@ -1,0 +1,26 @@
+{
+  "system": "fossify-messages",
+  "role": "sms",
+  "kind": "default-app",
+  "package": "org.fossify.messages",
+  "provenance": {
+    "type": "observed on a device",
+    "device": "Fairphone FP4",
+    "android": "13",
+    "date": "2026-10-02",
+    "note": "The default SMS app. It is closed at Initialize and End. No element is used yet: sms: links are planned, not built."
+  },
+  "screens": {
+    "thread": {
+      "activity": "ThreadActivity",
+      "note": "Harvested 2026-10-02 by harvest_ui.py after SENDTO sms:+1234567890?body=test: the ?body= part arrived in the message field.",
+      "elements": {
+        "message_body": { "id": "thread_type_message", "class": "EditText", "note": "its text is the prefilled body ('test')" },
+        "send_button": { "id": "thread_send_message", "note": "NEVER pressed: it would send an SMS." },
+        "dial_number": { "id": "dial_number", "desc": "Dial number", "note": "in the header: the number of the thread" },
+        "attachment": { "id": "thread_add_attachment" },
+        "messages": { "id": "thread_messages_list" }
+      }
+    }
+  }
+}

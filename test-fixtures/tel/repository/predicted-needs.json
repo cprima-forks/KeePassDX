@@ -1,0 +1,45 @@
+{
+  "why": "What each app has to offer the tests, written BEFORE looking at the app (2026-10-02), so that the harvest can be compared with it: what was found, what was not, and what was not predicted. Each need says which check uses it. A hint is a set of regular expressions over the id, the description, the text and the class of a screen node; any one that matches counts.",
+  "rule": "The harvest launches, reads and closes. It never taps anything: no Call, no Send, no Save.",
+  "targets": {
+    "dialer": {
+      "screen": "main",
+      "launch": ["-a", "android.intent.action.DIAL", "-d", "tel:+1234567890"],
+      "needs": [
+        { "name": "number", "why": "UI-CALL: the number the dialer was handed is compared with the link", "hint": { "class": "EditText", "id": "(input|number|digits|dialpad)" } },
+        { "name": "call_button", "why": "to know what is NOT to be pressed; the Call check never presses it", "hint": { "id": "(call|dial)", "desc": "(?i)(call|dial)" } },
+        { "name": "backspace", "why": "to leave the number in a known state", "hint": { "id": "(clear|delete|back)", "desc": "(?i)(delete|clear|backspace)" } },
+        { "name": "contacts_placeholder", "why": "the dialer shows suggestions: they must not be mistaken for the number", "hint": { "id": "(placeholder|suggest|contacts)", "text": "(?i)(no contacts|contacts)" } }
+      ]
+    },
+    "browser": {
+      "screen": "page",
+      "launch": ["-a", "android.intent.action.VIEW", "-d", "https://example.com"],
+      "needs": [
+        { "name": "address_bar", "why": "UI-WEB: the address that opened must be the link's target, not only 'the browser came to the front'", "hint": { "id": "(url|address|toolbar)", "desc": "(?i)(address|url|search)" } },
+        { "name": "page_text", "why": "the page that loaded shows what was opened (Example Domain)", "hint": { "text": "(?i)example domain" } },
+        { "name": "first_run_dialog", "why": "a first start may ask about onboarding or permissions and hide the page", "hint": { "id": "(onboarding|dialog|dismiss|close|button)", "text": "(?i)(not now|skip|dismiss|close|continue)" } }
+      ]
+    },
+    "mailer": {
+      "screen": "compose",
+      "launch": ["-a", "android.intent.action.SENDTO", "-d", "mailto:a@example.com"],
+      "needs": [
+        { "name": "to_field", "why": "UI-MAIL: the recipient that was filled in must be the link's address", "hint": { "id": "(to|recipient|address)", "desc": "(?i)(to|recipient)" } },
+        { "name": "subject", "why": "to know the composer is the plain one (empty subject)", "hint": { "id": "subject", "text": "(?i)subject" } },
+        { "name": "body", "why": "an empty body: nothing was pre-filled by the link", "hint": { "id": "(message|body|content)", "text": "(?i)message" } },
+        { "name": "send_button", "why": "to know what is NOT to be pressed", "hint": { "id": "send", "desc": "(?i)send" } },
+        { "name": "navigate_up", "why": "to leave without a draft", "hint": { "desc": "(?i)(navigate up|back|close)" } }
+      ]
+    },
+    "sms": {
+      "screen": "compose",
+      "launch": ["-a", "android.intent.action.SENDTO", "-d", "sms:+1234567890?body=test"],
+      "needs": [
+        { "name": "recipient", "why": "future sms: links: the recipient must be the number of the link", "hint": { "id": "(participant|recipient|contact|to)", "desc": "(?i)(recipient|to)" } },
+        { "name": "message_body", "why": "the ?body= part of an sms: link must be in the message", "hint": { "id": "(message|text|body|input)", "class": "EditText" } },
+        { "name": "send_button", "why": "to know what is NOT to be pressed", "hint": { "id": "send", "desc": "(?i)send" } }
+      ]
+    }
+  }
+}

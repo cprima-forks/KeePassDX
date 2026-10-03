@@ -1,0 +1,148 @@
+{
+  "system": "keepassdx",
+  "kind": "app",
+  "package": "com.kunzisoft.keepass",
+  "provenance": {
+    "type": "app source and device",
+    "checked": "inventory_ui.py --check compares every id with app/src/main/res (the generated repository/inventory-keepassdx.json); the screens marked harvested were read on the device",
+    "library": "elements marked from: library are not in the app's own source (AppCompat, Material) and are verified on the device only",
+    "harvested": { "device": "Fairphone FP4", "android": "13", "app": "4.6.0_beta01 (freeDebug)", "date": "2026-10-02", "by": "harvest_keepassdx.py: navigation only" },
+    "neverPress": "Elements with `neverPress: true` change data or leave the app's safe state. A harvest or a test locates them but never taps them."
+  },
+  "screens": {
+    "file_select": {
+      "activity": "FileDatabaseSelectActivity",
+      "elements": {
+        "known_file": { "id": "file_alias" },
+        "open_vault": { "id": "open_database_button" }
+      }
+    },
+    "credentials": {
+      "activity": "MainCredentialActivity",
+      "elements": {
+        "file_name": { "id": "filename" },
+        "read_mode": { "id": "menu_open_file_read_mode_key" },
+        "user_verification": { "id": "menu_open_file_user_verification_mode_key" },
+        "password": { "id": "password_text_view" },
+        "unlock": { "id": "activity_password_open_button" },
+        "navigate_up": { "desc": "Navigate up", "from": "library" }
+      }
+    },
+    "list": {
+      "activity": "GroupActivity",
+      "note": "harvested. The toolbar: drawer, database name, Search, Sort, More options (a popup window with Save, Merge and Reload data).",
+      "elements": {
+        "lock": { "id": "lock_button" },
+        "search_icon": { "id": "menu_search" },
+        "sort": { "id": "menu_sort", "note": "its tap did not open a dialog; the preferences file did not change" },
+        "overflow": { "desc": "More options", "class": "ImageView" },
+        "drawer_open": { "desc": "Navigation drawer open" },
+        "add_node": { "id": "add_button", "neverPress": true, "note": "adds an entry or a group" },
+        "database_name": { "id": "database_name" },
+        "breadcrumb": {
+          "id": "breadcrumb_group",
+          "children": {
+            "group_name": { "id": "group_name" },
+            "entry_count": { "id": "group_numbers" }
+          }
+        },
+        "rows": {
+          "id": "nodes_list",
+          "children": {
+            "title": { "id": "node_text" }
+          }
+        }
+      }
+    },
+    "drawer": {
+      "activity": "GroupActivity",
+      "note": "harvested: the navigation drawer of the list. Settings is here, not in the overflow.",
+      "elements": {
+        "close": { "desc": "Navigation drawer close" },
+        "header": {
+          "id": "navigation_header_container",
+          "from": "library",
+          "children": {
+            "database_name": { "id": "nav_database_name" },
+            "database_version": { "id": "nav_database_version", "note": "for example 'V2 - KDBX3.1'" },
+            "database_path": { "id": "nav_database_path", "note": "a content:// address" }
+          }
+        },
+        "settings": { "id": "menu_app_settings" },
+        "merge_from": { "id": "menu_merge_from", "neverPress": true },
+        "save_copy_to": { "id": "menu_save_copy_to", "neverPress": true },
+        "lock": { "id": "menu_lock_all" },
+        "about": { "id": "menu_about" },
+        "contribute": { "id": "menu_contribute", "note": "opens a web page" }
+      }
+    },
+    "search": {
+      "activity": "GroupActivity",
+      "elements": {
+        "field": { "id": "search_src_text", "from": "library" },
+        "clear": { "id": "search_close_btn", "from": "library", "note": "the 'x' at the right end of the field, shown when it holds text: a tap clears the text. This is how the run empties the field; it never presses Backspace or Delete. Its id and description ('Clear query') are the search view's own (AppCompat), checked on the device, not in the app's source." },
+        "count": { "id": "search_numbers", "note": "the number of results the app shows" },
+        "close": { "id": "search_close", "note": "a BACK ARROW at the left of the search bar (ic_baseline_arrow_back): it closes the search, it does not clear the text" },
+        "results": {
+          "id": "search_result",
+          "children": {
+            "title": { "id": "node_text" },
+            "path": { "id": "node_path" }
+          }
+        }
+      }
+    },
+    "entry": {
+      "activity": "EntryActivity",
+      "note": "harvested. The fields are built at run time inside template_fields_container: their labels and values are text nodes WITHOUT ids (locate by label text, see Repository.value_after_label), and every field's Copy button is an unnamed ImageButton with the description Copy, in the order of the fields.",
+      "elements": {
+        "title_bar": { "id": "toolbar_layout", "note": "its description is the entry's title" },
+        "navigate_up": { "desc": "Navigate up" },
+        "edit": { "id": "entry_edit_fab" },
+        "lock": { "id": "lock_button" },
+        "save_data": { "id": "menu_save_database", "neverPress": true },
+        "merge_data": { "id": "menu_merge_database", "neverPress": true },
+        "reload_data": { "id": "menu_reload_database", "neverPress": true },
+        "fields": {
+          "id": "template_fields_container",
+          "children": {
+            "copy_button": { "desc": "Copy", "class": "ImageButton" },
+            "show_password": { "desc": "Show password", "class": "ImageButton" }
+          }
+        }
+      }
+    },
+    "settings": {
+      "activity": "SettingsActivity",
+      "note": "harvested: the main screen and the categories App settings, Appearance, Form filling and Device unlocking. Every row is an AndroidX preference row (title, summary, icon, and for a switch a widget) inside recycler_view: the rows are located by their TITLE text. Rows seen: main: App settings, Form filling, Device unlocking, Appearance, Database settings, Security, Master key. App settings: General, Allow no master key, Delete password, Autosave database, Quick search, Keep screen on, Screenshot mode, User Verification. A category row is navigation; a row inside a category is a switch or a list and is NEVER tapped by a harvest.",
+      "elements": {
+        "rows": {
+          "id": "recycler_view",
+          "from": "library",
+          "children": {
+            "title": { "id": "title", "from": "library" },
+            "summary": { "id": "summary", "from": "library" }
+          }
+        }
+      }
+    },
+    "edit": {
+      "activity": "EntryEditActivity",
+      "note": "harvested (the entry tel-url, user verification off). Left with Discard.",
+      "elements": {
+        "text_field": { "class": "EditText" },
+        "template_selector": { "id": "entry_edit_template_selector" },
+        "template_name": { "id": "template_name" },
+        "fields": { "id": "template_fields_container" },
+        "expiration_text": { "id": "expiration_text" },
+        "expiration_checkbox": { "id": "expiration_checkbox" },
+        "navigate_up": { "desc": "Navigate up" },
+        "lock": { "id": "lock_button" },
+        "validate": { "id": "entry_edit_validate", "neverPress": true, "note": "saves" },
+        "add_attachment": { "id": "menu_add_attachment", "neverPress": true },
+        "add_otp": { "id": "menu_add_otp", "neverPress": true },
+        "add_field": { "id": "menu_add_field", "neverPress": true }
+      }
+    }
+  }
+}

@@ -1,0 +1,944 @@
+{
+ "role": "dialer",
+ "screen": "main",
+ "package": "org.fossify.phone",
+ "launched_with": [
+  "-a",
+  "android.intent.action.DIAL",
+  "-d",
+  "tel:+1234567890"
+ ],
+ "device": "Fairphone FP4, Android 13",
+ "date": "2026-10-02",
+ "focus": "org.fossify.phone/org.fossify.phone.activities.DialpadActivity",
+ "candidates": [
+  {
+   "id": "org.fossify.phone:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_appbar",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,0][1080,241]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Back",
+   "class": "ImageButton",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "",
+   "text": "Dialpad",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[150,115][379,206]"
+  },
+  {
+   "id": "org.fossify.phone:id/add_number_to_contact",
+   "text": "",
+   "desc": "Add number to contact",
+   "class": "Button",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[960,101][1080,221]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_holder",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,241][1080,2199]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_placeholder",
+   "text": "No contacts found",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,241][1080,351]"
+  },
+  {
+   "id": "org.fossify.phone:id/letter_fastscroller_thumb",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[820,751][960,1258]"
+  },
+  {
+   "id": "org.fossify.phone:id/letter_fastscroller",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[1000,751][1080,1258]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_divider",
+   "text": "",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,1258][1080,1261]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_input",
+   "text": "<redacted>",
+   "desc": "",
+   "class": "EditText",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[160,1261][920,1406]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_clear_char",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[920,1261][1040,1406]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_wrapper",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,1406][1080,2050]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_1_holder",
+   "text": "",
+   "desc": "One",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1426][357,1562]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_1",
+   "text": "1",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[174,1429][213,1511]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_2_holder",
+   "text": "",
+   "desc": "Two",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1426][703,1562]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_2",
+   "text": "2",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1429][559,1511]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_2_letters",
+   "text": "ABC",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[510,1511][569,1552]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_3_holder",
+   "text": "",
+   "desc": "Three",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1426][1050,1562]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_3",
+   "text": "3",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[867,1429][906,1511]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_3_letters",
+   "text": "DEF",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[859,1511][913,1552]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_4_holder",
+   "text": "",
+   "desc": "Four",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1582][357,1718]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_4",
+   "text": "4",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[174,1585][213,1667]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_4_letters",
+   "text": "GHI",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[169,1667][218,1708]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_5_holder",
+   "text": "",
+   "desc": "Five",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1582][703,1718]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_5",
+   "text": "5",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1585][559,1667]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_5_letters",
+   "text": "JKL",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[514,1667][566,1708]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_6_holder",
+   "text": "",
+   "desc": "Six",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1582][1050,1718]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_6",
+   "text": "6",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[867,1585][906,1667]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_6_letters",
+   "text": "MNO",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[852,1667][920,1708]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_7_holder",
+   "text": "",
+   "desc": "Seven",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1738][357,1874]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_7",
+   "text": "7",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[174,1741][213,1823]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_7_letters",
+   "text": "PQRS",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[155,1823][231,1864]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_8_holder",
+   "text": "",
+   "desc": "Eight",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1738][703,1874]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_8",
+   "text": "8",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1741][559,1823]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_8_letters",
+   "text": "TUV",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[512,1823][568,1864]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_9_holder",
+   "text": "",
+   "desc": "Nine",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1738][1050,1874]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_9",
+   "text": "9",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[867,1741][906,1823]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_9_letters",
+   "text": "WXYZ",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[845,1823][927,1864]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_asterisk_holder",
+   "text": "",
+   "desc": "Asterisk",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1894][357,2030]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_asterisk",
+   "text": "*",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[178,1921][208,2003]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_0_holder",
+   "text": "",
+   "desc": "Zero",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1894][703,2030]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_0",
+   "text": "0",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1897][559,1979]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_plus_letters",
+   "text": "+",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[531,1979][548,2020]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_hashtag_holder",
+   "text": "",
+   "desc": "Hashtag",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1894][1050,2030]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_hashtag",
+   "text": "#",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[865,1921][908,2003]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_call_button",
+   "text": "",
+   "desc": "Call number",
+   "class": "ImageView",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[455,2070][625,2199]"
+  }
+ ],
+ "matches": {
+  "number": {
+   "why": "UI-CALL: the number the dialer was handed is compared with the link",
+   "found": [
+    {
+     "id": "org.fossify.phone:id/dialpad_coordinator",
+     "text": "",
+     "desc": "",
+     "class": "ScrollView",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "org.fossify.phone:id/dialpad_appbar",
+     "text": "",
+     "desc": "",
+     "class": "LinearLayout",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,0][1080,241]"
+    },
+    {
+     "id": "org.fossify.phone:id/dialpad_toolbar",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,81][1080,241]"
+    },
+    {
+     "id": "org.fossify.phone:id/add_number_to_contact",
+     "text": "",
+     "desc": "Add number to contact",
+     "class": "Button",
+     "package": "org.fossify.phone",
+     "clickable": true,
+     "bounds": "[960,101][1080,221]"
+    }
+   ],
+   "count": 44
+  },
+  "call_button": {
+   "why": "to know what is NOT to be pressed; the Call check never presses it",
+   "found": [
+    {
+     "id": "org.fossify.phone:id/dialpad_coordinator",
+     "text": "",
+     "desc": "",
+     "class": "ScrollView",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "org.fossify.phone:id/dialpad_appbar",
+     "text": "",
+     "desc": "",
+     "class": "LinearLayout",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,0][1080,241]"
+    },
+    {
+     "id": "org.fossify.phone:id/dialpad_toolbar",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,81][1080,241]"
+    },
+    {
+     "id": "org.fossify.phone:id/dialpad_holder",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,241][1080,2199]"
+    }
+   ],
+   "count": 43
+  },
+  "backspace": {
+   "why": "to leave the number in a known state",
+   "found": [
+    {
+     "id": "org.fossify.phone:id/dialpad_clear_char",
+     "text": "",
+     "desc": "",
+     "class": "ImageView",
+     "package": "org.fossify.phone",
+     "clickable": true,
+     "bounds": "[920,1261][1040,1406]"
+    }
+   ],
+   "count": 1
+  },
+  "contacts_placeholder": {
+   "why": "the dialer shows suggestions: they must not be mistaken for the number",
+   "found": [
+    {
+     "id": "org.fossify.phone:id/dialpad_placeholder",
+     "text": "No contacts found",
+     "desc": "",
+     "class": "TextView",
+     "package": "org.fossify.phone",
+     "clickable": false,
+     "bounds": "[0,241][1080,351]"
+    }
+   ],
+   "count": 1
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "org.fossify.phone:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Back",
+   "class": "ImageButton",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "org.fossify.phone:id/letter_fastscroller_thumb",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[820,751][960,1258]"
+  },
+  {
+   "id": "org.fossify.phone:id/letter_fastscroller",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[1000,751][1080,1258]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_divider",
+   "text": "",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,1258][1080,1261]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_input",
+   "text": "<redacted>",
+   "desc": "",
+   "class": "EditText",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[160,1261][920,1406]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_wrapper",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[0,1406][1080,2050]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_1_holder",
+   "text": "",
+   "desc": "One",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1426][357,1562]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_1",
+   "text": "1",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[174,1429][213,1511]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_2_holder",
+   "text": "",
+   "desc": "Two",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1426][703,1562]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_2",
+   "text": "2",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1429][559,1511]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_2_letters",
+   "text": "ABC",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[510,1511][569,1552]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_3_holder",
+   "text": "",
+   "desc": "Three",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1426][1050,1562]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_3",
+   "text": "3",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[867,1429][906,1511]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_3_letters",
+   "text": "DEF",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[859,1511][913,1552]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_4_holder",
+   "text": "",
+   "desc": "Four",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1582][357,1718]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_4",
+   "text": "4",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[174,1585][213,1667]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_4_letters",
+   "text": "GHI",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[169,1667][218,1708]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_5_holder",
+   "text": "",
+   "desc": "Five",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1582][703,1718]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_5",
+   "text": "5",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1585][559,1667]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_5_letters",
+   "text": "JKL",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[514,1667][566,1708]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_6_holder",
+   "text": "",
+   "desc": "Six",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1582][1050,1718]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_6",
+   "text": "6",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[867,1585][906,1667]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_6_letters",
+   "text": "MNO",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[852,1667][920,1708]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_7_holder",
+   "text": "",
+   "desc": "Seven",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1738][357,1874]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_7",
+   "text": "7",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[174,1741][213,1823]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_7_letters",
+   "text": "PQRS",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[155,1823][231,1864]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_8_holder",
+   "text": "",
+   "desc": "Eight",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1738][703,1874]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_8",
+   "text": "8",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1741][559,1823]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_8_letters",
+   "text": "TUV",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[512,1823][568,1864]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_9_holder",
+   "text": "",
+   "desc": "Nine",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1738][1050,1874]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_9",
+   "text": "9",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[867,1741][906,1823]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_9_letters",
+   "text": "WXYZ",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[845,1823][927,1864]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_asterisk_holder",
+   "text": "",
+   "desc": "Asterisk",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[30,1894][357,2030]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_asterisk",
+   "text": "*",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[178,1921][208,2003]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_0_holder",
+   "text": "",
+   "desc": "Zero",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[377,1894][703,2030]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_0",
+   "text": "0",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[520,1897][559,1979]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_plus_letters",
+   "text": "+",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.phone",
+   "clickable": false,
+   "bounds": "[531,1979][548,2020]"
+  },
+  {
+   "id": "org.fossify.phone:id/dialpad_hashtag_holder",
+   "text": "",
+   "desc": "Hashtag",
+   "class": "RelativeLayout",
+   "package": "org.fossify.phone",
+   "clickable": true,
+   "bounds": "[723,1894][1050,2030]"
+  }
+ ]
+}

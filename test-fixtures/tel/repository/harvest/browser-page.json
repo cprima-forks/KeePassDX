@@ -1,0 +1,4006 @@
+{
+ "role": "browser",
+ "screen": "page",
+ "package": "org.mozilla.firefox",
+ "launched_with": [
+  "-a",
+  "android.intent.action.VIEW",
+  "-d",
+  "https://example.com"
+ ],
+ "device": "Fairphone FP4, Android 13",
+ "date": "2026-10-02",
+ "focus": "org.mozilla.firefox/org.mozilla.fenix.HomeActivity",
+ "candidates": [
+  {
+   "id": "org.mozilla.firefox:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/rootContainer",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/gestureLayout",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/browserWindow",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/browserLayout",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/swipeRefresh",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/engineView",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "",
+   "text": "Example Domain",
+   "desc": "",
+   "class": "WebView",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2120]"
+  },
+  {
+   "id": "",
+   "text": "T",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[249,423][281,487]"
+  },
+  {
+   "id": "",
+   "text": "h",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[281,423][311,487]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[311,423][323,487]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[323,423][351,487]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[351,423][364,487]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[364,423][394,487]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[394,423][425,487]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[425,423][471,487]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[471,423][500,487]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[500,423][513,487]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[513,423][543,487]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[543,423][556,487]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[556,423][569,487]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[569,423][596,487]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[596,423][610,487]"
+  },
+  {
+   "id": "",
+   "text": "f",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[610,423][628,487]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[628,423][659,487]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[659,423][677,487]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[677,423][690,487]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[690,423][719,487]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[719,423][747,487]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[747,423][775,487]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[775,423][788,487]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[788,423][801,487]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[801,423][831,487]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[144,508][174,572]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[174,508][205,572]"
+  },
+  {
+   "id": "",
+   "text": "c",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[205,508][233,572]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[233,508][262,572]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[262,508][309,572]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[309,508][337,572]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[337,508][366,572]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[366,508][384,572]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[384,508][413,572]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[413,508][430,572]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[430,508][443,572]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[443,508][474,572]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[474,508][503,572]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[503,508][516,572]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[516,508][545,572]"
+  },
+  {
+   "id": "",
+   "text": "x",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[545,508][571,572]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[571,508][600,572]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[600,508][647,572]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[647,508][677,572]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[677,508][690,572]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[690,508][718,572]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[718,508][746,572]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[746,508][759,572]"
+  },
+  {
+   "id": "",
+   "text": "w",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[759,508][799,572]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[799,508][812,572]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[812,508][829,572]"
+  },
+  {
+   "id": "",
+   "text": "h",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[829,508][859,572]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[859,508][889,572]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[889,508][918,572]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[918,508][936,572]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[150,594][179,658]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[179,594][207,658]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[207,594][236,658]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[236,594][266,658]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[266,594][279,658]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[279,594][308,658]"
+  },
+  {
+   "id": "",
+   "text": "g",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[308,594][338,658]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[338,594][351,658]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[351,594][381,658]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[381,594][409,658]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[409,594][428,658]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[428,594][474,658]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[474,594][487,658]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[487,594][515,658]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[515,594][542,658]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[542,594][555,658]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[555,594][586,658]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[586,594][615,658]"
+  },
+  {
+   "id": "",
+   "text": ".",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[615,594][629,658]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[629,594][642,658]"
+  },
+  {
+   "id": "",
+   "text": "T",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[642,594][674,658]"
+  },
+  {
+   "id": "",
+   "text": "h",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[674,594][704,658]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[704,594][716,658]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[716,594][744,658]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[744,594][757,658]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[757,594][770,658]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[770,594][798,658]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[798,594][811,658]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[811,594][840,658]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[840,594][871,658]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[871,594][888,658]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[888,594][901,658]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[901,594][930,658]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[108,679][136,743]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[136,679][164,743]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[164,679][182,743]"
+  },
+  {
+   "id": "",
+   "text": "v",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[182,679][208,743]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[208,679][221,743]"
+  },
+  {
+   "id": "",
+   "text": "c",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[221,679][249,743]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[249,679][277,743]"
+  },
+  {
+   "id": "",
+   "text": ";",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[277,679][289,743]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[289,679][302,743]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[302,679][330,743]"
+  },
+  {
+   "id": "",
+   "text": "v",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[330,679][356,743]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[356,679][386,743]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[386,679][399,743]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[399,679][429,743]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[429,679][443,743]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[443,679][460,743]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[460,679][488,743]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[488,679][501,743]"
+  },
+  {
+   "id": "",
+   "text": "y",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[501,679][527,743]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[527,679][539,743]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[539,679][569,743]"
+  },
+  {
+   "id": "",
+   "text": "g",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[569,679][599,743]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[599,679][612,743]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[612,679][642,743]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[642,679][672,743]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[672,679][685,743]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[685,679][698,743]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[698,679][716,743]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[716,679][729,743]"
+  },
+  {
+   "id": "",
+   "text": "f",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[729,679][747,743]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[747,679][778,743]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[778,679][796,743]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[796,679][809,743]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[809,679][826,743]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[826,679][855,743]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[855,679][882,743]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[882,679][900,743]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[900,679][913,743]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[913,679][942,743]"
+  },
+  {
+   "id": "",
+   "text": "g",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[942,679][972,743]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[236,764][265,828]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[265,764][295,828]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[295,764][325,828]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[325,764][338,828]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[338,764][385,828]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[385,764][415,828]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[415,764][445,828]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[445,764][458,828]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[458,764][475,828]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[475,764][505,828]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[505,764][523,828]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[523,764][536,828]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[536,764][565,828]"
+  },
+  {
+   "id": "",
+   "text": "g",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[565,764][595,828]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[595,764][609,828]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[609,764][639,828]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[639,764][668,828]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[668,764][686,828]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[686,764][716,828]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[716,764][746,828]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[746,764][774,828]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[774,764][802,828]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[802,764][830,828]"
+  },
+  {
+   "id": "",
+   "text": ".",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[830,764][844,828]"
+  },
+  {
+   "id": "",
+   "text": "هذا",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[857,896][922,987]"
+  },
+  {
+   "id": "",
+   "text": " النطاق",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[722,896][857,987]"
+  },
+  {
+   "id": "",
+   "text": " مُخصص",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[549,896][722,987]"
+  },
+  {
+   "id": "",
+   "text": " للاستخدام",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[338,896][549,987]"
+  },
+  {
+   "id": "",
+   "text": " في",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[266,896][338,987]"
+  },
+  {
+   "id": "",
+   "text": " أمثلة",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[159,896][266,987]"
+  },
+  {
+   "id": "",
+   "text": " التوثيق",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[778,981][918,1072]"
+  },
+  {
+   "id": "",
+   "text": " دون",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[687,981][778,1072]"
+  },
+  {
+   "id": "",
+   "text": " الحاجة",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[542,981][687,1072]"
+  },
+  {
+   "id": "",
+   "text": " إلى",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[467,981][542,1072]"
+  },
+  {
+   "id": "",
+   "text": " إذن.",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[373,981][467,1072]"
+  },
+  {
+   "id": "",
+   "text": " هذه",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[285,981][373,1072]"
+  },
+  {
+   "id": "",
+   "text": " ليست",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[163,981][285,1072]"
+  },
+  {
+   "id": "",
+   "text": " خدمة،",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[814,1067][934,1158]"
+  },
+  {
+   "id": "",
+   "text": " يُرجى",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[692,1067][814,1158]"
+  },
+  {
+   "id": "",
+   "text": " تجنب",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[569,1067][692,1158]"
+  },
+  {
+   "id": "",
+   "text": " الاعتماد",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[412,1067][569,1158]"
+  },
+  {
+   "id": "",
+   "text": " عليها",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[306,1067][412,1158]"
+  },
+  {
+   "id": "",
+   "text": " لأغراض",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[146,1067][306,1158]"
+  },
+  {
+   "id": "",
+   "text": " الاختبار",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[566,1152][709,1243]"
+  },
+  {
+   "id": "",
+   "text": " والمراقبة.",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[372,1152][566,1243]"
+  },
+  {
+   "id": "",
+   "text": "该",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[113,1286][167,1364]"
+  },
+  {
+   "id": "",
+   "text": "域",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[167,1286][220,1364]"
+  },
+  {
+   "id": "",
+   "text": "名",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[220,1286][273,1364]"
+  },
+  {
+   "id": "",
+   "text": "仅",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[273,1286][327,1364]"
+  },
+  {
+   "id": "",
+   "text": "用",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[327,1286][380,1364]"
+  },
+  {
+   "id": "",
+   "text": "于",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[380,1286][433,1364]"
+  },
+  {
+   "id": "",
+   "text": "文",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[433,1286][487,1364]"
+  },
+  {
+   "id": "",
+   "text": "档",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[487,1286][540,1364]"
+  },
+  {
+   "id": "",
+   "text": "示",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[540,1286][593,1364]"
+  },
+  {
+   "id": "",
+   "text": "例",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[593,1286][647,1364]"
+  },
+  {
+   "id": "",
+   "text": "，",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[647,1286][700,1364]"
+  },
+  {
+   "id": "",
+   "text": "无",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[700,1286][753,1364]"
+  },
+  {
+   "id": "",
+   "text": "需",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[753,1286][807,1364]"
+  },
+  {
+   "id": "",
+   "text": "获",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[807,1286][860,1364]"
+  },
+  {
+   "id": "",
+   "text": "得",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[860,1286][913,1364]"
+  },
+  {
+   "id": "",
+   "text": "许",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[913,1286][967,1364]"
+  },
+  {
+   "id": "",
+   "text": "可",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[113,1371][167,1449]"
+  },
+  {
+   "id": "",
+   "text": "。",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[167,1371][220,1449]"
+  },
+  {
+   "id": "",
+   "text": "这",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[220,1371][273,1449]"
+  },
+  {
+   "id": "",
+   "text": "并",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[273,1371][327,1449]"
+  },
+  {
+   "id": "",
+   "text": "非",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[327,1371][380,1449]"
+  },
+  {
+   "id": "",
+   "text": "一",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[380,1371][433,1449]"
+  },
+  {
+   "id": "",
+   "text": "项",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[433,1371][487,1449]"
+  },
+  {
+   "id": "",
+   "text": "服",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[487,1371][540,1449]"
+  },
+  {
+   "id": "",
+   "text": "务",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[540,1371][593,1449]"
+  },
+  {
+   "id": "",
+   "text": "，",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[593,1371][647,1449]"
+  },
+  {
+   "id": "",
+   "text": "请",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[647,1371][700,1449]"
+  },
+  {
+   "id": "",
+   "text": "勿",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[700,1371][753,1449]"
+  },
+  {
+   "id": "",
+   "text": "将",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[753,1371][807,1449]"
+  },
+  {
+   "id": "",
+   "text": "其",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[807,1371][860,1449]"
+  },
+  {
+   "id": "",
+   "text": "用",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[860,1371][913,1449]"
+  },
+  {
+   "id": "",
+   "text": "于",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[913,1371][967,1449]"
+  },
+  {
+   "id": "",
+   "text": "测",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[327,1456][380,1534]"
+  },
+  {
+   "id": "",
+   "text": "试",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[380,1456][433,1534]"
+  },
+  {
+   "id": "",
+   "text": "和",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[433,1456][487,1534]"
+  },
+  {
+   "id": "",
+   "text": "监",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[487,1456][540,1534]"
+  },
+  {
+   "id": "",
+   "text": "控",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[540,1456][593,1534]"
+  },
+  {
+   "id": "",
+   "text": "目",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[593,1456][647,1534]"
+  },
+  {
+   "id": "",
+   "text": "的",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[647,1456][700,1534]"
+  },
+  {
+   "id": "",
+   "text": "。",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[700,1456][753,1534]"
+  },
+  {
+   "id": "",
+   "text": "L",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[110,1607][139,1671]"
+  },
+  {
+   "id": "",
+   "text": "’",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[139,1607][149,1671]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[149,1607][179,1671]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[179,1607][206,1671]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[206,1607][235,1671]"
+  },
+  {
+   "id": "",
+   "text": "g",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[235,1607][265,1671]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[265,1607][293,1671]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[293,1607][307,1671]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[307,1607][337,1671]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[337,1607][365,1671]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[365,1607][378,1671]"
+  },
+  {
+   "id": "",
+   "text": "c",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[378,1607][406,1671]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[406,1607][434,1671]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[434,1607][447,1671]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[447,1607][478,1671]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[478,1607][508,1671]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[508,1607][555,1671]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[555,1607][584,1671]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[584,1607][597,1671]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[597,1607][626,1671]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[626,1607][654,1671]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[654,1607][668,1671]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[668,1607][696,1671]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[696,1607][723,1671]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[723,1607][741,1671]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[741,1607][754,1671]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[754,1607][772,1671]"
+  },
+  {
+   "id": "",
+   "text": "é",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[772,1607][800,1671]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[800,1607][827,1671]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[827,1607][856,1671]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[856,1607][874,1671]"
+  },
+  {
+   "id": "",
+   "text": "v",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[874,1607][900,1671]"
+  },
+  {
+   "id": "",
+   "text": "é",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[900,1607][928,1671]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[928,1607][941,1671]"
+  },
+  {
+   "id": "",
+   "text": "à",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[941,1607][970,1671]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[149,1692][179,1756]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[179,1692][208,1756]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[208,1692][235,1756]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[235,1692][248,1756]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[248,1692][277,1756]"
+  },
+  {
+   "id": "",
+   "text": "x",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[277,1692][303,1756]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[303,1692][331,1756]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[331,1692][378,1756]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[378,1692][408,1756]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[408,1692][421,1756]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[421,1692][449,1756]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[449,1692][476,1756]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[476,1692][490,1756]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[490,1692][520,1756]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[520,1692][548,1756]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[548,1692][561,1756]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[561,1692][591,1756]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[591,1692][622,1756]"
+  },
+  {
+   "id": "",
+   "text": "c",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[622,1692][650,1756]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[650,1692][679,1756]"
+  },
+  {
+   "id": "",
+   "text": "m",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[679,1692][726,1756]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[726,1692][754,1756]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[754,1692][783,1756]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[783,1692][801,1756]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[801,1692][830,1756]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[830,1692][847,1756]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[847,1692][860,1756]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[860,1692][891,1756]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[891,1692][920,1756]"
+  },
+  {
+   "id": "",
+   "text": ",",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[920,1692][931,1756]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[157,1778][184,1842]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[184,1778][213,1842]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[213,1778][243,1842]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[243,1778][270,1842]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[270,1778][283,1842]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[283,1778][312,1842]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[312,1778][342,1842]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[342,1778][359,1842]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[359,1778][389,1842]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[389,1778][407,1842]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[407,1778][420,1842]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[420,1778][447,1842]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[447,1778][476,1842]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[476,1778][494,1842]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[494,1778][507,1842]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[507,1778][537,1842]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[537,1778][567,1842]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[567,1778][580,1842]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[580,1778][610,1842]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[610,1778][627,1842]"
+  },
+  {
+   "id": "",
+   "text": "é",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[627,1778][656,1842]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[656,1778][685,1842]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[685,1778][698,1842]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[698,1778][727,1842]"
+  },
+  {
+   "id": "",
+   "text": "b",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[727,1778][757,1842]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[757,1778][770,1842]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[770,1778][798,1842]"
+  },
+  {
+   "id": "",
+   "text": ".",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[798,1778][812,1842]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[812,1778][825,1842]"
+  },
+  {
+   "id": "",
+   "text": "I",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[825,1778][840,1842]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[840,1778][853,1842]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[853,1778][866,1842]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[866,1778][895,1842]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[895,1778][923,1842]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[217,1863][244,1927]"
+  },
+  {
+   "id": "",
+   "text": "’",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[244,1863][254,1927]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[254,1863][283,1927]"
+  },
+  {
+   "id": "",
+   "text": "g",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[283,1863][313,1927]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[313,1863][326,1927]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[326,1863][343,1927]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[343,1863][356,1927]"
+  },
+  {
+   "id": "",
+   "text": "p",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[356,1863][386,1927]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[386,1863][415,1927]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[415,1863][443,1927]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[443,1863][456,1927]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[456,1863][486,1927]"
+  },
+  {
+   "id": "",
+   "text": "’",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[486,1863][497,1927]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[497,1863][526,1927]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[526,1863][556,1927]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[556,1863][569,1927]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[569,1863][596,1927]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[596,1863][625,1927]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[625,1863][643,1927]"
+  },
+  {
+   "id": "",
+   "text": "v",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[643,1863][669,1927]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[669,1863][682,1927]"
+  },
+  {
+   "id": "",
+   "text": "c",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[682,1863][710,1927]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[710,1863][738,1927]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[738,1863][751,1927]"
+  },
+  {
+   "id": "",
+   "text": ";",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[751,1863][763,1927]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[763,1863][776,1927]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[776,1863][803,1927]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[803,1863][834,1927]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[834,1863][863,1927]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[142,1948][172,2012]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[172,1948][189,2012]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[189,1948][202,2012]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[202,1948][215,2012]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[215,1948][228,2012]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[228,1948][256,2012]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[256,1948][285,2012]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[285,1948][302,2012]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[302,1948][315,2012]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[315,1948][345,2012]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[345,1948][375,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[375,1948][388,2012]"
+  },
+  {
+   "id": "",
+   "text": "à",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[388,1948][417,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[417,1948][430,2012]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[430,1948][460,2012]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[460,1948][489,2012]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[489,1948][516,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[516,1948][529,2012]"
+  },
+  {
+   "id": "",
+   "text": "f",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[529,1948][548,2012]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[548,1948][561,2012]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[561,1948][590,2012]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[590,1948][618,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[618,1948][631,2012]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[631,1948][661,2012]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[661,1948][689,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[689,1948][702,2012]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[702,1948][720,2012]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[720,1948][748,2012]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[748,1948][776,2012]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[776,1948][793,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[793,1948][806,2012]"
+  },
+  {
+   "id": "",
+   "text": "o",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[806,1948][837,2012]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[837,1948][866,2012]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[866,1948][879,2012]"
+  },
+  {
+   "id": "",
+   "text": "d",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[879,1948][909,2012]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[909,1948][938,2012]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[257,2034][285,2098]"
+  },
+  {
+   "id": "",
+   "text": "u",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[285,2034][314,2098]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[314,2034][332,2098]"
+  },
+  {
+   "id": "",
+   "text": "v",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[332,2034][358,2098]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[358,2034][386,2098]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[386,2034][399,2098]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[399,2034][412,2098]"
+  },
+  {
+   "id": "",
+   "text": "l",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[412,2034][425,2098]"
+  },
+  {
+   "id": "",
+   "text": "a",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[425,2034][454,2098]"
+  },
+  {
+   "id": "",
+   "text": "n",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[454,2034][484,2098]"
+  },
+  {
+   "id": "",
+   "text": "c",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[484,2034][511,2098]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[511,2034][540,2098]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[540,2034][553,2098]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[553,2034][581,2098]"
+  },
+  {
+   "id": "",
+   "text": "s",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[581,2034][609,2098]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[609,2034][626,2098]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[626,2034][639,2098]"
+  },
+  {
+   "id": "",
+   "text": "à",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[639,2034][668,2098]"
+  },
+  {
+   "id": "",
+   "text": " ",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[668,2034][682,2098]"
+  },
+  {
+   "id": "",
+   "text": "é",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[682,2034][710,2098]"
+  },
+  {
+   "id": "",
+   "text": "v",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[710,2034][735,2098]"
+  },
+  {
+   "id": "",
+   "text": "i",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[735,2034][748,2098]"
+  },
+  {
+   "id": "",
+   "text": "t",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[748,2034][766,2098]"
+  },
+  {
+   "id": "",
+   "text": "e",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[766,2034][794,2098]"
+  },
+  {
+   "id": "",
+   "text": "r",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[794,2034][809,2098]"
+  },
+  {
+   "id": "",
+   "text": ".",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[809,2034][823,2098]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/composable_toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,2120][1080,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Site information",
+   "class": "Button",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[20,2140][140,2199]"
+  },
+  {
+   "id": "ADDRESSBAR_URL_BOX",
+   "text": "",
+   "desc": " example.com. Search or enter address",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[140,2140][700,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "New tab",
+   "class": "Button",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[720,2140][840,2199]"
+  },
+  {
+   "id": "ADDRESSBAR_TABS_COUNTER",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[840,2140][960,2199]"
+  },
+  {
+   "id": "TabCounterTestTags.tabCounter",
+   "text": "",
+   "desc": "Non-private Tabs Open: 5. Tap to switch tabs.",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[870,2161][930,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "Button",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[960,2140][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ],
+ "matches": {
+  "address_bar": {
+   "why": "UI-WEB: the address that opened must be the link's target, not only 'the browser came to the front'",
+   "found": [
+    {
+     "id": "org.mozilla.firefox:id/composable_toolbar",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "org.mozilla.firefox",
+     "clickable": false,
+     "bounds": "[0,2120][1080,2199]"
+    },
+    {
+     "id": "ADDRESSBAR_URL_BOX",
+     "text": "",
+     "desc": " example.com. Search or enter address",
+     "class": "View",
+     "package": "org.mozilla.firefox",
+     "clickable": false,
+     "bounds": "[140,2140][700,2199]"
+    }
+   ],
+   "count": 2
+  },
+  "page_text": {
+   "why": "the page that loaded shows what was opened (Example Domain)",
+   "found": [
+    {
+     "id": "",
+     "text": "Example Domain",
+     "desc": "",
+     "class": "WebView",
+     "package": "org.mozilla.firefox",
+     "clickable": false,
+     "bounds": "[0,81][1080,2120]"
+    }
+   ],
+   "count": 1
+  },
+  "first_run_dialog": {
+   "why": "a first start may ask about onboarding or permissions and hide the page",
+   "found": [],
+   "count": 0
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "org.mozilla.firefox:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/rootContainer",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/gestureLayout",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/browserWindow",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/browserLayout",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/swipeRefresh",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "org.mozilla.firefox:id/engineView",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Site information",
+   "class": "Button",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[20,2140][140,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "New tab",
+   "class": "Button",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[720,2140][840,2199]"
+  },
+  {
+   "id": "ADDRESSBAR_TABS_COUNTER",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[840,2140][960,2199]"
+  },
+  {
+   "id": "TabCounterTestTags.tabCounter",
+   "text": "",
+   "desc": "Non-private Tabs Open: 5. Tap to switch tabs.",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[870,2161][930,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "Button",
+   "package": "org.mozilla.firefox",
+   "clickable": true,
+   "bounds": "[960,2140][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "org.mozilla.firefox",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ]
+}

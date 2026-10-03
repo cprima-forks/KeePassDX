@@ -1,0 +1,32 @@
+{
+  "system": "thunderbird",
+  "role": "mailer",
+  "kind": "default-app",
+  "package": "net.thunderbird.android",
+  "provenance": {
+    "type": "observed on a device",
+    "device": "Fairphone FP4",
+    "android": "13",
+    "date": "2026-10-02",
+    "note": "A tap on an e-mail address opens the composer with the address filled in. Leaving it asks whether to keep a draft; the test never keeps one."
+  },
+  "screens": {
+    "compose": {
+      "activity": "MessageCompose",
+      "note": "Harvested 2026-10-02 by harvest_ui.py after SENDTO mailto:a@example.com. The account address in `identity` is private and is redacted in the harvest.",
+      "elements": {
+        "to": { "id": "to", "class": "AutoCompleteTextView", "note": "its text is the recipient chips, 'a@example.com, ': UI-MAIL compares it with the link" },
+        "subject": { "id": "subject", "class": "EditText" },
+        "body": { "id": "message_content", "class": "EditText" },
+        "send_button": { "id": "send", "note": "NEVER pressed: it would send a mail." },
+        "add_attachment": { "id": "add_attachment" },
+        "identity": { "id": "identity", "note": "the sending account: private" },
+        "navigate_up": { "desc": "Navigate up" },
+        "draft_dialog": {
+          "text": "Save draft message?",
+          "note": "The dialog is matched by its text through the table of dialogs in fixture-spec.json (rule mail-draft)."
+        }
+      }
+    }
+  }
+}

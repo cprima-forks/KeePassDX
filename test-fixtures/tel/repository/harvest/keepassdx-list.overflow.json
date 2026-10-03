@@ -1,0 +1,130 @@
+{
+ "screen": "list.overflow",
+ "from": "the entry list",
+ "focus": "PopupWindow:2747ff3",
+ "date": "2026-10-02",
+ "candidates": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/content",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[580,122][1070,242]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/title",
+   "text": "Save data",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[620,147][1030,217]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/content",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[580,242][1070,362]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/title",
+   "text": "Merge data",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[620,267][1030,337]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/content",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[580,362][1070,482]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/title",
+   "text": "Reload data",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[620,387][1030,457]"
+  }
+ ],
+ "matches": {
+  "settings_item": {
+   "why": "to reach the settings, where the preconditions (screenshot mode, timeout) live",
+   "count": 0,
+   "found": []
+  },
+  "lock_all": {
+   "why": "an explicit way to lock for the Locked state",
+   "count": 0,
+   "found": []
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/content",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[580,122][1070,242]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/title",
+   "text": "Save data",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[620,147][1030,217]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/content",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[580,242][1070,362]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/title",
+   "text": "Merge data",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[620,267][1030,337]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/content",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[580,362][1070,482]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/title",
+   "text": "Reload data",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[620,387][1030,457]"
+  }
+ ]
+}

@@ -1,0 +1,75 @@
+{
+  "why": "What the tests will need from KeePassDX's own screens, written BEFORE harvesting them (2026-10-02), so that the harvest can be compared with it.",
+  "rule": "The harvest taps navigation only, from the lists below. It never taps a switch, a row inside a settings category, a Save or Validate button, Add node, or anything that changes data. A tap target that is not found stops that screen: nothing is guessed.",
+  "corrections": [
+    "First harvest, 2026-10-02: the list's More-options menu holds only Save data, Merge data and Reload data (a popup window). Settings is not there: it is menu_app_settings in the NAVIGATION DRAWER. The prediction list.overflow/settings_item and lock_all was wrong (Lock is in the drawer too: menu_lock_all).",
+    "First harvest: the entry screen has no More-options button. Save, Merge and Reload data are buttons in its toolbar (menu_save_database and so on). The screen entry.overflow was removed; the Settings path was changed to go through the drawer.",
+    "First harvest: a popup menu is a window named PopupWindow:<hash> without an activity; the table of dialogs answers it with Back (rule popup-menu).",
+    "Settings harvest: the category row is called 'App settings', not 'Application'; the other rows are 'Form filling', 'Device unlocking', 'Appearance', 'Database settings', 'Security' and 'Master key' (the last three need an open database and belong to the database, not to the app)."
+  ],
+  "screens": [
+    {
+      "id": "list.overflow",
+      "from": "the entry list",
+      "taps": [ { "desc": "More options" } ],
+      "needs": [
+        { "name": "settings_item", "why": "to reach the settings, where the preconditions (screenshot mode, timeout) live", "hint": { "text": "(?i)^settings$" } },
+        { "name": "lock_all", "why": "an explicit way to lock for the Locked state", "hint": { "text": "(?i)lock" } }
+      ]
+    },
+    {
+      "id": "list.drawer",
+      "from": "the entry list",
+      "taps": [ { "desc": "Navigation drawer open" } ],
+      "needs": [
+        { "name": "database_name", "why": "which database is open", "hint": { "id": "(database|header|name)" } },
+        { "name": "settings_entry", "why": "another way to reach the settings", "hint": { "text": "(?i)settings" } }
+      ]
+    },
+    {
+      "id": "list.sort",
+      "from": "the entry list",
+      "taps": [ { "id": "menu_sort" } ],
+      "needs": [
+        { "name": "sort_by_title", "why": "the list order depends on the sort: the fixture's file order is only the order for the default sort", "hint": { "text": "(?i)(title|name)" } }
+      ]
+    },
+    {
+      "id": "entry.view",
+      "from": "the entry tel-url, opened by search",
+      "open_entry": "tel-url",
+      "needs": [
+        { "name": "title", "why": "the entry that is open", "hint": { "desc": "tel-url", "id": "(title|name)" } },
+        { "name": "copy_button", "why": "UI-COPY: the copy button next to a field", "hint": { "desc": "(?i)copy" } },
+        { "name": "show_password", "why": "the password row exists; it must not be mistaken for the URL", "hint": { "desc": "(?i)(show|reveal)" } },
+        { "name": "url_value", "why": "the field value that is linked", "hint": { "text": "tel:" } },
+        { "name": "notes_label", "why": "the Notes field, below the URL", "hint": { "text": "^Notes$" } }
+      ]
+    },
+    {
+      "id": "entry.edit",
+      "from": "the entry tel-url, Edit pressed (user verification is off for the fixture)",
+      "open_entry": "tel-url",
+      "taps": [ { "id": "entry_edit_fab" } ],
+      "close": "discard",
+      "needs": [
+        { "name": "url_field", "why": "UI-EDIT: the plain value in edit mode", "hint": { "text": "^tel:", "class": "EditText" } },
+        { "name": "title_field", "why": "the entry's title field", "hint": { "text": "^tel-url$" } },
+        { "name": "validate", "why": "to know what is NOT pressed: it would save", "hint": { "desc": "(?i)validate" } },
+        { "name": "add_field", "why": "to know what is NOT pressed: it would add a custom field", "hint": { "desc": "(?i)add field" } }
+      ]
+    },
+    {
+      "id": "settings.main",
+      "from": "the list, the navigation drawer, Settings",
+      "taps": [ { "desc": "Navigation drawer open" }, { "id": "menu_app_settings" } ],
+      "needs": [
+        { "name": "category_application", "why": "app timeout, screenshot mode, lock settings", "hint": { "text": "(?i)application" } },
+        { "name": "category_appearance", "why": "text size, theme, monospace font", "hint": { "text": "(?i)appearance" } },
+        { "name": "category_form_filling", "why": "clipboard timeout, copy of protected fields", "hint": { "text": "(?i)form filling" } }
+      ],
+      "sub_screens": ["App settings", "Appearance", "Form filling", "Device unlocking"],
+      "sub_screens_why": "Only the category rows are tapped, to read their lists. Nothing inside a category is tapped: the rows are switches and lists."
+    }
+  ]
+}

@@ -1,0 +1,4776 @@
+{
+ "count": 548,
+ "ids": {
+  "ScrollView": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "ScrollView",
+    "text": "",
+    "view": "ScrollView"
+   },
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_password.xml",
+    "id": "ScrollView",
+    "text": "",
+    "view": "ScrollView"
+   }
+  ],
+  "activity_about_about_title": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_about_title",
+    "text": "Info",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_app_name": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_app_name",
+    "text": "@string/app_name",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_build": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_build",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_contact_title": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_contact_title",
+    "text": "Contact",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_contribution_link": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_contribution_link",
+    "text": "@string/contribution_url",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_contribution_subtitle": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_contribution_subtitle",
+    "text": "Contribution",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_contribution_text": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_contribution_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_description": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_description",
+    "text": "Android implementation of the KeePass password manager.",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_feedback_link": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_feedback_link",
+    "text": "@string/issues_url",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_feedback_subtitle": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_feedback_subtitle",
+    "text": "Feedback",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_homepage_link": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_homepage_link",
+    "text": "@string/homepage_url",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_homepage_subtitle": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_homepage_subtitle",
+    "text": "Homepage",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_icon": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "activity_about_licence_text": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_licence_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_privacy_text": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_privacy_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "activity_about_version": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "activity_about_version",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "activity_entry_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "activity_entry_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "activity_entry_edit_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "activity_entry_edit_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "activity_file_selection_coordinator_layout": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "activity_file_selection_coordinator_layout",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "activity_group_container_view": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "activity_group_container_view",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "activity_group_footer": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "activity_group_footer",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "activity_group_header": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "activity_group_header",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "activity_password_coordinator_layout": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_coordinator_layout",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "activity_password_credentials": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_credentials",
+    "text": "",
+    "view": "MainCredentialView"
+   }
+  ],
+  "activity_password_footer": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_footer",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "activity_password_info_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_info_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "activity_password_info_text": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_info_text",
+    "text": "Access to the file revoked by the file manager",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "activity_password_logotype": [
+   {
+    "desc": "About",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_logotype",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "activity_password_open_button": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "activity_password_open_button",
+    "text": "Unlock",
+    "view": "Button"
+   }
+  ],
+  "add_button": [
+   {
+    "desc": "Add node",
+    "file": "layout/view_button_add_node.xml",
+    "id": "add_button",
+    "text": "",
+    "view": "FloatingActionButton"
+   }
+  ],
+  "add_item_button": [
+   {
+    "desc": "Add item",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "add_item_button",
+    "text": "",
+    "view": "ImageButton"
+   }
+  ],
+  "add_item_container": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "add_item_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "add_node_button": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "add_node_button",
+    "text": "",
+    "view": "AddNodeButtonView"
+   }
+  ],
+  "app_bar": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "app_bar",
+    "text": "",
+    "view": "AppBarLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "app_bar",
+    "text": "",
+    "view": "AppBarLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "app_bar",
+    "text": "",
+    "view": "AppBarLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "app_bar",
+    "text": "",
+    "view": "AppBarLayout"
+   }
+  ],
+  "atLeastOne_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "atLeastOne_filter",
+    "text": "At least one character from each",
+    "view": "Chip"
+   }
+  ],
+  "autofill_app_id_icon": [
+   {
+    "desc": "About",
+    "file": "layout/item_autofill_app_id.xml",
+    "id": "autofill_app_id_icon",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "autofill_app_id_text": [
+   {
+    "desc": "",
+    "file": "layout/item_autofill_app_id.xml",
+    "id": "autofill_app_id_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "autofill_entry_icon": [
+   {
+    "desc": "Entry icon",
+    "file": "layout/item_autofill_entry.xml",
+    "id": "autofill_entry_icon",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "autofill_entry_text": [
+   {
+    "desc": "",
+    "file": "layout/item_autofill_entry.xml",
+    "id": "autofill_entry_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "autofill_web_domain_icon": [
+   {
+    "desc": "About",
+    "file": "layout/item_autofill_web_domain.xml",
+    "id": "autofill_web_domain_icon",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "autofill_web_domain_text": [
+   {
+    "desc": "",
+    "file": "layout/item_autofill_web_domain.xml",
+    "id": "autofill_web_domain_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "brackets_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "brackets_filter",
+    "text": "@string/visual_brackets",
+    "view": "Chip"
+   }
+  ],
+  "breadcrumb_group": [
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb.xml",
+    "id": "breadcrumb_group",
+    "text": "",
+    "view": "MaterialCardView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb_important.xml",
+    "id": "breadcrumb_group",
+    "text": "",
+    "view": "MaterialCardView"
+   }
+  ],
+  "breadcrumb_list": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "breadcrumb_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "card_view_hardware_key": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "card_view_hardware_key",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "card_view_key_file": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "card_view_key_file",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "card_view_master_password": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "card_view_master_password",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "card_view_otp_advanced": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "card_view_otp_advanced",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "card_view_otp_selection": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "card_view_otp_selection",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "chroma_color_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_color_picker.xml",
+    "id": "chroma_color_view",
+    "text": "",
+    "view": "ChromaColorView"
+   }
+  ],
+  "consider_chars_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "consider_chars_filter",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "consider_chars_filter_layout": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "consider_chars_filter_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "container_add_entry": [
+   {
+    "desc": "",
+    "file": "layout/view_button_add_node.xml",
+    "id": "container_add_entry",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "container_add_group": [
+   {
+    "desc": "",
+    "file": "layout/view_button_add_node.xml",
+    "id": "container_add_group",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "container_hardware_key": [
+   {
+    "desc": "",
+    "file": "layout/view_hardware_key_selection.xml",
+    "id": "container_hardware_key",
+    "text": "",
+    "view": "FrameLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "container_hardware_key",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "container_key_file": [
+   {
+    "desc": "",
+    "file": "layout/view_keyfile_selection.xml",
+    "id": "container_key_file",
+    "text": "",
+    "view": "ConstraintLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "container_key_file",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "create_database_button": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "create_database_button",
+    "text": "Create new vault",
+    "view": "Button"
+   }
+  ],
+  "credentials_information": [
+   {
+    "desc": "Credentials info",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "credentials_information",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "custom_fields_container": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "custom_fields_container",
+    "text": "",
+    "view": "SectionView"
+   }
+  ],
+  "database_color": [
+   {
+    "desc": "Database color",
+    "file": "layout/activity_group.xml",
+    "id": "database_color",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "database_modified": [
+   {
+    "desc": "Save",
+    "file": "layout/activity_group.xml",
+    "id": "database_modified",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "database_name": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "database_name",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "database_nav_view": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "database_nav_view",
+    "text": "",
+    "view": "NavigationDatabaseView"
+   }
+  ],
+  "date_time_label": [
+   {
+    "desc": "",
+    "file": "layout/view_date_time.xml",
+    "id": "date_time_label",
+    "text": "Expires",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "date_time_value": [
+   {
+    "desc": "",
+    "file": "layout/view_date_time.xml",
+    "id": "date_time_value",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "days_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "days_picker",
+    "text": "",
+    "view": "NumberPicker"
+   }
+  ],
+  "default_file_button": [
+   {
+    "desc": "Use as default database",
+    "file": "layout/item_file_info.xml",
+    "id": "default_file_button",
+    "text": "",
+    "view": "AppCompatCheckBox"
+   }
+  ],
+  "digits_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "digits_filter",
+    "text": "@string/visual_digits",
+    "view": "Chip"
+   }
+  ],
+  "drawer_layout": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "drawer_layout",
+    "text": "",
+    "view": "DrawerLayout"
+   }
+  ],
+  "duration_days_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "duration_days_picker",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "duration_hours_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "duration_hours_picker",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "duration_time_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "duration_time_picker",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "edit": [
+   {
+    "desc": "",
+    "file": "layout/fragment_color_picker.xml",
+    "id": "edit",
+    "text": "",
+    "view": "ConstraintLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "edit",
+    "text": "",
+    "view": "ConstraintLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "edit",
+    "text": "",
+    "view": "LinearLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_numbers.xml",
+    "id": "edit",
+    "text": "",
+    "view": "ConstraintLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_text.xml",
+    "id": "edit",
+    "text": "",
+    "view": "ConstraintLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_text.xml",
+    "id": "edit",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "entry_UUID_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_UUID_container",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "entry_UUID_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_UUID_label",
+    "text": "UUID",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_UUID_reference": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_UUID_reference",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_accessed_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_accessed_label",
+    "text": "Accessed",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_attachments_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_attachments_container",
+    "text": "",
+    "view": "CardView"
+   },
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "entry_attachments_container",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "entry_attachments_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_attachments_label",
+    "text": "Attachments",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "entry_attachments_label",
+    "text": "Attachments",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_attachments_list": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_attachments_list",
+    "text": "",
+    "view": "RecyclerView"
+   },
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "entry_attachments_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "entry_content": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_content",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "entry_content_tab": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_content_tab",
+    "text": "",
+    "view": "TabLayout"
+   }
+  ],
+  "entry_content_tab_advanced": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_content_tab_advanced",
+    "text": "",
+    "view": "TabItem"
+   }
+  ],
+  "entry_content_tab_main": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_content_tab_main",
+    "text": "",
+    "view": "TabItem"
+   }
+  ],
+  "entry_created": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_created",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_created_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_created_label",
+    "text": "Created",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_custom_field_delete": [
+   {
+    "desc": "Delete",
+    "file": "layout/fragment_entry_new_field.xml",
+    "id": "entry_custom_field_delete",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "entry_custom_field_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_new_field.xml",
+    "id": "entry_custom_field_label",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "entry_custom_field_label_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_new_field.xml",
+    "id": "entry_custom_field_label_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "entry_custom_field_protection": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_new_field.xml",
+    "id": "entry_custom_field_protection",
+    "text": "Protection",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "entry_edit_bottom_bar": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "entry_edit_bottom_bar",
+    "text": "",
+    "view": "ToolbarAction"
+   }
+  ],
+  "entry_edit_content": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "entry_edit_content",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "entry_edit_coordinator_layout": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "entry_edit_coordinator_layout",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "entry_edit_fab": [
+   {
+    "desc": "Edit",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_edit_fab",
+    "text": "",
+    "view": "FloatingActionButton"
+   }
+  ],
+  "entry_edit_scroll": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "entry_edit_scroll",
+    "text": "",
+    "view": "NestedScrollView"
+   }
+  ],
+  "entry_edit_template_selector": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "entry_edit_template_selector",
+    "text": "",
+    "view": "AppCompatSpinner"
+   }
+  ],
+  "entry_edit_validate": [
+   {
+    "desc": "Validate",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "entry_edit_validate",
+    "text": "",
+    "view": "FloatingActionButton"
+   }
+  ],
+  "entry_history": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_history",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "entry_history_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_history.xml",
+    "id": "entry_history_container",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "entry_history_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_history.xml",
+    "id": "entry_history_label",
+    "text": "History",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_history_last_modified": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_history.xml",
+    "id": "entry_history_last_modified",
+    "text": "Modified",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_entry_history.xml",
+    "id": "entry_history_last_modified",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_history_list": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_history.xml",
+    "id": "entry_history_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "entry_history_title": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_history.xml",
+    "id": "entry_history_title",
+    "text": "Title",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_entry_history.xml",
+    "id": "entry_history_title",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_history_username": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_history.xml",
+    "id": "entry_history_username",
+    "text": "Username",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_entry_history.xml",
+    "id": "entry_history_username",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_icon": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "entry_modified": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_modified",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_modified_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_modified_label",
+    "text": "Modified",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "entry_progress": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_progress",
+    "text": "",
+    "view": "LinearProgressIndicator"
+   }
+  ],
+  "entry_scroll": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_scroll",
+    "text": "",
+    "view": "NestedScrollView"
+   }
+  ],
+  "entry_section_advanced": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_section_advanced",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "entry_section_main": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_section_main",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "entry_tags_completion_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "entry_tags_completion_view",
+    "text": "",
+    "view": "TagsCompletionView"
+   }
+  ],
+  "entry_tags_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "entry_tags_container",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "entry_tags_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "entry_tags_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "entry_tags_list_view": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "entry_tags_list_view",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "entry_template": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry.xml",
+    "id": "entry_template",
+    "text": "",
+    "view": "TemplateView"
+   }
+  ],
+  "error_coordinator": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "error_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "error_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "error_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "excludeAmbiguous_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "excludeAmbiguous_filter",
+    "text": "Exclude ambiguous characters",
+    "view": "Chip"
+   }
+  ],
+  "expiration_checkbox": [
+   {
+    "desc": "",
+    "file": "layout/view_edit_date_time.xml",
+    "id": "expiration_checkbox",
+    "text": "",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "expiration_label": [
+   {
+    "desc": "",
+    "file": "layout/view_edit_date_time.xml",
+    "id": "expiration_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "expiration_text": [
+   {
+    "desc": "",
+    "file": "layout/view_edit_date_time.xml",
+    "id": "expiration_text",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "expires_image": [
+   {
+    "desc": "File info",
+    "file": "layout/view_date_time.xml",
+    "id": "expires_image",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "explanation_button": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "explanation_button",
+    "text": "",
+    "view": "Button"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_numbers.xml",
+    "id": "explanation_button",
+    "text": "",
+    "view": "Button"
+   }
+  ],
+  "explanation_text": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "explanation_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "explanation_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_numbers.xml",
+    "id": "explanation_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_text.xml",
+    "id": "explanation_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_explanation.xml",
+    "id": "explanation_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_text.xml",
+    "id": "explanation_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "extendedASCII_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "extendedASCII_filter",
+    "text": "@string/visual_extended",
+    "view": "Chip"
+   }
+  ],
+  "fab_add_entry": [
+   {
+    "desc": "Add entry",
+    "file": "layout/view_button_add_node.xml",
+    "id": "fab_add_entry",
+    "text": "Add entry",
+    "view": "ExtendedFloatingActionButton"
+   }
+  ],
+  "fab_add_group": [
+   {
+    "desc": "Add group",
+    "file": "layout/view_button_add_node.xml",
+    "id": "fab_add_group",
+    "text": "Add group",
+    "view": "ExtendedFloatingActionButton"
+   }
+  ],
+  "file_alias": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_alias",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "file_alias_edit": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_alias_edit",
+    "text": "",
+    "view": "AppCompatEditText"
+   }
+  ],
+  "file_alias_save": [
+   {
+    "desc": "File info",
+    "file": "layout/item_file_info.xml",
+    "id": "file_alias_save",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "file_container": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "file_container_alias_register": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_container_alias_register",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "file_container_basic_info": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_container_basic_info",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "file_delete_button": [
+   {
+    "desc": "Remove",
+    "file": "layout/item_file_info.xml",
+    "id": "file_delete_button",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "file_expand_container": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_expand_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "file_information_button": [
+   {
+    "desc": "File info",
+    "file": "layout/item_file_info.xml",
+    "id": "file_information_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "file_list": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "file_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "file_main_switcher": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_main_switcher",
+    "text": "",
+    "view": "ViewSwitcher"
+   }
+  ],
+  "file_manager_button": [
+   {
+    "desc": "",
+    "file": "layout/fragment_browser_install.xml",
+    "id": "file_manager_button",
+    "text": "File manager",
+    "view": "Button"
+   }
+  ],
+  "file_manager_install_description": [
+   {
+    "desc": "",
+    "file": "layout/fragment_browser_install.xml",
+    "id": "file_manager_install_description",
+    "text": "A file manager that accepts the ACTION_CREATE_DOCUMENT and ACTION_OPEN_DOCUMENT intent action is required to create, open, and save database files.",
+    "view": "TextView"
+   }
+  ],
+  "file_modification": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_modification",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "file_modification_container": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_modification_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "file_modification_label": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_modification_label",
+    "text": "Modified",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "file_modify_button": [
+   {
+    "desc": "Update",
+    "file": "layout/item_file_info.xml",
+    "id": "file_modify_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "file_path": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_path",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "file_selection_buttons_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "file_selection_buttons_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "file_selection_title_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "file_selection_title_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "file_selection_title_part_1": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "file_selection_title_part_1",
+    "text": "@string/app_name_part1",
+    "view": "TextView"
+   }
+  ],
+  "file_selection_title_part_2": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "file_selection_title_part_2",
+    "text": "@string/app_name_part2",
+    "view": "TextView"
+   }
+  ],
+  "file_selection_title_part_3": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "file_selection_title_part_3",
+    "text": "@string/app_name_part3",
+    "view": "TextView"
+   }
+  ],
+  "file_size": [
+   {
+    "desc": "",
+    "file": "layout/item_file_info.xml",
+    "id": "file_size",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "filename": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "filename",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "fingerprint_container": [
+   {
+    "desc": "",
+    "file": "layout/view_device_unlock.xml",
+    "id": "fingerprint_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "fragment_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_toolbar.xml",
+    "id": "fragment_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "fragment_device_unlock_container_view": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "fragment_device_unlock_container_view",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "fragment_search_container_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "fragment_search_container_view",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "group_UUID_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_UUID_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "group_UUID_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_UUID_label",
+    "text": "UUID",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_UUID_reference": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_UUID_reference",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_auto_type": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_auto_type",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_auto_type_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_auto_type_label",
+    "text": "Auto-Type",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_coordinator": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "group_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "group_created": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_created",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_created_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_created_label",
+    "text": "Created",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_edit_auto_type_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_auto_type_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "group_edit_auto_type_inherited": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_auto_type_inherited",
+    "text": "",
+    "view": "InheritedCompletionView"
+   }
+  ],
+  "group_edit_auto_type_inherited_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_auto_type_inherited_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "group_edit_auto_type_sequence": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_auto_type_sequence",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "group_edit_auto_type_sequence_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_auto_type_sequence_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "group_edit_expiration": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_expiration",
+    "text": "",
+    "view": "DateTimeEditFieldView"
+   }
+  ],
+  "group_edit_icon_button": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_icon_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "group_edit_name": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_name",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "group_edit_name_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_name_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "group_edit_note": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_note",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "group_edit_note_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_note_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "group_edit_searchable": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_searchable",
+    "text": "",
+    "view": "InheritedCompletionView"
+   }
+  ],
+  "group_edit_searchable_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_edit_searchable_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "group_expiration": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_expiration",
+    "text": "",
+    "view": "DateTimeFieldView"
+   }
+  ],
+  "group_icon": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   },
+   {
+    "desc": "Icon name",
+    "file": "layout/item_breadcrumb.xml",
+    "id": "group_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb_important.xml",
+    "id": "group_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "group_merge": [
+   {
+    "desc": "",
+    "file": "menu/database_extra.xml",
+    "id": "group_merge",
+    "text": "",
+    "view": "group"
+   }
+  ],
+  "group_meta": [
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb_important.xml",
+    "id": "group_meta",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_modified": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_modified",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_modified_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_modified_label",
+    "text": "Modified",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_name": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_name",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb.xml",
+    "id": "group_name",
+    "text": "Root",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb_important.xml",
+    "id": "group_name",
+    "text": "Root",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_note": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_note",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_note_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_note_label",
+    "text": "Notes",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_numbers": [
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb_important.xml",
+    "id": "group_numbers",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_searchable": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_searchable",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_searchable_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_searchable_label",
+    "text": "Searchable",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "group_separator": [
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb.xml",
+    "id": "group_separator",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "group_tags_completion_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_tags_completion_view",
+    "text": "",
+    "view": "TagsCompletionView"
+   }
+  ],
+  "group_tags_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group_edit.xml",
+    "id": "group_tags_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "group_tags_list_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "group_tags_list_view",
+    "text": "",
+    "view": "RecyclerView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb.xml",
+    "id": "group_tags_list_view",
+    "text": "",
+    "view": "RecyclerView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_breadcrumb_important.xml",
+    "id": "group_tags_list_view",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "guideline_buttons": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "guideline_buttons",
+    "text": "",
+    "view": "Guideline"
+   }
+  ],
+  "hardware_key_checkbox": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "hardware_key_checkbox",
+    "text": "Hardware key",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "Hardware key checkbox",
+    "file": "layout/view_main_credentials.xml",
+    "id": "hardware_key_checkbox",
+    "text": "",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "hardware_key_selection": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "hardware_key_selection",
+    "text": "",
+    "view": "HardwareKeySelectionView"
+   },
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "hardware_key_selection",
+    "text": "",
+    "view": "HardwareKeySelectionView"
+   }
+  ],
+  "history_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "history_container",
+    "text": "History",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "hours_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "hours_picker",
+    "text": "",
+    "view": "NumberPicker"
+   }
+  ],
+  "icon_container": [
+   {
+    "desc": "",
+    "file": "layout/item_icon.xml",
+    "id": "icon_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "icon_edit_image": [
+   {
+    "desc": "",
+    "file": "layout/fragment_icon_edit.xml",
+    "id": "icon_edit_image",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "icon_edit_name": [
+   {
+    "desc": "",
+    "file": "layout/fragment_icon_edit.xml",
+    "id": "icon_edit_name",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "icon_edit_name_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_icon_edit.xml",
+    "id": "icon_edit_name_container",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "icon_image": [
+   {
+    "desc": "",
+    "file": "layout/item_icon.xml",
+    "id": "icon_image",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "icon_name": [
+   {
+    "desc": "",
+    "file": "layout/item_icon.xml",
+    "id": "icon_name",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "icon_picker_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_icon_picker.xml",
+    "id": "icon_picker_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "icon_picker_coordinator": [
+   {
+    "desc": "",
+    "file": "layout/activity_icon_picker.xml",
+    "id": "icon_picker_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "icon_picker_fragment": [
+   {
+    "desc": "",
+    "file": "layout/activity_icon_picker.xml",
+    "id": "icon_picker_fragment",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "icon_picker_upload": [
+   {
+    "desc": "Validate",
+    "file": "layout/activity_icon_picker.xml",
+    "id": "icon_picker_upload",
+    "text": "",
+    "view": "FloatingActionButton"
+   }
+  ],
+  "icons_grid_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_icon_grid.xml",
+    "id": "icons_grid_view",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "ignore_chars_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "ignore_chars_filter",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "ignore_chars_filter_layout": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "ignore_chars_filter_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "image_viewer_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_image_viewer.xml",
+    "id": "image_viewer_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "image_viewer_image": [
+   {
+    "desc": "Attachments",
+    "file": "layout/activity_image_viewer.xml",
+    "id": "image_viewer_image",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "image_viewer_progress": [
+   {
+    "desc": "",
+    "file": "layout/activity_image_viewer.xml",
+    "id": "image_viewer_progress",
+    "text": "",
+    "view": "ProgressBar"
+   }
+  ],
+  "input_entry_hardware_key_completion": [
+   {
+    "desc": "",
+    "file": "layout/view_hardware_key_selection.xml",
+    "id": "input_entry_hardware_key_completion",
+    "text": "",
+    "view": "AppCompatAutoCompleteTextView"
+   }
+  ],
+  "input_entry_hardware_key_layout": [
+   {
+    "desc": "",
+    "file": "layout/view_hardware_key_selection.xml",
+    "id": "input_entry_hardware_key_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "input_entry_keyfile": [
+   {
+    "desc": "",
+    "file": "layout/view_keyfile_selection.xml",
+    "id": "input_entry_keyfile",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "input_text": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "input_text",
+    "text": "",
+    "view": "EditText"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_numbers.xml",
+    "id": "input_text",
+    "text": "",
+    "view": "AppCompatEditText"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_text.xml",
+    "id": "input_text",
+    "text": "",
+    "view": "AppCompatEditText"
+   }
+  ],
+  "input_text_unit": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_numbers.xml",
+    "id": "input_text_unit",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "item_attachment_action_container": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_action_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "item_attachment_broken": [
+   {
+    "desc": "Attachments",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_broken",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "item_attachment_compression": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_compression",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "item_attachment_container": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_container",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "item_attachment_delete_button": [
+   {
+    "desc": "Remove field",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_delete_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "item_attachment_icon": [
+   {
+    "desc": "Download",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "item_attachment_info": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_info",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "item_attachment_progress": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_progress",
+    "text": "",
+    "view": "CircularProgressIndicator"
+   }
+  ],
+  "item_attachment_progress_container": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_progress_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "item_attachment_size": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_size",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "item_attachment_size_container": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_size_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "item_attachment_thumbnail": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_thumbnail",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "item_attachment_title": [
+   {
+    "desc": "",
+    "file": "layout/item_attachment.xml",
+    "id": "item_attachment_title",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "key_generator_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_key_generator.xml",
+    "id": "key_generator_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "key_generator_coordinator": [
+   {
+    "desc": "",
+    "file": "layout/activity_key_generator.xml",
+    "id": "key_generator_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "key_generator_fragment": [
+   {
+    "desc": "",
+    "file": "layout/activity_key_generator.xml",
+    "id": "key_generator_fragment",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "key_generator_validation": [
+   {
+    "desc": "Validate",
+    "file": "layout/activity_key_generator.xml",
+    "id": "key_generator_validation",
+    "text": "",
+    "view": "FloatingActionButton"
+   }
+  ],
+  "keyboard_popup_close": [
+   {
+    "desc": "Close fields",
+    "file": "layout/keyboard_popup_fields.xml",
+    "id": "keyboard_popup_close",
+    "text": "",
+    "view": "ImageButton"
+   }
+  ],
+  "keyboard_popup_field_item_name": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_popup_fields_item.xml",
+    "id": "keyboard_popup_field_item_name",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "keyboard_popup_fields_list": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_popup_fields.xml",
+    "id": "keyboard_popup_fields_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "keyfile_checkbox": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "keyfile_checkbox",
+    "text": "Keyfile",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "Keyfile checkbox",
+    "file": "layout/view_main_credentials.xml",
+    "id": "keyfile_checkbox",
+    "text": "",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "keyfile_generate": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "keyfile_generate",
+    "text": "Generate keyfile",
+    "view": "MaterialButton"
+   }
+  ],
+  "keyfile_name": [
+   {
+    "desc": "",
+    "file": "layout/view_keyfile_selection.xml",
+    "id": "keyfile_name",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "keyfile_selection": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "keyfile_selection",
+    "text": "",
+    "view": "KeyFileSelectionView"
+   },
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "keyfile_selection",
+    "text": "",
+    "view": "KeyFileSelectionView"
+   }
+  ],
+  "length": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "length",
+    "text": "",
+    "view": "EditText"
+   }
+  ],
+  "loading": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "loading",
+    "text": "",
+    "view": "ProgressBar"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "loading",
+    "text": "",
+    "view": "ProgressBar"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "loading",
+    "text": "",
+    "view": "ProgressBar"
+   }
+  ],
+  "lock_button": [
+   {
+    "desc": "Lock",
+    "file": "layout/view_button_lock.xml",
+    "id": "lock_button",
+    "text": "",
+    "view": "FloatingActionButton"
+   }
+  ],
+  "lowerCase_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "lowerCase_filter",
+    "text": "@string/visual_lowercase",
+    "view": "Chip"
+   }
+  ],
+  "magikeyboard_app_id_icon": [
+   {
+    "desc": "About",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_app_id_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "magikeyboard_container_package": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_container_package",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "magikeyboard_database_color": [
+   {
+    "desc": "Database color",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_database_color",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "magikeyboard_database_container": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_database_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "magikeyboard_database_text": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_database_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "magikeyboard_entry_container": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_entry_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "magikeyboard_entry_icon": [
+   {
+    "desc": "Entry icon",
+    "file": "layout/item_keyboard_entry.xml",
+    "id": "magikeyboard_entry_icon",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "magikeyboard_entry_list": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_entry_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "magikeyboard_entry_subtext": [
+   {
+    "desc": "",
+    "file": "layout/item_keyboard_entry.xml",
+    "id": "magikeyboard_entry_subtext",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "magikeyboard_entry_text": [
+   {
+    "desc": "",
+    "file": "layout/item_keyboard_entry.xml",
+    "id": "magikeyboard_entry_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "magikeyboard_package_text": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_package_text",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "magikeyboard_share_browser": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_share_browser",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "magikeyboard_share_browser_icon": [
+   {
+    "desc": "Share URL",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_share_browser_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "magikeyboard_share_browser_text": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_share_browser_text",
+    "text": "Share from %1$s to KeePassDX",
+    "view": "TextView"
+   }
+  ],
+  "magikeyboard_timeout_progress": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_timeout_progress",
+    "text": "",
+    "view": "ProgressBar"
+   }
+  ],
+  "magikeyboard_view": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_view",
+    "text": "",
+    "view": "KeyboardView"
+   }
+  ],
+  "magikeyboard_web_domain_icon": [
+   {
+    "desc": "About",
+    "file": "layout/keyboard_container.xml",
+    "id": "magikeyboard_web_domain_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "main_credential_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_main_credential.xml",
+    "id": "main_credential_view",
+    "text": "",
+    "view": "MainCredentialView"
+   }
+  ],
+  "menu_about": [
+   {
+    "desc": "",
+    "file": "menu/about.xml",
+    "id": "menu_about",
+    "text": "About",
+    "view": "item"
+   }
+  ],
+  "menu_add_attachment": [
+   {
+    "desc": "",
+    "file": "menu/entry_edit.xml",
+    "id": "menu_add_attachment",
+    "text": "Add attachment",
+    "view": "item"
+   }
+  ],
+  "menu_add_field": [
+   {
+    "desc": "",
+    "file": "menu/entry_edit.xml",
+    "id": "menu_add_field",
+    "text": "Add field",
+    "view": "item"
+   }
+  ],
+  "menu_add_otp": [
+   {
+    "desc": "",
+    "file": "menu/entry_edit.xml",
+    "id": "menu_add_otp",
+    "text": "Set up one-time password",
+    "view": "item"
+   }
+  ],
+  "menu_app_settings": [
+   {
+    "desc": "",
+    "file": "menu/settings.xml",
+    "id": "menu_app_settings",
+    "text": "Settings",
+    "view": "item"
+   }
+  ],
+  "menu_block_autofill": [
+   {
+    "desc": "",
+    "file": "menu/autofill.xml",
+    "id": "menu_block_autofill",
+    "text": "Block autofill",
+    "view": "item"
+   }
+  ],
+  "menu_contribute": [
+   {
+    "desc": "",
+    "file": "menu/about.xml",
+    "id": "menu_contribute",
+    "text": "Contribute",
+    "view": "item"
+   }
+  ],
+  "menu_copy": [
+   {
+    "desc": "",
+    "file": "menu/node_menu.xml",
+    "id": "menu_copy",
+    "text": "Copy",
+    "view": "item"
+   }
+  ],
+  "menu_delete": [
+   {
+    "desc": "",
+    "file": "menu/icon.xml",
+    "id": "menu_delete",
+    "text": "Delete",
+    "view": "item"
+   },
+   {
+    "desc": "",
+    "file": "menu/node_menu.xml",
+    "id": "menu_delete",
+    "text": "Delete",
+    "view": "item"
+   }
+  ],
+  "menu_delete_entry_history": [
+   {
+    "desc": "",
+    "file": "menu/entry_history.xml",
+    "id": "menu_delete_entry_history",
+    "text": "Delete history",
+    "view": "item"
+   }
+  ],
+  "menu_edit": [
+   {
+    "desc": "",
+    "file": "menu/icon.xml",
+    "id": "menu_edit",
+    "text": "Edit",
+    "view": "item"
+   },
+   {
+    "desc": "",
+    "file": "menu/node_menu.xml",
+    "id": "menu_edit",
+    "text": "Edit",
+    "view": "item"
+   }
+  ],
+  "menu_empty_recycle_bin": [
+   {
+    "desc": "",
+    "file": "menu/recycle_bin.xml",
+    "id": "menu_empty_recycle_bin",
+    "text": "Empty the recycle bin",
+    "view": "item"
+   }
+  ],
+  "menu_external_icon": [
+   {
+    "desc": "",
+    "file": "menu/icon.xml",
+    "id": "menu_external_icon",
+    "text": "External icon",
+    "view": "item"
+   }
+  ],
+  "menu_generate": [
+   {
+    "desc": "",
+    "file": "menu/key_generator.xml",
+    "id": "menu_generate",
+    "text": "Generate password",
+    "view": "item"
+   }
+  ],
+  "menu_keystore_remove_key": [
+   {
+    "desc": "",
+    "file": "menu/device_unlock.xml",
+    "id": "menu_keystore_remove_key",
+    "text": "Delete device unlock key",
+    "view": "item"
+   }
+  ],
+  "menu_lock_all": [
+   {
+    "desc": "",
+    "file": "menu/database_extra.xml",
+    "id": "menu_lock_all",
+    "text": "Lock",
+    "view": "item"
+   }
+  ],
+  "menu_merge_database": [
+   {
+    "desc": "",
+    "file": "menu/database.xml",
+    "id": "menu_merge_database",
+    "text": "Merge data",
+    "view": "item"
+   }
+  ],
+  "menu_merge_from": [
+   {
+    "desc": "",
+    "file": "menu/database_extra.xml",
+    "id": "menu_merge_from",
+    "text": "Merge from …",
+    "view": "item"
+   }
+  ],
+  "menu_move": [
+   {
+    "desc": "",
+    "file": "menu/node_menu.xml",
+    "id": "menu_move",
+    "text": "Move",
+    "view": "item"
+   }
+  ],
+  "menu_open": [
+   {
+    "desc": "",
+    "file": "menu/node_menu.xml",
+    "id": "menu_open",
+    "text": "Open",
+    "view": "item"
+   }
+  ],
+  "menu_open_file_read_mode_key": [
+   {
+    "desc": "",
+    "file": "menu/open_file.xml",
+    "id": "menu_open_file_read_mode_key",
+    "text": "Modifiable",
+    "view": "item"
+   }
+  ],
+  "menu_open_file_user_verification_mode_key": [
+   {
+    "desc": "",
+    "file": "menu/open_file.xml",
+    "id": "menu_open_file_user_verification_mode_key",
+    "text": "User Verification enabled",
+    "view": "item"
+   }
+  ],
+  "menu_paste": [
+   {
+    "desc": "",
+    "file": "menu/node_paste_menu.xml",
+    "id": "menu_paste",
+    "text": "Paste",
+    "view": "item"
+   }
+  ],
+  "menu_reload_database": [
+   {
+    "desc": "",
+    "file": "menu/database.xml",
+    "id": "menu_reload_database",
+    "text": "Reload data",
+    "view": "item"
+   }
+  ],
+  "menu_restore_entry_history": [
+   {
+    "desc": "",
+    "file": "menu/entry_history.xml",
+    "id": "menu_restore_entry_history",
+    "text": "Restore history",
+    "view": "item"
+   }
+  ],
+  "menu_save_copy_to": [
+   {
+    "desc": "",
+    "file": "menu/database_extra.xml",
+    "id": "menu_save_copy_to",
+    "text": "Save a copy to …",
+    "view": "item"
+   }
+  ],
+  "menu_save_database": [
+   {
+    "desc": "",
+    "file": "menu/database.xml",
+    "id": "menu_save_database",
+    "text": "Save data",
+    "view": "item"
+   }
+  ],
+  "menu_search": [
+   {
+    "desc": "",
+    "file": "menu/search.xml",
+    "id": "menu_search",
+    "text": "Search",
+    "view": "item"
+   }
+  ],
+  "menu_sort": [
+   {
+    "desc": "",
+    "file": "menu/tree.xml",
+    "id": "menu_sort",
+    "text": "Sort",
+    "view": "item"
+   }
+  ],
+  "minus_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "minus_filter",
+    "text": "@string/visual_minus",
+    "view": "Chip"
+   }
+  ],
+  "minutes_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "minutes_picker",
+    "text": "",
+    "view": "NumberPicker"
+   }
+  ],
+  "nav_database_color": [
+   {
+    "desc": "Database color",
+    "file": "layout/nav_header_database.xml",
+    "id": "nav_database_color",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "nav_database_icon": [
+   {
+    "desc": "Navigation header",
+    "file": "layout/nav_header_database.xml",
+    "id": "nav_database_icon",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "nav_database_modified": [
+   {
+    "desc": "Save",
+    "file": "layout/nav_header_database.xml",
+    "id": "nav_database_modified",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "nav_database_name": [
+   {
+    "desc": "",
+    "file": "layout/nav_header_database.xml",
+    "id": "nav_database_name",
+    "text": "Database",
+    "view": "TextView"
+   }
+  ],
+  "nav_database_path": [
+   {
+    "desc": "",
+    "file": "layout/nav_header_database.xml",
+    "id": "nav_database_path",
+    "text": "Path",
+    "view": "TextView"
+   }
+  ],
+  "nav_database_version": [
+   {
+    "desc": "",
+    "file": "layout/nav_header_database.xml",
+    "id": "nav_database_version",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "node_attachment_icon": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_attachment_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "node_child_numbers": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_child_numbers",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "node_container": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_container",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "node_container_info": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_container_info",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "node_icon": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "node_image_identifier": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_image_identifier",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "node_meta": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_meta",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_meta",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "node_options": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_options",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "node_otp_display": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_otp_display",
+    "text": "",
+    "view": "OtpDisplayView"
+   }
+  ],
+  "node_passkey_icon": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_passkey_icon",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "node_path": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_path",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "node_subtext": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_subtext",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "node_tags_list_view": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_tags_list_view",
+    "text": "",
+    "view": "RecyclerView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_tags_list_view",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "node_text": [
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_entry.xml",
+    "id": "node_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_list_nodes_group.xml",
+    "id": "node_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "nodes_list": [
+   {
+    "desc": "Node children",
+    "file": "layout/fragment_nodes.xml",
+    "id": "nodes_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "nodes_list_fragment_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "nodes_list_fragment_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "not_found_container": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "not_found_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "not_found_img": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "not_found_img",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "not_found_text": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "not_found_text",
+    "text": "No search results",
+    "view": "TextView"
+   }
+  ],
+  "not_referenced_fields_container": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "not_referenced_fields_container",
+    "text": "",
+    "view": "SectionView"
+   }
+  ],
+  "open_database_button": [
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "open_database_button",
+    "text": "Open existing vault",
+    "view": "Button"
+   }
+  ],
+  "otp_circular_progress": [
+   {
+    "desc": "",
+    "file": "layout/view_otp_progress.xml",
+    "id": "otp_circular_progress",
+    "text": "",
+    "view": "CircularProgressIndicator"
+   }
+  ],
+  "otp_icon": [
+   {
+    "desc": "Token",
+    "file": "layout/view_otp_display.xml",
+    "id": "otp_icon",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "otp_information": [
+   {
+    "desc": "One-time password info",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "otp_information",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "otp_progress": [
+   {
+    "desc": "",
+    "file": "layout/view_otp_display.xml",
+    "id": "otp_progress",
+    "text": "",
+    "view": "OtpProgressView"
+   }
+  ],
+  "otp_text_progress": [
+   {
+    "desc": "",
+    "file": "layout/view_otp_progress.xml",
+    "id": "otp_text_progress",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "otp_token": [
+   {
+    "desc": "",
+    "file": "layout/view_otp_display.xml",
+    "id": "otp_token",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "passphrase_character_count": [
+   {
+    "desc": "",
+    "file": "layout/view_passphrase_conditions.xml",
+    "id": "passphrase_character_count",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "passphrase_copy_button": [
+   {
+    "desc": "Copy",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_copy_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "passphrase_separator_conditions_title": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_separator_conditions_title",
+    "text": "Separator",
+    "view": "TextView"
+   }
+  ],
+  "passphrase_separator_conditions_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_separator_conditions_view",
+    "text": "",
+    "view": "PasswordConditionsView"
+   }
+  ],
+  "passphrase_separators_conditions": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_separators_conditions",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "passphrase_slider_word_count": [
+   {
+    "desc": "Password length",
+    "file": "layout/view_passphrase_conditions.xml",
+    "id": "passphrase_slider_word_count",
+    "text": "",
+    "view": "Slider"
+   }
+  ],
+  "passphrase_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_view",
+    "text": "",
+    "view": "PasswordEditView"
+   }
+  ],
+  "passphrase_word_case_selection": [
+   {
+    "desc": "",
+    "file": "layout/view_passphrase_conditions.xml",
+    "id": "passphrase_word_case_selection",
+    "text": "",
+    "view": "Spinner"
+   }
+  ],
+  "passphrase_word_count_container": [
+   {
+    "desc": "",
+    "file": "layout/view_passphrase_conditions.xml",
+    "id": "passphrase_word_count_container",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "passphrase_word_count_edit_text": [
+   {
+    "desc": "",
+    "file": "layout/view_passphrase_conditions.xml",
+    "id": "passphrase_word_count_edit_text",
+    "text": "",
+    "view": "EditText"
+   }
+  ],
+  "passphrase_words_conditions": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_words_conditions",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "passphrase_words_conditions_title": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_words_conditions_title",
+    "text": "Words",
+    "view": "TextView"
+   }
+  ],
+  "passphrase_words_conditions_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_passphrase.xml",
+    "id": "passphrase_words_conditions_view",
+    "text": "",
+    "view": "PassphraseConditionsView"
+   }
+  ],
+  "password_advanced": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "password_advanced",
+    "text": "",
+    "view": "ChipGroup"
+   }
+  ],
+  "password_checkbox": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "password_checkbox",
+    "text": "Password",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "Password checkbox",
+    "file": "layout/view_main_credentials.xml",
+    "id": "password_checkbox",
+    "text": "",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "password_conditions_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_password.xml",
+    "id": "password_conditions_view",
+    "text": "",
+    "view": "PasswordConditionsView"
+   }
+  ],
+  "password_confirmation": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "password_confirmation",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "password_copy_button": [
+   {
+    "desc": "Copy",
+    "file": "layout/fragment_generate_password.xml",
+    "id": "password_copy_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "password_edit_entropy": [
+   {
+    "desc": "",
+    "file": "layout/view_password_edit.xml",
+    "id": "password_edit_entropy",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "password_edit_input_layout": [
+   {
+    "desc": "",
+    "file": "layout/view_password_edit.xml",
+    "id": "password_edit_input_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "password_edit_strength_progress": [
+   {
+    "desc": "",
+    "file": "layout/view_password_edit.xml",
+    "id": "password_edit_strength_progress",
+    "text": "",
+    "view": "LinearProgressIndicator"
+   }
+  ],
+  "password_edit_text": [
+   {
+    "desc": "",
+    "file": "layout/view_password_edit.xml",
+    "id": "password_edit_text",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "password_filters": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "password_filters",
+    "text": "",
+    "view": "ChipGroup"
+   }
+  ],
+  "password_input_container": [
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "password_input_container",
+    "text": "",
+    "view": "RelativeLayout"
+   }
+  ],
+  "password_input_layout": [
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "password_input_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "password_repeat_input_layout": [
+   {
+    "desc": "Repeat toggle password visibility",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "password_repeat_input_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "password_text_view": [
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "password_text_view",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "password_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_generate_password.xml",
+    "id": "password_view",
+    "text": "",
+    "view": "PasswordEditView"
+   },
+   {
+    "desc": "",
+    "file": "layout/fragment_set_main_credential.xml",
+    "id": "password_view",
+    "text": "",
+    "view": "PasswordEditView"
+   }
+  ],
+  "pref_dialog_list": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "pref_dialog_list",
+    "text": "",
+    "view": "RecyclerView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_explanation.xml",
+    "id": "pref_dialog_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "pref_dialog_list_container": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_item.xml",
+    "id": "pref_dialog_list_container",
+    "text": "",
+    "view": "LinearLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_radio_item.xml",
+    "id": "pref_dialog_list_container",
+    "text": "",
+    "view": "LinearLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_removable_item.xml",
+    "id": "pref_dialog_list_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "pref_dialog_list_delete_button": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_removable_item.xml",
+    "id": "pref_dialog_list_delete_button",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "pref_dialog_list_radio": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_radio_item.xml",
+    "id": "pref_dialog_list_radio",
+    "text": "",
+    "view": "RadioButton"
+   }
+  ],
+  "pref_dialog_list_text": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_item.xml",
+    "id": "pref_dialog_list_text",
+    "text": "",
+    "view": "TextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_list_removable_item.xml",
+    "id": "pref_dialog_list_text",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "progress_dialog_bar": [
+   {
+    "desc": "",
+    "file": "layout/fragment_progress.xml",
+    "id": "progress_dialog_bar",
+    "text": "",
+    "view": "LinearProgressIndicator"
+   }
+  ],
+  "progress_dialog_cancel": [
+   {
+    "desc": "",
+    "file": "layout/fragment_progress.xml",
+    "id": "progress_dialog_cancel",
+    "text": "Cancel",
+    "view": "Button"
+   }
+  ],
+  "progress_dialog_message": [
+   {
+    "desc": "",
+    "file": "layout/fragment_progress.xml",
+    "id": "progress_dialog_message",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "progress_dialog_title": [
+   {
+    "desc": "",
+    "file": "layout/fragment_progress.xml",
+    "id": "progress_dialog_title",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "progress_dialog_warning": [
+   {
+    "desc": "",
+    "file": "layout/fragment_progress.xml",
+    "id": "progress_dialog_warning",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "screenshot_mode_banner": [
+   {
+    "desc": "",
+    "file": "layout/keyboard_container.xml",
+    "id": "screenshot_mode_banner",
+    "text": "Screenshot mode",
+    "view": "TextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/view_screenshot_mode_banner.xml",
+    "id": "screenshot_mode_banner",
+    "text": "Screenshot mode",
+    "view": "TextView"
+   }
+  ],
+  "scroll_container": [
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "scroll_container",
+    "text": "",
+    "view": "NestedScrollView"
+   }
+  ],
+  "search_advance_filters": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_advance_filters",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "search_bar": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "search_bar",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "search_buttons": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_buttons",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "search_chip_application_id": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_application_id",
+    "text": "App Id",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_case_sensitive": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_case_sensitive",
+    "text": "Case sensitive",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_current_group": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_current_group",
+    "text": "Current group",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_expires": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_expires",
+    "text": "Expired",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_group_searchable": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_group_searchable",
+    "text": "Searchable",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_note": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_note",
+    "text": "Notes",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_other": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_other",
+    "text": "Other",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_password": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_password",
+    "text": "Password",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_recycle_bin": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_recycle_bin",
+    "text": "Recycle bin",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_regex": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_regex",
+    "text": "Regular expression",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_tag": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_tag",
+    "text": "Tags",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_tag_group": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_tag_group",
+    "text": "",
+    "view": "ChipGroup"
+   }
+  ],
+  "search_chip_template": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_template",
+    "text": "Template",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_title": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_title",
+    "text": "Title",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_url": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_url",
+    "text": "URL",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_username": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_username",
+    "text": "Username",
+    "view": "Chip"
+   }
+  ],
+  "search_chip_uuid": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_chip_uuid",
+    "text": "UUID",
+    "view": "Chip"
+   }
+  ],
+  "search_close": [
+   {
+    "desc": "@android:string/cancel",
+    "file": "layout/fragment_search.xml",
+    "id": "search_close",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "search_container": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "search_content_view": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "search_content_view",
+    "text": "",
+    "view": "FragmentContainerView"
+   }
+  ],
+  "search_expand": [
+   {
+    "desc": "Search filters",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_expand",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "search_filters": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "search_filters",
+    "text": "",
+    "view": "SearchFiltersView"
+   }
+  ],
+  "search_numbers": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "search_numbers",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "search_result": [
+   {
+    "desc": "Node children",
+    "file": "layout/fragment_search.xml",
+    "id": "search_result",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "search_sort": [
+   {
+    "desc": "Sort",
+    "file": "layout/fragment_search.xml",
+    "id": "search_sort",
+    "text": "",
+    "view": "AppCompatImageView"
+   }
+  ],
+  "search_tags_container": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_tags_container",
+    "text": "",
+    "view": "ConstraintLayout"
+   }
+  ],
+  "search_tags_list": [
+   {
+    "desc": "",
+    "file": "layout/view_search_filters.xml",
+    "id": "search_tags_list",
+    "text": "",
+    "view": "RecyclerView"
+   }
+  ],
+  "search_title": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "search_title",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "search_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_search.xml",
+    "id": "search_view",
+    "text": "",
+    "view": "SearchView"
+   }
+  ],
+  "seconds_picker": [
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "seconds_picker",
+    "text": "",
+    "view": "NumberPicker"
+   }
+  ],
+  "setup_check_password_edit_text": [
+   {
+    "desc": "",
+    "file": "layout/fragment_check_database_credential.xml",
+    "id": "setup_check_password_edit_text",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "setup_check_password_input_layout": [
+   {
+    "desc": "",
+    "file": "layout/fragment_check_database_credential.xml",
+    "id": "setup_check_password_input_layout",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "setup_otp_algorithm": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_algorithm",
+    "text": "",
+    "view": "AppCompatSpinner"
+   }
+  ],
+  "setup_otp_counter": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_counter",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "setup_otp_counter_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_counter_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "setup_otp_digits": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_digits",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "setup_otp_digits_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_digits_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "setup_otp_period": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_period",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "setup_otp_period_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_period_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "setup_otp_secret": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_secret",
+    "text": "",
+    "view": "TextInputEditText"
+   }
+  ],
+  "setup_otp_secret_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_secret_label",
+    "text": "",
+    "view": "TextInputLayout"
+   }
+  ],
+  "setup_otp_token_type": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_token_type",
+    "text": "",
+    "view": "AppCompatSpinner"
+   }
+  ],
+  "setup_otp_type": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_type",
+    "text": "",
+    "view": "AppCompatSpinner"
+   }
+  ],
+  "setup_otp_type_label": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_type_label",
+    "text": "OTP type",
+    "view": "TextView"
+   }
+  ],
+  "setup_otp_type_message": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "setup_otp_type_message",
+    "text": "The existing OTP type is not recognized by this form, and its validation may no longer correctly generate the token.",
+    "view": "TextView"
+   }
+  ],
+  "slider_length": [
+   {
+    "desc": "Password length",
+    "file": "layout/view_password_conditions.xml",
+    "id": "slider_length",
+    "text": "",
+    "view": "Slider"
+   }
+  ],
+  "sort_selection_ascending": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_ascending",
+    "text": "Lowest first ↓",
+    "view": "CheckBox"
+   }
+  ],
+  "sort_selection_creation_time": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_creation_time",
+    "text": "Creation",
+    "view": "RadioButton"
+   }
+  ],
+  "sort_selection_db": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_db",
+    "text": "Natural order",
+    "view": "RadioButton"
+   }
+  ],
+  "sort_selection_groups_before": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_groups_before",
+    "text": "Groups before",
+    "view": "CheckBox"
+   }
+  ],
+  "sort_selection_last_access_time": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_last_access_time",
+    "text": "Access",
+    "view": "RadioButton"
+   }
+  ],
+  "sort_selection_last_modify_time": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_last_modify_time",
+    "text": "Modification",
+    "view": "RadioButton"
+   }
+  ],
+  "sort_selection_radio_group": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_radio_group",
+    "text": "",
+    "view": "RadioGroup"
+   }
+  ],
+  "sort_selection_recycle_bin_bottom": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_recycle_bin_bottom",
+    "text": "Recycle bin at the bottom",
+    "view": "CheckBox"
+   }
+  ],
+  "sort_selection_title": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_title",
+    "text": "Title",
+    "view": "RadioButton"
+   }
+  ],
+  "sort_selection_username": [
+   {
+    "desc": "",
+    "file": "layout/fragment_sort_selection.xml",
+    "id": "sort_selection_username",
+    "text": "Username",
+    "view": "RadioButton"
+   }
+  ],
+  "space_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "space_filter",
+    "text": "Space",
+    "view": "Chip"
+   }
+  ],
+  "special_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "special_filter",
+    "text": "@string/visual_special",
+    "view": "Chip"
+   }
+  ],
+  "special_mode_view": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry_edit.xml",
+    "id": "special_mode_view",
+    "text": "",
+    "view": "ToolbarSpecial"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "special_mode_view",
+    "text": "",
+    "view": "ToolbarSpecial"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "special_mode_view",
+    "text": "",
+    "view": "ToolbarSpecial"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "special_mode_view",
+    "text": "",
+    "view": "ToolbarSpecial"
+   }
+  ],
+  "summary": [
+   {
+    "desc": "",
+    "file": "layout/preference_category_material.xml",
+    "id": "summary",
+    "text": "",
+    "view": "TextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/preference_material.xml",
+    "id": "summary",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "switchWidget": [
+   {
+    "desc": "",
+    "file": "layout/preference_material_switch.xml",
+    "id": "switchWidget",
+    "text": "",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "switch_element": [
+   {
+    "desc": "",
+    "file": "layout/fragment_color_picker.xml",
+    "id": "switch_element",
+    "text": "Enable",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_duration.xml",
+    "id": "switch_element",
+    "text": "Enable",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_list.xml",
+    "id": "switch_element",
+    "text": "Enable",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_numbers.xml",
+    "id": "switch_element",
+    "text": "Enable",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_input_text.xml",
+    "id": "switch_element",
+    "text": "Enable",
+    "view": "MaterialSwitch"
+   },
+   {
+    "desc": "",
+    "file": "layout/pref_dialog_text.xml",
+    "id": "switch_element",
+    "text": "Enable",
+    "view": "MaterialSwitch"
+   }
+  ],
+  "tabs_layout": [
+   {
+    "desc": "",
+    "file": "layout/fragment_tabs_pagination.xml",
+    "id": "tabs_layout",
+    "text": "",
+    "view": "TabLayout"
+   }
+  ],
+  "tabs_view_pager": [
+   {
+    "desc": "",
+    "file": "layout/fragment_tabs_pagination.xml",
+    "id": "tabs_view_pager",
+    "text": "",
+    "view": "ViewPager2"
+   }
+  ],
+  "tag_name": [
+   {
+    "desc": "",
+    "file": "layout/item_tag.xml",
+    "id": "tag_name",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_tag_chip.xml",
+    "id": "tag_name",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_tag_edit.xml",
+    "id": "tag_name",
+    "text": "",
+    "view": "AppCompatTextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/item_tag_small.xml",
+    "id": "tag_name",
+    "text": "",
+    "view": "AppCompatTextView"
+   }
+  ],
+  "tag_remove": [
+   {
+    "desc": "Delete",
+    "file": "layout/item_tag_edit.xml",
+    "id": "tag_remove",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "template_background": [
+   {
+    "desc": "",
+    "file": "layout/item_template.xml",
+    "id": "template_background",
+    "text": "",
+    "view": "LinearLayoutCompat"
+   }
+  ],
+  "template_background_color": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "template_background_color",
+    "text": "",
+    "view": "View"
+   }
+  ],
+  "template_background_color_button": [
+   {
+    "desc": "Entry background color",
+    "file": "layout/view_template.xml",
+    "id": "template_background_color_button",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "template_fields_container": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "template_fields_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "template_foreground_color": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "template_foreground_color",
+    "text": "",
+    "view": "View"
+   }
+  ],
+  "template_foreground_color_button": [
+   {
+    "desc": "Entry background color",
+    "file": "layout/view_template.xml",
+    "id": "template_foreground_color_button",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "template_header_container": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "template_header_container",
+    "text": "",
+    "view": "CardView"
+   }
+  ],
+  "template_icon_button": [
+   {
+    "desc": "Entry icon",
+    "file": "layout/view_entry_edit_icon.xml",
+    "id": "template_icon_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   },
+   {
+    "desc": "Entry icon",
+    "file": "layout/view_template.xml",
+    "id": "template_icon_button",
+    "text": "",
+    "view": "AppCompatImageButton"
+   }
+  ],
+  "template_image": [
+   {
+    "desc": "Entry icon",
+    "file": "layout/item_template.xml",
+    "id": "template_image",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "template_name": [
+   {
+    "desc": "",
+    "file": "layout/item_template.xml",
+    "id": "template_name",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "template_title_container": [
+   {
+    "desc": "",
+    "file": "layout/view_template.xml",
+    "id": "template_title_container",
+    "text": "",
+    "view": "FrameLayout"
+   }
+  ],
+  "template_view": [
+   {
+    "desc": "",
+    "file": "layout/fragment_entry_edit.xml",
+    "id": "template_view",
+    "text": "",
+    "view": "TemplateEditView"
+   }
+  ],
+  "title": [
+   {
+    "desc": "",
+    "file": "layout/preference_category_material.xml",
+    "id": "title",
+    "text": "",
+    "view": "TextView"
+   },
+   {
+    "desc": "",
+    "file": "layout/preference_material.xml",
+    "id": "title",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "title_block": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "title_block",
+    "text": "",
+    "view": "LinearLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/fragment_group.xml",
+    "id": "title_block",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "title_database": [
+   {
+    "desc": "",
+    "file": "layout/fragment_main_credential.xml",
+    "id": "title_database",
+    "text": "Database",
+    "view": "TextView"
+   }
+  ],
+  "toolbar": [
+   {
+    "desc": "",
+    "file": "layout/activity_about.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "include"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "MaterialToolbar"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "MaterialToolbar"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "toolbar",
+    "text": "@string/app_name",
+    "view": "MaterialToolbar"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_icon_picker.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "ToolbarAction"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_image_viewer.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "ToolbarAction"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_key_generator.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "ToolbarAction"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "toolbar",
+    "text": "",
+    "view": "MaterialToolbar"
+   },
+   {
+    "desc": "",
+    "file": "layout/toolbar_default.xml",
+    "id": "toolbar",
+    "text": "@string/app_name",
+    "view": "MaterialToolbar"
+   }
+  ],
+  "toolbar_action": [
+   {
+    "desc": "",
+    "file": "layout/activity_group.xml",
+    "id": "toolbar_action",
+    "text": "",
+    "view": "ToolbarAction"
+   }
+  ],
+  "toolbar_coordinator": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "toolbar_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_toolbar.xml",
+    "id": "toolbar_coordinator",
+    "text": "",
+    "view": "CoordinatorLayout"
+   }
+  ],
+  "toolbar_layout": [
+   {
+    "desc": "",
+    "file": "layout/activity_entry.xml",
+    "id": "toolbar_layout",
+    "text": "",
+    "view": "CollapsingToolbarLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_file_selection.xml",
+    "id": "toolbar_layout",
+    "text": "",
+    "view": "CollapsingToolbarLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/activity_main_credential.xml",
+    "id": "toolbar_layout",
+    "text": "",
+    "view": "CollapsingToolbarLayout"
+   }
+  ],
+  "unavailable_feature_message": [
+   {
+    "desc": "",
+    "file": "layout/fragment_unavailable_feature.xml",
+    "id": "unavailable_feature_message",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "underline_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "underline_filter",
+    "text": "@string/visual_underline",
+    "view": "Chip"
+   }
+  ],
+  "unlock_container": [
+   {
+    "desc": "",
+    "file": "layout/view_main_credentials.xml",
+    "id": "unlock_container",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ],
+  "upperCase_filter": [
+   {
+    "desc": "",
+    "file": "layout/view_password_conditions.xml",
+    "id": "upperCase_filter",
+    "text": "@string/visual_uppercase",
+    "view": "Chip"
+   }
+  ],
+  "user_verification_database_credential": [
+   {
+    "desc": "",
+    "file": "layout/fragment_check_database_credential.xml",
+    "id": "user_verification_database_credential",
+    "text": "Enter the first four characters of your database password",
+    "view": "TextView"
+   }
+  ],
+  "user_verification_information": [
+   {
+    "desc": "User verification info",
+    "file": "layout/fragment_check_database_credential.xml",
+    "id": "user_verification_information",
+    "text": "",
+    "view": "ImageView"
+   }
+  ],
+  "value_string": [
+   {
+    "desc": "",
+    "file": "layout/item_select_field_value.xml",
+    "id": "value_string",
+    "text": "",
+    "view": "TextView"
+   }
+  ],
+  "vertical_guideline": [
+   {
+    "desc": "",
+    "file": "layout/fragment_set_otp.xml",
+    "id": "vertical_guideline",
+    "text": "",
+    "view": "Guideline"
+   }
+  ],
+  "widget_frame": [
+   {
+    "desc": "",
+    "file": "layout/preference_category_material.xml",
+    "id": "widget_frame",
+    "text": "",
+    "view": "LinearLayout"
+   },
+   {
+    "desc": "",
+    "file": "layout/preference_material.xml",
+    "id": "widget_frame",
+    "text": "",
+    "view": "LinearLayout"
+   }
+  ]
+ },
+ "source": "app/src/main/res"
+}

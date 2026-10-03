@@ -1,0 +1,2284 @@
+{
+ "source": "app/src/main (static; the fork-only Spike files are excluded)",
+ "package": "com.kunzisoft.keepass",
+ "activities": {
+  "FileDatabaseSelectActivity": {
+   "exported": "true",
+   "launcher": true,
+   "actions": [
+    "MAIN"
+   ],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/FileDatabaseSelectActivity.kt",
+   "layouts": [
+    "activity_file_selection"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "FileDatabaseSelectActivity",
+    "GroupActivity",
+    "MainCredentialActivity"
+   ]
+  },
+  "MainCredentialActivity": {
+   "exported": "true",
+   "launcher": false,
+   "actions": [
+    "VIEW"
+   ],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/MainCredentialActivity.kt",
+   "layouts": [
+    "activity_main_credential"
+   ],
+   "menus": [
+    "open_file"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "AppearanceSettingsActivity",
+    "DeviceUnlockSettingsActivity",
+    "GroupActivity",
+    "MainCredentialActivity"
+   ]
+  },
+  "GroupActivity": {
+   "exported": "false",
+   "launcher": false,
+   "actions": [
+    "SEARCH"
+   ],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/GroupActivity.kt",
+   "layouts": [
+    "activity_group"
+   ],
+   "menus": [
+    "about",
+    "database",
+    "database_extra",
+    "node_menu",
+    "node_paste_menu",
+    "recycle_bin",
+    "search",
+    "settings",
+    "tree"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "AboutActivity",
+    "EntryActivity",
+    "EntryEditActivity",
+    "GroupActivity",
+    "IconPickerActivity",
+    "SettingsActivity"
+   ]
+  },
+  "EntryActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/EntryActivity.kt",
+   "layouts": [
+    "activity_entry"
+   ],
+   "menus": [
+    "database",
+    "entry_history"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "EntryActivity",
+    "EntryEditActivity"
+   ]
+  },
+  "IconPickerActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/IconPickerActivity.kt",
+   "layouts": [
+    "activity_icon_picker"
+   ],
+   "menus": [
+    "icon"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "IconPickerActivity"
+   ]
+  },
+  "KeyGeneratorActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/KeyGeneratorActivity.kt",
+   "layouts": [
+    "activity_key_generator"
+   ],
+   "menus": [
+    "key_generator"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "KeyGeneratorActivity"
+   ]
+  },
+  "ImageViewerActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/ImageViewerActivity.kt",
+   "layouts": [
+    "activity_image_viewer"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "ImageViewerActivity"
+   ]
+  },
+  "EntryEditActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/EntryEditActivity.kt",
+   "layouts": [
+    "activity_entry_edit"
+   ],
+   "menus": [
+    "entry_edit"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "EntryEditActivity",
+    "IconPickerActivity",
+    "KeyGeneratorActivity"
+   ]
+  },
+  "AboutActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/AboutActivity.kt",
+   "layouts": [
+    "activity_about"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "SettingsActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/SettingsActivity.kt",
+   "layouts": [
+    "activity_toolbar"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "SettingsActivity"
+   ]
+  },
+  "DeviceUnlockSettingsActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/DeviceUnlockSettingsActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "MagikeyboardSettingsActivity": {
+   "exported": "true",
+   "launcher": false,
+   "actions": [
+    "MAIN"
+   ],
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/MagikeyboardSettingsActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "AutofillSettingsActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/AutofillSettingsActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "PasskeysSettingsActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/PasskeysSettingsActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "AppearanceSettingsActivity": {
+   "exported": null,
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/AppearanceSettingsActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "HardwareKeyActivity": {
+   "exported": "false",
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/activity/HardwareKeyActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "HardwareKeyActivity"
+   ]
+  },
+  "AutofillLauncherActivity": {
+   "exported": "false",
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/activity/AutofillLauncherActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "AutofillLauncherActivity",
+    "FileDatabaseSelectActivity",
+    "GroupActivity"
+   ]
+  },
+  "EntrySelectionLauncherActivity": {
+   "exported": "true",
+   "launcher": false,
+   "actions": [
+    "SEND",
+    "VIEW"
+   ],
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/activity/EntrySelectionLauncherActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "EntrySelectionLauncherActivity",
+    "FileDatabaseSelectActivity",
+    "GroupActivity"
+   ]
+  },
+  "PasswordLauncherActivity": {
+   "exported": "false",
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/activity/PasswordLauncherActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "FileDatabaseSelectActivity",
+    "GroupActivity",
+    "PasswordLauncherActivity"
+   ]
+  },
+  "PasskeyLauncherActivity": {
+   "exported": "false",
+   "launcher": false,
+   "actions": [],
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/activity/PasskeyLauncherActivity.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "FileDatabaseSelectActivity",
+    "GroupActivity",
+    "PasskeyLauncherActivity"
+   ]
+  }
+ },
+ "fragments_and_dialogs": {
+  "AutofillBlocklistAppIdPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/AutofillBlocklistAppIdPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "AutofillBlocklistAppIdPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "AutofillBlocklistAppIdPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "AutofillBlocklistPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/AutofillBlocklistPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "AutofillBlocklistPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "AutofillBlocklistPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "AutofillBlocklistWebDomainPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/AutofillBlocklistWebDomainPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "AutofillBlocklistWebDomainPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "AutofillBlocklistWebDomainPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "AutofillSettingsFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/AutofillSettingsFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [
+    "preferences_autofill"
+   ],
+   "fragments_defined_here": [
+    "AutofillSettingsFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "CheckDatabaseCredentialDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/CheckDatabaseCredentialDialogFragment.kt",
+   "layouts": [
+    "fragment_check_database_credential"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "CheckDatabaseCredentialDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "CheckDatabaseCredentialDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "CheckDeviceCredentialDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/CheckDeviceCredentialDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "CheckDeviceCredentialDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "CheckDeviceCredentialDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "ColorPickerDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/ColorPickerDialogFragment.kt",
+   "layouts": [
+    "fragment_color_picker"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "ColorPickerDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "ColorPickerDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "DatabaseChangedDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/DatabaseChangedDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseChangedDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseChangedDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "DatabaseColorPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseColorPreferenceDialogFragmentCompat.kt",
+   "layouts": [
+    "fragment_color_picker"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseColorPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseColorPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseDataCompressionPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseDataCompressionPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseDataCompressionPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseDataCompressionPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseDefaultUsernamePreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseDefaultUsernamePreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseDefaultUsernamePreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseDefaultUsernamePreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseDescriptionPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseDescriptionPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseDescriptionPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseDescriptionPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/DatabaseDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "DatabaseEncryptionAlgorithmPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseEncryptionAlgorithmPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseEncryptionAlgorithmPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseEncryptionAlgorithmPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/DatabaseFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "DatabaseKeyDerivationPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseKeyDerivationPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseKeyDerivationPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseKeyDerivationPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseMaxHistoryItemsPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseMaxHistoryItemsPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseMaxHistoryItemsPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseMaxHistoryItemsPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseMaxHistorySizePreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseMaxHistorySizePreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseMaxHistorySizePreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseMaxHistorySizePreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseMemoryUsagePreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseMemoryUsagePreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseMemoryUsagePreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseMemoryUsagePreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseNamePreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseNamePreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseNamePreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseNamePreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseParallelismPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseParallelismPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseParallelismPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseParallelismPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseRecycleBinGroupPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseRecycleBinGroupPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseRecycleBinGroupPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseRecycleBinGroupPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseRemoveUnlinkedDataPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseRemoveUnlinkedDataPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseRemoveUnlinkedDataPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseRemoveUnlinkedDataPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseRoundsPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseRoundsPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseRoundsPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseRoundsPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseSavePreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseSavePreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseSavePreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseSavePreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DatabaseTemplatesGroupPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DatabaseTemplatesGroupPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DatabaseTemplatesGroupPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DatabaseTemplatesGroupPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DeleteNodesDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/DeleteNodesDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DeleteNodesDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "DeleteNodesDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "DeviceUnlockFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/biometric/DeviceUnlockFragment.kt",
+   "layouts": [],
+   "menus": [
+    "device_unlock"
+   ],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DeviceUnlockFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "DialogColorPreference": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preference/DialogColorPreference.kt",
+   "layouts": [
+    "fragment_color_picker"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "DialogListExplanationPreference": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preference/DialogListExplanationPreference.kt",
+   "layouts": [
+    "pref_dialog_list_explanation"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "DiscardChangesDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/DiscardChangesDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DiscardChangesDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "DiscardChangesDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "DurationDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/DurationDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "DurationDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "DurationDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "DurationDialogPreference": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preference/DurationDialogPreference.kt",
+   "layouts": [
+    "pref_dialog_duration"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "EditGroupDialogAction": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/GroupEditDialogFragment.kt",
+   "layouts": [
+    "fragment_group_edit"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "GroupEditDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "GroupEditDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "EntryCustomFieldDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/EntryCustomFieldDialogFragment.kt",
+   "layouts": [
+    "fragment_entry_new_field"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "EntryCustomFieldDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "EntryCustomFieldDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "EntryEditFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/EntryEditFragment.kt",
+   "layouts": [
+    "fragment_entry_edit"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "EntryEditFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "EntryFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/EntryFragment.kt",
+   "layouts": [
+    "fragment_entry"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "EntryFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "EntryHistoryFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/EntryHistoryFragment.kt",
+   "layouts": [
+    "fragment_entry_history"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "EntryHistoryFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "FileManagerDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/FileManagerDialogFragment.kt",
+   "layouts": [
+    "fragment_browser_install"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "FileManagerDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "FileManagerDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "FileTooBigDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/FileTooBigDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "FileTooBigDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "FileTooBigDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "GroupDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/GroupDialogFragment.kt",
+   "layouts": [
+    "fragment_group"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "GroupDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "GroupDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "GroupEditDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/GroupEditDialogFragment.kt",
+   "layouts": [
+    "fragment_group_edit"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "GroupEditDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "GroupEditDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "GroupFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/GroupFragment.kt",
+   "layouts": [
+    "fragment_nodes"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "GroupFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "IconCustomFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/IconCustomFragment.kt",
+   "layouts": [
+    "fragment_icon_grid"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "IconCustomFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "IconEditDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/IconEditDialogFragment.kt",
+   "layouts": [
+    "fragment_icon_edit"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "IconEditDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "IconEditDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "IconFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/IconFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "IconPickerFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/IconPickerFragment.kt",
+   "layouts": [
+    "fragment_tabs_pagination"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "IconPickerFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "IconStandardFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/IconStandardFragment.kt",
+   "layouts": [
+    "fragment_icon_grid"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "IconStandardFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "InputPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/InputPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "InputPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "InputPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "KeyGeneratorFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/KeyGeneratorFragment.kt",
+   "layouts": [
+    "fragment_tabs_pagination"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "KeyGeneratorFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "MagikeyboardSettingsFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/MagikeyboardSettingsFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [
+    "preferences_keyboard"
+   ],
+   "fragments_defined_here": [
+    "MagikeyboardSettingsFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "MainCredentialDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/MainCredentialDialogFragment.kt",
+   "layouts": [
+    "fragment_main_credential"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "MainCredentialDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "MainCredentialDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "MainCredentialDialogViewModel": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/viewmodels/MainCredentialDialogViewModel.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "MainPreferenceFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/MainPreferenceFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [
+    "preferences"
+   ],
+   "fragments_defined_here": [
+    "MainPreferenceFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "NestedAppSettingsFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/NestedAppSettingsFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [
+    "preferences_appearance",
+    "preferences_application",
+    "preferences_device_unlock",
+    "preferences_form_filling"
+   ],
+   "fragments_defined_here": [
+    "NestedAppSettingsFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "AutofillSettingsActivity",
+    "MagikeyboardSettingsActivity",
+    "PasskeysSettingsActivity"
+   ]
+  },
+  "NestedDatabaseSettingsFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/NestedDatabaseSettingsFragment.kt",
+   "layouts": [],
+   "menus": [
+    "database"
+   ],
+   "preferences": [
+    "preferences_database",
+    "preferences_database_master_key",
+    "preferences_database_security"
+   ],
+   "fragments_defined_here": [
+    "NestedDatabaseSettingsFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": [
+    "SettingsActivity"
+   ]
+  },
+  "NestedSettingsFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/NestedSettingsFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "NestedSettingsFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "OverwriteDataDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/OverwriteDataDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "OverwriteDataDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "OverwriteDataDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "PasskeysPrivilegedAppsPreferenceDialogFragmentCompat": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/preferencedialogfragment/PasskeysPrivilegedAppsPreferenceDialogFragmentCompat.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "PasskeysPrivilegedAppsPreferenceDialogFragmentCompat"
+   ],
+   "dialogs_defined_here": [
+    "PasskeysPrivilegedAppsPreferenceDialogFragmentCompat"
+   ],
+   "activities_started": []
+  },
+  "PasskeysSettingsFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/settings/PasskeysSettingsFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [
+    "preferences_passkeys"
+   ],
+   "fragments_defined_here": [
+    "PasskeysSettingsFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "PassphraseGeneratorFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/PassphraseGeneratorFragment.kt",
+   "layouts": [
+    "fragment_generate_passphrase"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "PassphraseGeneratorFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "PasswordEncodingDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/PasswordEncodingDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "PasswordEncodingDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "PasswordEncodingDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "PasswordGeneratorFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/PasswordGeneratorFragment.kt",
+   "layouts": [
+    "fragment_generate_password"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "PasswordGeneratorFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "ProFeatureDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/ProFeatureDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "ProFeatureDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "ProFeatureDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "ProgressTaskDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/tasks/ProgressTaskDialogFragment.kt",
+   "layouts": [
+    "fragment_progress"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "ProgressTaskDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "ProgressTaskDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "ReplaceFileDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/ReplaceAttachmentDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "ReplaceFileDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "ReplaceFileDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "SearchFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/fragments/SearchFragment.kt",
+   "layouts": [
+    "fragment_search"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "SearchFragment"
+   ],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "SetMainCredentialDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/SetMainCredentialDialogFragment.kt",
+   "layouts": [
+    "fragment_set_main_credential"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "SetMainCredentialDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "SetMainCredentialDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "SetOTPDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/SetOTPDialogFragment.kt",
+   "layouts": [
+    "fragment_set_otp"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "SetOTPDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "SetOTPDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "ShowAppPrivilegedDialog": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/viewmodel/PasskeyLauncherViewModel.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "ShowAppSignatureDialog": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/credentialprovider/viewmodel/PasskeyLauncherViewModel.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "ShowDatabaseInfoReloadedDialog": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/viewmodels/DatabaseViewModel.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "ShowPasswordEncodingDialog": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/viewmodels/DatabaseViewModel.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [],
+   "dialogs_defined_here": [],
+   "activities_started": []
+  },
+  "SortDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/SortDialogFragment.kt",
+   "layouts": [
+    "fragment_sort_selection"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "SortDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "SortDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "UnavailableFeatureDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/UnavailableFeatureDialogFragment.kt",
+   "layouts": [
+    "fragment_unavailable_feature"
+   ],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "UnavailableFeatureDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "UnavailableFeatureDialogFragment"
+   ],
+   "activities_started": []
+  },
+  "UnderDevelopmentFeatureDialogFragment": {
+   "file": "app/src/main/java/com/kunzisoft/keepass/activities/dialogs/UnderDevelopmentFeatureDialogFragment.kt",
+   "layouts": [],
+   "menus": [],
+   "preferences": [],
+   "fragments_defined_here": [
+    "UnderDevelopmentFeatureDialogFragment"
+   ],
+   "dialogs_defined_here": [
+    "UnderDevelopmentFeatureDialogFragment"
+   ],
+   "activities_started": []
+  }
+ },
+ "menus": {
+  "about": [
+   {
+    "id": "menu_about",
+    "title": "About",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_contribute",
+    "title": "Contribute",
+    "show": "ifRoom"
+   }
+  ],
+  "autofill": [
+   {
+    "id": "menu_block_autofill",
+    "title": "Block autofill",
+    "show": "ifRoom"
+   }
+  ],
+  "database": [
+   {
+    "id": "menu_save_database",
+    "title": "Save data",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_merge_database",
+    "title": "Merge data",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_reload_database",
+    "title": "Reload data",
+    "show": "ifRoom"
+   }
+  ],
+  "database_extra": [
+   {
+    "id": "menu_merge_from",
+    "title": "Merge from …",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_save_copy_to",
+    "title": "Save a copy to …",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_lock_all",
+    "title": "Lock",
+    "show": "ifRoom"
+   }
+  ],
+  "device_unlock": [
+   {
+    "id": "menu_keystore_remove_key",
+    "title": "Delete device unlock key",
+    "show": "ifRoom"
+   }
+  ],
+  "entry_edit": [
+   {
+    "id": "menu_add_attachment",
+    "title": "Add attachment",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_add_otp",
+    "title": "Set up one-time password",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_add_field",
+    "title": "Add field",
+    "show": "ifRoom"
+   }
+  ],
+  "entry_history": [
+   {
+    "id": "menu_restore_entry_history",
+    "title": "Restore history",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_delete_entry_history",
+    "title": "Delete history",
+    "show": "ifRoom"
+   }
+  ],
+  "icon": [
+   {
+    "id": "menu_edit",
+    "title": "Edit",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_delete",
+    "title": "Delete",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_external_icon",
+    "title": "External icon",
+    "show": "ifRoom"
+   }
+  ],
+  "key_generator": [
+   {
+    "id": "menu_generate",
+    "title": "Generate password",
+    "show": "ifRoom"
+   }
+  ],
+  "node_menu": [
+   {
+    "id": "menu_copy",
+    "title": "Copy",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_move",
+    "title": "Move",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_delete",
+    "title": "Delete",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_open",
+    "title": "Open",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_edit",
+    "title": "Edit",
+    "show": "ifRoom"
+   }
+  ],
+  "node_paste_menu": [
+   {
+    "id": "menu_paste",
+    "title": "Paste",
+    "show": "ifRoom|withText"
+   }
+  ],
+  "open_file": [
+   {
+    "id": "menu_open_file_read_mode_key",
+    "title": "Modifiable",
+    "show": "ifRoom"
+   },
+   {
+    "id": "menu_open_file_user_verification_mode_key",
+    "title": "User Verification enabled",
+    "show": "ifRoom"
+   }
+  ],
+  "recycle_bin": [
+   {
+    "id": "menu_empty_recycle_bin",
+    "title": "Empty the recycle bin",
+    "show": "ifRoom"
+   }
+  ],
+  "search": [
+   {
+    "id": "menu_search",
+    "title": "Search",
+    "show": "always"
+   }
+  ],
+  "settings": [
+   {
+    "id": "menu_app_settings",
+    "title": "Settings",
+    "show": "ifRoom"
+   }
+  ],
+  "tree": [
+   {
+    "id": "menu_sort",
+    "title": "Sort",
+    "show": "ifRoom"
+   }
+  ]
+ },
+ "preferences": {
+  "preferences": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "App"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_app_key",
+    "title": "App settings"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_form_filling_key",
+    "title": "Form filling"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_device_unlock_key",
+    "title": "Device unlocking"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_appearance_key",
+    "title": "Appearance"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "settings_database_category_key",
+    "title": "Database"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_database_key",
+    "title": "Database settings"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_database_security_key",
+    "title": "Security"
+   },
+   {
+    "type": "Preference",
+    "key": "settings_database_credentials_key",
+    "title": "Master key"
+   }
+  ],
+  "preferences_appearance": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Interface"
+   },
+   {
+    "type": "ListPreference",
+    "key": "setting_style_key",
+    "title": "App theme"
+   },
+   {
+    "type": "ListPreference",
+    "key": "setting_style_brightness_key",
+    "title": "Theme brightness"
+   },
+   {
+    "type": "IconPackListPreference",
+    "key": "setting_icon_pack_choose_key",
+    "title": "Icon pack"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "show_entry_colors_key",
+    "title": "Entry colors"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "colorize_password_key",
+    "title": "Colorize passwords"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Nodes"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "hide_expired_entries_key",
+    "title": "Hide expired entries"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "hide_templates_key",
+    "title": "Hide templates"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Text"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "list_entries_show_username_key",
+    "title": "Show usernames"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "list_groups_show_number_entries_key",
+    "title": "Show number of entries"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "recursive_number_entries_key",
+    "title": "Recursive number of entries"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "show_tags_key",
+    "title": "Show Tags"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "show_otp_token_key",
+    "title": "Show OTP Token"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "show_uuid_key",
+    "title": "Show UUID"
+   },
+   {
+    "type": "ListPreference",
+    "key": "list_size_key",
+    "title": "Size of list items"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "monospace_font_fields_enable_key",
+    "title": "Field typeface"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Other"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "enable_education_screens_key",
+    "title": "Educational hints"
+   },
+   {
+    "type": "Preference",
+    "key": "reset_education_screens_key",
+    "title": "Reset educational hints"
+   }
+  ],
+  "preferences_application": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "General"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "allow_no_password_key",
+    "title": "Allow no master key"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "delete_entered_password_key",
+    "title": "Delete password"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "enable_auto_save_database_key",
+    "title": "Autosave database"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "auto_focus_search_key",
+    "title": "Quick search"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "enable_keep_screen_on_key",
+    "title": "Keep screen on"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "enable_screenshot_mode_key",
+    "title": "Screenshot mode"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "User Verification"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "user_verification_device_credential_key",
+    "title": "User Verification credential"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Lock"
+   },
+   {
+    "type": "DurationDialogPreference",
+    "key": "app_timeout_key",
+    "title": "Timeout"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "lock_database_screen_off_key",
+    "title": "Screen lock"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "lock_database_back_root_key",
+    "title": "Press \\'Back\\' to lock"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "lock_database_show_button_key",
+    "title": "Show lock button"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "History"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "remember_database_locations_key",
+    "title": "Remember databases locations"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "remember_keyfile_locations_key",
+    "title": "Remember keyfile locations"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "remember_hardware_key_key",
+    "title": "Remember hardware keys"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "show_recent_files_key",
+    "title": "Show recent files"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "hide_broken_locations_key",
+    "title": "Hide broken database links"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Properties"
+   },
+   {
+    "type": "Preference",
+    "key": "import_app_properties_key",
+    "title": "Import app settings"
+   },
+   {
+    "type": "Preference",
+    "key": "export_app_properties_key",
+    "title": "Export app settings"
+   }
+  ],
+  "preferences_autofill": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "General"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_suggestions_key",
+    "title": "Autofill suggestions"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_inline_suggestions_key",
+    "title": "Inline suggestions"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_close_database_key",
+    "title": "Close database"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_manual_selection_key",
+    "title": "Manual selection"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Save"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_save_search_info_key",
+    "title": "Save search info"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_ask_to_save_data_key",
+    "title": "Ask to save data"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Filter"
+   },
+   {
+    "type": "InputListPreference",
+    "key": "autofill_application_id_blocklist_key",
+    "title": "Application blocklist"
+   },
+   {
+    "type": "InputListPreference",
+    "key": "autofill_web_domain_blocklist_key",
+    "title": "Web domain blocklist"
+   }
+  ],
+  "preferences_database": [
+   {
+    "type": "PreferenceCategory",
+    "key": "database_category_general_key",
+    "title": "General"
+   },
+   {
+    "type": "InputTextPreference",
+    "key": "database_name_key",
+    "title": "Database name"
+   },
+   {
+    "type": "InputTextPreference",
+    "key": "database_description_key",
+    "title": "Database description"
+   },
+   {
+    "type": "InputTextPreference",
+    "key": "database_default_username_key",
+    "title": "Default username"
+   },
+   {
+    "type": "DialogColorPreference",
+    "key": "database_custom_color_key",
+    "title": "Custom database color"
+   },
+   {
+    "type": "Preference",
+    "key": "database_version_key",
+    "title": "Database version"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "database_category_data_key",
+    "title": "Data"
+   },
+   {
+    "type": "DialogListExplanationPreference",
+    "key": "database_data_compression_key",
+    "title": "Data compression"
+   },
+   {
+    "type": "TextPreference",
+    "key": "database_data_remove_unlinked_attachments_key",
+    "title": "Remove unlinked data"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "database_category_recycle_bin_key",
+    "title": "Recycle bin"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "recycle_bin_enable_key",
+    "title": "Recycle bin usage"
+   },
+   {
+    "type": "DialogListExplanationPreference",
+    "key": "recycle_bin_group_key",
+    "title": "Recycle bin group"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "database_category_templates_key",
+    "title": "Templates"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "templates_group_enable_key",
+    "title": "Templates usage"
+   },
+   {
+    "type": "DialogListExplanationPreference",
+    "key": "templates_group_uuid_key",
+    "title": "Templates group"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "database_category_history_key",
+    "title": "History"
+   },
+   {
+    "type": "InputNumberPreference",
+    "key": "max_history_items_key",
+    "title": "Maximum number"
+   },
+   {
+    "type": "InputSizePreference",
+    "key": "max_history_size_key",
+    "title": "Maximum size"
+   }
+  ],
+  "preferences_database_master_key": [
+   {
+    "type": "Preference",
+    "key": "settings_database_change_credentials_key",
+    "title": "Change master key"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Master key"
+   },
+   {
+    "type": "InputTextPreference",
+    "key": "settings_database_recommend_changing_master_key_key",
+    "title": "Recommend renewal"
+   },
+   {
+    "type": "InputTextPreference",
+    "key": "settings_database_force_changing_master_key_key",
+    "title": "Force renewal"
+   },
+   {
+    "type": "InputTextPreference",
+    "key": "settings_database_force_changing_master_key_next_time_key",
+    "title": "Force renewal next time"
+   }
+  ],
+  "preferences_database_security": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Encryption"
+   },
+   {
+    "type": "DialogListExplanationPreference",
+    "key": "encryption_algorithm_key",
+    "title": "Encryption algorithm"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Key derivation function"
+   },
+   {
+    "type": "DialogListExplanationPreference",
+    "key": "key_derivation_function_key",
+    "title": "Key derivation function"
+   },
+   {
+    "type": "InputKdfNumberPreference",
+    "key": "transform_rounds_key",
+    "title": "Transformation rounds"
+   },
+   {
+    "type": "InputKdfSizePreference",
+    "key": "memory_usage_key",
+    "title": "Memory usage"
+   },
+   {
+    "type": "InputKdfNumberPreference",
+    "key": "parallelism_key",
+    "title": "Parallelism"
+   }
+  ],
+  "preferences_device_unlock": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "General"
+   },
+   {
+    "type": "Preference",
+    "key": "device_unlock_explanation_key",
+    "title": ""
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "biometric_unlock_enable_key",
+    "title": "Biometric unlocking"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "device_credential_unlock_enable_key",
+    "title": "Device credential unlocking"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "biometric_auto_open_prompt_key",
+    "title": "Auto-open prompt"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Content"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "temp_device_unlock_enable_key",
+    "title": "Temp device unlocking"
+   },
+   {
+    "type": "DurationDialogPreference",
+    "key": "temp_device_unlock_timeout_key",
+    "title": "Device unlocking expiration"
+   },
+   {
+    "type": "Preference",
+    "key": "biometric_delete_all_key_key",
+    "title": "Delete encryption keys"
+   }
+  ],
+  "preferences_form_filling": [
+   {
+    "type": "PreferenceCategory",
+    "key": "credential_provider_key",
+    "title": "Credential provider"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "settings_credential_provider_enable_key",
+    "title": "Credential provider service"
+   },
+   {
+    "type": "Preference",
+    "key": "passkeys_explanation_key",
+    "title": ""
+   },
+   {
+    "type": "Preference",
+    "key": "settings_passkeys_key",
+    "title": "Passkeys settings"
+   },
+   {
+    "type": "Preference",
+    "key": "autofill_explanation_key",
+    "title": ""
+   },
+   {
+    "type": "Preference",
+    "key": "settings_autofill_key",
+    "title": "Autofill settings"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "autofill_share_magikeyboard_key",
+    "title": "Share to Magikeyboard"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Keyboard"
+   },
+   {
+    "type": "Preference",
+    "key": "magic_keyboard_explanation_key",
+    "title": ""
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "magic_keyboard_key",
+    "title": "Device keyboard settings"
+   },
+   {
+    "type": "Preference",
+    "key": "magic_keyboard_preference_key",
+    "title": "Magikeyboard settings"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "General"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "subdomain_search_key",
+    "title": "Subdomain search"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "clipboard_otp_notifications_key",
+    "title": "OTP notification"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Clipboard"
+   },
+   {
+    "type": "Preference",
+    "key": "clipboard_explanation_key",
+    "title": ""
+   },
+   {
+    "type": "DurationDialogPreference",
+    "key": "clipboard_timeout_key",
+    "title": "Clipboard timeout"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "allow_copy_password_key",
+    "title": "Clipboard trust"
+   }
+  ],
+  "preferences_keyboard": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Notification"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_notification_entry_key",
+    "title": "Notification info"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_notification_entry_clear_close_key",
+    "title": "Clear at closing"
+   },
+   {
+    "type": "DurationDialogPreference",
+    "key": "keyboard_entry_timeout_key",
+    "title": "Timeout"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Save"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_save_search_info_key",
+    "title": "Save shared info"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Keys"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_auto_go_action_key",
+    "title": "Auto key action"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_key_vibrate_key",
+    "title": "Vibratory keypresses"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_key_sound_key",
+    "title": "Audible keypresses"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Switch keyboard"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_auto_switch_key",
+    "title": "Auto Magikeyboard switch"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_previous_database_credentials_key",
+    "title": "Database credentials screen"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_previous_search_key",
+    "title": "Search screen"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_previous_fill_in_key",
+    "title": "Switch back"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "keyboard_previous_lock_key",
+    "title": "Lock database"
+   }
+  ],
+  "preferences_passkeys": [
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "General"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "passkeys_close_database_key",
+    "title": "Close database"
+   },
+   {
+    "type": "DialogListExplanationPreference",
+    "key": "passkeys_privileged_apps_key",
+    "title": "Privileged apps"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "passkeys_auto_select_key",
+    "title": "Auto select"
+   },
+   {
+    "type": "PreferenceCategory",
+    "key": "",
+    "title": "Database"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "user_verification_preferred_key",
+    "title": "Preferred User Verification"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "passkeys_backup_eligibility_key",
+    "title": "Backup Eligibility"
+   },
+   {
+    "type": "SwitchPreferenceCompat",
+    "key": "passkeys_backup_state_key",
+    "title": "Backup State"
+   }
+  ]
+ }
+}

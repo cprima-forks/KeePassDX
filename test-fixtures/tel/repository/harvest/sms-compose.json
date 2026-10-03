@@ -1,0 +1,353 @@
+{
+ "role": "sms",
+ "screen": "compose",
+ "package": "org.fossify.messages",
+ "launched_with": [
+  "-a",
+  "android.intent.action.SENDTO",
+  "-d",
+  "sms:+1234567890?body=test"
+ ],
+ "device": "Fairphone FP4, Android 13",
+ "date": "2026-10-02",
+ "focus": "org.fossify.messages/org.fossify.messages.activities.ThreadActivity",
+ "candidates": [
+  {
+   "id": "org.fossify.messages:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_appbar",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,0][1080,241]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Back",
+   "class": "ImageButton",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "",
+   "text": "<redacted>",
+   "desc": "",
+   "class": "TextView",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[150,115][569,206]"
+  },
+  {
+   "id": "org.fossify.messages:id/dial_number",
+   "text": "",
+   "desc": "Dial number",
+   "class": "Button",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[860,101][980,221]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "ImageView",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[980,101][1080,221]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_holder",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,241][1080,2199]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_messages_fastscroller",
+   "text": "",
+   "desc": "",
+   "class": "RelativeLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,241][1080,1390]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_messages_list",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,241][1080,1390]"
+  },
+  {
+   "id": "org.fossify.messages:id/trackView",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[1015,241][1080,1390]"
+  },
+  {
+   "id": "org.fossify.messages:id/message_holder",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,1390][1080,2199]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_add_attachment",
+   "text": "",
+   "desc": "Attachment",
+   "class": "ImageView",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[10,1390][130,1510]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_type_message",
+   "text": "test",
+   "desc": "",
+   "class": "EditText",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[140,1390][940,1510]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_send_message",
+   "text": "SMS",
+   "desc": "OK",
+   "class": "Button",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[950,1390][1070,1510]"
+  }
+ ],
+ "matches": {
+  "recipient": {
+   "why": "future sms: links: the recipient must be the number of the link",
+   "found": [
+    {
+     "id": "org.fossify.messages:id/thread_coordinator",
+     "text": "",
+     "desc": "",
+     "class": "ScrollView",
+     "package": "org.fossify.messages",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "org.fossify.messages:id/thread_toolbar",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "org.fossify.messages",
+     "clickable": false,
+     "bounds": "[0,81][1080,241]"
+    }
+   ],
+   "count": 2
+  },
+  "message_body": {
+   "why": "the ?body= part of an sms: link must be in the message",
+   "found": [
+    {
+     "id": "org.fossify.messages:id/action_bar_root",
+     "text": "",
+     "desc": "",
+     "class": "FrameLayout",
+     "package": "org.fossify.messages",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "org.fossify.messages:id/thread_coordinator",
+     "text": "",
+     "desc": "",
+     "class": "ScrollView",
+     "package": "org.fossify.messages",
+     "clickable": false,
+     "bounds": "[0,0][1080,2199]"
+    },
+    {
+     "id": "org.fossify.messages:id/thread_appbar",
+     "text": "",
+     "desc": "",
+     "class": "LinearLayout",
+     "package": "org.fossify.messages",
+     "clickable": false,
+     "bounds": "[0,0][1080,241]"
+    },
+    {
+     "id": "org.fossify.messages:id/thread_toolbar",
+     "text": "",
+     "desc": "",
+     "class": "ViewGroup",
+     "package": "org.fossify.messages",
+     "clickable": false,
+     "bounds": "[0,81][1080,241]"
+    }
+   ],
+   "count": 13
+  },
+  "send_button": {
+   "why": "to know what is NOT to be pressed",
+   "found": [
+    {
+     "id": "org.fossify.messages:id/thread_send_message",
+     "text": "SMS",
+     "desc": "OK",
+     "class": "Button",
+     "package": "org.fossify.messages",
+     "clickable": true,
+     "bounds": "[950,1390][1070,1510]"
+    }
+   ],
+   "count": 1
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Back",
+   "class": "ImageButton",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "org.fossify.messages:id/dial_number",
+   "text": "",
+   "desc": "Dial number",
+   "class": "Button",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[860,101][980,221]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "ImageView",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[980,101][1080,221]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_holder",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,241][1080,2199]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_messages_fastscroller",
+   "text": "",
+   "desc": "",
+   "class": "RelativeLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,241][1080,1390]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_messages_list",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,241][1080,1390]"
+  },
+  {
+   "id": "org.fossify.messages:id/trackView",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[1015,241][1080,1390]"
+  },
+  {
+   "id": "org.fossify.messages:id/message_holder",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "org.fossify.messages",
+   "clickable": false,
+   "bounds": "[0,1390][1080,2199]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_add_attachment",
+   "text": "",
+   "desc": "Attachment",
+   "class": "ImageView",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[10,1390][130,1510]"
+  },
+  {
+   "id": "org.fossify.messages:id/thread_type_message",
+   "text": "test",
+   "desc": "",
+   "class": "EditText",
+   "package": "org.fossify.messages",
+   "clickable": true,
+   "bounds": "[140,1390][940,1510]"
+  }
+ ]
+}

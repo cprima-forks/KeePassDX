@@ -1,0 +1,711 @@
+{
+ "screen": "entry.edit",
+ "from": "the entry tel-url, Edit pressed (user verification is off for the fixture)",
+ "focus": "com.kunzisoft.keepass.free/com.kunzisoft.keepass.activities.EntryEditActivity",
+ "date": "2026-10-02",
+ "candidates": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_entry_edit_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/error_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_coordinator_layout",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_scroll",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_template_selector",
+   "text": "",
+   "desc": "",
+   "class": "Spinner",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,94][1080,225]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_background",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayoutCompat",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[25,107][935,212]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_image",
+   "text": "",
+   "desc": "Entry icon",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[55,129][115,189]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_name",
+   "text": "Standard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[145,128][390,190]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,225][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_view",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,225][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_header_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[25,238][1055,633]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_icon_button",
+   "text": "",
+   "desc": "Entry icon",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[470,273][610,413]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_title_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[60,413][1020,598]"
+  },
+  {
+   "id": "",
+   "text": "tel-url",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,431][1020,598]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_foreground_color_button",
+   "text": "",
+   "desc": "Entry background colour",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[872,301][992,421]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_background_color_button",
+   "text": "",
+   "desc": "Entry background colour",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[927,246][1047,366]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_fields_container",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,646][1080,2178]"
+  },
+  {
+   "id": "",
+   "text": "Username",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,712][1020,879]"
+  },
+  {
+   "id": "",
+   "text": "test123",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,897][900,1064]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/text_input_end_icon",
+   "text": "",
+   "desc": "Show password",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[780,920][900,1040]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Edit",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[900,909][1020,1029]"
+  },
+  {
+   "id": "",
+   "text": "Entropy: 9,47 bit",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[615,995][900,1064]"
+  },
+  {
+   "id": "",
+   "text": "tel:<redacted>",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,1082][1020,1249]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/expiration_label",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[60,1249][870,1433]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/expiration_text",
+   "text": "Never",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,1267][870,1423]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/expiration_checkbox",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[890,1281][1020,1401]"
+  },
+  {
+   "id": "",
+   "text": "Open the database read-only, so that nothing here is saved.\nNever press the call",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,1451][1020,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/lock_button",
+   "text": "",
+   "desc": "Lock",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,1986][165,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_bottom_bar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2018][1080,2178]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[120,2028][260,2168]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_add_attachment",
+   "text": "",
+   "desc": "Add attachment",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[540,2038][660,2158]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_add_otp",
+   "text": "",
+   "desc": "Set up one-time password",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[660,2038][780,2158]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_add_field",
+   "text": "",
+   "desc": "Add field",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[780,2038][900,2158]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_validate",
+   "text": "",
+   "desc": "Validate",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[910,2008][1050,2148]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ],
+ "matches": {
+  "url_field": {
+   "why": "UI-EDIT: the plain value in edit mode",
+   "count": 6,
+   "found": [
+    {
+     "id": "",
+     "text": "tel-url",
+     "desc": "",
+     "class": "EditText",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[60,431][1020,598]"
+    },
+    {
+     "id": "",
+     "text": "Username",
+     "desc": "",
+     "class": "EditText",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[60,712][1020,879]"
+    },
+    {
+     "id": "",
+     "text": "test123",
+     "desc": "",
+     "class": "EditText",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[60,897][900,1064]"
+    },
+    {
+     "id": "",
+     "text": "tel:<redacted>",
+     "desc": "",
+     "class": "EditText",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[60,1082][1020,1249]"
+    }
+   ]
+  },
+  "title_field": {
+   "why": "the entry's title field",
+   "count": 1,
+   "found": [
+    {
+     "id": "",
+     "text": "tel-url",
+     "desc": "",
+     "class": "EditText",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[60,431][1020,598]"
+    }
+   ]
+  },
+  "validate": {
+   "why": "to know what is NOT pressed: it would save",
+   "count": 1,
+   "found": [
+    {
+     "id": "com.kunzisoft.keepass.free:id/entry_edit_validate",
+     "text": "",
+     "desc": "Validate",
+     "class": "ImageButton",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[910,2008][1050,2148]"
+    }
+   ]
+  },
+  "add_field": {
+   "why": "to know what is NOT pressed: it would add a custom field",
+   "count": 1,
+   "found": [
+    {
+     "id": "com.kunzisoft.keepass.free:id/menu_add_field",
+     "text": "",
+     "desc": "Add field",
+     "class": "Button",
+     "package": "com.kunzisoft.keepass.free",
+     "clickable": true,
+     "bounds": "[780,2038][900,2158]"
+    }
+   ]
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_entry_edit_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/error_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_coordinator_layout",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_scroll",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_template_selector",
+   "text": "",
+   "desc": "",
+   "class": "Spinner",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,94][1080,225]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_background",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayoutCompat",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[25,107][935,212]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_image",
+   "text": "",
+   "desc": "Entry icon",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[55,129][115,189]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_name",
+   "text": "Standard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[145,128][390,190]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,225][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_view",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,225][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_header_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[25,238][1055,633]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_icon_button",
+   "text": "",
+   "desc": "Entry icon",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[470,273][610,413]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_title_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[60,413][1020,598]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_foreground_color_button",
+   "text": "",
+   "desc": "Entry background colour",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[872,301][992,421]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_background_color_button",
+   "text": "",
+   "desc": "Entry background colour",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[927,246][1047,366]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/template_fields_container",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,646][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/text_input_end_icon",
+   "text": "",
+   "desc": "Show password",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[780,920][900,1040]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Edit",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[900,909][1020,1029]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/expiration_label",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[60,1249][870,1433]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/expiration_text",
+   "text": "Never",
+   "desc": "",
+   "class": "EditText",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[60,1267][870,1423]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/expiration_checkbox",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[890,1281][1020,1401]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/lock_button",
+   "text": "",
+   "desc": "Lock",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,1986][165,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/entry_edit_bottom_bar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2018][1080,2178]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[120,2028][260,2168]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_add_attachment",
+   "text": "",
+   "desc": "Add attachment",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[540,2038][660,2158]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_add_otp",
+   "text": "",
+   "desc": "Set up one-time password",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[660,2038][780,2158]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ]
+}

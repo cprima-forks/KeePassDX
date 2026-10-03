@@ -1,0 +1,226 @@
+{
+  "registry": "dialogs",
+  "kind": "registry",
+  "of_package": "com.kunzisoft.keepass",
+  "provenance": {
+    "type": "app source, read statically (agent report 2026-10-02)",
+    "verified_on_device": "none of these were opened on the phone unless the entry says seen: true",
+    "use": "Each entry says what the dialog is, when it appears, what to answer in a test run, and whether it may appear unexpectedly (unexpected: true). The rules the runner acts on stay in fixture-spec.json `dialogs`; an entry here becomes a rule when a run meets it or when it is cheap to meet.",
+    "answer": "Safe answer = the one that changes no data. 'wait' = a person acts (handover). 'back' = the Back key. Button texts are English resources."
+  },
+  "overlays": {
+    "education": {
+      "what": "TapTargetView overlay, not a dialog: it covers the activity and blocks every other tap",
+      "when": "first visit of a screen, hint by hint (file list, credentials, group, entry, entry edit); once each; state in the app's SharedPreferences file kdbxeducation",
+      "unexpected": true,
+      "answer": "avoid: precondition 'education off' (Appearance, enable_education_screens_key = false) or pre-seed kdbxeducation; else Back cancels it",
+      "note": "timing is asynchronous (posted from onCreateOptionsMenu). The user-verification hint is missing from the reset list, so 'Reset educational hints' does not reset it."
+    }
+  },
+  "dialogs": {
+    "progress": {
+      "class": "ProgressTaskDialogFragment",
+      "ids": ["progress_dialog_title", "progress_dialog_message", "progress_dialog_bar", "progress_dialog_warning", "progress_dialog_cancel"],
+      "trigger": "every database task: load, save, merge, reload, copy, move, delete",
+      "texts": "dynamic",
+      "unexpected": true,
+      "answer": "wait until gone (not cancelable; Cancel only when the task allows)"
+    },
+    "database-changed": {
+      "class": "DatabaseChangedDialogFragment",
+      "trigger": "onResume finds that the file's modified time or size changed (an adb push of the fixture while the app held it open; a sync)",
+      "texts": "warning_database_info_changed with old and new date and size; or warning_database_revoked when the file is gone",
+      "buttons": ["OK"],
+      "unexpected": true,
+      "answer": "OK (reads the file again; changes nothing)",
+      "note": "Initialize pushes the fixture; the apps are force-stopped first, so it should not appear. If it does, the close step did not work: a system exception."
+    },
+    "reload-discards": {
+      "class": "AlertDialog warning_database_info_reloaded",
+      "trigger": "a forced reload that would discard local changes",
+      "buttons": ["OK", "Cancel"],
+      "unexpected": true,
+      "answer": "Cancel"
+    },
+    "notification-permission": {
+      "class": "AlertDialog warning_database_notification_permission",
+      "trigger": "Android 13+, first database action, permission neither granted nor refused before",
+      "buttons": ["Later", "Ask"],
+      "unexpected": true,
+      "answer": "Later (Ask opens the system permission dialog)",
+      "note": "the FP4 runs Android 13: possible on a fresh install"
+    },
+    "password-encoding": {
+      "class": "PasswordEncodingDialogFragment",
+      "trigger": "unlock with a password containing characters outside the encoding",
+      "texts": "Warning; warning_password_encoding",
+      "buttons": ["OK", "Cancel"],
+      "unexpected": true,
+      "answer": "Cancel; test123 never triggers it"
+    },
+    "duplicate-uuid": {
+      "class": "AlertDialog contains_duplicate_uuid",
+      "trigger": "load fails with a duplicate UUID",
+      "buttons": ["OK", "Cancel"],
+      "unexpected": true,
+      "answer": "Cancel, and report the fixture as broken: a system exception"
+    },
+    "lock-discard": {
+      "class": "AlertDialog in lockAndExit",
+      "trigger": "Lock button, drawer Lock, or Back-to-lock while the database has unsaved changes",
+      "texts": "Discard changes?",
+      "buttons": ["Cancel", "Lock"],
+      "unexpected": true,
+      "answer": "Lock (the fixture is never changed by a run; seeing this means something saved or edited)"
+    },
+    "discard-changes": {
+      "class": "DiscardChangesDialogFragment",
+      "trigger": "Back or Navigate up in the entry editor when the entry differs from the start",
+      "texts": "Discard changes?",
+      "buttons": ["Cancel", "Discard"],
+      "unexpected": true,
+      "seen": true,
+      "answer": "Discard (rule discard-changes exists)"
+    },
+    "user-verification-device": {
+      "class": "CheckDeviceCredentialDialogFragment (system BiometricPrompt)",
+      "trigger": "Edit, reveal or copy of a protected field, drawer merge or save copy, database settings, when the per-database toggle is on and device credentials are available",
+      "texts": "User Verification; user_verification_required_description",
+      "unexpected": false,
+      "seen": true,
+      "answer": "wait: a person acts (rule user-verification, 180 s). Prevented in the fixture by setting the toggle off in Initialize."
+    },
+    "user-verification-database": {
+      "class": "CheckDatabaseCredentialDialogFragment",
+      "ids": ["setup_check_password_edit_text", "setup_check_password_input_layout", "user_verification_database_credential"],
+      "trigger": "as above when device-credential verification is off or unavailable",
+      "buttons": ["Check", "Cancel"],
+      "unexpected": true,
+      "answer": "Cancel, or type test123 and Check only if a scenario needs it"
+    },
+    "clipboard-first-time": {
+      "class": "AlertDialog allow_copy_password_warning + clipboard_warning",
+      "trigger": "first tap on the Copy button of a protected field (allow_copy_password_first_time_key defaults to true)",
+      "buttons": ["Enable", "Disable"],
+      "unexpected": true,
+      "answer": "Disable (changes the setting clipboard trust to off, which is the default)",
+      "note": "relevant to UI-COPY if it is ever built"
+    },
+    "file-manager": {
+      "class": "FileManagerDialogFragment",
+      "ids": ["file_manager_button", "file_manager_install_description"],
+      "trigger": "the system file picker is missing or throws",
+      "buttons": ["Cancel"],
+      "unexpected": true,
+      "answer": "Cancel, and fail: a system exception (no picker, no open)"
+    },
+    "pro-feature": {
+      "class": "ProFeatureDialogFragment",
+      "trigger": "choosing a disabled theme or icon pack (only builds with STYLES_DISABLED or ICON_PACKS_DISABLED)",
+      "buttons": ["Download or Contribute", "Cancel"],
+      "unexpected": false,
+      "answer": "Cancel; not reachable in this build"
+    },
+    "delete-nodes": {
+      "class": "DeleteNodesDialogFragment",
+      "trigger": "deleting entries or groups, emptying the recycle bin",
+      "buttons": ["OK", "Cancel"],
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel; a run never selects entries for deletion"
+    },
+    "group-info": {
+      "class": "GroupDialogFragment",
+      "trigger": "tap on the CURRENT group's breadcrumb (it does not navigate)",
+      "buttons": ["OK"],
+      "unexpected": true,
+      "answer": "OK",
+      "note": "a test that taps the breadcrumb for navigation meets this"
+    },
+    "sort": {
+      "class": "SortDialogFragment",
+      "ids": ["sort_selection_radio_group", "sort_selection_title", "sort_selection_ascending", "sort_selection_groups_before", "sort_selection_recycle_bin_bottom"],
+      "trigger": "menu_sort or search_sort",
+      "texts": "Sort",
+      "buttons": ["OK", "Cancel"],
+      "unexpected": false,
+      "answer": "Cancel",
+      "note": "the earlier harvest tapped menu_sort and saw no dialog: not explained; the dialog may take longer than the wait, or the tap missed"
+    },
+    "group-edit": {
+      "class": "GroupEditDialogFragment",
+      "trigger": "add group, edit group, long tap on the current breadcrumb",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel"
+    },
+    "entry-custom-field": {
+      "class": "EntryCustomFieldDialogFragment",
+      "trigger": "menu_add_field",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel"
+    },
+    "set-otp": {
+      "class": "SetOTPDialogFragment",
+      "trigger": "menu_add_otp",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel"
+    },
+    "file-too-big": {
+      "class": "FileTooBigDialogFragment",
+      "trigger": "adding an attachment above the warning size",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel"
+    },
+    "set-main-credential": {
+      "class": "SetMainCredentialDialogFragment",
+      "trigger": "create a vault; Settings, Change master key",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel"
+    },
+    "main-credential": {
+      "class": "MainCredentialDialogFragment",
+      "trigger": "drawer, Merge from, after the file is chosen",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel"
+    },
+    "unavailable-feature": {
+      "class": "UnavailableFeatureDialogFragment",
+      "trigger": "turning on biometric or device-credential unlock on a device that lacks it",
+      "buttons": ["OK"],
+      "unexpected": false,
+      "answer": "OK"
+    },
+    "preference-dialogs": {
+      "class": "settings/preferencedialogfragment/*",
+      "trigger": "tapping a database or timeout preference",
+      "unexpected": false,
+      "neverPress": true,
+      "answer": "Cancel; a harvest never taps a row inside a category"
+    },
+    "passkey-unknown-app": {
+      "class": "PasskeyLauncherActivity AlertDialogs",
+      "trigger": "a passkey request from an unknown app",
+      "unexpected": false,
+      "answer": "not reachable in this test"
+    }
+  },
+  "platform_dialogs": {
+    "popup-menu": { "window": "PopupWindow:<hash>", "answer": "back", "seen": true, "note": "the app has no PopupMenu or bottom sheet; the overflow is a popup window" },
+    "notification-shade": { "answer": "cmd statusbar collapse", "seen": true },
+    "screen-locked": { "answer": "wait", "seen": true },
+    "file-picker": { "package": "documentsui", "trigger": "Open existing vault, keyfile", "answer": "pick the file by name; Initialize does this", "seen": true },
+    "post-notifications-system": { "trigger": "after Ask in notification-permission", "answer": "Don't allow", "seen": false },
+    "snackbar-toast": { "trigger": "save_success, error_save_read_only and others", "answer": "none: they vanish; a test must not depend on them", "seen": false }
+  },
+  "gaps": [
+    "Dialogs not yet matched against the fixture-spec `dialogs` table: database-changed, notification-permission, clipboard-first-time, group-info, reload-discards, password-encoding, lock-discard, education overlay.",
+    "The 'education off' state is not yet a precondition in environments/cprima-dev.json; it is unverified whether the phone has any hints pending.",
+    "None of the app dialogs besides discard-changes and user-verification was opened on the phone."
+  ]
+}

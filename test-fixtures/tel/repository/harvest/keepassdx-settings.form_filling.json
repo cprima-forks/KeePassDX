@@ -1,0 +1,650 @@
+{
+ "screen": "settings.form_filling",
+ "from": "the settings, the category row",
+ "focus": "com.kunzisoft.keepass.free/com.kunzisoft.keepass.settings.SettingsActivity",
+ "date": "2026-10-02",
+ "candidates": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "",
+   "text": "Form filling",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[150,112][510,209]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/list_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/recycler_view",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Credential provider",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,281][464,343]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Credential provider service",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,423][699,493]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,383][1000,533]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,398][1000,518]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/icon_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,596][220,676]"
+  },
+  {
+   "id": "android:id/icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,606][140,666]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Configure autofilling to quickly fill out forms in other apps",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[220,573][1000,700]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Autofill settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,780][445,850]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Share to Magikeyboard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,930][613,1000]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Share entries retrieved from autofill to Magikeyboard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1000][830,1127]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,890][1000,1167]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,968][1000,1088]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Keyboard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1207][273,1269]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/icon_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1405][220,1485]"
+  },
+  {
+   "id": "android:id/icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1415][140,1475]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Activate a custom keyboard populating your passwords and all identity fields",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[220,1349][1000,1541]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Device keyboard settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1621][660,1691]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1581][1000,1731]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1596][1000,1716]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Magikeyboard settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1771][607,1841]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "General",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1921][236,1983]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Subdomain search",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2063][514,2133]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Search web domains with subdomains constraints",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2133][830,2178]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,2023][1000,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,2101][1000,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ],
+ "matches": {},
+ "unpredicted": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/list_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/recycler_view",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Credential provider",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,281][464,343]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Credential provider service",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,423][699,493]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,383][1000,533]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,398][1000,518]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/icon_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,596][220,676]"
+  },
+  {
+   "id": "android:id/icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,606][140,666]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Configure autofilling to quickly fill out forms in other apps",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[220,573][1000,700]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Autofill settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,780][445,850]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Share to Magikeyboard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,930][613,1000]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Share entries retrieved from autofill to Magikeyboard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1000][830,1127]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,890][1000,1167]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,968][1000,1088]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Keyboard",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1207][273,1269]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/icon_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1405][220,1485]"
+  },
+  {
+   "id": "android:id/icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1415][140,1475]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Activate a custom keyboard populating your passwords and all identity fields",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[220,1349][1000,1541]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Device keyboard settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1621][660,1691]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1581][1000,1731]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1596][1000,1716]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Magikeyboard settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1771][607,1841]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "General",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1921][236,1983]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Subdomain search",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2063][514,2133]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Search web domains with subdomains constraints",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2133][830,2178]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,2023][1000,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,2101][1000,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ]
+}

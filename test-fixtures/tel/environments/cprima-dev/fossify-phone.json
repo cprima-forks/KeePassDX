@@ -1,0 +1,27 @@
+{
+  "system": "fossify-phone",
+  "role": "dialer",
+  "kind": "default-app",
+  "package": "org.fossify.phone",
+  "chooser_label": "Phone",
+  "chooser_label_note": "How the app is named in Android's 'Open with' chooser (repository/android.json, resolver.apps.label). The row also has the second line Dialpad.",
+  "provenance": {
+    "type": "observed on a device",
+    "device": "Fairphone FP4",
+    "android": "13",
+    "date": "2026-10-02",
+    "note": "Fossify Phone is not a usual dialer. It shows the number it was handed in a field with this id. Without this element the number is read from the screen by content (an edit field that holds a phone-like text)."
+  },
+  "screens": {
+    "main": {
+      "activity": "DialpadActivity",
+      "elements": {
+        "number": { "id": "dialpad_input", "class": "EditText" },
+        "call_button": { "id": "dialpad_call_button", "note": "NEVER pressed: it would place a call. Listed so that no step can mistake it for something else." },
+        "backspace": { "id": "dialpad_clear_char" },
+        "placeholder": { "id": "dialpad_placeholder" },
+        "navigate_up": { "desc": "Back", "class": "ImageButton" }
+      }
+    }
+  }
+}

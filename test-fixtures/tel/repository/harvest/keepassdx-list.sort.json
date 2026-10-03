@@ -1,0 +1,1277 @@
+{
+ "screen": "list.sort",
+ "from": "the entry list",
+ "focus": "com.kunzisoft.keepass.free/com.kunzisoft.keepass.activities.GroupActivity",
+ "date": "2026-10-02",
+ "candidates": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/drawer_layout",
+   "text": "",
+   "desc": "",
+   "class": "DrawerLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_group_container_view",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/error_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/search_content_view",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_group_header",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,244]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,244]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigation drawer open",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/database_name",
+   "text": "KeePassDX Database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[170,81][740,244]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_search",
+   "text": "",
+   "desc": "Search",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[740,101][860,221]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_sort",
+   "text": "",
+   "desc": "Sort",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[860,101][980,221]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[980,101][1080,221]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/add_node_button",
+   "text": "",
+   "desc": "",
+   "class": "RelativeLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/add_button",
+   "text": "",
+   "desc": "Add node",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[880,1948][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/app_bar",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,404]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/breadcrumb_list",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,404]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/breadcrumb_group",
+   "text": "",
+   "desc": "",
+   "class": "CardView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[30,264][425,384]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_numbers",
+   "text": "50",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[43,284][107,341]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[63,284][143,364]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_name",
+   "text": "Database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[178,289][397,359]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/nodes_list_fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,404][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/nodes_list",
+   "text": "",
+   "desc": "Node children",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,404][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,424][1050,544]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,444][155,524]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,449][990,519]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "tel-url",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,449][342,519]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,564][1050,684]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,584][155,664]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,589][990,659]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "tel-custom",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,589][458,659]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,704][1050,824]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,724][155,804]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,729][990,799]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "tel-notes",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,729][413,799]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,844][1050,964]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,864][155,944]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,869][990,939]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ctl-https",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,869][400,939]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,984][1050,1104]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1004][155,1084]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1009][990,1079]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ctl-mailto",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1009][428,1079]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1124][1050,1244]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1144][155,1224]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1149][990,1219]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ctl-bare",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1149][384,1219]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1264][1050,1384]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1284][155,1364]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1289][990,1359]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-longpress-start",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1289][618,1359]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1404][1050,1524]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1424][155,1504]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1429][990,1499]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-longpress-middle",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1429][668,1499]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1544][1050,1664]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1564][155,1644]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1569][990,1639]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-longpress-end",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1569][596,1639]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1684][1050,1804]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1704][155,1784]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1709][990,1779]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-two-numbers",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1709][572,1779]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1824][1050,1944]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1844][155,1924]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1849][990,1919]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-wrapped-number",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1849][658,1919]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1964][1050,2084]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1984][155,2064]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1989][990,2059]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-edit-and-copy",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1989][578,2059]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,2104][1050,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,2124][155,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,2129][990,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "works-capitals",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,2129][546,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_group_footer",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,1986][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/lock_button",
+   "text": "",
+   "desc": "Lock",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,1986][165,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ],
+ "matches": {
+  "sort_by_title": {
+   "why": "the list order depends on the sort: the fixture's file order is only the order for the default sort",
+   "count": 0,
+   "found": []
+  }
+ },
+ "unpredicted": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/drawer_layout",
+   "text": "",
+   "desc": "",
+   "class": "DrawerLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_group_container_view",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/error_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/search_content_view",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/activity_group_header",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,244]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,244]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigation drawer open",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/database_name",
+   "text": "KeePassDX Database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[170,81][740,244]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_search",
+   "text": "",
+   "desc": "Search",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[740,101][860,221]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/menu_sort",
+   "text": "",
+   "desc": "Sort",
+   "class": "Button",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[860,101][980,221]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "More options",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[980,101][1080,221]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ScrollView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/add_node_button",
+   "text": "",
+   "desc": "",
+   "class": "RelativeLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/add_button",
+   "text": "",
+   "desc": "Add node",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[880,1948][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/app_bar",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,404]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/breadcrumb_list",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,244][1080,404]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/breadcrumb_group",
+   "text": "",
+   "desc": "",
+   "class": "CardView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[30,264][425,384]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_numbers",
+   "text": "50",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[43,284][107,341]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[63,284][143,364]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/group_name",
+   "text": "Database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[178,289][397,359]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/nodes_list_fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,404][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/nodes_list",
+   "text": "",
+   "desc": "Node children",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,404][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,424][1050,544]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,444][155,524]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,449][990,519]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "tel-url",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,449][342,519]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,564][1050,684]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,584][155,664]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,589][990,659]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "tel-custom",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,589][458,659]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,704][1050,824]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,724][155,804]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,729][990,799]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "tel-notes",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,729][413,799]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,844][1050,964]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,864][155,944]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,869][990,939]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ctl-https",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,869][400,939]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,984][1050,1104]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1004][155,1084]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1009][990,1079]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ctl-mailto",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1009][428,1079]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1124][1050,1244]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1144][155,1224]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1149][990,1219]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ctl-bare",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1149][384,1219]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1264][1050,1384]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1284][155,1364]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1289][990,1359]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-longpress-start",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1289][618,1359]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1404][1050,1524]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1424][155,1504]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1429][990,1499]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-longpress-middle",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1429][668,1499]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[20,1544][1050,1664]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[75,1564][155,1644]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_container_info",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1569][990,1639]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/node_text",
+   "text": "ui-longpress-end",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[210,1569][596,1639]"
+  }
+ ]
+}

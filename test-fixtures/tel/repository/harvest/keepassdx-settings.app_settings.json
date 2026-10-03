@@ -1,0 +1,668 @@
+{
+ "screen": "settings.app_settings",
+ "from": "the settings, the category row",
+ "focus": "com.kunzisoft.keepass.free/com.kunzisoft.keepass.settings.SettingsActivity",
+ "date": "2026-10-02",
+ "candidates": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "",
+   "text": "App settings",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[150,112][553,209]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/list_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/recycler_view",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "General",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,281][236,343]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Allow no master key",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,423][550,493]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Allows tapping the \"Open\" button if no credentials are selected",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,493][830,620]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,383][1000,660]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,461][1000,581]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Delete password",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,700][468,770]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Deletes the password entered after a connection attempt to a database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,770][830,897]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,660][1000,937]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,738][1000,858]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Autosave database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,977][524,1047]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Save the database after every important action (in \"Modifiable\" mode)",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1047][830,1239]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,937][1000,1279]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1048][1000,1168]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Quick search",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1319][381,1389]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Request a search when opening a database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1389][830,1516]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1279][1000,1556]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1357][1000,1477]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Keep screen on",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1596][439,1666]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Keep the screen on when watching or editing an entry",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1666][830,1793]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1556][1000,1833]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1634][1000,1754]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1873][490,1943]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Allow third party apps to record or take screenshots of the app",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1943][830,2070]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1833][1000,2110]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1911][1000,2031]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "User Verification",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2150][417,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ],
+ "matches": {},
+ "unpredicted": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/list_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/recycler_view",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "General",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,281][236,343]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Allow no master key",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,423][550,493]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Allows tapping the \"Open\" button if no credentials are selected",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,493][830,620]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,383][1000,660]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,461][1000,581]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Delete password",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,700][468,770]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Deletes the password entered after a connection attempt to a database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,770][830,897]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,660][1000,937]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,738][1000,858]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Autosave database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,977][524,1047]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Save the database after every important action (in \"Modifiable\" mode)",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1047][830,1239]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,937][1000,1279]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1048][1000,1168]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Quick search",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1319][381,1389]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Request a search when opening a database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1389][830,1516]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1279][1000,1556]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1357][1000,1477]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Keep screen on",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1596][439,1666]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Keep the screen on when watching or editing an entry",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1666][830,1793]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1556][1000,1833]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1634][1000,1754]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1873][490,1943]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Allow third party apps to record or take screenshots of the app",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1943][830,2070]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1833][1000,2110]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1911][1000,2031]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "User Verification",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2150][417,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ]
+}

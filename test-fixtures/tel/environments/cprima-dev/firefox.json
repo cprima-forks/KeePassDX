@@ -1,0 +1,28 @@
+{
+  "system": "firefox",
+  "role": "browser",
+  "kind": "default-app",
+  "package": "org.mozilla.firefox",
+  "provenance": {
+    "type": "observed on a device",
+    "device": "Fairphone FP4",
+    "android": "13",
+    "date": "2026-10-02",
+    "note": "A tap on a web address opens it here. Only the fact that Firefox came to the front is checked so far; no element of it is used yet."
+  },
+  "screens": {
+    "page": {
+      "activity": "HomeActivity",
+      "note": "Harvested 2026-10-02 by harvest_ui.py after VIEW https://example.com. The toolbar is a Compose view: its elements are test tags, and the opened address is in the DESCRIPTION of the address box (' example.com. Search or enter address'), not in a text.",
+      "elements": {
+        "toolbar": { "id": "composable_toolbar" },
+        "address_box": { "id": "ADDRESSBAR_URL_BOX", "note": "its desc holds the address that opened: this is what UI-WEB should compare with the link target" },
+        "tabs_counter": { "id": "ADDRESSBAR_TABS_COUNTER" },
+        "engine_view": { "id": "engineView" },
+        "page_text": { "text": "Example Domain" },
+        "site_information": { "desc": "Site information" },
+        "new_tab": { "desc": "New tab" }
+      }
+    }
+  }
+}

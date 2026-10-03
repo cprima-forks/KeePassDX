@@ -1,0 +1,614 @@
+{
+ "screen": "settings.device_unlocking",
+ "from": "the settings, the category row",
+ "focus": "com.kunzisoft.keepass.free/com.kunzisoft.keepass.settings.SettingsActivity",
+ "date": "2026-10-02",
+ "candidates": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "",
+   "text": "Device unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[150,112][694,209]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/list_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/recycler_view",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "General",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,281][236,343]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/icon_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,446][220,526]"
+  },
+  {
+   "id": "android:id/icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,456][140,516]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Use device unlocking to open a database more easily",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[220,423][1000,550]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Biometric unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,630][542,700]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Lets you scan your biometric to open the database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,700][830,827]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,590][1000,867]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,668][1000,788]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Device credential unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,907][716,977]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Lets you use your device credential to open the database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,977][830,1104]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,867][1000,1144]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,945][1000,1065]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Auto-open prompt",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1184][501,1254]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Automatically request device unlock if the database is set up to use it",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1254][830,1446]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1144][1000,1486]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1255][1000,1375]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Content",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1526][240,1588]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Temp device unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1668][613,1738]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Do not store any encrypted content to use device unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1738][830,1865]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1628][1000,1905]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1706][1000,1826]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Device unlocking expiration",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1945][716,2015]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Duration of device unlocking usage before deleting its content",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2015][1000,2142]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ],
+ "matches": {},
+ "unpredicted": [
+  {
+   "id": "com.kunzisoft.keepass.free:id/action_bar_root",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "android:id/content",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2199]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar_coordinator",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/toolbar",
+   "text": "",
+   "desc": "",
+   "class": "ViewGroup",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,81][1080,241]"
+  },
+  {
+   "id": "",
+   "text": "",
+   "desc": "Navigate up",
+   "class": "ImageButton",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": true,
+   "bounds": "[0,91][140,231]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/fragment_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/list_container",
+   "text": "",
+   "desc": "",
+   "class": "FrameLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/recycler_view",
+   "text": "",
+   "desc": "",
+   "class": "RecyclerView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,241][1080,2178]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "General",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,281][236,343]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/icon_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,446][220,526]"
+  },
+  {
+   "id": "android:id/icon",
+   "text": "",
+   "desc": "",
+   "class": "ImageView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,456][140,516]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Use device unlocking to open a database more easily",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[220,423][1000,550]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Biometric unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,630][542,700]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Lets you scan your biometric to open the database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,700][830,827]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,590][1000,867]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,668][1000,788]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Device credential unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,907][716,977]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Lets you use your device credential to open the database",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,977][830,1104]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,867][1000,1144]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,945][1000,1065]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Auto-open prompt",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1184][501,1254]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Automatically request device unlock if the database is set up to use it",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1254][830,1446]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1144][1000,1486]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1255][1000,1375]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Content",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1526][240,1588]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Temp device unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1668][613,1738]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Do not store any encrypted content to use device unlocking",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1738][830,1865]"
+  },
+  {
+   "id": "android:id/widget_frame",
+   "text": "",
+   "desc": "",
+   "class": "LinearLayout",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[830,1628][1000,1905]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/switchWidget",
+   "text": "",
+   "desc": "",
+   "class": "Switch",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[870,1706][1000,1826]"
+  },
+  {
+   "id": "android:id/title",
+   "text": "Device unlocking expiration",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,1945][716,2015]"
+  },
+  {
+   "id": "android:id/summary",
+   "text": "Duration of device unlocking usage before deleting its content",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[80,2015][1000,2142]"
+  },
+  {
+   "id": "com.kunzisoft.keepass.free:id/screenshot_mode_banner",
+   "text": "Screenshot mode",
+   "desc": "",
+   "class": "TextView",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,2178][1080,2199]"
+  },
+  {
+   "id": "android:id/navigationBarBackground",
+   "text": "",
+   "desc": "",
+   "class": "View",
+   "package": "com.kunzisoft.keepass.free",
+   "clickable": false,
+   "bounds": "[0,0][0,0]"
+  }
+ ]
+}
