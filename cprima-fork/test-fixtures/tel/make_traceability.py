@@ -32,7 +32,8 @@ CASES_DIR = FORK / "app" / "sharedTest" / "resources" / "tel-cases"
 WIKI = REPO.parent / "KeePassDX.wiki" / "test-management"
 
 ENV_JVM, ENV_PHONE, ENV_DEVICE = "E-003", "E-004", "E-001"
-CODE_ENVIRONMENTS = (ENV_JVM, ENV_PHONE)
+ENV_JVM28 = "E-007"  # the same desktop JVM run with Robolectric at sdk 28 (Android 9)
+CODE_ENVIRONMENTS = (ENV_JVM, ENV_JVM28, ENV_PHONE)
 CASE_NAME = re.compile(r"case\[(C-[A-Z]{2}-\d+)\]")
 
 
@@ -125,6 +126,8 @@ def main() -> int:
     results = {
         ENV_JVM: {**jvm_results(args.jvm_normal, "RequirementCasesTest"),
                   **jvm_results(args.jvm_defects, "RequirementCasesKnownDefectsTest")},
+        ENV_JVM28: {**jvm_results(args.jvm_normal, "RequirementCasesApi28Test"),
+                    **jvm_results(args.jvm_defects, "RequirementCasesKnownDefectsApi28Test")},
         ENV_PHONE: {**phone_results(args.phone_normal, "RequirementCasesInstrumentedTest"),
                     **phone_results(args.phone_defects, "RequirementCasesKnownDefectsInstrumentedTest")},
     }
@@ -132,9 +135,10 @@ def main() -> int:
     for environment, found in results.items():
         if set(found) != code_ids:
             errors.append(f"{environment}: missing {sorted(code_ids - set(found))[:5]} extra {sorted(set(found) - code_ids)[:5]}")
-    if results[ENV_JVM] != results[ENV_PHONE]:
-        different = sorted(c for c in code_ids if results[ENV_JVM].get(c) != results[ENV_PHONE].get(c))
-        print(f"note: the environments differ in {different}")
+    for other in (ENV_PHONE, ENV_JVM28):
+        if results[ENV_JVM] != results[other]:
+            different = sorted(c for c in code_ids if results[ENV_JVM].get(c) != results[other].get(c))
+            print(f"note: {ENV_JVM} and {other} differ in {different}")
     if errors:
         print("\n".join(errors), file=sys.stderr)
         return 1
