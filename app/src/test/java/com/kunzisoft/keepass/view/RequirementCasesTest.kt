@@ -14,10 +14,10 @@ import org.robolectric.annotation.Config
  */
 @RunWith(ParameterizedRobolectricTestRunner::class)
 @Config(sdk = [34])
-class RequirementCasesTest(private val caseId: String) {
+open class RequirementCasesTest(private val caseId: String) {
 
     companion object {
-        private fun read(path: String): String =
+        internal fun read(path: String): String =
             RequirementCasesTest::class.java.classLoader!!
                 .getResourceAsStream(path)!!
                 .bufferedReader().use { it.readText() }

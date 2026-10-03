@@ -68,6 +68,7 @@ class RequirementCaseFilesTest {
         assertEquals(cases.map { it.id }, headers.map { it.id })
         assertEquals(cases.map { it.level }, headers.map { it.level })
         assertEquals(cases.map { it.current }, headers.map { it.current })
+        assertEquals(cases.map { it.differsOnSdk.toSet() }, headers.map { it.differsOnSdk })
     }
 
     @Test

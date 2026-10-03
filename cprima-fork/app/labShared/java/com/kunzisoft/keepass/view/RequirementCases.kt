@@ -41,7 +41,9 @@ class RqCase(
     /** The time within which the case must finish, null for no limit. */
     val timeLimitMs: Long?,
     val current: String,
-    val legacy: List<String>
+    val legacy: List<String>,
+    /** API levels on which the case is known to differ although `current` says it matches, see [RequirementCases.isNormal]. */
+    val differsOnSdk: List<Int> = emptyList()
 ) {
     // Used by the test runners as the name of the test
     override fun toString() = id
@@ -61,27 +63,35 @@ object RequirementCases {
     fun pathOf(topic: String) = "tel-cases/$topic.json"
 
     /** The part of a case that decides in which test class it runs. */
-    class Header(val id: String, val level: String, val current: String)
+    class Header(val id: String, val level: String, val current: String, val differsOnSdk: Set<Int> = emptySet())
 
     // One case per line, with the fields in this order: the files are written that way and the data
     // hygiene test checks it. This avoids a JSON parser: the Robolectric runner reads its parameters
     // outside the sandbox, where org.json is not the real implementation.
     private val HEADER_REGEX = Regex(
-        "\"id\"\\s*:\\s*\"([^\"]+)\"[^\\n]*?\"level\"\\s*:\\s*\"(\\w+)\"[^\\n]*?\"current\"\\s*:\\s*\"(\\w+)\""
+        "\"id\"\\s*:\\s*\"([^\"]+)\"[^\\n]*?\"level\"\\s*:\\s*\"(\\w+)\"[^\\n]*?\"current\"\\s*:\\s*\"(\\w+)\"" +
+            "(?:\\s*,\\s*\"differs_on_sdk\"\\s*:\\s*\\[([0-9,\\s]*)\\])?"
     )
 
     fun headers(readFile: (String) -> String): List<Header> =
         TOPICS.flatMap { topic ->
             HEADER_REGEX.findAll(readFile(pathOf(topic)))
-                .map { Header(it.groupValues[1], it.groupValues[2], it.groupValues[3]) }
+                .map { Header(it.groupValues[1], it.groupValues[2], it.groupValues[3], sdkList(it.groupValues[4])) }
                 .toList()
         }
 
-    /** True for the cases of the normal task: executable here, and not known to differ. */
-    fun isNormal(header: Header) = header.level == RqLevel.CODE && header.current != RqCurrent.DIFFERS
+    private fun sdkList(text: String): Set<Int> =
+        text.split(',').map { it.trim() }.filter { it.isNotEmpty() }.map { it.toInt() }.toSet()
 
-    /** True for the cases of the known defects task: executable here, and known to differ. */
-    fun isKnownDefect(header: Header) = header.level == RqLevel.CODE && header.current == RqCurrent.DIFFERS
+    /** A case known to differ: everywhere (`current`), or on the API level the run is on (`differs_on_sdk`). */
+    private fun differs(header: Header, sdk: Int?) =
+        header.current == RqCurrent.DIFFERS || (sdk != null && sdk in header.differsOnSdk)
+
+    /** True for the cases of the normal task: executable here, and not known to differ on this API level. */
+    fun isNormal(header: Header, sdk: Int? = null) = header.level == RqLevel.CODE && !differs(header, sdk)
+
+    /** True for the cases of the known defects task: executable here, and known to differ on this API level. */
+    fun isKnownDefect(header: Header, sdk: Int? = null) = header.level == RqLevel.CODE && differs(header, sdk)
 
     fun parseValues(json: String): Map<String, RqValue> {
         val array = JSONArray(json)
@@ -120,7 +130,8 @@ object RequirementCases {
                 },
                 timeLimitMs = if (expected.has("timeLimitMs")) expected.getLong("timeLimitMs") else null,
                 current = case.getString("current"),
-                legacy = strings(case.optJSONArray("legacy") ?: JSONArray())
+                legacy = strings(case.optJSONArray("legacy") ?: JSONArray()),
+                differsOnSdk = (case.optJSONArray("differs_on_sdk") ?: JSONArray()).let { array -> (0 until array.length()).map { array.getInt(it) } }
             )
         }
     }
