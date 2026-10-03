@@ -218,7 +218,7 @@ def remove_phone_shots() -> None:
 
 # --- phonectl: the utility that runs on the phone (cprima-fork/tools/phonectl) ----------------------------
 
-PHONECTL_DEX = Path(__file__).resolve().parent.parent / "tools" / "phonectl" / "build" / "phonectl.dex"
+PHONECTL_DEX = Path(__file__).resolve().parents[2] / "tools" / "phonectl" / "build" / "phonectl.dex"
 _PHONECTL_PUSHED = [False]
 
 

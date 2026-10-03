@@ -1,6 +1,8 @@
 package com.kunzisoft.keepass.linklab
 
 import android.app.Activity
+import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.widget.TextView
 import androidx.core.view.WindowCompat
@@ -18,7 +20,25 @@ class LabAboutActivity : Activity() {
         setContentView(R.layout.linklab_about)
         applyInsets(R.id.linklab_about_root, R.id.linklab_about_header, R.id.linklab_about_footer)
         findViewById<TextView>(R.id.linklab_about_text).text = legend()
-        findViewById<android.view.View>(R.id.linklab_about_close).setOnClickListener { finish() }
+        findViewById<TextView>(R.id.linklab_about_provenance).text =
+            "Android ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT}) · ${Build.MODEL} · " +
+                    "KeePassDX ${packageManager.getPackageInfo(packageName, 0).versionName} · schema ${LabSchema.VERSION}"
+        // Opened by the launcher it is the start screen and leads on to the cases; opened from the cases it closes
+        val button = findViewById<android.widget.Button>(R.id.linklab_about_close)
+        if (intent.getBooleanExtra(EXTRA_FROM_LAB, false)) {
+            button.text = "Close"
+            button.setOnClickListener { finish() }
+        } else {
+            button.text = "Start"
+            button.setOnClickListener {
+                startActivity(Intent(this, LabActivity::class.java))
+                finish()
+            }
+        }
+    }
+
+    companion object {
+        const val EXTRA_FROM_LAB = "from-lab"
     }
 
     private fun legend(): String = """
@@ -45,7 +65,7 @@ Installed apps that can open the target. Nothing is started.
 Footer
 Run probes repeats the probes for this case. Copy puts the records of the session (JSON lines) on the clipboard. Save writes them to the files of the app (linklab/<run>/diagnostics.jsonl). The last line says what you are looking at: Android version, device, app version, view kind, schema version and the hash of the test data.
 
-Start it from the launcher, or from a computer:
+This is the start screen. Start (below) opens the first case. From a computer:
 adb shell am start -n $packageName/com.kunzisoft.keepass.linklab.LabActivity --es case-id C-PA-001
 
 About LinkLab

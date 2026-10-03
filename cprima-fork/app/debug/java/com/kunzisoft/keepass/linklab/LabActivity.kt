@@ -20,6 +20,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import com.kunzisoft.keepass.R
+import com.kunzisoft.keepass.view.RequirementCases
 import com.kunzisoft.keepass.view.RqCase
 import java.io.File
 import java.text.SimpleDateFormat
@@ -64,7 +65,7 @@ class LabActivity : Activity() {
         applyInsets(R.id.linklab_root, R.id.linklab_header, R.id.linklab_footer)
 
         findViewById<View>(R.id.linklab_about).setOnClickListener {
-            startActivity(Intent(this, LabAboutActivity::class.java))
+            startActivity(Intent(this, LabAboutActivity::class.java).putExtra(LabAboutActivity.EXTRA_FROM_LAB, true))
         }
         findViewById<View>(R.id.linklab_previous).setOnClickListener { show(index - 1) }
         findViewById<View>(R.id.linklab_next).setOnClickListener { show(index + 1) }
@@ -262,6 +263,9 @@ class LabActivity : Activity() {
             .put("index", index)
             .put("total", data.cases.size)
             .put("ready", ready)
+            .put("schema", LabSchema.VERSION)
+            .put("data", data.hashes[RequirementCases.VALUES_FILE])
+            .put("data_source", data.sourceName)
             .put("seq", recorder.lastSequence)
             .put("t", System.currentTimeMillis())
         worker.execute {

@@ -19,14 +19,15 @@
             android:label="@string/linklab_name"
             android:exported="true"
             android:launchMode="singleTop">
+        </activity>
+        <activity
+            android:name="com.kunzisoft.keepass.linklab.LabAboutActivity"
+            android:label="@string/linklab_name"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="com.kunzisoft.keepass.linklab.LabAboutActivity"
-            android:label="@string/linklab_about_title"
-            android:exported="false" />
     </application>
 </manifest>
