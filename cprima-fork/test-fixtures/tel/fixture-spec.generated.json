@@ -599,15 +599,15 @@
       "id": "visual-V-0048",
       "purpose": "visual",
       "field": "url",
-      "value": "write a@example.com or tel:+49",
+      "value": "write a@example.com or tel:+493023125511",
       "links": [
         {
           "text": "a@example.com",
           "target": "mailto:a@example.com"
         },
         {
-          "text": "+49",
-          "target": "tel:+49"
+          "text": "+493023125511",
+          "target": "tel:+493023125511"
         }
       ]
     },
@@ -615,15 +615,15 @@
       "id": "visual-V-0042",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:+1tel:+2",
+      "value": "tel:+493023125506tel:+493023125507",
       "links": [
         {
-          "text": "+1",
-          "target": "tel:+1"
+          "text": "+493023125506",
+          "target": "tel:+493023125506"
         },
         {
-          "text": "+2",
-          "target": "tel:+2"
+          "text": "+493023125507",
+          "target": "tel:+493023125507"
         }
       ]
     },
@@ -638,11 +638,11 @@
       "id": "visual-V-0095",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:0301234567",
+      "value": "tel:03023125567",
       "links": [
         {
-          "text": "0301234567",
-          "target": "tel:0301234567"
+          "text": "03023125567",
+          "target": "tel:03023125567"
         }
       ]
     },
@@ -664,11 +664,11 @@
       "id": "visual-V-0039",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:+49\n301234",
+      "value": "tel:+493023125503\n301234",
       "links": [
         {
-          "text": "+49",
-          "target": "tel:+49"
+          "text": "+493023125503",
+          "target": "tel:+493023125503"
         }
       ]
     },
@@ -707,11 +707,11 @@
       "id": "visual-V-0092",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:0301234567;phone-context=+49",
+      "value": "tel:03023125567;phone-context=+49",
       "links": [
         {
-          "text": "0301234567;phone-context=+49",
-          "target": "tel:0301234567;phone-context=+49"
+          "text": "03023125567;phone-context=+49",
+          "target": "tel:03023125567;phone-context=+49"
         }
       ]
     },
@@ -726,15 +726,15 @@
       "id": "visual-V-0044",
       "purpose": "visual",
       "field": "url",
-      "value": "https://example.com/a tel:+49",
+      "value": "https://example.com/a tel:+493023125508",
       "links": [
         {
           "text": "https://example.com/a",
           "target": "https://example.com/a"
         },
         {
-          "text": "+49",
-          "target": "tel:+49"
+          "text": "+493023125508",
+          "target": "tel:+493023125508"
         }
       ]
     },
@@ -749,11 +749,11 @@
       "id": "visual-V-0005",
       "purpose": "visual",
       "field": "url",
-      "value": "TEL:+49301234567",
+      "value": "TEL:+493023125567",
       "links": [
         {
-          "text": "+49301234567",
-          "target": "tel:+49301234567"
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
         }
       ]
     },
@@ -761,11 +761,11 @@
       "id": "visual-V-0030",
       "purpose": "visual",
       "field": "url",
-      "value": "(tel:+49)",
+      "value": "(tel:+493023125501)",
       "links": [
         {
-          "text": "+49",
-          "target": "tel:+49"
+          "text": "+493023125501",
+          "target": "tel:+493023125501"
         }
       ]
     },
@@ -773,14 +773,14 @@
       "id": "visual-V-0084",
       "purpose": "visual",
       "field": "url",
-      "value": "Tel: +49 30 1234567",
+      "value": "Tel: +49 30 23125567",
       "links": []
     },
     {
       "id": "visual-V-0077",
       "purpose": "visual",
       "field": "url",
-      "value": "+0301234567",
+      "value": "+03023125567",
       "links": []
     },
     {
@@ -813,11 +813,11 @@
       "id": "visual-V-0007",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:+0301234567",
+      "value": "tel:+03023125567",
       "links": [
         {
-          "text": "+0301234567",
-          "target": "tel:+0301234567"
+          "text": "+03023125567",
+          "target": "tel:+03023125567"
         }
       ]
     },
@@ -825,7 +825,7 @@
       "id": "visual-V-0053",
       "purpose": "visual",
       "field": "url",
-      "value": "Hotel:+4930123456",
+      "value": "Hotel:+493023125456",
       "links": []
     },
     {
@@ -853,11 +853,11 @@
       "id": "visual-V-0021",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:+49 (0) 30 1234567",
+      "value": "tel:+49 (0) 30 23125567",
       "links": [
         {
-          "text": "+49 (0) 30 1234567",
-          "target": "tel:+49301234567"
+          "text": "+49 (0) 30 23125567",
+          "target": "tel:+493023125567"
         }
       ]
     },
@@ -865,11 +865,11 @@
       "id": "visual-V-0024",
       "purpose": "visual",
       "field": "url",
-      "value": "tel:+1 (555) 010-0100",
+      "value": "tel:+1 (201) 555-0100",
       "links": [
         {
-          "text": "+1 (555) 010-0100",
-          "target": "tel:+15550100100"
+          "text": "+1 (201) 555-0100",
+          "target": "tel:+12015550100"
         }
       ]
     },

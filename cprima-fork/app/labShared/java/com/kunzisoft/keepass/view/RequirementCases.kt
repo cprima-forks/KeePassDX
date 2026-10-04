@@ -41,6 +41,7 @@ class RqCase(
     /** The time within which the case must finish, null for no limit. */
     val timeLimitMs: Long?,
     val current: String,
+    /** Names of the scenarios of the older case file that this case comes from: provenance, not the exact old input. */
     val legacy: List<String>,
     /** API levels on which the case is known to differ although `current` says it matches, see [RequirementCases.isNormal]. */
     val differsOnSdk: List<Int> = emptyList()
