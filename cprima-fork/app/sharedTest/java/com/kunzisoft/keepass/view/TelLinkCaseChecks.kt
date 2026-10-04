@@ -6,14 +6,18 @@ import android.text.style.URLSpan
 import android.text.util.Linkify
 import android.widget.TextView
 import androidx.core.text.util.LinkifyCompat
+import com.kunzisoft.keepass.utils.TEL_LINK_CONFIG
+import com.kunzisoft.keepass.utils.TelLinkConfig
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.TEL_SCHEME
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.linkifySchemes
 
 /** The helpers that run the linkify of a field on a text and read the links back. */
 object TelLinkCaseChecks {
 
     /** The two calls TextFieldView.linkify() makes for a field: the mask based one, then the spike. */
-    private fun linkify(view: TextView, tag: Any?, config: PhoneLinkConfig) {
+    private fun linkify(view: TextView, tag: Any?, config: TelLinkConfig) {
         LinkifyCompat.addLinks(view, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
-        spikeLinkifyTel(view, tag, config)
+        view.linkifySchemes(tag, config)
     }
 
     internal fun viewWith(context: Context, input: String) =
@@ -39,7 +43,7 @@ object TelLinkCaseChecks {
         input: String,
         field: String,
         times: Int = 1,
-        config: PhoneLinkConfig = PHONE_LINK_CONFIG
+        config: TelLinkConfig = TEL_LINK_CONFIG
     ): List<TelLink> {
         val view = viewWith(context, input)
         repeat(times) { linkify(view, TelLinkCases.tagOf(field), config) }

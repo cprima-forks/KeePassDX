@@ -3,6 +3,9 @@ package com.kunzisoft.keepass.view
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import kotlin.random.Random
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.TEL_MATCH_FILTER
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.TEL_PATTERN
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.TEL_SCHEME
 
 /**
  * Compares the regular expression with a hand-written scanner on thousands of random strings.

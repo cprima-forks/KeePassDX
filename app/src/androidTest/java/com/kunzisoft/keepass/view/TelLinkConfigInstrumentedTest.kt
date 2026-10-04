@@ -4,19 +4,20 @@ import androidx.test.platform.app.InstrumentationRegistry
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
+import com.kunzisoft.keepass.utils.TelLinkConfig
 
-/** The configuration of the phone number links as a whole, on the phone. See PhoneLinkConfigTest. */
+/** The configuration of the tel links as a whole, on the phone. See TelLinkConfigTest. */
 @RunWith(JUnit4::class)
-class PhoneLinkConfigInstrumentedTest {
+class TelLinkConfigInstrumentedTest {
 
     @Test
-    fun shippedValues() = PhoneLinkFlagChecks.shippedValues()
+    fun shippedValues() = TelLinkFlagChecks.shippedValues()
 
     @Test
-    fun rfc3966IsRequired() = PhoneLinkFlagChecks.rfc3966IsRequired()
+    fun rfc3966IsRequired() = TelLinkFlagChecks.rfc3966IsRequired()
 
     @Test
-    fun allFieldsHasAnEffect() {
+    fun namedFieldsHaveAnEffect() {
         val instrumentation = InstrumentationRegistry.getInstrumentation()
         val inputs = flagInputs { path ->
             instrumentation.context.assets.open(path).bufferedReader().use { it.readText() }
@@ -24,7 +25,7 @@ class PhoneLinkConfigInstrumentedTest {
         var failure: Throwable? = null
         instrumentation.runOnMainSync {
             try {
-                PhoneLinkFlagChecks.allFieldsHasAnEffect(inputs, instrumentation.targetContext)
+                TelLinkFlagChecks.namedFieldsHaveAnEffect(inputs, instrumentation.targetContext)
             } catch (throwable: Throwable) {
                 failure = throwable
             }

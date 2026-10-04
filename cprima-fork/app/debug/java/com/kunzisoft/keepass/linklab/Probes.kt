@@ -18,9 +18,10 @@ import com.kunzisoft.keepass.view.RqCase
 import com.kunzisoft.keepass.view.RqValue
 import com.kunzisoft.keepass.view.TelLinkCases
 import com.kunzisoft.keepass.view.TextFieldView
-import com.kunzisoft.keepass.view.spikeLinkifyTel
 import org.json.JSONArray
 import org.json.JSONObject
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.linkifySchemes
+import com.kunzisoft.keepass.view.TemplateAbstractView
 
 /**
  * The observations LinkLab makes of one case. Each probe records what an Android API returns or leaves
@@ -77,9 +78,9 @@ object Probes {
         // The two calls of TextFieldView.linkify() on a plain text view
         val spikeView = TextView(activity).apply { this.text = text }
         LinkifyCompat.addLinks(spikeView, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
-        spikeLinkifyTel(spikeView, tag)
+        spikeView.linkifySchemes(tag)
         rec.add("link.spike", case.id, value.id) {
-            put("call", "addLinks(WEB_URLS|EMAIL_ADDRESSES), then spikeLinkifyTel")
+            put("call", "addLinks(WEB_URLS|EMAIL_ADDRESSES), then linkifySchemes")
             put("spans", SpanDump.json(SpanDump.spansOf(spikeView)))
         }
 

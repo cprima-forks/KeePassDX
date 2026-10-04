@@ -40,6 +40,7 @@ import com.kunzisoft.keepass.database.element.security.ProtectedString
 import com.kunzisoft.keepass.model.AppOriginEntryField.APPLICATION_ID_FIELD_NAME
 import com.kunzisoft.keepass.model.FieldProtection
 import com.kunzisoft.keepass.utils.AppUtil.openExternalApp
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.linkifySchemes
 
 open class TextFieldView @JvmOverloads constructor(
     context: Context,
@@ -296,7 +297,7 @@ open class TextFieldView @JvmOverloads constructor(
             }
             else -> {
                 LinkifyCompat.addLinks(valueView, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
-                spikeLinkifyTel(valueView, tag)
+                valueView.linkifySchemes(tag)
             }
         }
     }

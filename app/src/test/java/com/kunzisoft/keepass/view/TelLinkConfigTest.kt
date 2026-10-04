@@ -6,23 +6,24 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
 import org.robolectric.annotation.Config
+import com.kunzisoft.keepass.utils.TelLinkConfig
 
-/** The configuration of the phone number links as a whole: shipped values, required notation, effect of allFields. */
+/** The configuration of the phone number links as a whole: shipped values, required notation, effect of fields. */
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk = [34])
-class PhoneLinkConfigTest {
+class TelLinkConfigTest {
 
     @Test
-    fun shippedValues() = PhoneLinkFlagChecks.shippedValues()
+    fun shippedValues() = TelLinkFlagChecks.shippedValues()
 
     @Test
-    fun rfc3966IsRequired() = PhoneLinkFlagChecks.rfc3966IsRequired()
+    fun rfc3966IsRequired() = TelLinkFlagChecks.rfc3966IsRequired()
 
     @Test
-    fun allFieldsHasAnEffect() {
-        PhoneLinkFlagChecks.allFieldsHasAnEffect(
+    fun namedFieldsHaveAnEffect() {
+        TelLinkFlagChecks.namedFieldsHaveAnEffect(
             flagInputs { path ->
-                PhoneLinkConfigTest::class.java.classLoader!!
+                TelLinkConfigTest::class.java.classLoader!!
                     .getResourceAsStream(path)!!
                     .bufferedReader().use { it.readText() }
             },

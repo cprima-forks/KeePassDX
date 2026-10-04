@@ -2,8 +2,8 @@ package com.kunzisoft.keepass.view
 
 import org.junit.Test
 
-/** The pattern against the hand-written reference, on the desktop JVM. See TelPatternFuzzChecks. */
-class SpikeLinkifyFuzzTest {
+/** The pattern against the hand-written reference, with the phone's regex engine. See TelPatternFuzzChecks. */
+class TelLinkifyFuzzInstrumentedTest {
 
     @Test
     fun patternAgreesWithTheReferenceOnRandomStrings() {

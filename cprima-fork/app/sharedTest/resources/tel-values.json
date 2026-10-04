@@ -118,5 +118,8 @@
   { "id": "V-0120", "value": "tel:+49(0)3023125567", "codepoints": [], "note": "the bracketed national prefix 0 after the country code, without spaces" },
   { "id": "V-0121", "value": "tel:+(0)3023125567;phone-context=49", "codepoints": [], "note": "a plus, the national prefix 0 and a context that is not valid" },
   { "id": "V-0122", "value": "tel:00493023125567", "codepoints": [], "note": "the international call prefix 00 instead of the plus" },
-  { "id": "V-0123", "value": "tel:+493023125567,12", "codepoints": [], "note": "a comma and digits after the number: an extension sent after a pause?" }
+  { "id": "V-0123", "value": "tel:+493023125567,12", "codepoints": [], "note": "a comma and digits after the number: an extension sent after a pause?" },
+  { "id": "V-0124", "value": "tel:+49-30-2312-5567-12", "codepoints": [], "note": "a hyphen-separated last group: an extension in the digits (direct dial-in)?" },
+  { "id": "V-0125", "value": "tel:+49030231255567", "codepoints": [], "note": "a 0 right after the country code, which Germany does not use" },
+  { "id": "V-0126", "value": "tel:(030) 23125567", "codepoints": [], "note": "a national number with a bracketed area code and a space" }
 ]

@@ -9,15 +9,15 @@ import org.robolectric.annotation.Config
 
 /**
  * The feature flags of the phone number links, checked against the value of every code case on the
- * desktop JVM (Robolectric). The same checks run on the phone in PhoneLinkFlagsInstrumentedTest.
+ * desktop JVM (Robolectric). The same checks run on the phone in TelLinkFlagsInstrumentedTest.
  */
 @RunWith(ParameterizedRobolectricTestRunner::class)
 @Config(sdk = [34])
-class PhoneLinkFlagsTest(private val caseId: String) {
+class TelLinkFlagsTest(private val caseId: String) {
 
     companion object {
         private fun read(path: String): String =
-            PhoneLinkFlagsTest::class.java.classLoader!!
+            TelLinkFlagsTest::class.java.classLoader!!
                 .getResourceAsStream(path)!!
                 .bufferedReader().use { it.readText() }
 
@@ -34,11 +34,14 @@ class PhoneLinkFlagsTest(private val caseId: String) {
 
     @Test
     fun defaultArgumentIsShippedConfiguration() =
-        PhoneLinkFlagChecks.defaultArgumentIsShippedConfiguration(case, context)
+        TelLinkFlagChecks.defaultArgumentIsShippedConfiguration(case, context)
 
     @Test
-    fun noSchemesNoTelLink() = PhoneLinkFlagChecks.noSchemesNoTelLink(case, context)
+    fun noSchemesNoTelLink() = TelLinkFlagChecks.noSchemesNoTelLink(case, context)
 
     @Test
-    fun allFieldsBehaveAsUrlField() = PhoneLinkFlagChecks.allFieldsBehaveAsUrlField(case, context)
+    fun namedFieldsBehaveAsUrlField() = TelLinkFlagChecks.namedFieldsBehaveAsUrlField(case, context)
+
+    @Test
+    fun emptyFieldsNoTelLink() = TelLinkFlagChecks.emptyFieldsNoTelLink(case, context)
 }

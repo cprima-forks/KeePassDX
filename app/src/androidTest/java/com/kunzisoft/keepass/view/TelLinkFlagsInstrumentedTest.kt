@@ -7,10 +7,10 @@ import org.junit.runners.Parameterized
 
 /**
  * The feature flags of the phone number links, checked against the value of every code case on the
- * phone. The same checks run on the desktop JVM in PhoneLinkFlagsTest.
+ * phone. The same checks run on the desktop JVM in TelLinkFlagsTest.
  */
 @RunWith(Parameterized::class)
-class PhoneLinkFlagsInstrumentedTest(private val case: FlagInput) {
+class TelLinkFlagsInstrumentedTest(private val case: FlagInput) {
 
     companion object {
         private fun read(path: String): String =
@@ -38,11 +38,14 @@ class PhoneLinkFlagsInstrumentedTest(private val case: FlagInput) {
 
     @Test
     fun defaultArgumentIsShippedConfiguration() =
-        onMainThread { PhoneLinkFlagChecks.defaultArgumentIsShippedConfiguration(case, it) }
+        onMainThread { TelLinkFlagChecks.defaultArgumentIsShippedConfiguration(case, it) }
 
     @Test
-    fun noSchemesNoTelLink() = onMainThread { PhoneLinkFlagChecks.noSchemesNoTelLink(case, it) }
+    fun noSchemesNoTelLink() = onMainThread { TelLinkFlagChecks.noSchemesNoTelLink(case, it) }
 
     @Test
-    fun allFieldsBehaveAsUrlField() = onMainThread { PhoneLinkFlagChecks.allFieldsBehaveAsUrlField(case, it) }
+    fun namedFieldsBehaveAsUrlField() = onMainThread { TelLinkFlagChecks.namedFieldsBehaveAsUrlField(case, it) }
+
+    @Test
+    fun emptyFieldsNoTelLink() = onMainThread { TelLinkFlagChecks.emptyFieldsNoTelLink(case, it) }
 }

@@ -7,6 +7,11 @@ import androidx.core.text.util.LinkifyCompat
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
+import com.kunzisoft.keepass.utils.TEL_LINK_CONFIG
+import com.kunzisoft.keepass.utils.LinkedField
+import com.kunzisoft.keepass.utils.TelLinkConfig
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.TEL_SCHEME
+import com.kunzisoft.keepass.utils.TelLinkifyUtil.linkifySchemes
 
 /**
  * The checks for a case of tel-cases/<topic>.json at the code level.
@@ -21,7 +26,7 @@ object RequirementCaseChecks {
         caseId: String,
         readFile: (String) -> String,
         context: Context,
-        config: PhoneLinkConfig = PHONE_LINK_CONFIG
+        config: TelLinkConfig = TEL_LINK_CONFIG
     ) {
         val (values, cases) = RequirementCases.load(readFile)
         val case = cases.first { it.id == caseId }
@@ -32,10 +37,10 @@ object RequirementCaseChecks {
         case: RqCase,
         value: RqValue,
         context: Context,
-        config: PhoneLinkConfig = PHONE_LINK_CONFIG
+        config: TelLinkConfig = TEL_LINK_CONFIG
     ) {
         require(case.level == RqLevel.CODE) { "${case.id} is not a code case" }
-        require(!config.allFields) { "allFields is checked in PhoneLinkFlagChecks" }
+        require(config.fields == setOf(LinkedField.URL)) { "fields is checked in TelLinkFlagChecks" }
         val expected = checkNotNull(case.links) { "${case.id} has no expected links" }
         fun message(what: String) = "[${case.id} ${case.requirements.joinToString()}] $what"
 
@@ -91,9 +96,9 @@ object RequirementCaseChecks {
     }
 
     /** The two calls TextFieldView.linkify() makes for a field: the mask based one, then the spike. */
-    private fun linkified(context: Context, text: String, field: String, config: PhoneLinkConfig) =
+    private fun linkified(context: Context, text: String, field: String, config: TelLinkConfig) =
         TelLinkCaseChecks.viewWith(context, text).also {
             LinkifyCompat.addLinks(it, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
-            spikeLinkifyTel(it, TelLinkCases.tagOf(field), config)
+            it.linkifySchemes(TelLinkCases.tagOf(field), config)
         }
 }
