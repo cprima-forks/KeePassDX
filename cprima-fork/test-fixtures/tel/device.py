@@ -373,8 +373,17 @@ def tap(x: int, y: int) -> None:
     phonectl("tap", str(x), str(y))
 
 
-def long_press(x: int, y: int) -> None:
-    phonectl("long-press", str(x), str(y), "1200")
+def system_tap(x: int, y: int) -> None:
+    """A tap through Android's own `input tap`. The system dialogs (file picker, app chooser) sometimes ignore the
+    zero-length touch that phonectl injects."""
+    adb("shell", "input", "tap", str(x), str(y))
+
+
+LONG_PRESS_MS = 1200  # how long the finger stays down; a run sets it (ui_test.py --long-press-ms)
+
+
+def long_press(x: int, y: int, ms: int | None = None) -> None:
+    phonectl("long-press", str(x), str(y), str(LONG_PRESS_MS if ms is None else ms))
 
 
 def swipe(x1: int, y1: int, x2: int, y2: int, ms: int = 350) -> None:

@@ -4,17 +4,28 @@ Shared by populate.py (writes the database) and check_alignment.py (checks it).
 """
 
 import json
+import os
 from pathlib import Path
 
 HERE = Path(__file__).parent
-SPEC_FILE = HERE / "fixture-spec.json"
+SPEC_FILE = HERE / os.environ.get("TEL_SPEC", "fixture-spec.json")  # TEL_SPEC: another fixture, see near-life.json
 
 READ_ONLY_LINE = "Open the database read-only, so that nothing here is saved."
 CALL_LINE = "Never press the call button of the dialer. Go back after each step."
 
 
+CODE_ENTRIES_FILE = HERE / "fixture-spec.code-entries.json"
+
+
 def load_spec() -> dict:
-    return json.loads(SPEC_FILE.read_text(encoding="utf-8"))
+    """fixture-spec.json, with the entries of fixture-spec.code-entries.json (make_code_entries.py)
+    appended: one for every value of the code cases that no entry of the spec shows."""
+    spec = json.loads(SPEC_FILE.read_text(encoding="utf-8"))
+    if CODE_ENTRIES_FILE.exists() and SPEC_FILE.name == "fixture-spec.json":
+        ids = {e["id"] for e in spec["entries"]}
+        added = json.loads(CODE_ENTRIES_FILE.read_text(encoding="utf-8"))["entries"]
+        spec["entries"] = spec["entries"] + [e for e in added if e["id"] not in ids]
+    return spec
 
 
 def load_environment(name: str) -> dict:
@@ -98,6 +109,8 @@ def expected_of(entry: dict, case: dict | None) -> str:
 
 def instructions_of(entry: dict, spec: dict, cases: dict) -> str:
     """The text of the Notes field: instruction lines, then 'Expected', then the entry id."""
+    if "notes" in entry:  # an entry with its own text (the near-life database)
+        return "\n".join([entry["notes"], f"Expected: {expected_of(entry, None)}", f"Entry: {entry['id']}"])
     case = cases.get(entry.get("valueFrom", ""))
     lines = [READ_ONLY_LINE, CALL_LINE]
     number = 1

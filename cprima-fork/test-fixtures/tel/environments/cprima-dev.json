@@ -23,13 +23,14 @@
       "in_view_first": "four rows in full; Zoom was under the Just once / Always bar until the list moved"
     }
   },
-  "closeBeforeAndAfter": [],
+  "closeBeforeAndAfter": ["com.google.android.documentsui"],
   "preconditions": [
     {
       "id": "screenshot-mode",
       "kind": "app_preference",
       "key": "enable_screenshot_mode_key",
       "equals": "true",
+      "set": true,
       "why": "Without KeePassDX's Screenshot mode every screenshot is black (the window is marked secure), and a run without evidence has no use."
     },
     {

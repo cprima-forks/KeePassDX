@@ -64,6 +64,14 @@ def right_of(anchor: dict, words: list[dict]) -> dict | None:
     return best
 
 
+def wrapped_after(anchor: dict, word: dict, words: list[dict]) -> bool:
+    """Whether `word` starts the next line and `anchor` ends its line: the number wrapped away from `tel:`."""
+    if right_of(anchor, words) is not None:
+        return False
+    below = word["y"] - anchor["y"]
+    return 0 < below <= 2.2 * anchor["h"] and word["x"] <= anchor["x"]
+
+
 def locate_numbers(words: list[dict], numbers: list[str]) -> list[tuple[dict | None, str]]:
     """Box of each number, in order, and how it was found.
 
@@ -83,6 +91,9 @@ def locate_numbers(words: list[dict], numbers: list[str]) -> list[tuple[dict | N
                     continue
                 gap = w["x"] - (anchor["x"] + anchor["w"])
                 if abs(w["y"] - anchor["y"]) < 20 and -5 <= gap <= 45:
+                    if best is None or (w["y"], w["x"]) < (best[1]["y"], best[1]["x"]):
+                        best = (i, w)
+                elif wrapped_after(anchor, w, words):
                     if best is None or (w["y"], w["x"]) < (best[1]["y"], best[1]["x"]):
                         best = (i, w)
         if best:

@@ -81,7 +81,9 @@ def close_apps(env: dict, detected: dict, log) -> None:
 
 
 def ensure_file_on_phone(path: Path, sha: str, log) -> str:
-    name = f"kp-test-tel-fixture-{sha[:8]}.kdbx"
+    # the stress fixture carries its checksum in the name; another database (the examples for the upstream
+    # reader) keeps its own file name on the phone
+    name = f"kp-test-tel-fixture-{sha[:8]}.kdbx" if path.name == "kp-test-tel.kdbx" else path.name
     target = f"{PHONE_DIR}/{name}"
     on_phone = dv.adb("shell", "sha256sum", target).split()
     if not on_phone or on_phone[0] != sha:
@@ -133,11 +135,19 @@ def pick_in_picker(name: str, log) -> None:
     """The app does not know the file: choose it in the system file picker (the Downloads folder)."""
     dv.tap(*dv.centre(dv.bounds(ui.require(dv.dump(), "keepassdx.file_select.open_vault"))))
     dv.wait_until(lambda: "documentsui" in dv.focus(), 10, what="the file picker")
+    dv.wait_stable()  # the picker fills its list after it opens: a tap on a moving list misses the row
     for _ in range(8):
         for node in ui.find_all(dv.dump(), "android.picker.file_title"):
             if node.get("text") == name:
-                dv.tap(*dv.centre(dv.bounds(node)))
-                log(event="setup", step="picked in the file picker", file=name)
+                for attempt in (1, 2, 3):  # the row is tapped again while the picker is still in front
+                    # the system's own `input tap`: the picker ignores the touch that phonectl injects
+                    x, y = dv.centre(dv.bounds(node))
+                    dv.adb("shell", "input", "tap", str(x), str(y))
+                    log(event="setup", step="picked in the file picker", file=name, attempt=attempt)
+                    if dv.soft_wait(lambda: "documentsui" not in dv.focus(), timeout=4):
+                        return
+                    node = next((n for n in ui.find_all(dv.dump(), "android.picker.file_title")
+                                 if n.get("text") == name), node)
                 return
         dv.swipe(540, 1700, 540, 800, 900)
         dv.wait_stable()  # the list has stopped scrolling
@@ -207,6 +217,7 @@ def initialize(spec: dict, env: dict, detected: dict, path: Path, log) -> Setup:
     # person ("screen-locked"); deal_with_modals returns once it is gone
     dv.deal_with_modals()
     close_apps(env, detected, log)
+    ensure_app_preferences(env, log)
     name = ensure_file_on_phone(path, sha, log)
     order = file_order(path, db["password"], sha)
     start_app(log)
@@ -305,6 +316,32 @@ def preflight(env: dict, log) -> dict:
         raise SetupError(f"preflight: {problem}") from None
     log(event="setup", step="preflight passed", preconditions=[r["id"] for r in fingerprint["preconditions"]], screenshot="ok")
     return fingerprint
+
+
+def ensure_app_preferences(env: dict, log) -> None:
+    """Initialize: set the app settings that the profile marks with `"set": true`, while the app is
+    stopped (a running app overwrites the file). A setting that is missing is added, a different
+    value is replaced. The preflight afterwards verifies the result."""
+    package = env["target"]
+    wanted = {r["key"]: r["equals"] for r in env.get("preconditions", [])
+              if r["kind"] == "app_preference" and r.get("set")}
+    current = read_app_preferences(package)
+    if current is None:
+        raise SetupError(f"the settings of {package} cannot be read (run-as), so they cannot be set")
+    path = f"shared_prefs/{package}_preferences.xml"
+    for key, value in wanted.items():
+        before = current.get(key)
+        if before == value:
+            continue
+        if before is None:
+            edit = f"s#</map>#<boolean name=\"{key}\" value=\"{value}\" />&#"
+        else:
+            edit = f"s#name=\"{key}\" value=\"{before}\"#name=\"{key}\" value=\"{value}\"#"
+        dv.adb("shell", f"run-as {package} sed -i '{edit}' {path}")
+        after = (read_app_preferences(package) or {}).get(key)
+        log(event="setup", step="setting set", key=key, was=before, now=after)
+        if after != value:
+            raise SetupError(f"the setting {key} could not be set: it is {after!r}, expected {value!r}")
 
 
 def restore_preferences(env: dict, original: dict | None, log) -> None:

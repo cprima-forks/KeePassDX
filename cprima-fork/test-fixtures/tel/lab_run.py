@@ -61,6 +61,17 @@ def case_ids(all_code: bool, listed: str | None) -> list[str]:
     return ids
 
 
+def near_life_cases(code_ids: list[str]) -> list[str]:
+    """The first code case in the URL field of every value of near-life.json, in the order of that file."""
+    cases = {}
+    for path in sorted((CASES_DIR / "tel-cases").glob("*.json")):
+        for case in json.loads(path.read_text(encoding="utf-8")):
+            if case["id"] in code_ids and case.get("field", "url") == "url":
+                cases.setdefault(case["value"], case["id"])
+    entries = json.loads((CASES_DIR / "near-life.json").read_text(encoding="utf-8"))["entries"]
+    return [cases[entry["value"]] for entry in entries]
+
+
 def lab_state(case: str) -> dict | None:
     """The newest LINKLAB_STATE of this case in logcat, or None."""
     found = None
@@ -125,14 +136,17 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--cases")
     parser.add_argument("--all", action="store_true")
+    parser.add_argument("--near-life", action="store_true", help="the code case of each value of near-life.json")
     parser.add_argument("--environment", default="cprima-dev")
     parser.add_argument("--lab-env", default="E-004")
     parser.add_argument("--no-scroll", action="store_true")
     args = parser.parse_args()
-    if not args.cases and not args.all:
-        parser.error("give --cases or --all")
+    if not args.cases and not args.all and not args.near_life:
+        parser.error("give --cases, --all or --near-life")
 
-    ids = case_ids(args.all, args.cases)
+    ids = case_ids(args.all or args.near_life, args.cases)
+    if args.near_life:
+        ids = near_life_cases(ids)
     env = fixture_spec.load_environment(args.environment)
     dv.configure([], env)
     stamp = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")

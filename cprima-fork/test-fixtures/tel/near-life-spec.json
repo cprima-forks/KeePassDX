@@ -1,0 +1,1081 @@
+{
+  "casesFile": "../../app/sharedTest/resources/tel-link-cases.json",
+  "customFieldName": "phone",
+  "database": {
+    "password": "test123",
+    "userVerification": "disabled",
+    "mode": "Modifiable",
+    "why": "The password is a documented test value, not a secret. User verification off: the per-database toggle of KeePassDX, which removes the system prompt before an entry can be edited. Modifiable: the Edit button exists only for a database that is not read-only; the tests never save."
+  },
+  "dialogs": [
+    {
+      "name": "discard-changes",
+      "match": {
+        "message": "Discard changes?",
+        "has_button": "Discard"
+      },
+      "answer": "Discard",
+      "why": "Leaving edit mode asks this. A test never saves."
+    },
+    {
+      "name": "lock-discard",
+      "match": {
+        "message": "Discard changes?",
+        "has_button": "Lock"
+      },
+      "answer": "Lock",
+      "why": "Locking asks this when the database holds unsaved changes. A test never saves, so nothing is lost; seeing it at all means something edited the database, and the report shows the rule used."
+    },
+    {
+      "name": "database-changed",
+      "match": {
+        "text_contains": "has been modified outside the app"
+      },
+      "answer": "OK",
+      "why": "The file changed on the phone while the app held it open (a push or a sync). OK only reads it again. Initialize closes the apps before the push, so this means the close step did not work."
+    },
+    {
+      "name": "reload-discards",
+      "match": {
+        "text_contains": "Reloading the database will delete the locally modified data"
+      },
+      "answer": "Cancel",
+      "why": "A reload that would throw away local changes. Cancel changes nothing."
+    },
+    {
+      "name": "notification-permission",
+      "match": {
+        "text_contains": "The notification permission allows you to display the status of the database"
+      },
+      "answer": "Later",
+      "why": "Android 13 asks once. Later does not open the system permission dialog and does not change a setting."
+    },
+    {
+      "name": "clipboard-first-time",
+      "match": {
+        "text_contains": "The clipboard is shared by all apps"
+      },
+      "answer": "Disable",
+      "why": "First tap on Copy of a protected field. Disable keeps the default (clipboard trust off)."
+    },
+    {
+      "name": "password-encoding",
+      "match": {
+        "text_contains": "Avoid password characters outside of text encoding"
+      },
+      "answer": "Cancel",
+      "why": "The unlock password has unusual characters. test123 never does; Cancel changes nothing."
+    },
+    {
+      "name": "duplicate-uuid",
+      "match": {
+        "text_contains": "The database contains duplicate UUIDs"
+      },
+      "answer": "Cancel",
+      "why": "The fixture is broken. Cancel, and the run fails at the unlock."
+    },
+    {
+      "name": "mail-draft",
+      "match": {
+        "text": "Save draft message?"
+      },
+      "answer": "Discard",
+      "why": "A tap on an e-mail address opens a composer; leaving it asks this. A test never saves a draft."
+    },
+    {
+      "name": "popup-menu",
+      "match": {
+        "window_prefix": "PopupWindow"
+      },
+      "answer": "back",
+      "why": "An overflow menu or a dropdown is a window named PopupWindow:<hash>, without an activity. It is not a modal to wait for: Back closes it."
+    },
+    {
+      "name": "notification-shade",
+      "match": {
+        "window": "NotificationShade"
+      },
+      "answer": "command:cmd statusbar collapse",
+      "why": "The notification panel covers the app and makes the screen dump fail. Closing it is a technical step."
+    },
+    {
+      "name": "screen-locked",
+      "match": {
+        "window": "Keyguard"
+      },
+      "answer": "wait",
+      "waitSeconds": 180,
+      "why": "The phone locked itself. Only the person can unlock it; the test waits for them."
+    },
+    {
+      "name": "user-verification",
+      "match": {
+        "window": "BiometricPrompt"
+      },
+      "answer": "wait",
+      "waitSeconds": 180,
+      "why": "Android asks the person to verify (PIN or fingerprint) before an entry can be edited. The test never enters a PIN: it waits for the person."
+    }
+  ],
+  "scenarios": {
+    "UI-LINK": {
+      "title": "The link in view mode",
+      "steps": [
+        "Open the entry in view mode and look at the value. Which characters are underlined?"
+      ]
+    },
+    "UI-TAP": {
+      "title": "Tap",
+      "steps": [
+        "Tap the underlined number. Android may ask which app opens it; choose the Phone app. Look at the dialpad: does it hold the number? Do NOT press the call button. Go back."
+      ]
+    },
+    "UI-LONGPRESS": {
+      "title": "Long-press",
+      "steps": [
+        "Long-press the underlined number. Which characters are highlighted? Which buttons does the toolbar show?"
+      ]
+    },
+    "UI-CALL": {
+      "title": "Call in the selection toolbar",
+      "steps": [
+        "After the long-press tap Call in the toolbar. What does the dialpad hold? Do NOT press the call button. Go back."
+      ]
+    },
+    "UI-LONGPRESS-TWO": {
+      "title": "Long-press with two numbers",
+      "steps": [
+        "Long-press the second number only. Is only that number highlighted? Tap Call: does the dialpad hold only the second number? Do NOT press the call button."
+      ]
+    },
+    "UI-WRAP": {
+      "title": "A number that wraps over two lines",
+      "steps": [
+        "The number is long enough to wrap. Is the underline continuous over both lines? Tap the part on the second line. Long-press the part on the second line: is the whole number highlighted?"
+      ]
+    },
+    "UI-NOTEL": {
+      "title": "No phone link where only another link is expected",
+      "steps": [
+        "Look at the value: only the web address or e-mail address may be a link, no part of it a phone link. A tap on the part with the number must open the web address, not the dialer. Go back."
+      ]
+    },
+    "UI-NOLINK": {
+      "title": "No link where none is expected",
+      "steps": [
+        "Look at the value: nothing may be underlined. Long-press the value: a single word is highlighted, as in any text."
+      ]
+    },
+    "UI-WEB": {
+      "title": "A web link",
+      "steps": [
+        "Tap the underlined address. Does the browser open? Go back."
+      ]
+    },
+    "UI-MAIL": {
+      "title": "An e-mail link",
+      "steps": [
+        "Is only the address underlined, and not the word in front of it? Tap it: does a mail app open? Go back without sending."
+      ]
+    },
+    "UI-REOPEN": {
+      "title": "Reopen the entry",
+      "steps": [
+        "Go back to the list and open the entry again. Is it shown exactly as before?"
+      ]
+    },
+    "UI-EDIT": {
+      "title": "Edit mode",
+      "steps": [
+        "Tap the pencil. In edit mode the value is a plain text field: no underline, the full text. Leave edit mode WITHOUT saving."
+      ]
+    },
+    "UI-COPY": {
+      "title": "Copy button",
+      "steps": [
+        "Tap the copy button next to the value, then paste somewhere (for example into a note app). What was copied: the whole value or only a part?"
+      ]
+    }
+  },
+  "description": "Generated by make_near_life.py from near-life.json; do not edit. The near-life database: The entries of the near-life database tel-link-examples.kdbx: an address book as a person keeps it, one number per entry, written in the formats people really use. Hand-kept. The stored text is the value of tel-values.json named by `value`; the links an entry must show are the expected links of the code cases with that value. All numbers are fictional. make_near_life.py builds near-life-spec.json and the database from this file.",
+  "entries": [
+    {
+      "id": "Hotel Lindenhof front desk",
+      "field": "url",
+      "value": "tel:+493023125567",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "Germany, international form, written without separators. (V-0001)",
+      "expected": "Underlined: '+493023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Praxis Dr Beispiel",
+      "field": "url",
+      "value": "tel:+49-30-231-25567",
+      "links": [
+        {
+          "text": "+49-30-231-25567",
+          "target": "tel:+49-30-231-25567"
+        }
+      ],
+      "notes": "Germany, international form, written with hyphens. (V-0008)",
+      "expected": "Underlined: '+49-30-231-25567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Buchhandlung Sonnenschein",
+      "field": "url",
+      "value": "tel:+49.30.231.25567",
+      "links": [
+        {
+          "text": "+49.30.231.25567",
+          "target": "tel:+49.30.231.25567"
+        }
+      ],
+      "notes": "Germany, international form, written with dots. (V-0009)",
+      "expected": "Underlined: '+49.30.231.25567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Taxi Musterstadt",
+      "field": "url",
+      "value": "tel:+49(30)231-25567",
+      "links": [
+        {
+          "text": "+49(30)231-25567",
+          "target": "tel:+49(30)231-25567"
+        }
+      ],
+      "notes": "Germany, the area code in brackets, no spaces. (V-0010)",
+      "expected": "Underlined: '+49(30)231-25567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Stadtwerke Hotline",
+      "field": "url",
+      "value": "tel:+49 30 23125567",
+      "links": [
+        {
+          "text": "+49 30 23125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "Germany, international form with spaces between the groups. (V-0020)",
+      "expected": "Underlined: '+49 30 23125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Reisebuero Nordlicht",
+      "field": "url",
+      "value": "tel:+49 (0) 30 23125567",
+      "links": [
+        {
+          "text": "+49 (0) 30 23125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "Germany, international form with the national prefix (0) in brackets and spaces. (V-0021)",
+      "expected": "Underlined: '+49 (0) 30 23125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Autohaus Weber",
+      "field": "url",
+      "value": "tel:+49(0)3023125567",
+      "links": [
+        {
+          "text": "+49(0)3023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "Germany, international form with the national prefix (0) in brackets, no spaces. (V-0120)",
+      "expected": "Underlined: '+49(0)3023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Friseur Haarscharf",
+      "field": "url",
+      "value": "tel:030/1234567",
+      "links": [
+        {
+          "text": "030/1234567",
+          "target": "tel:0301234567"
+        }
+      ],
+      "notes": "Germany, national form with a slash after the area code. (V-0022)",
+      "expected": "Underlined: '030/1234567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Baeckerei Korn",
+      "field": "url",
+      "value": "tel:03023125567",
+      "links": [
+        {
+          "text": "03023125567",
+          "target": "tel:03023125567"
+        }
+      ],
+      "notes": "Germany, national form, only digits. (V-0095)",
+      "expected": "Underlined: '03023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Nachbar Sued",
+      "field": "url",
+      "value": "tel:00493023125567",
+      "links": [],
+      "notes": "Germany, written with the international call prefix 00. (V-0122)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Zahnarzt Lachen",
+      "field": "url",
+      "value": "tel:(030) 23125567",
+      "links": [],
+      "notes": "Germany, national form with the area code in brackets and a space. (V-0126)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Kanzlei Recht und Ordnung",
+      "field": "url",
+      "value": "tel:+49030231255567",
+      "links": [
+        {
+          "text": "+49030231255567",
+          "target": "tel:+49030231255567"
+        }
+      ],
+      "notes": "Germany, international form with the trunk zero kept after the country code. (V-0125)",
+      "expected": "Underlined: '+49030231255567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Pizzeria Bella Roma New Jersey",
+      "field": "url",
+      "value": "tel:+1-201-555-0123",
+      "links": [
+        {
+          "text": "+1-201-555-0123",
+          "target": "tel:+1-201-555-0123"
+        }
+      ],
+      "notes": "USA, international form with hyphens. (V-0011)",
+      "expected": "Underlined: '+1-201-555-0123'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Diner Route Nine",
+      "field": "url",
+      "value": "tel:+1 (201) 555-0100",
+      "links": [
+        {
+          "text": "+1 (201) 555-0100",
+          "target": "tel:+12015550100"
+        }
+      ],
+      "notes": "USA, international form with the area code in brackets and spaces. (V-0024)",
+      "expected": "Underlined: '+1 (201) 555-0100'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Switchboard with extension",
+      "field": "url",
+      "value": "tel:+4930123;ext=12",
+      "links": [
+        {
+          "text": "+4930123;ext=12",
+          "target": "tel:+4930123;ext=12"
+        }
+      ],
+      "notes": "An extension carried as a parameter of the link. (V-0087)",
+      "expected": "Underlined: '+4930123;ext=12'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Hospital desk with subaddress",
+      "field": "url",
+      "value": "tel:+4930123;isub=12345",
+      "links": [
+        {
+          "text": "+4930123;isub=12345",
+          "target": "tel:+4930123;isub=12345"
+        }
+      ],
+      "notes": "An ISDN subaddress carried as a parameter of the link. (V-0088)",
+      "expected": "Underlined: '+4930123;isub=12345'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Office with pause and extension",
+      "field": "url",
+      "value": "tel:+493023125567,12",
+      "links": [],
+      "notes": "A comma after the number: a pause, then the extension digits. (V-0123)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Office extension with hyphens",
+      "field": "url",
+      "value": "tel:+49-30-2312-5567-12",
+      "links": [
+        {
+          "text": "+49-30-2312-5567-12",
+          "target": "tel:+49-30-2312-5567-12"
+        }
+      ],
+      "notes": "An extension written as a last group of the number. (V-0124)",
+      "expected": "Underlined: '+49-30-2312-5567-12'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Sentence with extension",
+      "field": "url",
+      "value": "Call tel:+4930123;ext=12 now",
+      "links": [
+        {
+          "text": "+4930123;ext=12",
+          "target": "tel:+4930123;ext=12"
+        }
+      ],
+      "notes": "A number with an extension inside a sentence. (V-0090)",
+      "expected": "Underlined: '+4930123;ext=12'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Extension and subaddress",
+      "field": "url",
+      "value": "tel:+4930123;ext=12;isub=3",
+      "links": [],
+      "notes": "Both parameters in one link: not allowed by the standard. (V-0089)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Office local number with context",
+      "field": "url",
+      "value": "tel:03023125567;ext=12;phone-context=+49",
+      "links": [
+        {
+          "text": "03023125567;ext=12;phone-context=+49",
+          "target": "tel:03023125567;ext=12;phone-context=+49"
+        }
+      ],
+      "notes": "A local number with an extension and the context of its country. (V-0091)",
+      "expected": "Underlined: '03023125567;ext=12;phone-context=+49'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Local number with context",
+      "field": "url",
+      "value": "tel:03023125567;phone-context=+49",
+      "links": [
+        {
+          "text": "03023125567;phone-context=+49",
+          "target": "tel:03023125567;phone-context=+49"
+        }
+      ],
+      "notes": "A local number with the context of its country. (V-0092)",
+      "expected": "Underlined: '03023125567;phone-context=+49'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Company internal number",
+      "field": "url",
+      "value": "tel:7042;phone-context=example.com",
+      "links": [
+        {
+          "text": "7042;phone-context=example.com",
+          "target": "tel:7042;phone-context=example.com"
+        }
+      ],
+      "notes": "An internal number with the domain of the company as its context. (V-0093)",
+      "expected": "Underlined: '7042;phone-context=example.com'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Emergency number with context",
+      "field": "url",
+      "value": "tel:112;phone-context=+49",
+      "links": [
+        {
+          "text": "112;phone-context=+49",
+          "target": "tel:112;phone-context=+49"
+        }
+      ],
+      "notes": "An emergency number with the context of its country. (V-0094)",
+      "expected": "Underlined: '112;phone-context=+49'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Emergency number Europe",
+      "field": "url",
+      "value": "tel:112",
+      "links": [
+        {
+          "text": "112",
+          "target": "tel:112"
+        }
+      ],
+      "notes": "The European emergency number, written alone. (V-0096)",
+      "expected": "Underlined: '112'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Emergency number USA",
+      "field": "url",
+      "value": "tel:911",
+      "links": [
+        {
+          "text": "911",
+          "target": "tel:911"
+        }
+      ],
+      "notes": "The emergency number of the USA, written alone. (V-0097)",
+      "expected": "Underlined: '911'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Short number",
+      "field": "url",
+      "value": "tel:4711",
+      "links": [
+        {
+          "text": "4711",
+          "target": "tel:4711"
+        }
+      ],
+      "notes": "A four digit service number, written alone. (V-0098)",
+      "expected": "Underlined: '4711'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Hotline with opening hours",
+      "field": "url",
+      "value": "Hotline: tel:+493023125567 (Mo\u2013Fr 8\u201318 Uhr)",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "A number inside text, followed by opening hours in brackets. (V-0038)",
+      "expected": "Underlined: '+493023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Two numbers office and mobile",
+      "field": "url",
+      "value": "B\u00fcro tel:+493023125567, Mobil tel:+491713920012",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        },
+        {
+          "text": "+491713920012",
+          "target": "tel:+491713920012"
+        }
+      ],
+      "notes": "Two numbers in one field, each with its label. (V-0043)",
+      "expected": "Underlined: '+493023125567', '+491713920012'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number then web address",
+      "field": "url",
+      "value": "tel:+493023125509 https://example.com",
+      "links": [
+        {
+          "text": "+493023125509",
+          "target": "tel:+493023125509"
+        },
+        {
+          "text": "https://example.com",
+          "target": "https://example.com"
+        }
+      ],
+      "notes": "A number followed by a web address. (V-0045)",
+      "expected": "Underlined: '+493023125509', 'https://example.com'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Web address then number",
+      "field": "url",
+      "value": "https://example.com/a tel:+493023125508",
+      "links": [
+        {
+          "text": "https://example.com/a",
+          "target": "https://example.com/a"
+        },
+        {
+          "text": "+493023125508",
+          "target": "tel:+493023125508"
+        }
+      ],
+      "notes": "A web address followed by a number. (V-0044)",
+      "expected": "Underlined: 'https://example.com/a', '+493023125508'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number after e-mail address",
+      "field": "url",
+      "value": "a@example.com tel:+493023125510",
+      "links": [
+        {
+          "text": "a@example.com",
+          "target": "mailto:a@example.com"
+        },
+        {
+          "text": "+493023125510",
+          "target": "tel:+493023125510"
+        }
+      ],
+      "notes": "An e-mail address followed by a number. (V-0046)",
+      "expected": "Underlined: 'a@example.com', '+493023125510'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Call now",
+      "field": "url",
+      "value": "call tel:+4930123 now",
+      "links": [
+        {
+          "text": "+4930123",
+          "target": "tel:+4930123"
+        }
+      ],
+      "notes": "A number inside a short sentence. (V-0037)",
+      "expected": "Underlined: '+4930123'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number in brackets",
+      "field": "url",
+      "value": "(tel:+493023125567)",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "A number in round brackets. (V-0031)",
+      "expected": "Underlined: '+493023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number in quotation marks",
+      "field": "url",
+      "value": "\"tel:+493023125502\"",
+      "links": [
+        {
+          "text": "+493023125502",
+          "target": "tel:+493023125502"
+        }
+      ],
+      "notes": "A number in quotation marks. (V-0032)",
+      "expected": "Underlined: '+493023125502'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number with full stop",
+      "field": "url",
+      "value": "tel:+49301234567.",
+      "links": [
+        {
+          "text": "+49301234567",
+          "target": "tel:+49301234567"
+        }
+      ],
+      "notes": "A number at the end of a sentence. (V-0028)",
+      "expected": "Underlined: '+49301234567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number with comma",
+      "field": "url",
+      "value": "tel:+493023125567,",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "A number followed by a comma in a list. (V-0029)",
+      "expected": "Underlined: '+493023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number then emoji",
+      "field": "url",
+      "value": "tel:+4930123\ud83d\ude00",
+      "links": [
+        {
+          "text": "+4930123",
+          "target": "tel:+4930123"
+        }
+      ],
+      "notes": "A number followed by an emoji. (V-0035)",
+      "expected": "Underlined: '+4930123'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Number split by line break",
+      "field": "url",
+      "value": "tel:+493023125503\n301234",
+      "links": [
+        {
+          "text": "+493023125503",
+          "target": "tel:+493023125503"
+        }
+      ],
+      "notes": "A number with a line break inside it. (V-0039)",
+      "expected": "Underlined: '+493023125503'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Upper case TEL",
+      "field": "url",
+      "value": "TEL:+493023125567",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "The prefix in capital letters. (V-0005)",
+      "expected": "Underlined: '+493023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Capitalised Tel",
+      "field": "url",
+      "value": "Tel:+493023125567",
+      "links": [
+        {
+          "text": "+493023125567",
+          "target": "tel:+493023125567"
+        }
+      ],
+      "notes": "The prefix with a capital first letter. (V-0006)",
+      "expected": "Underlined: '+493023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Country code only",
+      "field": "url",
+      "value": "tel:+1",
+      "links": [
+        {
+          "text": "+1",
+          "target": "tel:+1"
+        }
+      ],
+      "notes": "A plus and a country code, no number. (V-0003)",
+      "expected": "Underlined: '+1'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Too many digits",
+      "field": "url",
+      "value": "tel:+123456789012345678901234567890",
+      "links": [
+        {
+          "text": "+123456789012345678901234567890",
+          "target": "tel:+123456789012345678901234567890"
+        }
+      ],
+      "notes": "More digits than a telephone number can have. (V-0004)",
+      "expected": "Underlined: '+123456789012345678901234567890'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Leading zero country code",
+      "field": "url",
+      "value": "tel:+03023125567",
+      "links": [
+        {
+          "text": "+03023125567",
+          "target": "tel:+03023125567"
+        }
+      ],
+      "notes": "A plus followed by zero: no country starts with 0. (V-0007)",
+      "expected": "Underlined: '+03023125567'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Double plus",
+      "field": "url",
+      "value": "tel:++49",
+      "links": [],
+      "notes": "Two plus signs. (V-0017)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Percent encoded plus",
+      "field": "url",
+      "value": "tel:%2B49301234",
+      "links": [],
+      "notes": "The plus written as %2B, as in a web address. (V-0019)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Full width plus",
+      "field": "url",
+      "value": "tel:\uff0b49301234",
+      "links": [],
+      "notes": "The plus written as a full width character. (V-0018)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "Hidden right to left control",
+      "field": "url",
+      "value": "tel:+4930123\u202e",
+      "links": [],
+      "notes": "An invisible control character after the number. (V-0099)",
+      "expected": "Nothing is underlined."
+    },
+    {
+      "id": "No-break space inside",
+      "field": "url",
+      "value": "tel:+49\u00a0301234",
+      "links": [
+        {
+          "text": "+49\u00a0301234",
+          "target": "tel:+49301234"
+        }
+      ],
+      "notes": "A no-break space inside the number. (V-0104)",
+      "expected": "Underlined: '+49\\xa0301234'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    },
+    {
+      "id": "Tab inside",
+      "field": "url",
+      "value": "tel:+49\t301234",
+      "links": [
+        {
+          "text": "+49\t301234",
+          "target": "tel:+49301234"
+        }
+      ],
+      "notes": "A tab inside the number. (V-0105)",
+      "expected": "Underlined: '+49\\t301234'. The rest is plain.",
+      "scenarios": [
+        "UI-LINK",
+        "UI-TAP",
+        "UI-LONGPRESS",
+        "UI-CALL"
+      ]
+    }
+  ]
+}

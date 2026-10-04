@@ -21,6 +21,7 @@ from urllib.parse import urlparse
 import datetime
 import hashlib
 import json
+import os
 import sys
 import time
 from dataclasses import dataclass, field
@@ -36,20 +37,20 @@ import run_facts
 import shot_meta
 from errors import BusinessException, DataMismatch
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "tools"))  # publish_png, strip_png_metadata, crop_png
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools"))  # publish_png, strip_png_metadata, crop_png
 import publish_png  # noqa: E402
 from ui import ui
 
 HERE = Path(__file__).parent
 RUNS = HERE / "runs"
-DATABASE = HERE / "kp-test-tel.kdbx"
+DATABASE = HERE / os.environ.get("TEL_DATABASE", "kp-test-tel.kdbx")  # TEL_DATABASE with TEL_SPEC: the near-life database
 
 PASS, FAIL, ERROR = "pass", "fail", "error"
 LINK_MIN_PIXELS = 100  # a link box must hold at least this many pixels of the link colour
 NOLINK_MAX_PIXELS = 20  # a box that is not a link holds at most this many
 COLOUR_DISTANCE = 70  # RGB distance that still counts as the link colour
 SCREEN_BOTTOM = 2178  # above the "screenshot mode" banner and the navigation bar
-BREAKER_ENTRIES = 3  # entries in a row with only errors that stop the run
+BREAKER_ENTRIES = 3  # entries in a row with only errors that stop the run (--breaker; 0: never)
 HANDOVER_SECONDS = 600  # how long a handover to the person may wait before the run ends
 
 
@@ -258,10 +259,15 @@ def launched(e: Entry, x: int, y: int, name: str, expect_change: bool = True) ->
     return focus, e.shot(name)
 
 
-def long_press_toolbar(point) -> tuple:
+def long_press_toolbar(point, e: Entry | None = None, name: str = "longpress") -> tuple:
     """Long-press and wait for the selection toolbar (up to 3 s). Returns the screen it was seen on
-    and its buttons: (root, nodes), or (None, []) if it never came."""
+    and its buttons: (root, nodes), or (None, []) if it never came. With an entry, a screenshot is
+    taken right after the press and another one second later, to show whether the selection changes."""
     dv.long_press(*point)
+    if e is not None:
+        e.shot(f"{name}-0-right-after-press")
+        time.sleep(1.0)
+        e.shot(f"{name}-1-one-second-later")
 
     def seen():
         root = dv.dump(windows=True)
@@ -318,7 +324,7 @@ def is_dialer(e: Entry, focus: str) -> bool:
 
 def call_flow(e: Entry, point, expected: str, tag: str, scenario: str) -> Result:
     """Long-press at `point`, tap Call, and compare what the dialer holds with `expected`."""
-    root, toolbar = long_press_toolbar(point)
+    root, toolbar = long_press_toolbar(point, e, f"{tag}-longpress")
     shots = [e.shot(f"{tag}-longpress")]
     names = button_names(toolbar)
     call = ui.find(root, "android.selection_toolbar.call") if root is not None else None
@@ -425,11 +431,13 @@ def s_tap(e: Entry) -> Result:
         x1, y1, x2, y2 = dv.bounds(row)
         _, _, bar, _ = resolver_rows()[:4]
         floor = dv.bounds(bar)[1] if bar is not None else y2
-        dv.tap((x1 + x2) // 2, (y1 + min(y2, floor)) // 2)  # the row's visible part: the button bar covers its lower rows
+        dv.system_tap((x1 + x2) // 2, (y1 + min(y2, floor)) // 2)  # the row's visible part: the button bar covers its lower rows
         once = dv.soft_wait(lambda: ui.find(dv.dump(windows=True), "android.resolver.just_once"), timeout=4.0)
         if once is None:
             return Result("UI-TAP", FAIL, "; ".join(notes) + f"; no 'Just once' button after choosing {label!r}", shots)
-        dv.tap(*dv.centre(dv.bounds(once)))  # Just once: nothing becomes a default
+        dv.system_tap(*dv.centre(dv.bounds(once)))  # Just once: nothing becomes a default
+        if dv.soft_wait(lambda: "ResolverActivity" not in dv.focus(), timeout=2.0) is None:
+            dv.system_tap(*dv.centre(dv.bounds(once)))  # the chooser is still there: once more
         notes.append(f"chose {label!r}, Just once")
     else:
         notes.append("no chooser: an app opened directly")
@@ -453,7 +461,7 @@ def s_longpress(e: Entry) -> Result:
     else:
         word = e.link_word(e.links[0])
     canary = new_canary()  # on the clipboard before the Copy
-    root, toolbar = long_press_toolbar(dv.centre(ocr.box_of(word)))
+    root, toolbar = long_press_toolbar(dv.centre(ocr.box_of(word)), e, "longpress")
     shot = e.shot("longpress")  # the toolbar with the selection
     names = button_names(toolbar)
     e.selection_open = bool(names)
@@ -726,6 +734,7 @@ class Runner:
             "device": dv.adb("shell", "getprop", "ro.product.model").strip(),
             "android": dv.adb("shell", "getprop", "ro.build.version.release").strip(),
             "environment": self.env["name"],
+            "long_press_ms": dv.LONG_PRESS_MS,
             "detected_apps": self.detected,
             "roles": self.roles,
             "roles_without_system_file": self.unbound_roles,
@@ -954,7 +963,7 @@ class Runner:
                 print(f"{state.upper():5} {entry['id']:50} " + "; ".join(f"{r.scenario} {r.state}" for r in results), flush=True)
                 # circuit breaker: the phone is failing, not the app; more entries would only repeat it
                 failing_in_a_row = failing_in_a_row + 1 if all(r.state == ERROR for r in results) else 0
-                if failing_in_a_row >= BREAKER_ENTRIES:
+                if BREAKER_ENTRIES and failing_in_a_row >= BREAKER_ENTRIES:
                     raise Abort(f"{failing_in_a_row} entries in a row ended only in errors; the phone is in a state the script cannot work with")
         except Abort as problem:
             self.meta["aborted"] = str(problem)
@@ -998,15 +1007,22 @@ def write_report(runner: Runner, report: dict) -> None:
 
 
 def main() -> int:
+    global BREAKER_ENTRIES
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("--only", nargs="*", help="entry ids to test (default: all)")
     parser.add_argument("--environment", default="cprima-dev",
                         help="the profile of the phone and its apps (environments/<name>.json)")
     parser.add_argument("--no-setup", action="store_true",
                         help="skip Initialize: a person has opened and unlocked the fixture on the phone")
+    parser.add_argument("--long-press-ms", type=int, default=dv.LONG_PRESS_MS,
+                        help=f"how long the finger stays down on a long-press (default {dv.LONG_PRESS_MS})")
+    parser.add_argument("--breaker", type=int, default=BREAKER_ENTRIES,
+                        help="entries in a row with only errors that stop the run; 0: never (default %(default)s)")
     parser.add_argument("--leave-open", action="store_true",
                         help="skip End: leave the apps open (End force-stops them, which locks the database)")
     args = parser.parse_args()
+    dv.LONG_PRESS_MS = args.long_press_ms
+    BREAKER_ENTRIES = args.breaker
     runner = Runner(args.only, run_setup=not args.no_setup, environment=args.environment)
     try:
         runner.start()
