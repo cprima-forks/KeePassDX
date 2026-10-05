@@ -94,7 +94,7 @@ def main(run_dir: str, lab_path: str, wiki: str, dial_path: str | None = None) -
     shown = 0
     for item in source["entries"]:
         title = item["title"]
-        name = slug(title)
+        name = item["value"].lower()  # the value id: a neutral file name
         value = by_title[title]["value"]
         entry = report["entries"].get(title)
         link = doc.linked(spans.get(case_of[item["value"]], []))
