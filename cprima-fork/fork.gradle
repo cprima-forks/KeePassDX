@@ -1,5 +1,5 @@
 /*
- * Fork-only build settings (fork issues #14 and #15).
+ * Fork-only build settings (the Markdown notes spike, upstream issue #2702).
  *
  * build.gradle.kts of the app is owned by upstream. It carries ONE added line,
  * apply(from = "../cprima-fork/fork.gradle"), so that a pull from upstream conflicts at most on that line.
@@ -15,7 +15,7 @@ android {
 
     sourceSets {
         // Test code and cases shared by the unit test and the instrumented test. labShared holds the case-file
-        // code without JUnit, so that the debug app (LinkLab) can use it too.
+        // code without JUnit, so that the debug app (MarkdownLab) can use it too.
         getByName('test') {
             java.srcDir "$fork/app/sharedTest/java"
             java.srcDir "$fork/app/labShared/java"
@@ -26,7 +26,7 @@ android {
             java.srcDir "$fork/app/labShared/java"
             assets.srcDir "$fork/app/sharedTest/resources"
         }
-        // LinkLab, a probe screen in the debug variant only (fork issue #15): the whole source set is ours
+        // MarkdownLab, a screen in the debug variant only (spike for upstream issue #2702): the whole source set is ours
         getByName('debug') {
             setRoot("$fork/app/debug")
             java.srcDir "$fork/app/labShared/java"

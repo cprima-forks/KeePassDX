@@ -10,8 +10,9 @@ It is used for upstream contributions.
 | `master` | Mirror of upstream `master` | Fast-forward from upstream only. Never commit directly. |
 | `develop` | Mirror of upstream `develop` | Fast-forward from upstream only. Never commit directly. Base for the feature branch. |
 | `feature/<upstream-issue#>-<slug>` | The one working branch for an upstream issue | Branch off `develop`. All work for that issue lives here: code, tests, research, fixtures. |
+| `spike/<slug>` | Exploration of an idea, for example `spike/notes-markdown` (upstream #2702) | Branch off `develop`. Short-lived. It carries the fork test infrastructure so that the idea can be tested. It is not a pull request branch. |
 
-There is one feature branch at a time. No other long-lived or side branches.
+There is one feature branch at a time, and spike branches for exploration. No other long-lived or side branches.
 
 `fork-main` is not part of this workflow.
 
