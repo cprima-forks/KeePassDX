@@ -53,12 +53,18 @@ import org.commonmark.parser.Parser
 import java.util.Locale
 
 /**
- * Turns the Markdown of a note into styled text, following the CommonMark rules and nothing else. What the
- * renderer does not show as formatting (code blocks, images, HTML, tables, strikethrough, setext headings) is shown
- * as the characters that were typed, so that nothing is dropped. It makes no image and opens no address.
+ * Turns the Markdown of a note into styled text. The parsing is CommonMark's, with these deliberate changes: a link
+ * is followed by its address in brackets, only http, https, mailto and tel addresses can be tapped, and the blocks
+ * are separated by one empty line (the items of a list by a line break), so that a text without Markdown syntax
+ * keeps its paragraphs.
  *
- * Blocks are separated by one empty line, the items of a list by a line break, so that a text without Markdown syntax
- * keeps its paragraphs. A single line break in a paragraph becomes a space, as CommonMark says.
+ * What the renderer does not show as formatting (fenced and indented code, HTML, reference definitions, headings
+ * underlined with === or ---) is shown as the characters that were typed. Standard Markdown still changes some typed
+ * characters: emphasis markers, backslash escapes, entities such as &amp;, a link title, and a single line break in
+ * a paragraph, which becomes a space. A table, strikethrough or a footnote is not recognised, so a table's lines run
+ * together and `[^1]` can lose its brackets.
+ *
+ * It makes no image and fetches nothing from the network. A link is opened only when the user taps it.
  */
 object MarkdownRenderer {
 
