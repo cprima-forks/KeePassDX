@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug build only (fork, spike for upstream issue #2702). No launcher entry: start it with
+     adb shell am start -n com.kunzisoft.keepass.cprima_fork/com.kunzisoft.keepass.markdownlab.MarkdownLabActivity -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <activity
+            android:name="com.kunzisoft.keepass.markdownlab.MarkdownLabActivity"
+            android:exported="true"
+            android:label="@string/markdownlab_name"
+            android:launchMode="singleTop" />
+    </application>
+</manifest>

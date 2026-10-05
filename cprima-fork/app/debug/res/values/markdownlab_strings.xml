@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MarkdownLab, debug build only: not translated -->
+<resources>
+    <string name="markdownlab_name" translatable="false">MarkdownLab</string>
+    <string name="markdownlab_no_data" translatable="false">No data</string>
+    <string name="markdownlab_previous" translatable="false">Previous</string>
+    <string name="markdownlab_next" translatable="false">Next</string>
+    <string name="markdownlab_run" translatable="false">Run again</string>
+    <string name="markdownlab_copy" translatable="false">Copy JSON</string>
+    <string name="markdownlab_save" translatable="false">Save</string>
+    <string name="markdownlab_copied" translatable="false">Record copied</string>
+    <string name="markdownlab_label_markdown" translatable="false">MARKDOWN (as stored; · space, ↵ line end)</string>
+    <string name="markdownlab_label_rendered" translatable="false">SHOWN (the renderer)</string>
+    <string name="markdownlab_label_spans" translatable="false">SPANS</string>
+    <string name="markdownlab_empty" translatable="false">(empty)</string>
+    <string name="markdownlab_none" translatable="false">none</string>
+    <string name="markdownlab_characters" translatable="false">%1$d characters</string>
+    <string name="markdownlab_rendered_note" translatable="false">%1$d characters shown · rendered in %2$.2f ms</string>
+</resources>

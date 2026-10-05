@@ -1,0 +1,8 @@
+[project]
+name = "kp-markdown-example"
+version = "0.1.0"
+description = "Builds the KeePassDX Markdown notes example database"
+requires-python = ">=3.12"
+dependencies = [
+    "pykeepass>=4.1",
+]
