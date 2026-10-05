@@ -86,6 +86,12 @@ def main(run_dir: str, lab_path: str, wiki: str, dial_path: str | None = None) -
         "",
         "# Telephone links as people write them: pictures",
         "",
+        "## A valid number (RFC 3966)",
+        "",
+        "- **Global:** `+`, then digits, with `-` `.` `(` `)` allowed between them. At least one digit. No spaces, no letters.",
+        "- **Local** (no `+`): valid only with a `;phone-context=` that says where it applies.",
+        "- Anything else is not a valid number. [Details](Research-RFC-3966).",
+        "",
         "The pictures behind [Tel-Link-Examples](Tel-Link-Examples). Per entry: the entry view, the dialer after a tap on the "
         "link, and a long-press on the link (the toolbar above it). A grey picture with \"-\" means that there is no link to press. \"not tested\" means that the run did not "
         "press it: the step was not run, or the run could not find the link on the screen.",
