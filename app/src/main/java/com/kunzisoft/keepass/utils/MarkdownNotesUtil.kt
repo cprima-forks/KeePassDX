@@ -19,6 +19,7 @@
  */
 package com.kunzisoft.keepass.utils
 
+import android.os.Build
 import com.kunzisoft.keepass.view.TemplateAbstractView
 
 /** The fields of an entry that can be shown as Markdown. Only the notes are a candidate. */
@@ -29,7 +30,14 @@ enum class MarkdownField { NOTES }
  * An empty [fields] set switches the rendering off everywhere. The code stays, nothing is rendered.
  */
 class MarkdownConfig(
-    val fields: Set<MarkdownField> = setOf(MarkdownField.NOTES)
+    val fields: Set<MarkdownField> = setOf(MarkdownField.NOTES),
+    /**
+     * The lowest Android version (API level) on which the rendering is shown; below it the field shows its text as
+     * it is. 24 is the lowest version measured to work (Android 7.0; also 28 and 33 work). On API 19 it fails, because
+     * the library needs `java.util.function`, which Android has from API 24. API 20 to 23 are below the minimum and
+     * not measured (wiki: Research-Markdown-minSdk).
+     */
+    val minSdk: Int = 24
 )
 
 /** The flags of this build. */
@@ -43,7 +51,13 @@ object MarkdownNotesUtil {
         else -> null
     }
 
-    /** True if the field with this tag is shown as Markdown with the given flags. */
-    fun shows(fieldTag: Any?, config: MarkdownConfig = MARKDOWN_CONFIG): Boolean =
-        markdownFieldOf(fieldTag) in config.fields
+    /**
+     * True if the field with this tag is shown as Markdown with the given flags, on this Android version. Below the
+     * minimum version it is false, and nothing of the Markdown library is loaded.
+     */
+    fun shows(
+        fieldTag: Any?,
+        config: MarkdownConfig = MARKDOWN_CONFIG,
+        sdk: Int = Build.VERSION.SDK_INT
+    ): Boolean = sdk >= config.minSdk && markdownFieldOf(fieldTag) in config.fields
 }
