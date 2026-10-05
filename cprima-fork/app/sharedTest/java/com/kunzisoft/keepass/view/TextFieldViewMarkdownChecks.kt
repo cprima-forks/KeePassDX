@@ -2,7 +2,9 @@ package com.kunzisoft.keepass.view
 
 import android.content.Context
 import android.text.Spanned
+import android.text.method.LinkMovementMethod
 import android.text.style.StyleSpan
+import android.text.style.URLSpan
 import android.view.ContextThemeWrapper
 import com.kunzisoft.keepass.R
 import com.kunzisoft.keepass.utils.MARKDOWN_CONFIG
@@ -22,6 +24,9 @@ object TextFieldViewMarkdownChecks {
 
     private class Probe(context: Context) : TextFieldView(context) {
         fun shown(): CharSequence = valueView.text
+        fun linksTappable(): Boolean = valueView.movementMethod is LinkMovementMethod
+        fun linkTargets(): List<String> =
+            (valueView.text as Spanned).getSpans(0, valueView.text.length, URLSpan::class.java).map { it.url }
     }
 
     // The view reads attributes of the theme of the app, which a plain application context may not have
@@ -41,8 +46,30 @@ object TextFieldViewMarkdownChecks {
         "notesAreShownAsMarkdownAndTheStoredTextIsKept" to ::notesAreShownAsMarkdownAndTheStoredTextIsKept,
         "anotherFieldIsShownAsItIs" to ::anotherFieldIsShownAsItIs,
         "aHiddenNotesFieldIsNotRenderedUntilItIsRevealed" to ::aHiddenNotesFieldIsNotRenderedUntilItIsRevealed,
-        "aSecondValueReplacesTheFirst" to ::aSecondValueReplacesTheFirst
+        "aSecondValueReplacesTheFirst" to ::aSecondValueReplacesTheFirst,
+        "theLinksOfTheNotesCanBeTapped" to ::theLinksOfTheNotesCanBeTapped,
+        "aBareAddressInRenderedNotesIsNotLinkified" to ::aBareAddressInRenderedNotesIsNotLinkified
     )
+
+    /**
+     * Upstream's link detection does not run on a rendered Notes field, so a bare web address or email in it is
+     * not a link. In another field, with the same text, it still is: that shows that the detection works here.
+     */
+    fun aBareAddressInRenderedNotesIsNotLinkified(context: Context) {
+        val text = "see https://example.com and mail a@example.com"
+        assertEquals(emptyList<String>(), field(context, TemplateAbstractView.FIELD_NOTES_TAG, text).linkTargets())
+        assertEquals(
+            listOf("https://example.com", "mailto:a@example.com"),
+            field(context, TemplateAbstractView.FIELD_CUSTOM_TAG, text).linkTargets()
+        )
+    }
+
+    /** A tap on a link opens the dialer (tel:), the mailer (mailto:) or the browser (https:), by the link movement method. */
+    fun theLinksOfTheNotesCanBeTapped(context: Context) {
+        val view = field(context, TemplateAbstractView.FIELD_NOTES_TAG, "[a](tel:+4930123) [b](mailto:x@example.com) [c](https://example.com)")
+        assertTrue("link movement method", view.linksTappable())
+        assertEquals(listOf("tel:+4930123", "mailto:x@example.com", "https://example.com"), view.linkTargets())
+    }
 
     fun shippedFlagsAreTheNotesOnly(@Suppress("UNUSED_PARAMETER") context: Context) {
         assertEquals(setOf(MarkdownField.NOTES), MARKDOWN_CONFIG.fields)

@@ -24,4 +24,6 @@ class TextFieldViewMarkdownTest {
     @Test fun anotherFieldIsShownAsItIs() = TextFieldViewMarkdownChecks.anotherFieldIsShownAsItIs(context)
     @Test fun aHiddenNotesFieldIsNotRenderedUntilItIsRevealed() = TextFieldViewMarkdownChecks.aHiddenNotesFieldIsNotRenderedUntilItIsRevealed(context)
     @Test fun aSecondValueReplacesTheFirst() = TextFieldViewMarkdownChecks.aSecondValueReplacesTheFirst(context)
+    @Test fun theLinksOfTheNotesCanBeTapped() = TextFieldViewMarkdownChecks.theLinksOfTheNotesCanBeTapped(context)
+    @Test fun aBareAddressInRenderedNotesIsNotLinkified() = TextFieldViewMarkdownChecks.aBareAddressInRenderedNotesIsNotLinkified(context)
 }
