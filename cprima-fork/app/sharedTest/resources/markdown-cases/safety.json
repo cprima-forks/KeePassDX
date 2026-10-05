@@ -1,0 +1,5 @@
+[
+{ "id": "M-SF-001", "requirements": ["MD-004", "MD-041"], "level": "code", "markdown": "![x](http://127.0.0.1:1/a.png)", "expected": { "text": "![x](http://127.0.0.1:1/a.png)", "spans": [] }, "current": "matches" },
+{ "id": "M-SF-002", "requirements": ["MD-004", "MD-041"], "level": "code", "markdown": "![x](data:image/png;base64,AAAA)", "expected": { "text": "![x](data:image/png;base64,AAAA)", "spans": [] }, "current": "matches" },
+{ "id": "M-SF-003", "requirements": ["MD-004", "MD-041"], "level": "code", "markdown": "a ![x][r] b\n\n[r]: http://127.0.0.1:1/a.png", "expected": { "text": "a ![x][r] b\n\n[r]: http://127.0.0.1:1/a.png", "spans": [] }, "current": "matches" }
+]

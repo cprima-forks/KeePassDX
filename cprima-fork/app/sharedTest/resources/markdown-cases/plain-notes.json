@@ -1,0 +1,8 @@
+[
+{ "id": "M-PN-001", "requirements": ["MD-005"], "level": "code", "markdown": "- item one\n- item two", "expected": { "text": "item one\nitem two", "spans": [ { "kind": "bullet", "start": 0, "end": 8 }, { "kind": "bullet", "start": 9, "end": 17 } ] }, "current": "matches" },
+{ "id": "M-PN-002", "requirements": ["MD-005"], "level": "code", "markdown": "# not a comment", "expected": { "text": "not a comment", "spans": [ { "kind": "heading:1", "start": 0, "end": 13 } ] }, "current": "matches" },
+{ "id": "M-PN-003", "requirements": ["MD-005"], "level": "code", "markdown": "Step 1.\nStep 2.", "expected": { "text": "Step 1. Step 2.", "spans": [] }, "current": "matches" },
+{ "id": "M-PN-004", "requirements": ["MD-005"], "level": "code", "markdown": "2024. Was a year", "expected": { "text": "2024. Was a year", "spans": [] }, "current": "matches" },
+{ "id": "M-PN-005", "requirements": ["MD-005"], "level": "code", "markdown": "Label:\n  indented line", "expected": { "text": "Label: indented line", "spans": [] }, "current": "matches" },
+{ "id": "M-PN-006", "requirements": ["MD-005"], "level": "code", "markdown": "a > b and c < d", "expected": { "text": "a > b and c < d", "spans": [] }, "current": "matches" }
+]

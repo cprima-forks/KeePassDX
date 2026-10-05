@@ -1,0 +1,8 @@
+[
+{ "id": "M-PS-001", "requirements": ["MD-005"], "level": "code", "markdown": "just a plain note", "expected": { "text": "just a plain note", "spans": [] }, "current": "matches" },
+{ "id": "M-PS-002", "requirements": ["MD-005"], "level": "code", "markdown": "line1\n\nline2", "expected": { "text": "line1\n\nline2", "spans": [] }, "current": "matches" },
+{ "id": "M-PS-003", "requirements": ["MD-005"], "level": "code", "markdown": "line1\nline2", "expected": { "text": "line1 line2", "spans": [] }, "current": "matches" },
+{ "id": "M-PS-004", "requirements": ["MD-005"], "level": "code", "markdown": "Password: abc123!", "expected": { "text": "Password: abc123!", "spans": [] }, "current": "matches" },
+{ "id": "M-PS-005", "requirements": ["MD-005"], "level": "code", "markdown": "a  b", "expected": { "text": "a  b", "spans": [] }, "current": "matches" },
+{ "id": "M-PS-006", "requirements": ["MD-005"], "level": "code", "markdown": "", "expected": { "text": "", "spans": [] }, "current": "matches" }
+]

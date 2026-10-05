@@ -51,10 +51,10 @@ android {
         // The same split for the instrumented run; -PknownDefects runs only the known defects class.
         if (project.hasProperty('knownDefects')) {
             testInstrumentationRunnerArguments['class'] =
-                    'com.kunzisoft.keepass.view.RequirementCasesKnownDefectsInstrumentedTest'
+                    'com.kunzisoft.keepass.utils.MarkdownRendererKnownDefectsInstrumentedTest'
         } else {
             testInstrumentationRunnerArguments['notClass'] =
-                    'com.kunzisoft.keepass.view.RequirementCasesKnownDefectsInstrumentedTest'
+                    'com.kunzisoft.keepass.utils.MarkdownRendererKnownDefectsInstrumentedTest'
         }
     }
 }

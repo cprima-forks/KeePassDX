@@ -1,0 +1,11 @@
+[
+{ "id": "M-CC-001", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "a*b*c", "expected": { "text": "abc", "spans": [ { "kind": "italic", "start": 1, "end": 2 } ] }, "current": "matches" },
+{ "id": "M-CC-002", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "snake_case_name", "expected": { "text": "snake_case_name", "spans": [] }, "current": "matches" },
+{ "id": "M-CC-003", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "_x_", "expected": { "text": "x", "spans": [ { "kind": "italic", "start": 0, "end": 1 } ] }, "current": "matches" },
+{ "id": "M-CC-004", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "C:\\temp\\file", "expected": { "text": "C:\\temp\\file", "spans": [] }, "current": "matches" },
+{ "id": "M-CC-005", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "a\\*b", "expected": { "text": "a*b", "spans": [] }, "current": "matches" },
+{ "id": "M-CC-006", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "code `x", "expected": { "text": "code `x", "spans": [] }, "current": "matches" },
+{ "id": "M-CC-007", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "12345-67890\n23456-78901", "expected": { "text": "12345-67890 23456-78901", "spans": [] }, "current": "matches" },
+{ "id": "M-CC-008", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "a**b**c", "expected": { "text": "abc", "spans": [ { "kind": "bold", "start": 1, "end": 2 } ] }, "current": "matches" },
+{ "id": "M-CC-009", "requirements": ["MD-001", "MD-005"], "level": "code", "markdown": "a &amp; b", "expected": { "text": "a & b", "spans": [] }, "current": "matches" }
+]

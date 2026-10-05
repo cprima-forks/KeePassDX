@@ -1,0 +1,18 @@
+[
+{ "id": "M-FM-001", "requirements": ["MD-011"], "level": "code", "markdown": "a *b* c", "expected": { "text": "a b c", "spans": [ { "kind": "italic", "start": 2, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-002", "requirements": ["MD-011"], "level": "code", "markdown": "a _b_ c", "expected": { "text": "a b c", "spans": [ { "kind": "italic", "start": 2, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-003", "requirements": ["MD-011"], "level": "code", "markdown": "a **b** c", "expected": { "text": "a b c", "spans": [ { "kind": "bold", "start": 2, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-004", "requirements": ["MD-011"], "level": "code", "markdown": "a ***b*** c", "expected": { "text": "a b c", "spans": [ { "kind": "bold", "start": 2, "end": 3 }, { "kind": "italic", "start": 2, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-005", "requirements": ["MD-010"], "level": "code", "markdown": "# Title", "expected": { "text": "Title", "spans": [ { "kind": "heading:1", "start": 0, "end": 5 } ] }, "current": "matches" },
+{ "id": "M-FM-006", "requirements": ["MD-010"], "level": "code", "markdown": "###### Small", "expected": { "text": "Small", "spans": [ { "kind": "heading:6", "start": 0, "end": 5 } ] }, "current": "matches" },
+{ "id": "M-FM-007", "requirements": ["MD-010"], "level": "code", "markdown": "# One\n\ntext", "expected": { "text": "One\n\ntext", "spans": [ { "kind": "heading:1", "start": 0, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-008", "requirements": ["MD-012"], "level": "code", "markdown": "- a\n- b", "expected": { "text": "a\nb", "spans": [ { "kind": "bullet", "start": 0, "end": 1 }, { "kind": "bullet", "start": 2, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-009", "requirements": ["MD-012"], "level": "code", "markdown": "1. a\n2. b", "expected": { "text": "1. a\n2. b", "spans": [] }, "current": "matches" },
+{ "id": "M-FM-010", "requirements": ["MD-012"], "level": "code", "markdown": "- a\n  - b", "expected": { "text": "a\nb", "spans": [ { "kind": "bullet", "start": 0, "end": 3 }, { "kind": "bullet", "start": 2, "end": 3 } ] }, "current": "matches" },
+{ "id": "M-FM-011", "requirements": ["MD-013"], "level": "code", "markdown": "use `x` now", "expected": { "text": "use x now", "spans": [ { "kind": "code", "start": 4, "end": 5 } ] }, "current": "matches" },
+{ "id": "M-FM-012", "requirements": ["MD-015"], "level": "code", "markdown": "a  \nb", "expected": { "text": "a\nb", "spans": [] }, "current": "matches" },
+{ "id": "M-FM-013", "requirements": ["MD-015"], "level": "code", "markdown": "a\\\nb", "expected": { "text": "a\nb", "spans": [] }, "current": "matches" },
+{ "id": "M-FM-014", "requirements": ["MD-022"], "level": "code", "markdown": "> quoted", "expected": { "text": "quoted", "spans": [ { "kind": "quote", "start": 0, "end": 6 } ] }, "current": "matches" },
+{ "id": "M-FM-015", "requirements": ["MD-023"], "level": "code", "markdown": "a\n\n---\n\nb", "expected": { "text": "a\n\n \n\nb", "spans": [ { "kind": "rule", "start": 3, "end": 4 } ] }, "current": "matches" },
+{ "id": "M-FM-016", "requirements": ["MD-010", "MD-011"], "level": "code", "markdown": "# a *b*", "expected": { "text": "a b", "spans": [ { "kind": "heading:1", "start": 0, "end": 3 }, { "kind": "italic", "start": 2, "end": 3 } ] }, "current": "matches" }
+]

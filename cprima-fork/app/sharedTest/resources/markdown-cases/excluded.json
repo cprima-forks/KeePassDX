@@ -1,0 +1,13 @@
+[
+{ "id": "M-EX-001", "requirements": ["MD-020"], "level": "code", "markdown": "```\ncode\n```", "expected": { "text": "```\ncode\n```", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-002", "requirements": ["MD-021"], "level": "code", "markdown": "para\n\n    code", "expected": { "text": "para\n\n    code", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-003", "requirements": ["MD-040"], "level": "code", "markdown": "| a | b |\n|---|---|\n| 1 | 2 |", "expected": { "text": "| a | b |\n|---|---|\n| 1 | 2 |", "spans": [] }, "current": "differs" },
+{ "id": "M-EX-004", "requirements": ["MD-041"], "level": "code", "markdown": "![alt](http://example.com/a.png)", "expected": { "text": "![alt](http://example.com/a.png)", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-005", "requirements": ["MD-042"], "level": "code", "markdown": "a <b>x</b> c", "expected": { "text": "a <b>x</b> c", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-006", "requirements": ["MD-042"], "level": "code", "markdown": "<div>x</div>", "expected": { "text": "<div>x</div>", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-007", "requirements": ["MD-043"], "level": "code", "markdown": "~~x~~", "expected": { "text": "~~x~~", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-008", "requirements": ["MD-043"], "level": "code", "markdown": "Title\n===", "expected": { "text": "Title\n===", "spans": [] }, "current": "matches" },
+{ "id": "M-EX-009", "requirements": ["MD-043"], "level": "code", "markdown": "- [ ] todo", "expected": { "text": "[ ] todo", "spans": [ { "kind": "bullet", "start": 0, "end": 8 } ] }, "current": "matches" },
+{ "id": "M-EX-010", "requirements": ["MD-043"], "level": "code", "markdown": "x[^1]\n\n[^1]: note", "expected": { "text": "x[^1]\n\n[^1]: note", "spans": [] }, "current": "differs" },
+{ "id": "M-EX-011", "requirements": ["MD-043"], "level": "code", "markdown": "Title\n---", "expected": { "text": "Title\n---", "spans": [] }, "current": "matches" }
+]

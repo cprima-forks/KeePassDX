@@ -1,0 +1,12 @@
+[
+{ "id": "M-LK-001", "requirements": ["MD-014", "MD-030"], "level": "code", "markdown": "[x](https://example.com)", "expected": { "text": "x (https://example.com)", "spans": [ { "kind": "link:https://example.com", "start": 0, "end": 1 } ] }, "current": "matches" },
+{ "id": "M-LK-002", "requirements": ["MD-030"], "level": "code", "markdown": "[m](mailto:a@example.com)", "expected": { "text": "m (mailto:a@example.com)", "spans": [ { "kind": "link:mailto:a@example.com", "start": 0, "end": 1 } ] }, "current": "matches" },
+{ "id": "M-LK-003", "requirements": ["MD-030"], "level": "code", "markdown": "[t](tel:+4930123)", "expected": { "text": "t (tel:+4930123)", "spans": [ { "kind": "link:tel:+4930123", "start": 0, "end": 1 } ] }, "current": "matches" },
+{ "id": "M-LK-004", "requirements": ["MD-030"], "level": "code", "markdown": "[j](javascript:alert(1))", "expected": { "text": "j (javascript:alert(1))", "spans": [] }, "current": "matches" },
+{ "id": "M-LK-005", "requirements": ["MD-030"], "level": "code", "markdown": "[r](relative/path)", "expected": { "text": "r (relative/path)", "spans": [] }, "current": "matches" },
+{ "id": "M-LK-006", "requirements": ["MD-014", "MD-030"], "level": "code", "markdown": "<https://example.com>", "expected": { "text": "https://example.com", "spans": [ { "kind": "link:https://example.com", "start": 0, "end": 19 } ] }, "current": "matches" },
+{ "id": "M-LK-007", "requirements": ["MD-030"], "level": "code", "markdown": "[x](HTTPS://EXAMPLE.COM)", "expected": { "text": "x (HTTPS://EXAMPLE.COM)", "spans": [ { "kind": "link:HTTPS://EXAMPLE.COM", "start": 0, "end": 1 } ] }, "current": "matches" },
+{ "id": "M-LK-008", "requirements": ["MD-030", "MD-031"], "level": "code", "markdown": "[https://good.example](https://evil.example)", "expected": { "text": "https://good.example (https://evil.example)", "spans": [ { "kind": "link:https://evil.example", "start": 0, "end": 20 } ] }, "current": "matches" },
+{ "id": "M-LK-009", "requirements": ["MD-030"], "level": "code", "markdown": "bare https://example.com here", "expected": { "text": "bare https://example.com here", "spans": [] }, "current": "matches" },
+{ "id": "M-LK-010", "requirements": ["MD-030"], "level": "code", "markdown": "<a@example.com>", "expected": { "text": "a@example.com", "spans": [ { "kind": "link:mailto:a@example.com", "start": 0, "end": 13 } ] }, "current": "matches" }
+]

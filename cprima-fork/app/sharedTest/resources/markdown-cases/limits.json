@@ -1,0 +1,6 @@
+[
+{ "id": "M-LM-001", "requirements": ["MD-032"], "level": "code", "markdown": "**bold** text", "limits": { "maxChars": 5, "maxDepth": 20 }, "expected": { "text": "**bold** text", "spans": [] }, "current": "matches" },
+{ "id": "M-LM-002", "requirements": ["MD-032"], "level": "code", "markdown": "**bold** text", "limits": { "maxChars": 100, "maxDepth": 20 }, "expected": { "text": "bold text", "spans": [ { "kind": "bold", "start": 0, "end": 4 } ] }, "current": "matches" },
+{ "id": "M-LM-003", "requirements": ["MD-032"], "level": "code", "markdown": "> > > deep", "limits": { "maxChars": 1000, "maxDepth": 2 }, "expected": { "text": "> > > deep", "spans": [] }, "current": "matches" },
+{ "id": "M-LM-004", "requirements": ["MD-032"], "level": "code", "markdown": "> > ok", "limits": { "maxChars": 1000, "maxDepth": 2 }, "expected": { "text": "ok", "spans": [ { "kind": "quote", "start": 0, "end": 2 }, { "kind": "quote", "start": 0, "end": 2 } ] }, "current": "matches" }
+]
