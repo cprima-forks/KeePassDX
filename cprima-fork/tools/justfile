@@ -1,0 +1,38 @@
+# Android build setup. Run from the repository root as `just fork <recipe>`.
+
+set shell := ["pwsh", "-NoProfile", "-Command"]
+
+# Show what the setup would install. Changes nothing.
+dry:
+    ./Setup-AndroidBuild.ps1 -Dry
+
+# Paths are relative to where you run just: `just fork strip-png in.png out.png`
+# Strip metadata (capture time, UUID, device build) from a PNG; pixels stay unchanged
+[no-cd]
+strip-png source target:
+    uv run python "{{source_directory()}}/strip_png_metadata.py" "{{source}}" "{{target}}"
+
+# Cut `top` pixel rows off the top of a PNG (the status bar). The source is not changed.
+[no-cd]
+crop-png source target top:
+    uv run --with pillow python "{{source_directory()}}/crop_png.py" "{{source}}" "{{target}}" --top "{{top}}"
+
+# Crop (the height comes from the screenshot's sidecar .png.json), strip the metadata, verify one
+# screenshot; prints capture time and pixel hash. Without a measured sidecar add --top N: `just fork publish-png a.png b.png --top 81`
+[no-cd]
+publish-png source target *args:
+    uv run --with pillow python "{{source_directory()}}/publish_png.py" one "{{source}}" "{{target}}" {{args}}
+
+# The same for a folder; writes one JSON line per image to `manifest` (error-* files are skipped)
+[no-cd]
+publish-pngs source_dir target_dir manifest *args:
+    uv run --with pillow python "{{source_directory()}}/publish_png.py" dir "{{source_dir}}" "{{target_dir}}" --manifest "{{manifest}}" --exclude "error-*" {{args}}
+
+# Draw the cut line on the top of a screenshot, to look at it before publishing
+[no-cd]
+preview-png source out *args:
+    uv run --with pillow python "{{source_directory()}}/publish_png.py" preview "{{source}}" "{{out}}" {{args}}
+
+# Install missing SDK packages. Licenses are not accepted unless you pass -AcceptLicenses.
+setup *args:
+    ./Setup-AndroidBuild.ps1 {{args}}

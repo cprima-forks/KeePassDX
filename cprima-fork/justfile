@@ -1,0 +1,52 @@
+# Fork recipes for the tel: link work. Mounted by the root justfile as `just cprima <recipe>`.
+# Every Gradle call goes through the root recipe `gradle`, which takes JAVA_HOME, ANDROID_HOME,
+# GRADLE_USER_HOME and BUILD_TMP from cprima-fork/tools/.env. Never call ./gradlew directly: another
+# JAVA_HOME, TEMP or Gradle home gives a second build that locks the first one's files.
+
+set shell := ["pwsh", "-NoProfile", "-Command"]
+
+root := justfile_directory() / ".."
+package := "com.kunzisoft.keepass.cprima_fork"
+lab := package + "/com.kunzisoft.keepass.linklab.LabActivity"
+
+# Run a root recipe from the repository root
+[private]
+[working-directory: '..']
+root-gradle *args:
+    just gradle {{args}}
+
+# Build and install the debug app (with LinkLab) on the connected phone
+install: (root-gradle ":app:installLibreDebug")
+
+# The normal test task: JVM tests of the requirement cases, the flags and the fuzz tests
+test: (root-gradle ":app:testLibreDebugUnitTest")
+
+# The known-difference task: the cases that are expected to fail, as evidence
+test-known: (root-gradle ":app:testLibreDebugUnitTest" "-PknownDefects")
+
+# Check what is installed on the phone: the build and when it was installed
+installed:
+    adb shell dumpsys package {{package}} | Select-String "versionName|lastUpdateTime"
+
+# Show one case in LinkLab: just cprima lab-case C-NG-001
+lab-case id:
+    adb shell am start -n {{lab}} --es case-id {{id}}
+
+# Probe every code case on the device of ANDROID_SERIAL (cprima-fork/tools/.env) without a gesture; the file is pulled into `out`
+[working-directory: '..']
+lab-batch out="cprima-fork/test-fixtures/tel/runs/lab" env="E-004": (lab-batch-on env_var("ANDROID_SERIAL") out env)
+
+# The same on a named device: just cprima lab-batch-on emulator-5554 cprima-fork/test-fixtures/tel/runs/lab-api28 E-005
+[working-directory: '..']
+lab-batch-on $ANDROID_SERIAL out env:
+    adb shell am force-stop {{package}}
+    adb logcat -c
+    adb shell am start -n {{lab}} --ez batch true --es env-id {{env}}
+    # one line: every recipe line is its own pwsh process, so a variable does not survive to the next line
+    $line = $null; for ($i = 0; $i -lt 100 -and -not $line; $i++) { Start-Sleep 3; $line = adb logcat -d -s LinkLab | Select-String "LINKLAB_DONE" }; if (-not $line) { throw "LINKLAB_DONE not seen" }; $device = ($line.Line -replace '^.*file=', '').Trim(); New-Item -ItemType Directory -Force {{out}} | Out-Null; $env:MSYS_NO_PATHCONV = 1; adb pull $device {{out}}
+
+# The instrumented tests on one named device (the normal task, or the known-difference task with -PknownDefects).
+# TEMP and TMP point to BUILD_TMP as in the root recipe `gradle`. Example: just cprima connected-on emulator-5554 -PknownDefects
+[working-directory: '..']
+connected-on $ANDROID_SERIAL *args:
+    Write-Host "device: $env:ANDROID_SERIAL"; New-Item -ItemType Directory -Force $env:BUILD_TMP | Out-Null; $env:TEMP = $env:BUILD_TMP; $env:TMP = $env:BUILD_TMP; ./gradlew.bat :app:connectedLibreDebugAndroidTest --continue {{args}}
