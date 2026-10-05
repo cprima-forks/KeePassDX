@@ -9,6 +9,7 @@ The database is rebuilt from scratch every time, so the script is the single sou
 """
 
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 from pykeepass import create_database
@@ -18,6 +19,10 @@ DATABASE = HERE / "notes-markdown-example.kdbx"
 PASSWORD = "test123"
 
 TITLE = "Home network (example)"
+
+# KeePassDX shows an entry that does not expire with this expiry time. pykeepass writes the creation time instead, and
+# the edit screen then counts the entry as changed and asks "Discard changes?" on a back press with no change made.
+NEVER_EXPIRES = datetime(2999, 11, 28, 23, 59, 59, tzinfo=timezone.utc)
 
 # What the renderer shows as formatting comes first, then what it leaves as typed. The line that ends in \x20\x20
 # (two spaces) is on purpose: that is a line break in Markdown. It is written as an escape, because editors and
@@ -64,14 +69,17 @@ def main() -> int:
     if DATABASE.exists():
         DATABASE.unlink()
     database = create_database(str(DATABASE), password=PASSWORD)
-    database.add_entry(
+    entry = database.add_entry(
         database.root_group,
         title=TITLE,
         username="admin",
         password="example-not-a-secret",
         url="https://example.com/router",
         notes=NOTES,
+        expiry_time=NEVER_EXPIRES,
+        icon="0",
     )
+    entry.expires = False
     database.save()
     print(f"{DATABASE.name}: 1 entry, password {PASSWORD}")
     return 0
