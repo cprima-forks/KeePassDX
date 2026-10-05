@@ -162,6 +162,7 @@ dependencies {
     // Credentials
     implementation(libs.nbvcxz)
     implementation(libs.androidx.credentials)
+    implementation(libs.commonmark)
     // Modules import
     implementation(project(":database"))
     implementation(project(":icon-pack"))
