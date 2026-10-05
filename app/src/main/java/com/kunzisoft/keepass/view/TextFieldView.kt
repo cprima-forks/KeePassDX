@@ -21,6 +21,7 @@ package com.kunzisoft.keepass.view
 
 import android.content.Context
 import android.text.InputFilter
+import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
 import android.util.AttributeSet
 import android.util.TypedValue
@@ -306,6 +307,8 @@ open class TextFieldView @JvmOverloads constructor(
                 // Only reached when the text is not hidden. The links of the Markdown replace the autolinks,
                 // because linkifying a text again removes the links it already has.
                 valueView.text = MarkdownRenderer.render(String(mMarkdownSource!!))
+                // Linkifying switches link tapping on; here it must be switched on by hand
+                valueView.movementMethod = LinkMovementMethod.getInstance()
             }
             else -> {
                 LinkifyCompat.addLinks(valueView, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
