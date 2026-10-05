@@ -40,6 +40,8 @@ import com.kunzisoft.keepass.database.element.security.ProtectedString
 import com.kunzisoft.keepass.model.AppOriginEntryField.APPLICATION_ID_FIELD_NAME
 import com.kunzisoft.keepass.model.FieldProtection
 import com.kunzisoft.keepass.utils.AppUtil.openExternalApp
+import com.kunzisoft.keepass.utils.MarkdownNotesUtil
+import com.kunzisoft.keepass.utils.MarkdownRenderer
 
 open class TextFieldView @JvmOverloads constructor(
     context: Context,
@@ -209,14 +211,20 @@ open class TextFieldView @JvmOverloads constructor(
         labelView.setText(labelId)
     }
 
+    // The stored text of a field that shows it as Markdown, null when the field shows its text as it is.
+    // The text that is shown is then a different one, so the stored text is kept here and is what `value` returns.
+    private var mMarkdownSource: CharArray? = null
+
     override var value: CharArray
         get() {
+            mMarkdownSource?.let { return it.copyOf() }
             val sequence = valueView.text
             val valueChars = CharArray(sequence.length)
             android.text.TextUtils.getChars(sequence, 0, sequence.length, valueChars, 0)
             return valueChars
         }
         set(value) {
+            mMarkdownSource = if (MarkdownNotesUtil.shows(tag)) value.copyOf() else null
             valueView.setCharArray(value)
             changeProtectedValueParameters()
         }
@@ -293,6 +301,11 @@ open class TextFieldView @JvmOverloads constructor(
                         context.openExternalApp(packageName)
                     }
                 //}
+            }
+            mMarkdownSource != null -> {
+                // Only reached when the text is not hidden. The links of the Markdown replace the autolinks,
+                // because linkifying a text again removes the links it already has.
+                valueView.text = MarkdownRenderer.render(String(mMarkdownSource!!))
             }
             else -> {
                 LinkifyCompat.addLinks(valueView, Linkify.WEB_URLS or Linkify.EMAIL_ADDRESSES)
