@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/wifi-access-point@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A Wi-Fi access point, or a router that has Wi-Fi: the Wi-Fi network, the device's identifiers, and the admin login of its web interface. serial_number and MAC are listed here again on purpose: a schema stands alone.",
+  "x-pdh-entity": {"name": "wifi-access-point", "version": 0},
+  "title": "Wi-Fi access point",
+  "description": "A Wi-Fi access point, or a router with Wi-Fi: the network, the device and its admin login.",
+  "type": "object",
+  "required": ["Title", "SSID"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "SSID": {"type": "string", "description": "Wi-Fi network name."},
+    "wifi_security": {"$ref": "../types.schema.json#/$defs/wifi_security", "description": "How the network is secured. Empty means not recorded."},
+    "wifi_key": {"type": "string", "x-pdh-protected": true, "description": "Wi-Fi password. Empty for an open or an enterprise network."},
+    "serial_number": {"type": "string", "description": "Manufacturer serial number."},
+    "MAC": {"$ref": "../types.schema.json#/$defs/mac", "description": "Network hardware (MAC) address."},
+    "URL": {"$ref": "../types.schema.json#/$defs/web_url", "description": "The admin web interface. Often a local http:// address, which is a valid address."},
+    "UserName": {"type": "string", "description": "The user name of the admin login."},
+    "Password": {"type": "string", "x-pdh-protected": true, "description": "The password of the admin login. A fresh device may have none yet."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {"wifi_security": {"enum": ["open", "enterprise"]}},
+        "required": ["wifi_security"]
+      },
+      "else": {
+        "required": ["wifi_key"],
+        "x-pdh-level": "warn",
+        "description": "A secured network, or one whose security is not recorded, has a key."
+      }
+    },
+    {
+      "required": ["URL", "UserName", "Password"],
+      "x-pdh-level": "warn",
+      "description": "The admin login is recorded: where it is, and who opens it."
+    }
+  ]
+}

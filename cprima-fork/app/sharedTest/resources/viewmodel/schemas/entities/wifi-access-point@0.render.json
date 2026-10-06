@@ -1,0 +1,22 @@
+{
+  "entity": "wifi-access-point@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Network", "rows": [
+      {"attribute": "SSID", "copy": true},
+      {"attribute": "wifi_security"},
+      {"attribute": "wifi_key"}
+    ]},
+    {"label": "Device", "rows": [
+      {"attribute": "serial_number"},
+      {"attribute": "MAC"}
+    ]},
+    {"label": "Admin login", "rows": [
+      {"attribute": "URL"},
+      {"attribute": "UserName", "copy": true},
+      {"attribute": "Password"}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

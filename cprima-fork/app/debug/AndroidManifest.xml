@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug build only (fork, view-model spike). No launcher entry: start it with
+     adb shell am start -n com.kunzisoft.keepass.cprima_fork/com.kunzisoft.keepass.viewmodellab.ViewModelLabActivity (extra: case-id bank-account)
+
+     The JSON Schema library of the spike (json-schema-validator 0.3.1) brings uri-kmp, which declares minSdk 21, while
+     the app declares 19. The merger refuses that. For the spike the library is forced in here, for the debug build
+     only; the app gate of the feature would have to be 21 or higher (measured in the experiment VX-007). -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk tools:overrideLibrary="com.eygraber.uri" />
+    <application>
+        <activity
+            android:name="com.kunzisoft.keepass.viewmodellab.ViewModelLabActivity"
+            android:exported="true"
+            android:label="ViewModelLab"
+            android:launchMode="singleTop" />
+    </application>
+</manifest>

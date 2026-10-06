@@ -1,0 +1,13 @@
+{
+  "entity": "bank-account@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Account", "rows": [
+      {"attribute": "IBAN", "copy": true},
+      {"attribute": "BIC", "copy": true},
+      {"attribute": "account_number", "copy": true}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

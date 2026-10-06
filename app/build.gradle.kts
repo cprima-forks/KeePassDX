@@ -9,6 +9,8 @@ ksp {
     arg("room.schemaLocation", "$projectDir/schemas")
 }
 
+apply(from = "../cprima-fork/fork.gradle")
+
 android {
     namespace = "com.kunzisoft.keepass"
     compileSdk = 36

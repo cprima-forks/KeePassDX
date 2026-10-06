@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Unit-test and instrumented-test manifest of the fork (view-model spike). It only lets the JSON Schema library of the
+     spike (json-schema-validator 0.3.1, which brings uri-kmp with minSdk 21) be merged into an app whose minSdk is 19;
+     see cprima-fork/app/debug/AndroidManifest.xml. -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-sdk tools:overrideLibrary="com.eygraber.uri" />
+</manifest>

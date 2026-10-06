@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/bank-account@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A bank or broker account at one institution. A web login to it is not part of this thing: a record that also has a login is of two entity types (_schema = bank-account@0, online-account@0).",
+  "x-pdh-entity": {"name": "bank-account", "version": 0},
+  "title": "Bank account",
+  "description": "A bank or broker account at one institution.",
+  "type": "object",
+  "required": ["Title", "IBAN"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "IBAN": {"$ref": "../types.schema.json#/$defs/iban", "description": "International bank account number."},
+    "BIC": {"type": "string", "description": "Bank identifier code (SWIFT)."},
+    "account_number": {"type": "string", "description": "Account number at a bank or broker."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

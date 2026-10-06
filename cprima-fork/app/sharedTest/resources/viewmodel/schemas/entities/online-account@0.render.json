@@ -1,0 +1,22 @@
+{
+  "entity": "online-account@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Login", "rows": [
+      {"attribute": "UserName", "copy": true},
+      {"attribute": "email", "copy": true},
+      {"attribute": "URL"},
+      {"attribute": "Password"},
+      {"attribute": "otp"}
+    ]},
+    {"label": "Passkey", "collapsed": true, "rows": [
+      {"attribute": "passkey_relying_party"},
+      {"attribute": "passkey_username"},
+      {"attribute": "passkey_credential_id"},
+      {"attribute": "passkey_private_key", "multiline": true},
+      {"attribute": "passkey_user_handle"}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

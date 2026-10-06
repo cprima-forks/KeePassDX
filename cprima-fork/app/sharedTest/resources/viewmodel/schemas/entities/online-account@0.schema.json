@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/online-account@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. An account at a website or online service, with the login to it. It starts from the website of the old profile; the online shop (address, phone, customer number) is not part of it. The passkey properties are one passkey; two backup flags of the KeePassXC passkey are not listed yet.",
+  "x-pdh-entity": {"name": "online-account", "version": 0},
+  "title": "Online account",
+  "description": "An account at a website or online service: where it is, how to log in, and the passkey for it.",
+  "type": "object",
+  "required": ["Title", "UserName", "URL"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "UserName": {"type": "string", "description": "The user name of the login."},
+    "email": {"$ref": "../types.schema.json#/$defs/email_address", "description": "The e-mail address registered with the account."},
+    "URL": {
+      "$ref": "../types.schema.json#/$defs/web_url",
+      "description": "The web address of the login. It should start with https (in any letter case); http:// is a valid address, so this is a hint and never an error.",
+      "pattern": "^[Hh][Tt][Tt][Pp][Ss]://",
+      "x-pdh-level": "warn"
+    },
+    "Password": {"type": "string", "x-pdh-protected": true, "description": "The password of the login. Empty for an account that has only a passkey."},
+    "otp": {"$ref": "../types.schema.json#/$defs/otp", "x-pdh-protected": true, "description": "The one-time-password secret (TOTP or HOTP) of the login."},
+    "passkey_relying_party": {"type": "string", "description": "The site the passkey belongs to, as a domain name (WebAuthn: relying party id)."},
+    "passkey_username": {"type": "string", "description": "The user name stored with the passkey."},
+    "passkey_credential_id": {"type": "string", "x-pdh-protected": true, "description": "The passkey's credential id."},
+    "passkey_private_key": {"type": "string", "x-pdh-protected": true, "description": "The passkey's private key (PEM)."},
+    "passkey_user_handle": {"type": "string", "x-pdh-protected": true, "description": "The user handle the site assigned to the passkey."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  },
+  "allOf": [
+    {
+      "anyOf": [{"required": ["Password"]}, {"required": ["passkey_private_key"]}],
+      "x-pdh-level": "error",
+      "description": "An account has a password or a passkey."
+    },
+    {
+      "dependentRequired": {
+        "passkey_relying_party": ["passkey_credential_id", "passkey_private_key", "passkey_user_handle"],
+        "passkey_credential_id": ["passkey_relying_party", "passkey_private_key", "passkey_user_handle"],
+        "passkey_private_key": ["passkey_relying_party", "passkey_credential_id", "passkey_user_handle"],
+        "passkey_user_handle": ["passkey_relying_party", "passkey_credential_id", "passkey_private_key"]
+      },
+      "x-pdh-level": "error",
+      "description": "A passkey has all four parts or none."
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/types.schema.json",
+  "$comment": "Value types: what a value is and how it is written. Licensed under CC-BY-4.0. A type says nothing about secrecy (protection belongs to the property) and nothing about meaning (the property's name and description do). One type, one kind of value: a web address, a generic URI, a bare contact identifier and a contact URI are four different types.",
+  "$defs": {
+    "web_url": {
+      "type": "string",
+      "pattern": "^[Hh][Tt][Tt][Pp][Ss]?://[^\\s]+$",
+      "description": "A web address: an http or https URL. A local admin page such as http://192.168.1.1/ is one."
+    },
+    "uri": {
+      "type": "string",
+      "pattern": "^[A-Za-z][A-Za-z0-9+.-]*:[^\\s]+$",
+      "description": "Any URI: a scheme, a colon and the rest, such as ssh://host, otpauth://totp/x or urn:isbn:0451450523. Use web_url when it must be a web address."
+    },
+    "email_address": {
+      "type": "string",
+      "format": "email",
+      "pattern": "^[^\\s@:/]+@[^\\s@/]+$",
+      "description": "A bare e-mail address, such as user@example.org. Not a mailto: URI."
+    },
+    "phone_number": {
+      "type": "string",
+      "pattern": "^\\+?[0-9 ()./-]{5,}$",
+      "description": "A bare phone number: digits with the usual separators, an optional leading +. Not a tel: URI."
+    },
+    "tel_uri": {
+      "type": "string",
+      "pattern": "^tel:\\+?[0-9().-]{3,}(;[^\\s]+)*$",
+      "description": "A phone number as a tel: URI (RFC 3966), such as tel:+49-30-1234567."
+    },
+    "sms_uri": {
+      "type": "string",
+      "pattern": "^sms:\\+?[0-9().-]{3,}(,\\+?[0-9().-]{3,})*(\\?[^\\s]*)?$",
+      "description": "A phone number to text, as an sms: URI (RFC 5724), such as sms:+15105550101 or sms:+15105550101?body=hello."
+    },
+    "mailto_uri": {
+      "type": "string",
+      "pattern": "^mailto:[^\\s@]+@[^\\s@]+$",
+      "description": "An e-mail address as a mailto: URI, such as mailto:user@example.org."
+    },
+    "otp": {
+      "type": "string",
+      "description": "The secret of a one-time password (TOTP or HOTP): the key as base32 text, or an otpauth:// address."
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$",
+      "description": "A calendar day, written YYYY-MM-DD."
+    },
+    "pin": {
+      "type": "string",
+      "pattern": "^[0-9]{4,8}$",
+      "description": "A numeric PIN."
+    },
+    "iban": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}[0-9]{2}[A-Za-z0-9 ]{11,30}$",
+      "description": "An international bank account number: country code, two check digits, the account part. Printed in groups of four with spaces; the spaces are allowed."
+    },
+    "mac": {
+      "type": "string",
+      "pattern": "^([0-9A-Fa-f]{2}[:-]){5}[0-9A-Fa-f]{2}$",
+      "description": "A network hardware (MAC) address: six pairs of hex digits, separated by colons. A dash is also read."
+    },
+    "wifi_security": {
+      "type": "string",
+      "enum": ["open", "wep", "wpa-personal", "wpa2-personal", "wpa3-personal", "wpa2-wpa3-personal", "enterprise"],
+      "description": "How a Wi-Fi network is secured, as a router's settings page names it. wpa2-wpa3 is the mixed mode a router offers while devices move from WPA2 to WPA3."
+    }
+  }
+}
