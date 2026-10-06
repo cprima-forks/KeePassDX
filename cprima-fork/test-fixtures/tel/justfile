@@ -1,0 +1,42 @@
+# tel: fixture database. Run from the repository root as `just fixture <recipe>`.
+
+set shell := ["pwsh", "-NoProfile", "-Command"]
+
+db := "kp-test-tel.kdbx"
+
+# Run every entry of the fixture on the phone, unlocking it by itself: just fixture ui [--only ID...] [--long-press-ms N]
+ui *args:
+    uv run python ui_test.py {{args}}
+
+# Build the near-life database tel-link-examples.kdbx (an address book, for the documentation) from near-life.json
+near-life:
+    uv run python make_near_life.py
+    $env:TEL_SPEC = 'near-life-spec.json'; uv run python populate.py tel-link-examples.kdbx
+
+# Run the near-life database on the phone, unlocking it by itself: just fixture ui-near-life [--only TITLE...]
+ui-near-life *args:
+    $env:TEL_SPEC = 'near-life-spec.json'; $env:TEL_DATABASE = 'tel-link-examples.kdbx'; uv run python ui_test.py {{args}}
+
+# Dial the links of the near-life entries on an emulator and record the number the telephony dials (never on a phone)
+dial-out *args:
+    uv run python dial_out_test.py {{args}}
+
+# Add one entry for every value of the code cases that the fixture does not show yet (fixture-spec.code-entries.json)
+entries:
+    uv run python make_code_entries.py
+
+# Show what populate.py would change. Changes nothing.
+dry:
+    uv run python populate.py {{db}} --dry
+
+# Bring the database in line with the spec. A second run changes nothing.
+populate:
+    uv run python populate.py {{db}}
+
+# Check that spec, case file and database agree
+align:
+    uv run python check_alignment.py {{db}}
+
+# Compare the stored header hash with the real one
+check:
+    uv run python check_headerhash.py {{db}}

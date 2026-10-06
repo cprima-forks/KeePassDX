@@ -1,0 +1,5 @@
+# screenshots, dumps and reports of UI test runs: evidence goes to the wiki, not to git
+runs/
+__pycache__/
+# raw dumps of other apps' screens: the harvest keeps a privacy-filtered summary instead
+repository/harvest/_dumps/
