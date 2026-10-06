@@ -1,0 +1,15 @@
+{
+  "entity": "device@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Identifiers", "rows": [
+      {"attribute": "serial_number", "copy": true},
+      {"attribute": "part_number", "copy": true},
+      {"attribute": "MAC", "copy": true},
+      {"attribute": "IMEI", "copy": true}
+    ]},
+    {"label": "Warranty", "rows": [{"attribute": "warranty_until"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

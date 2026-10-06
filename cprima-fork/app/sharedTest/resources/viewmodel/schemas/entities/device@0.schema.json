@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/device@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A device with its identifiers: the old profile's hardware, renamed. A record of any more specific device type (wifi-access-point, openwrt-device) also names this type, so that a device-account can link to a device without listing every device type.",
+  "x-pdh-entity": {"name": "device", "version": 0},
+  "title": "Device",
+  "description": "A device with its identifiers.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "serial_number": {"type": "string", "description": "The manufacturer's serial number."},
+    "part_number": {"type": "string", "description": "The manufacturer's part number."},
+    "MAC": {"$ref": "../types.schema.json#/$defs/mac", "description": "Network hardware (MAC) address."},
+    "IMEI": {"type": "string", "description": "The phone hardware identifier (IMEI)."},
+    "warranty_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the manufacturer's warranty ends. A warranty ending does not make the device invalid, so this is not valid_until."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/contract@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A contract: the old profile's utility-contract (a customer account with a utility or service provider), now with a link to its counterparty. A counterparty is a role, not an entity type: it is an organization or a person.",
+  "x-pdh-entity": {"name": "contract", "version": 0},
+  "title": "Contract",
+  "description": "A contract with a provider: who it is with, and the numbers that identify it.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "counterparty": {
+      "type": "string",
+      "x-pdh-link": {"targets": ["organization", "person"], "allow_self": false},
+      "description": "The organization or person the contract is with."
+    },
+    "customer_no": {"type": "string", "description": "The customer number at the counterparty."},
+    "contract_no": {"type": "string", "description": "The contract number."},
+    "phone": {"$ref": "../types.schema.json#/$defs/phone_number", "description": "The counterparty's phone number for this contract."},
+    "email": {"$ref": "../types.schema.json#/$defs/email_address", "description": "The counterparty's e-mail address for this contract."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid: here, the end of the contract term. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  },
+  "allOf": [
+    {"required": ["counterparty"], "x-pdh-level": "warn", "description": "A contract says who it is with."}
+  ]
+}

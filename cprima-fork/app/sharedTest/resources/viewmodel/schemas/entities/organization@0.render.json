@@ -1,0 +1,14 @@
+{
+  "entity": "organization@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Contact", "rows": [
+      {"attribute": "address", "multiline": true},
+      {"attribute": "phone", "copy": true},
+      {"attribute": "email", "copy": true},
+      {"attribute": "URL", "copy": true}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

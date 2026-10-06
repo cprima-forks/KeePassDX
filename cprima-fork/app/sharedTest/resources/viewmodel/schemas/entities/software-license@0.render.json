@@ -1,0 +1,12 @@
+{
+  "entity": "software-license@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Licence", "rows": [
+      {"attribute": "license_key"},
+      {"attribute": "license_serial_number", "copy": true}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

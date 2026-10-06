@@ -1,0 +1,17 @@
+{
+  "entity": "contract@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Contract", "rows": [
+      {"attribute": "counterparty", "label": "With"},
+      {"attribute": "customer_no", "copy": true},
+      {"attribute": "contract_no", "copy": true}
+    ]},
+    {"label": "Contact", "rows": [
+      {"attribute": "phone", "copy": true},
+      {"attribute": "email", "copy": true}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

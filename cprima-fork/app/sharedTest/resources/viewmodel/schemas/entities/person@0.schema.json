@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/person@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A person. A thing, not a role: whether they are a landlord or an employer is said by what links to them. New, and minimal: it exists so that a contract can point at a person.",
+  "x-pdh-entity": {"name": "person", "version": 0},
+  "title": "Person",
+  "description": "A person: their name and how to reach them.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The person's name."},
+    "address": {"type": "string", "description": "The postal address, one line per line."},
+    "phone": {"$ref": "../types.schema.json#/$defs/phone_number", "description": "Their phone number."},
+    "email": {"$ref": "../types.schema.json#/$defs/email_address", "description": "Their e-mail address."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

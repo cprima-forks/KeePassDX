@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/software-license@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A software licence: the old profile's software-license.",
+  "x-pdh-entity": {"name": "software-license", "version": 0},
+  "title": "Software licence",
+  "description": "A software licence with its key.",
+  "type": "object",
+  "required": ["Title", "license_key"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "license_key": {"type": "string", "x-pdh-protected": true, "description": "The licence key."},
+    "license_serial_number": {"type": "string", "description": "The serial number of the licence (not of a device)."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the licence ends. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

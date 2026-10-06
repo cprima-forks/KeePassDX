@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/keypair@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A public/private key pair (SSH, GPG, ...): the old profile's keypair and the key terms of its vocabulary (public_key, fingerprint, ssh_key). The private part is protected; the public key and the fingerprint are not secret.",
+  "x-pdh-entity": {"name": "keypair", "version": 0},
+  "title": "Key pair",
+  "description": "A public/private key pair.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "fingerprint": {"type": "string", "description": "The key fingerprint. Not secret."},
+    "public_key": {"type": "string", "description": "The public key. Not secret."},
+    "ssh_key": {"type": "string", "x-pdh-protected": true, "description": "The private key."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

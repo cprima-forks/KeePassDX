@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/sim-card@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A SIM card: the old profile's sim-card. It mixes a physical card and a subscription; that is the old shape, carried over unchanged (the contract number is text, not a link).",
+  "x-pdh-entity": {"name": "sim-card", "version": 0},
+  "title": "SIM card",
+  "description": "A SIM card: its phone number, PIN and PUK, and the subscription it belongs to.",
+  "type": "object",
+  "required": ["Title", "phone", "PIN", "PUK"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "phone": {"$ref": "../types.schema.json#/$defs/phone_number", "description": "The card's phone number."},
+    "PIN": {"$ref": "../types.schema.json#/$defs/pin", "x-pdh-protected": true, "description": "The SIM PIN."},
+    "PUK": {"$ref": "../types.schema.json#/$defs/puk", "x-pdh-protected": true, "description": "The SIM unlock code (PUK)."},
+    "ICCID": {"type": "string", "description": "The SIM card serial number (ICCID)."},
+    "carrier": {"type": "string", "description": "The mobile network operator."},
+    "contract_no": {"type": "string", "description": "The contract number of the subscription."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

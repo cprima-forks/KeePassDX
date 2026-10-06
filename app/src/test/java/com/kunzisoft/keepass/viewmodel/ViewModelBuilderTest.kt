@@ -19,8 +19,21 @@ class ViewModelBuilderTest {
     private fun build(sample: ViewModelSamples.Sample) = builder.build(ViewModelSamples.record(sample))
 
     @Test
-    fun theThreeEntityTypesAreLoaded() {
-        assertEquals(listOf("bank-account@0", "online-account@0", "wifi-access-point@0"), schemas.entities.keys.toList())
+    fun everyEntityTypeOfTheCatalogIsLoadedWithItsStyle() {
+        assertEquals(19, schemas.entities.size)
+        assertTrue("bank-account@0" in schemas.entities && "contract@0" in schemas.entities)
+        assertTrue(schemas.entities.filterValues { it.render == null }.keys.toString(), schemas.entities.values.all { it.render != null })
+    }
+
+    @Test
+    fun everyEntityTypeCompilesAndRendersAnEmptyRecordWithoutFailing() {
+        // VX-007: the library must read all 19 real schemas. An empty record breaks their rules, which is the point:
+        // the findings are listed and nothing fails.
+        for (name in schemas.entities.keys) {
+            val view = builder.build(RecordNormalizer.normalize("x", linkedMapOf("_schema" to name)), Mode.EDIT)
+            assertTrue(name, view.findings.isNotEmpty())
+            assertTrue(name, view.sections.isNotEmpty())
+        }
     }
 
     @Test

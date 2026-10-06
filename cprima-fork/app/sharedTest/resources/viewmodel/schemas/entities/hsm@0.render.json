@@ -1,0 +1,10 @@
+{
+  "entity": "hsm@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Device", "rows": [{"attribute": "serial_number", "copy": true}]},
+    {"label": "PINs", "rows": [{"attribute": "so_pin"}, {"attribute": "user_pin"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

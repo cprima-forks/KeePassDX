@@ -1,0 +1,18 @@
+{
+  "entity": "openwrt-device@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Device", "rows": [
+      {"attribute": "serial_number"},
+      {"attribute": "MAC"}
+    ]},
+    {"label": "Admin login", "rows": [
+      {"attribute": "URL"},
+      {"attribute": "UserName", "copy": true},
+      {"attribute": "Password"}
+    ]},
+    {"label": "SSH", "rows": [{"attribute": "ssh_key"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

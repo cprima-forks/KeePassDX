@@ -1,0 +1,15 @@
+{
+  "entity": "credit-card@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Card", "rows": [
+      {"attribute": "card_number"},
+      {"attribute": "cardholder", "copy": true},
+      {"attribute": "issuer"},
+      {"attribute": "issuer_phone", "copy": true}
+    ]},
+    {"label": "Codes", "rows": [{"attribute": "CVV"}, {"attribute": "PIN"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

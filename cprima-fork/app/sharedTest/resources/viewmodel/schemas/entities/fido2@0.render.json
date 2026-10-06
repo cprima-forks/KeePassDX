@@ -1,0 +1,14 @@
+{
+  "entity": "fido2@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Key", "rows": [
+      {"attribute": "vendor"},
+      {"attribute": "model"},
+      {"attribute": "serial_number", "copy": true}
+    ]},
+    {"label": "PIN", "rows": [{"attribute": "user_pin"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

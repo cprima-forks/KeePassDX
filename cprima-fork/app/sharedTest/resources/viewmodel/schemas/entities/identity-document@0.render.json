@@ -1,0 +1,9 @@
+{
+  "entity": "identity-document@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Security", "rows": [{"attribute": "PIN"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

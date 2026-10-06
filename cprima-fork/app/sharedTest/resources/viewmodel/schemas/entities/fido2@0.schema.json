@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/fido2@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A FIDO2 security key (a hardware token such as a Nitrokey or a YubiKey). New: the old profile had no such type, so this is a first draft of what one needs to be told apart and unlocked.",
+  "x-pdh-entity": {"name": "fido2", "version": 0},
+  "title": "FIDO2 security key",
+  "description": "A FIDO2 security key: which one it is, and its PIN.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "vendor": {"type": "string", "description": "The maker of the key."},
+    "model": {"type": "string", "description": "The model of the key."},
+    "serial_number": {"type": "string", "description": "The manufacturer's serial number."},
+    "user_pin": {"type": "string", "x-pdh-protected": true, "description": "The FIDO2 PIN of the key."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

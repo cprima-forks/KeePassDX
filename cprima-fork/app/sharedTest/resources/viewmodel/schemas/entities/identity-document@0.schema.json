@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/identity-document@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. An ID card, passport, certificate or similar: the old profile's identity-document.",
+  "x-pdh-entity": {"name": "identity-document", "version": 0},
+  "title": "Identity document",
+  "description": "An ID card, passport, certificate or similar, with its PIN.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "PIN": {"$ref": "../types.schema.json#/$defs/pin", "x-pdh-protected": true, "description": "The document's PIN."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the document stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

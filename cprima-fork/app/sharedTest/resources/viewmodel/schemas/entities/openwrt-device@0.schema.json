@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/openwrt-device@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A device running OpenWrt or a vendor fork of it: the root login opens the web interface and SSH, by password or by key. The old profile named it together with wifi-access-point; a record here may be bound to both, and the shared properties must then agree.",
+  "x-pdh-entity": {"name": "openwrt-device", "version": 0},
+  "title": "OpenWrt device",
+  "description": "A device running OpenWrt: its identifiers, its admin login and its SSH key.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "serial_number": {"type": "string", "description": "Manufacturer serial number."},
+    "MAC": {"$ref": "../types.schema.json#/$defs/mac", "description": "Network hardware (MAC) address."},
+    "URL": {"$ref": "../types.schema.json#/$defs/web_url", "description": "The admin web interface. Often a local http:// address, which is a valid address."},
+    "UserName": {"type": "string", "description": "The user name of the admin login, usually root."},
+    "Password": {"type": "string", "x-pdh-protected": true, "description": "The password of the admin login. A fresh device may have none yet."},
+    "ssh_key": {"type": "string", "x-pdh-protected": true, "description": "The private SSH key the device accepts."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  },
+  "allOf": [
+    {
+      "required": ["URL", "UserName", "Password"],
+      "x-pdh-level": "warn",
+      "description": "The admin login is recorded: where it is, and who opens it."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/organization@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. An organization: a company, an authority, a club. A thing, not a role: whether it is a supplier or a bank is said by what links to it. New, and minimal: it exists so that a contract has something to point at.",
+  "x-pdh-entity": {"name": "organization", "version": 0},
+  "title": "Organization",
+  "description": "An organization: its name and how to reach it.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The name of the organization."},
+    "address": {"type": "string", "description": "The postal address, one line per line."},
+    "phone": {"$ref": "../types.schema.json#/$defs/phone_number", "description": "Its phone number."},
+    "email": {"$ref": "../types.schema.json#/$defs/email_address", "description": "Its e-mail address."},
+    "URL": {"$ref": "../types.schema.json#/$defs/web_url", "description": "Its website."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}

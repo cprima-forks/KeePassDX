@@ -54,6 +54,21 @@
       "pattern": "^[0-9]{4,8}$",
       "description": "A numeric PIN."
     },
+    "card_number": {
+      "type": "string",
+      "pattern": "^[0-9 ]{13,23}$",
+      "description": "A payment card number: 13 to 23 digits, spaces allowed."
+    },
+    "cvv": {
+      "type": "string",
+      "pattern": "^[0-9]{3,4}$",
+      "description": "A card security code: 3 or 4 digits."
+    },
+    "puk": {
+      "type": "string",
+      "pattern": "^[0-9]{8}$",
+      "description": "A SIM unlock code (PUK): 8 digits."
+    },
     "iban": {
       "type": "string",
       "pattern": "^[A-Z]{2}[0-9]{2}[A-Za-z0-9 ]{11,30}$",

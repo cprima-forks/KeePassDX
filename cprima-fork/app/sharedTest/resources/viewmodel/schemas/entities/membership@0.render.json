@@ -1,0 +1,9 @@
+{
+  "entity": "membership@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Membership", "rows": [{"attribute": "member_no", "copy": true}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

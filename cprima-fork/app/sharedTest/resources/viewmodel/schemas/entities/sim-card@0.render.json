@@ -1,0 +1,15 @@
+{
+  "entity": "sim-card@0",
+  "title": "Title",
+  "sections": [
+    {"label": "SIM", "rows": [
+      {"attribute": "phone", "copy": true},
+      {"attribute": "ICCID", "copy": true},
+      {"attribute": "carrier"},
+      {"attribute": "contract_no", "copy": true}
+    ]},
+    {"label": "Codes", "rows": [{"attribute": "PIN"}, {"attribute": "PUK"}]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

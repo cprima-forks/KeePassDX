@@ -1,0 +1,14 @@
+{
+  "entity": "device-account@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Device", "rows": [{"attribute": "device"}]},
+    {"label": "Login", "rows": [
+      {"attribute": "URL"},
+      {"attribute": "UserName", "copy": true},
+      {"attribute": "Password"}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

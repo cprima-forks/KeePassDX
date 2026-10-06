@@ -1,0 +1,13 @@
+{
+  "entity": "keypair@0",
+  "title": "Title",
+  "sections": [
+    {"label": "Key", "rows": [
+      {"attribute": "fingerprint", "copy": true},
+      {"attribute": "public_key", "copy": true, "multiline": true},
+      {"attribute": "ssh_key"}
+    ]},
+    {"label": "Validity", "rows": [{"attribute": "valid_until"}]},
+    {"label": "Notes", "rows": [{"attribute": "Notes", "multiline": true}]}
+  ]
+}

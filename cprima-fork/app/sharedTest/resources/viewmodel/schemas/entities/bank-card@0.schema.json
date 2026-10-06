@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/bank-card@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. A bank card (debit, Girocard): the old profile's bank-card, a card core with no security code. A security code on one is an unknown attribute, reported under the catalog's policy.",
+  "x-pdh-entity": {"name": "bank-card", "version": 0},
+  "title": "Bank card",
+  "description": "A bank card (debit, Girocard): its number, holder, issuer and PIN.",
+  "type": "object",
+  "required": ["Title"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "card_number": {"$ref": "../types.schema.json#/$defs/card_number", "x-pdh-protected": true, "description": "The card number."},
+    "PIN": {"$ref": "../types.schema.json#/$defs/pin", "x-pdh-protected": true, "description": "The card's PIN."},
+    "cardholder": {"type": "string", "description": "The name printed on the card."},
+    "issuer": {"type": "string", "description": "The bank that issued the card."},
+    "issuer_phone": {"$ref": "../types.schema.json#/$defs/phone_number", "description": "The issuer's phone number, for example the blocking hotline."},
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid: here, the card's expiry day. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  },
+  "allOf": [
+    {"required": ["valid_until"], "x-pdh-level": "warn", "description": "A card has an expiry date."}
+  ]
+}

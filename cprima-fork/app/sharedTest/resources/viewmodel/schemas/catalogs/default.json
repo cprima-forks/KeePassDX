@@ -2,5 +2,25 @@
   "description": "The default schema set: the entity types, pinned to exact versions, and the type files they refer to. Licensed under CC-BY-4.0.",
   "unknown_attributes": "warn",
   "types": ["../types.schema.json"],
-  "entity_types": ["bank-account@0", "online-account@0", "wifi-access-point@0"]
+  "entity_types": [
+    "api-credential@0",
+    "bank-account@0",
+    "bank-card@0",
+    "contract@0",
+    "credit-card@0",
+    "device-account@0",
+    "device@0",
+    "fido2@0",
+    "hsm@0",
+    "identity-document@0",
+    "keypair@0",
+    "membership@0",
+    "online-account@0",
+    "openwrt-device@0",
+    "organization@0",
+    "person@0",
+    "sim-card@0",
+    "software-license@0",
+    "wifi-access-point@0"
+  ]
 }

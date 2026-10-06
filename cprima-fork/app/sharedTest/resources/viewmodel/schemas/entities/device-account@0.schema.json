@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pdh.invalid/schemas/entities/device-account@0.schema.json",
+  "$comment": "Licensed under CC-BY-4.0. An additional login on a device. The device record keeps its main login; every other user gets a record of this type with a link to the device. The target is a record that names the type `device` (a Wi-Fi access point or an OpenWrt device names it as well), so no device type has to be listed here.",
+  "x-pdh-entity": {"name": "device-account", "version": 0},
+  "title": "Device account",
+  "description": "An additional login on a device, linked to the device's record.",
+  "type": "object",
+  "required": ["Title", "UserName", "Password", "device"],
+  "properties": {
+    "Title": {"type": "string", "description": "The record's title."},
+    "UserName": {"type": "string", "description": "The user name of the login."},
+    "Password": {"type": "string", "x-pdh-protected": true, "description": "The password of the login."},
+    "URL": {"$ref": "../types.schema.json#/$defs/web_url", "description": "Where the login is used, if it is not the device's own admin address."},
+    "device": {
+      "type": "string",
+      "x-pdh-link": {"targets": ["device"], "allow_self": false},
+      "description": "The device this login belongs to."
+    },
+    "valid_until": {"$ref": "../types.schema.json#/$defs/date", "description": "The day the record stops being valid. Empty means it does not expire."},
+    "Notes": {"type": "string", "description": "Free-form notes, over several lines."}
+  }
+}
